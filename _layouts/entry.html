@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- rad fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- JS -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+        <script type="text/javascript" src="//use.typekit.net/iil6ecz.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body class="entry">
+        <div class="site">
+
+          <div class="entry-content">
+          {{ content }}
+
+
+                 
+            {% if page.previous.url %} 
+            <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" class="text-uppercase">
+            <p class="tk-adobe-garamond-pro browse-label tk-proxima-nova-alt-ext-cond">read this next</p>
+            <p  class="browse-name">{{page.previous.title}}</p>
+          </a> 
+          {% endif %} 
+          </div>
+
+
+
+          <div class="footer fadeInUp animated">
+      
+            <!--
+            <div class="metadata">
+          
+
+            </div>
+            -->
+        </div>
+
+        <script type="javascript" src="/js/jquery.js"></script>
+        
+    </body>
+</html>
