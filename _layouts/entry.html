@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/entries.css">
 
         <!-- JS -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
@@ -29,25 +30,31 @@
 
                  
             {% if page.previous.url %} 
-            <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" class="text-uppercase">
+            <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" class="text-uppercase space-vert">
             <p class="tk-adobe-garamond-pro browse-label tk-proxima-nova-alt-ext-cond">read this next</p>
             <p  class="browse-name">{{page.previous.title}}</p>
-          </a> 
+             </a> 
           {% endif %} 
+          
+
           </div>
 
 
 
-          <div class="footer fadeInUp animated">
-      
-            <!--
-            <div class="metadata">
-          
-
-            </div>
-            -->
-        </div>
-
+      </div>
+        <nav class="footer">
+            <ul class="flexbox">
+              <li class="more nav-item">
+                
+              </li>
+              <li class="more nav-item">
+                <a href="/index.html">
+                  <span class="font-small">BROWSE</span>
+                  ☰
+                </a>
+              </li>
+            </ul>
+          </nav>
         <script type="javascript" src="/js/jquery.js"></script>
         
     </body>

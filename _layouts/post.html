@@ -2,11 +2,15 @@
 layout: entry
 ---
 
+<header class="name">{{ page.title }}</header>
 
-<header>{{ page.title }}</header>
-<p class="meta tk-proxima-nova-alt-ext-cond">{{ page.date | date_to_string }}</p>
+  <ul class="entry-sort meta flexbox">
+    <li class="sort-opt sort-date font-light">{{ page.date | date_to_string }}</li>
+    <li class="sort-opt font-light">|</li>
+    <li class="sort-opt sort-type font-light">{{ page.type }}</li>
+  </ul> 
 
-<article class="tk-adobe-garamond-pro">
+<article class="tk-adobe-garamond-pro space-vert">
 {{ content }}
 </article>
 
