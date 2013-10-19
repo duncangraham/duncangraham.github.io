@@ -256,27 +256,11 @@ text-align: center;
 margin: .1em auto;
 }
 
-.view-diamond.hover-active .posts .post:hover {
-  border-top-color:#FFF !important;
-  border-bottom-color: #FFF !important;
-  
-  transition : border .1s ease-out; 
-  -webkit-transition : border .1s ease-out; 
-  -moz-transition : border .1s ease-out;
-  -o-transition : border .1s ease-out;      
-}
-
 .view-diamond .post-title {
   color: #FFF;
   position: relative;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.15), 2px 2px rgba(0, 0, 0, 0.15), 3px 3px rgba(0, 0, 0, 0.15);
 }
-
-.view-diamond.hover-active .posts .post:hover .post-title {
-  color:#333;
-  text-shadow: none;
-}
-
 
 /* smallest */
 

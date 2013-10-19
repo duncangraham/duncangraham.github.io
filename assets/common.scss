@@ -1,0 +1,483 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Mixins */
+
+@mixin transition($prop, $time, $ease) {
+  -webkit-transition: $prop $time $ease;
+  -moz-transition: $prop $time $ease;
+  -o-transition: $prop $time $ease;
+  transition: $prop $time $ease;
+}
+
+
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFF;
+  font-size: small;
+  color:#333;
+  &.view-diamond {
+    overflow: hidden;
+  }
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  width:100%;
+  text-align: center;
+  font-size: 1.75em;
+  margin: 1em 0em .5em 0em;
+}
+
+::selection {
+  background: #333;
+  color:#FFF;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.display-block {
+  display: block;
+}
+
+.entry .color-white {
+  color: white;
+}
+
+.amp {
+  font-size: .5em;
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.span2 {
+  width: 50%;
+  float: left;
+}
+
+.font-large {
+  font-size:1.5em;
+}
+
+.font-mini {
+  font-size: .5em;
+}
+
+.font-dark {
+  color: #333;
+}
+
+.font-light {
+  color: #e0e0e0;
+}
+
+.space-top {
+  margin-top:2em;
+}
+
+.space-bottom {
+  margin-bottom:2em;
+}
+
+.space-vert {
+  margin:2em 0em;
+}
+
+  .flexbox {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-flex-pack: center;
+  }
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  font-size: 115%;
+  line-height: 1.5em;
+  width: 55%;
+  margin: 0em auto;
+}
+
+.list-views {
+  list-style-type: none;
+}
+
+.shape {
+  height: 1.5em;
+  width: 1.5em;
+  &.view-option_diamond {
+    float: right;
+    width: 0em;
+    height: 0em;
+    border-top: 0px solid #333;
+    border-right: 12px solid rgba(0, 0, 0, 0);
+    border-bottom: 12px solid;
+    border-left: 12px solid rgba(0, 0, 0, 0);
+    border-bottom-color: #333;
+    position: relative;
+    &:after {
+      content: '';
+      width: 0em;
+      height: 0em;
+      border-bottom: 0px solid rgba(0, 0, 0, 0);
+      border-right: 12px solid rgba(0, 0, 0, 0);
+      border-top: 12px solid;
+      border-left: 12px solid rgba(0, 0, 0, 0);
+      border-top-color: inherit;
+      position: absolute;
+      top: 12px;
+      left: -12px;
+    }
+  }
+}
+
+/* POSTS */
+
+.posts {
+  margin: 0px auto;
+  list-style-type: none;
+  height: 100%;
+}
+
+.view-diamond {
+  .post {
+    font-size: 2em;
+    text-align: center;
+    margin: .1em auto;
+  }
+  .post-title {
+    color: #FFF;
+    position: relative;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.15), 2px 2px rgba(0, 0, 0, 0.15), 3px 3px rgba(0, 0, 0, 0.15);
+  }
+  .post {
+    &:nth-child(1), &:nth-child(11) {
+      width: 0;
+      height: 0;
+      border-left: 62px solid rgba(0, 0, 0, 0);
+      border-right: 62px solid rgba(0, 0, 0, 0);
+      z-index: 1000;
+      position: relative;
+      font-size: 0em;
+    }
+    &:nth-child(1) {
+      border-bottom: 45px solid #333;
+    }
+    &:nth-child(11) {
+      border-top: 45px solid #333;
+    }
+    &:nth-child(2), &:nth-child(10) {
+      width: 4.4em;
+      border-left: 41px solid rgba(0, 0, 0, 0);
+      border-right: 41px solid rgba(0, 0, 0, 0);
+      height: 0;
+    }
+    &:nth-child(2) {
+      border-bottom: 1em solid #333;
+    }
+    &:nth-child(10) {
+      border-top: 1em solid #333;
+      .post-title {
+        top: -3.3em;
+      }
+    }
+    &:nth-child(2) .post-title, &:nth-child(10) .post-title {
+      font-size: .1em;
+    }
+    &:nth-child(3) {
+      width: 7.4em;
+      border-left: 60px solid rgba(0, 0, 0, 0);
+      border-right: 60px solid rgba(0, 0, 0, 0);
+      height: 0;
+    }
+  }
+}
+
+.post:nth-child(9) {
+  width: 7.4em;
+  border-left: 60px solid rgba(0, 0, 0, 0);
+  border-right: 60px solid rgba(0, 0, 0, 0);
+  height: 0;
+}
+
+.view-diamond .post {
+  &:nth-child(3) {
+    border-bottom: 1.5em solid #333;
+  }
+  &:nth-child(9) {
+    border-top: 1.5em solid #333;
+  }
+  &:nth-child(3) .post-title, &:nth-child(9) .post-title {
+    font-size: .5em;
+  }
+  &:nth-child(3) .post-title {
+    top: .55em;
+  }
+  &:nth-child(9) .post-title {
+    top: -2.5em;
+  }
+  &:nth-child(4), &:nth-child(8) {
+    width: 11.7em;
+    border-left: 80px solid rgba(0, 0, 0, 0);
+    border-right: 80px solid rgba(0, 0, 0, 0);
+    height: 0;
+  }
+  &:nth-child(4) {
+    border-bottom: 2em solid #333;
+  }
+  &:nth-child(8) {
+    border-top: 2em solid #333;
+  }
+  &:nth-child(4) .post-title, &:nth-child(8) .post-title {
+    font-size: 1em;
+  }
+  &:nth-child(4) .post-title {
+    top: .6em;
+  }
+  &:nth-child(8) .post-title {
+    top: -1.3em;
+  }
+  &:nth-child(5), &:nth-child(7) {
+    width: 17.4em;
+    border-left: 99px solid rgba(0, 0, 0, 0);
+    border-right: 99px solid rgba(0, 0, 0, 0);
+    height: 0;
+    z-index: 2;
+    /* bit of a hacky way to deal with the center diamond piece overlapping */
+    position: relative;
+  }
+  &:nth-child(5) {
+    border-bottom: 2.5em solid #333;
+  }
+  &:nth-child(7) {
+    border-top: 2.5em solid #333;
+  }
+  &:nth-child(5) .post-title, &:nth-child(7) .post-title {
+    font-size: 1.5em;
+  }
+  &:nth-child(5) .post-title {
+    top: .6em;
+  }
+  &:nth-child(7) .post-title {
+    top: -1em;
+  }
+  &:nth-child(6) {
+    margin: 70px auto 0em;
+    width: 24.3em;
+    height: 0;
+    border-top: 0px solid #333;
+    border-right: 91px solid rgba(0, 0, 0, 0);
+    border-bottom: 67px solid;
+    border-left: 91px solid rgba(0, 0, 0, 0);
+    border-bottom-color: #333;
+    position: relative;
+    top: -67px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: -91px;
+      top: 67px;
+      width: 24.3em;
+      height: 0;
+      border-bottom: 67px solid rgba(0, 0, 0, 0);
+      border-right: 91px solid rgba(0, 0, 0, 0);
+      border-top: 67px solid;
+      border-left: 91px solid rgba(0, 0, 0, 0);
+      border-top-color: inherit;
+      z-index: -2;
+    }
+    .post-title {
+      font-size: 2em;
+      top: .82em;
+    }
+  }
+  &:nth-child(n+12) {
+    display: none;
+  }
+}
+
+.name {
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin: 0em 2%;
+  position: fixed;
+  bottom: 1em;
+  width: 96%;
+
+  .more {
+    min-width: 3.8em;
+  }
+
+  .flexbox {
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-flex-pack: justify;
+  }
+
+// .nav-item {
+//   width: 50%;
+//   float: left;
+// }
+
+
+}
+
+.font-small {
+  font-size: .65em;
+  padding-top: .35em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.opacity {
+  opacity: 0 !important;
+}
+
+.entry-type {
+  font-weight: normal;
+  opacity: 1;
+  /*FUN FACT! animating width fucks with line height, effectively making it 0*/
+}
+
+.char5 {
+position: absolute;
+-webkit-transform: rotate(180deg);
+margin-top: 1px;
+margin-left: 1px;
+-moz-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.char2:hover {
+  cursor: pointer;
+}
+
+.char6 {
+  padding-left: 1em;
+}
+
+/*****************************************************************************/
+/*
+/* ENTRY PAGE
+/*
+/*****************************************************************************/
+
+.entry .entry-content {
+  margin: 2.5em auto 12.5em auto;
+  line-height: 1.5em;
+}
+
+/* standard */
+
+.entry-content {
+  pre {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .4em;
+  }
+  code {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .2em;
+  }
+  pre {
+    code {
+      border: none;
+    }
+    &.terminal {
+      border: 1px solid #000;
+      background-color: #333;
+      color: #FFF;
+      code {
+        background-color: #333;
+      }
+    }
+  }
+}
+
+/* terminal */
+
+.browse {
+  width: 25em;
+  margin: 1em 0em;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.site {
+  .browse-entries {
+    font-size: 1.3em;
+    height: 2.5em;
+  }
+  .browse-label {
+    text-transform: uppercase;
+    margin: 1px;
+    width: 100%;
+  }
+}
+
+.browse-name {
+  font-size: 1.5em;
+  margin: 0em;
+}
+
+.metadata {
+  background-color: #333;
+  width: 100%;
+  height: 5em;
+}
+
+.color {
+  border-top-color: red;
+}

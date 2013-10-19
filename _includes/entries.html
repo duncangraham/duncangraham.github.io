@@ -1,0 +1,81 @@
+---
+layout: about
+title: dvncan
+---
+
+   <ul class="entries font-large">
+     {% for post in site.posts %}
+      <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry tk-adobe-garamond-pro ">
+        <a href="{{ post.url }}" class="display-block">
+          <span>{{ post.title }}</span>
+          <span class="post-date float-right">{{ post.date | date: "%m.%d.%Y" }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+<!--    <nav class="footer">
+            <ul>
+              <li class="more float-left nav-item left">
+                <ul class="entry-sort">
+                  <li class="sort-opt float-left">SORT: </li>
+                  <li class="sort-opt sort-date float-left"><a class="selected" href="#">DATE</a></li>
+                  <li class="sort-opt float-left">|</li>
+                  <li class="sort-opt sort-type float-left"><a href="#">TYPE</a></li>
+                </ul>       
+              </li>
+              <li class="more float-left nav-item right">
+                <a href="index.html">
+                  <span class="font-small">BACK TO POST</span>
+                  &raquo;
+                </a>
+              </li>
+            </ul>
+          </nav>
+ -->
+
+          <script>
+          var entArr = [];
+          $('.entry').each(function(key, value){            
+            entArr.push(value);
+          });
+
+          console.log(entArr);
+
+          $('.sort-date a').on('click', function(){
+            changeSort($(this));
+
+            entArr.sort(function (a, b) {
+                if (a.classList[1] < b.classList[1])
+                  return 1;
+                if (a.classList[1] > b.classList[1])
+                  return -1;
+                // a must be equal to b
+                return 0;
+            });
+
+            $('.entries').html(entArr);
+          });
+
+          $('.sort-type a').on('click', function(){
+            changeSort($(this));
+
+            entArr.sort(function (a, b) {
+                if (a.classList[0] > b.classList[0])
+                  return 1;
+                if (a.classList[0] < b.classList[0])
+                  return -1;
+                // a must be equal to b
+                return 0;
+            });
+
+            console.log(entArr);
+            $('.entries').html(entArr);
+          });
+
+          var changeSort = function($this) {
+            $('.selected').removeClass('selected');
+            $this.addClass('selected');
+          };
+
+          </script>

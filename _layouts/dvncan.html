@@ -7,25 +7,29 @@
         <meta name="viewport" content="width=device-width">
         <!-- rad fonts -->
         <link href="http://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/main.css">
-
-        <!-- JS -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-        <script type="text/javascript" src="//use.typekit.net/iil6ecz.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/entries.css">
     </head>
     <body class="view-diamond hover-active">
         <div class="site">
+            <header class="name">
+                <span class="char1">D</span>
+                <span class="char2">V</span>
+                <span class="char3">N</span>
+                <span class="char4">C</span>
+                <span class="char5">V</span>
+                <span class="char6">N</span>  
+            </header>
 
           {{ content }}
 
 
+        <!-- JS -->
+        <script type="text/javascript" src="//use.typekit.net/iil6ecz.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <!-- for reasons I haven't figured out yet, scripts with jekyll are only working when I don't reference them, but include them directy. Maybe something to do with the scope? if you know why this is happening shoot me a tweet @duncangraham -->
         <script>
@@ -51,10 +55,10 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         (function(a){function d(b){var c=b||window.event,d=[].slice.call(arguments,1),e=0,f=!0,g=0,h=0;return b=a.event.fix(c),b.type="mousewheel",c.wheelDelta&&(e=c.wheelDelta/120),c.detail&&(e=-c.detail/3),h=e,c.axis!==undefined&&c.axis===c.HORIZONTAL_AXIS&&(h=0,g=-1*e),c.wheelDeltaY!==undefined&&(h=c.wheelDeltaY/120),c.wheelDeltaX!==undefined&&(g=-1*c.wheelDeltaX/120),d.unshift(b,e,g,h),(a.event.dispatch||a.event.handle).apply(this,d)}var b=["DOMMouseScroll","mousewheel"];if(a.event.fixHooks)for(var c=b.length;c;)a.event.fixHooks[b[--c]]=a.event.mouseHooks;a.event.special.mousewheel={setup:function(){if(this.addEventListener)for(var a=b.length;a;)this.addEventListener(b[--a],d,!1);else this.onmousewheel=d},teardown:function(){if(this.removeEventListener)for(var a=b.length;a;)this.removeEventListener(b[--a],d,!1);else this.onmousewheel=null}},a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})})(jQuery)
         </script>
         <script>
-
         var pos = 3;
         var entryType = $('.entry-type')
         var entryArr = ['experiments', 'ideas', 'writings', 'projects'];
+        var $body = $('body');
 
         setInterval(function(){  
 
@@ -72,19 +76,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
                       }
                     }, 4000);
 
-
-          
           var allowed = true; //should slow down the scroll speed
-          // var footerOpen = false;
-          // $('.more').on('click', function(){
-          //   if(footerOpen == false) {
-          //     footerOpen = true;
-          //     $('.footer').addClass('footer-open');
-          //   } else {
-          //     footerOpen = false;
-          //     $('.footer').removeClass('footer-open');
-          //   }
-          // });
 
           var oneUp = function(){
             var firstChild = $('.post:first-child');
@@ -108,9 +100,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
           };
 
           $(document).mousewheel(function(event, delta) {
-              var dir = delta > 0 ? 'Up' : 'Down';
-
-              console.log(dir);
+              var dir = delta > 0 ? 'Down' : 'Up';
               if (allowed == true) {
                 allowed = false;
                 setTimeout(function(){  
@@ -135,41 +125,16 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
           // this is awesome. read it. http://krazydad.com/tutorials/makecolors.php
           //he's also really goofy, it's great.
 
+          //redo using HSL
+
           function rainbow(numOfSteps, step) {
-              var r, g, b;
+              //there are 360 distinct hue values in hsl
+              //unique number representing % through items. increases approaching 360
+              var h = (360/numOfSteps)*step
+              // FUN FACT! ~~ is shorthand for Math.floor(). not relevant anymore, but still useful.
 
-              //unique number representing % through items. increases approaching 1
-              var h = numOfSteps-step / numOfSteps; 
-              //~~ is shorthand for Math.floor(), round to nearest whole # towards 0. 
-              //approaches 6 as h approaches 1. never reaches 6. 
-              //duh.
-              var i = ~~(h * 6);
-              //ratio (<1) times 6, minus the rounded down i
-              //never passes 1
-              //what is the significance of six you ask??
-              var f = h * 6 - i; 
-              //the inverse of f
-              var q = 1 - f;
-
-              //to get colors that don't burn retinas I need to 
-
-              //1 if the max.
-              switch(i % 6){
-                  case 0: r = 1, g = f, b = 0; break;
-                  case 1: r = q, g = 1, b = 0; break;
-                  case 2: r = 0, g = 1, b = f; break;
-                  case 3: r = 0, g = q, b = 1; break;
-                  case 4: r = f, g = 0, b = 1; break;
-                  case 5: r = 1, g = 0, b = q; break;
-              }
-
-             var c = "rgba(" + ~~(r * 255) + ',' + ~~(g * 255) + ',' + ~~(b * 255) + ', .75)';
-
-             // var c = "#" + ("00" + (~ ~(r * 255)).toString(16)).slice(-2) + ("00" + (~ ~(g * 255)).toString(16)).slice(-2) + ("00" + (~ ~(b * 255)).toString(16)).slice(-2);
-
-              console.log("C: " + c + ' r: '+ r + ", g: " + g + ", b: " + b + ", h: " + h + ", i: " + i + ", f: " + f + ", q: " + q)
-
-              return (c);
+             var color = "hsla(" + h + ", 75%, 60%, 1)";
+             return (color);
           }
 
           var numPosts = $('.post').length;
@@ -185,25 +150,123 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
           // colors.jpg
 
-          // var $win = $(window),
-          //     w = 0,
-          //     h = 0,
-          //     rgb = [],
-          //     getWidth = function() {
-          //       w = $win.width();
-          //       h = $win.height();
-          //     };
+            var mousePos;
+            $(window).mousemove( function(e) {
+                mousePos = e;
+            });
 
-          // $win.resize(getWidth).mousemove(function(e) {
-          //   rgb = [
-          //      Math.round(e.pageX/w * 255),
-          //      Math.round(e.pageY/h * 255),
-          //      150
-          //   ]
+          var $win = $(window),
+              w = 0,
+              h = 0,
+              rgb = [],
+              rgb2 = [],
+              getWidth = function() {
+                w = $win.width();
+                h = $win.height();
+              };
 
-          //   $('').css('background-color','rgb('+rgb.join(',')+')');
-          // }).resize();
+          var colorize = function(e){
+                rgb = [
+                   Math.round(e.pageX/w * 255),
+                   Math.round(e.pageY/h * 255),
+                   150
+                ]
 
-        </script>
+
+
+                if($('body').hasClass('insanity')) {
+                rgb2 = [
+                   Math.round(e.pageY/h * 255),
+                   Math.round(e.pageX/w * 255),
+                   150
+                ]
+
+                    $body.css({'background-color':'rgb('+rgb.join(',')+')',
+                                'color': 'rgb('+rgb2.join(',')+')'});
+                    $('.sort-opt a, .font-light').css({'color': 'rgb('+rgb2.join(',')+')'});
+                    $('.entry-sort, .shape').css({'border-top-color': 'rgb('+rgb2.join(',')+')',
+                                                  'border-bottom-color': 'rgb('+rgb2.join(',')+')'});
+
+                    $('.char2').css('color','#FFF');
+
+                    console.log('rgb('+rgb2.join(',')+')');
+
+                } else {
+                    $('.char2').css('color','rgb('+rgb.join(',')+')');
+                }
+          };
+
+
+               
+              $win.resize(getWidth).mousemove(function(e) { colorize(mousePos) }).resize();
+
+          $('.char2').on('click',function(){
+             if($body.hasClass('insanity')) {
+               $body.removeClass('insanity');
+
+                $body.css({'background-color':'#FFFFFF',
+                            'color': '#333'});
+                $('.sort-opt a').css({'color': 'inherit'});
+                $('.font-light').css({'color': ''});
+                $('.entry-sort, .shape').css({'border-top-color': '#333',
+                                              'border-bottom-color': '#333'});
+                colorize(mousePos);
+            } else {
+                $body.addClass('insanity');
+                colorize(mousePos);
+
+            }
+          })
+
+          var entArr = [];
+          $('.entry').each(function(key, value){            
+            entArr.push(value);
+          });
+
+          console.log(entArr);
+
+          $('.sort-date a').on('click', function(){
+            changeSort($(this));
+
+            entArr.sort(function (a, b) {
+                if (a.classList[1] < b.classList[1])
+                  return 1;
+                if (a.classList[1] > b.classList[1])
+                  return -1;
+                // a must be equal to b
+                return 0;
+            });
+
+            $('.sort-type').addClass('font-light');
+            $('.sort-date').removeClass('font-light');
+
+            $('.entries').html(entArr);
+          });
+
+          $('.sort-type a').on('click', function(){
+            changeSort($(this));
+
+            entArr.sort(function (a, b) {
+                if (a.classList[0] > b.classList[0])
+                  return 1;
+                if (a.classList[0] < b.classList[0])
+                  return -1;
+                // a must be equal to b
+                return 0;
+            });
+
+            $('.sort-date').addClass('font-light');
+            $('.sort-type').removeClass('font-light');
+
+            console.log(entArr);
+            $('.entries').html(entArr);
+          });
+
+          var changeSort = function($this) {
+            $('.selected').removeClass('selected');
+            $this.addClass('selected');
+          };
+
+          </script>
     </body>
 </html>
