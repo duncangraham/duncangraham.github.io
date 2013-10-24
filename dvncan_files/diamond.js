@@ -70,11 +70,3 @@ $('.post').each(function (key, value) {
     $this.css('border-top-color', color);
 });
 
-$('.view-option_square').on('click', function(){
-	$('body').addClass('view-square');
-});
-
-$('.view-option_diamond').on('click', function(){
-	$('body').removeClass('view-square');
-});
-

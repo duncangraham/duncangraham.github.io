@@ -56,7 +56,7 @@ $win.resize(getWidth).mousemove(function (e) {
     colorize(mousePos);
 }).resize();
 
-$('.char2.insanity').on('click', function () {
+$('.char2').on('click', function () {
     if ($body.hasClass('insanity')) {
         $body.removeClass('insanity');
 

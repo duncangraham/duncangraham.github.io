@@ -50,10 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-<<<<<<< HEAD
-=======
   jekyll
   rake
   rb-fsevent
   sass
->>>>>>> gh-pages

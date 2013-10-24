@@ -33,7 +33,10 @@ body {
 a {
   color:inherit;
   text-decoration: none;
-  display: block;
+}
+
+.post a {
+border-bottom: 2px solid rgba(255,255,255, .5);
 }
 
 ul {
@@ -68,7 +71,7 @@ header {
   color: white;
 }
 
-.amp {
+.fancy {
   font-size: .5em;
   font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
   font-style: italic;
@@ -100,6 +103,10 @@ header {
   margin-top:2em;
 }
 
+.space-top_mini {
+  margin-top: .6em;
+}
+
 .space-bottom {
   margin-bottom:2em;
 }
@@ -109,11 +116,26 @@ header {
 }
 
   .flexbox {
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -webkit-flex-pack: center;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   }
+
+  .flexbox.flex_space-between { 
+    justify-content: space-between;
+  }
+
+  .flexbox.flex_center { 
+    justify-content: center;
+  }
+
+  .flexbox.flex_space-around { 
+    justify-content: space-around;
+  }
+
+
 
 /*****************************************************************************/
 /*
@@ -133,30 +155,37 @@ header {
 }
 
 .shape {
-  height: 1.5em;
-  width: 1.5em;
+  height: .9em;
+  width: .9em;
+
+  &.view-option_square {
+  background-color: #FFF;
+  margin: 4px 0px 0px 20px;
+  }
+
   &.view-option_diamond {
     float: right;
     width: 0em;
     height: 0em;
-    border-top: 0px solid #333;
+    border-top: 0px solid #FFF;
     border-right: 12px solid rgba(0, 0, 0, 0);
-    border-bottom: 12px solid;
+    border-bottom: 9px solid;
     border-left: 12px solid rgba(0, 0, 0, 0);
-    border-bottom-color: #333;
+    border-bottom-color: #FFF;
     position: relative;
+    top:4px;
     &:after {
-      content: '';
-      width: 0em;
-      height: 0em;
-      border-bottom: 0px solid rgba(0, 0, 0, 0);
-      border-right: 12px solid rgba(0, 0, 0, 0);
-      border-top: 12px solid;
-      border-left: 12px solid rgba(0, 0, 0, 0);
-      border-top-color: inherit;
-      position: absolute;
-      top: 12px;
-      left: -12px;
+    content: '';
+    width: 0em;
+    height: 0em;
+    border-bottom: 0px solid rgba(0, 0, 0, 0);
+    border-right: 12px solid rgba(0, 0, 0, 0);
+    border-top: 9px solid;
+    border-left: 12px solid rgba(0, 0, 0, 0);
+    border-top-color: inherit;
+    position: absolute;
+    top: 9px;
+    left: -12px;
     }
   }
 }
@@ -335,20 +364,16 @@ header {
   font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-size: 1.5em;
-  margin: 0em 2%;
+  padding: .25em 2%;
   position: fixed;
-  bottom: 1em;
+  bottom: 0em;
   width: 96%;
+  background-color: #111;
+  color: rgb(255, 255, 255);
+
 
   .more {
-    min-width: 3.8em;
-  }
-
-  .flexbox {
-    display: -webkit-box;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -webkit-flex-pack: justify;
+    min-width: 5.5em;
   }
 
 // .nav-item {

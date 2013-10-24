@@ -1,3 +1,28 @@
+@mixin transition($prop, $time, $ease) {
+  -webkit-transition: $prop $time $ease;
+  -moz-transition: $prop $time $ease;
+  -o-transition: $prop $time $ease;
+  transition: $prop $time $ease;
+}
+
+.view-square {
+  .about {
+  width: 70em;
+  margin: 0px auto;
+  overflow: hidden;
+  }
+
+  .post, .post:after {
+  border-right-width: 0em !important;
+  border-left-width: 0em !important;
+  width: 23em !important;
+  left:0px !important;
+
+  //@include transition(all, .4s, ease-out)
+
+  }
+}
+
 .posts {
   font-size: 115%;
   line-height: 1.5em;

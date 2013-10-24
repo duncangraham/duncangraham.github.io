@@ -1,3 +1,13 @@
+.view-square .about {
+  width: 70em;
+  margin: 0px auto;
+  overflow: hidden; }
+.view-square .post, .view-square .post:after {
+  border-right-width: 0em !important;
+  border-left-width: 0em !important;
+  width: 23em !important;
+  left: 0px !important; }
+
 .posts {
   font-size: 115%;
   line-height: 1.5em;

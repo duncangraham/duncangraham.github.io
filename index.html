@@ -2,7 +2,17 @@
 layout: dvncan
 title: dvncan
 ---
-  <ul class="entry-sort flexbox">
+
+  <header class="name">
+    <span class="char1">D</span>
+    <span class="char2 insanity">V</span>
+    <span class="char3">N</span>
+    <span class="char4">C</span>
+    <span class="char5">V</span>
+    <span class="char6">N</span>  
+  </header>
+
+  <ul class="entry-sort flexbox flex_space-around">
     <li class="sort-opt sort-date"><a class="selected" href="#">DATE</a></li>
     <li class="sort-opt font-light">|</li>
     <li class="sort-opt sort-type font-light"><a href="#">TYPE</a></li>
@@ -13,7 +23,7 @@ title: dvncan
       <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry tk-adobe-garamond-pro ">
         <a href="{{ post.url }}" class="display-block">
           <span>{{ post.title }}</span>
-            <ul class="float-right flexbox font-mini">
+            <ul class="float-right flexbox font-mini flex_space-around space-top_mini">
               <li class="sort-opt sort-date post-date">{{ post.date | date: "%m.%d.%Y" }}</li>
               <li class="sort-opt font-light">|</li>
               <li class="sort-opt sort-type post-type font-light ">{{ post.type }}</li>
@@ -25,12 +35,13 @@ title: dvncan
 </div> <!-- end site div -->
 
    <nav class="footer">
-            <ul class="flexbox">
-              <li class="more nav-item">      
+            <ul class="flexbox flex_space-between">
+              <li class="more nav-item"> 
+              <a href="http://www.twitter.com/duncangraham">twitter</a>     
               </li>
-              <li class="more">
+              <li class="more right">
                 <a href="about.html">
-                  <span class="font-small">ABOUT </span>
+                  about
                   <span class="shape view-option_diamond "></span>
                 </a>
               </li>
