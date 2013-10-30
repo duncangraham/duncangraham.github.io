@@ -6,36 +6,34 @@ date:   2013-10-23 17:00:00
 ---
 <style>
 </style>
+<p class="first-paragraph">
 I was reading an article on the Washington Post not long ago and I was struck by how little space was afforded to the actual content of the article. At the worst point, the article body fills less than a fifth of the screen. Most of the area is taken up by ads or links to other articles.  
+</p>
 
-<br/>
 
-Looking at the New York Times, I saw the same layout.  
+(In all fairness, this layout is, unfortunately, fairly common. While the current business model relys on page views and ads, consumption- not contemplation- will be the priority.)
 
-<br/>
 
 <img src="/img/beautifulNews1.png" alt="the current state of digital newspapers" />
+<div class="font-small center">
+before even getting to the content, there are dozens of ways to leave the page.
+</div>
 
-<br/>
+So in the spirit of solving a problem rather than complaining about it, I built a chrome extension to fix the issue. It removes anything I thought was visual clutter and leaves the actual content of the article, surrounded by gorgeous white space. (I left in an ad initially because it fit and didn't look awful. I'm beginning to second guess myself though.)
 
-So in the spirit of solving a problem rather than complaining about it, I built a chrome extension to fix the issue. It removes anything I thought was visual clutter and leaves the actual content of the article, surrounded by gorgeous white space.
-
-<br/>
 
 <img src="/img/beautifulNews2.png" alt="the fix" />
 
-<br/>
-<br/>
 
 <a href="https://chrome.google.com/webstore/detail/beautiful-news/jigeajicpgpngjpemlolbfoilemfhigg">download Beautiful News here &raquo;</a>
-<br/>
-<a href="https://chrome.google.com/webstore/detail/beautiful-news/jigeajicpgpngjpemlolbfoilemfhigg">Beautiful News for Firefox coming soon</a>
 
-<br/>
+<a href="#">Beautiful News for Firefox coming soon</a>
+
 
 <div class="font-small">
 Disclaimer: I work at the Washington Post, but I built this one weekend on my own time.
 </div>
+
 <br/>
 <br/>
 <br/>

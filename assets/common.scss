@@ -78,6 +78,10 @@ header {
   font-weight: normal;
 }
 
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
 .span2 {
   width: 50%;
   float: left;
@@ -159,7 +163,7 @@ header {
   width: .9em;
 
   &.view-option_square {
-  background-color: #FFF;
+  background-color: #CCC;
   margin: 4px 0px 0px 20px;
   }
 
@@ -167,11 +171,11 @@ header {
     float: right;
     width: 0em;
     height: 0em;
-    border-top: 0px solid #FFF;
+    border-top: 0px solid #CCC;
     border-right: 12px solid rgba(0, 0, 0, 0);
     border-bottom: 9px solid;
     border-left: 12px solid rgba(0, 0, 0, 0);
-    border-bottom-color: #FFF;
+    border-bottom-color: #CCC;
     position: relative;
     top:4px;
     &:after {
@@ -361,16 +365,12 @@ header {
 }
 
 .footer {
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
   font-size: 1.5em;
-  padding: .25em 2%;
+  padding: .25em 0em;
   position: fixed;
-  bottom: 0em;
-  width: 96%;
-  background-color: #111;
-  color: rgb(255, 255, 255);
-
+  bottom: 1em;
+  width: 55%;
+  border-bottom: 2px dotted #F0F0F0;
 
   .more {
     min-width: 5.5em;
@@ -440,6 +440,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     border: 1px solid #ddd;
     background-color: #eef;
     padding: 0 .4em;
+    overflow: scroll;
   }
   code {
     border: 1px solid #ddd;
@@ -503,6 +504,10 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   height: 5em;
 }
 
-.color {
-  border-top-color: red;
+.hover-show {
+  display: none;
+}
+
+.hover-show:hover {
+  display: block;
 }
