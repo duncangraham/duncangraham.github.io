@@ -89,7 +89,7 @@ img {
   position: fixed;
   font-size: 1.5em;
   bottom: 1.5em;
-  left: 2.5em;
+  left: .6em;
   color: #CCC;
   -webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
@@ -113,10 +113,10 @@ img {
   color: #000; }
 
 .nav.next {
-  right: 1em; }
+  right: 0em; }
 
 .nav.previous {
-  left: 1em; }
+  left: 0em; }
 
 .twitter {
   font-family: 'Lato', sans-serif;

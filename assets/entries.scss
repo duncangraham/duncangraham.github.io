@@ -113,7 +113,7 @@ img {
 	position: fixed;
 	font-size: 1.5em;
 	bottom:1.5em;
-	left:2.5em;
+	left:.6em;
 	color:#CCC;
 	@include transition(color, .2s, linear);
 }
@@ -136,11 +136,11 @@ img {
 }
 
 .nav.next {
-	right:1em;
+	right:0em;
 }
 
 .nav.previous {
-	left:1em;
+	left:0em;
 }
 
 .twitter {
