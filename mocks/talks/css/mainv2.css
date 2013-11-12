@@ -1812,10 +1812,14 @@ display: block;
 padding: 0em;
 list-style-type: none;
 overflow: auto;
+/* text-align: center; */
 }
 .panelists li {
 float: left;
-margin-left:1em; 
+width: 100%;
+text-align: center; 
+font-size: 1.2em;
+padding-bottom: .5em;
 }
 
 .list-previous {
@@ -3884,7 +3888,7 @@ float: left;
 width: 100%;
 }
 section {
-padding: 5%;
+padding: 2em;
 width: 60%;
 margin: 5em auto;
 overflow: auto;
