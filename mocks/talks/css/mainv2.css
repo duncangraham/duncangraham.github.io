@@ -1747,6 +1747,8 @@ z-index: 1;
 height: 100%;
 width:100%;
 float: left;
+color: #333;
+text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
 background: url(../img/bg.jpg)no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -1779,10 +1781,8 @@ margin: .5em auto 0em auto;
 .talks {
 font-size: 3.5em;
 line-height: 1.2em;
-color: #FFF;
 font-weight: 700;
 font-style:italic;
-text-shadow: 1px 1px 2px #444;
 float: left;
 }
 
@@ -1792,9 +1792,6 @@ float: right;
 nav span {
 font-size: 1.35em;
 font-weight: bold;
-color:#444;
-text-shadow: 1px 1px 1px #FFF;
-height: 31px;
 line-height: 4em;
 padding: 0 15px;
 text-decoration: none;
@@ -1803,15 +1800,18 @@ margin: 1px;
 
 .talk-next {
 font-weight: bold;
-padding: .25em;
+padding: .25em 0em;
 font-size: 1.5em;
-color: #CCC;
+color: #333;
+text-shadow: 1px 1px 0px rgba(255,255,255,.2);
+width: 100%;
+text-align: center;
+display: block;
 }
 .panelists {
 padding: 0em;
 list-style-type: none;
 overflow: auto;
-padding-bottom: 8em;
 }
 .panelists li {
 float: left;
@@ -1863,27 +1863,42 @@ width:100%;
 	transition:all .3s;
 	font-size: 2em;
 }
-::-webkit-input-placeholder {
-   color: rgba(255,255,255,.5);
-   text-shadow:none;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   color: rgba(255,255,255,.5);
-   text-shadow:none;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: rgba(255,255,255,.5);
-   text-shadow:none;
-}
-
-:-ms-input-placeholder {  
-   color: rgba(255,255,255,.5);
-   text-shadow:none;
-}
 #nav input:focus {
 	outline:none;
+}
+
+.rsvp {
+margin: 0px auto;
+width: 20em;
+font-size: 2em;
+}
+
+.rsvp .email-input {
+    font-size: inherit;
+	
+    width: 94.5%;
+    padding: .5em;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.rsvp .email-input:focus {
+	outline:none;
+}
+
+.rsvp .btn{
+	background-color:#0075AD;
+	width:100%;
+	color:#FFF;
+	padding-bottom: 2.5em;
+	line-height: 2.5em;
+	font-weight: bold;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.rsvp .btn:hover{
+	background-color:#0098DF;
 }
 
 #nav input:hover {
@@ -3858,19 +3873,22 @@ padding: 0 2px;
 font-style: normal;
 }
 .talk-title {
-width: 56%;
 overflow: auto;
 float: left;
+width: 100%;
+text-align: center;
 }
 .talk-details {
 height: 100%;
 float: left;
-padding-left: 4em;
+width: 100%;
 }
 section {
 padding: 5%;
-width: 93%;
+width: 60%;
+margin: 5em auto;
 overflow: auto;
+background-color: rgba(255,255,255,.2);
 }
 section.odd {
 background: transparent url(/images/features/bg/section2.png?1369759276) repeat 0 0;
