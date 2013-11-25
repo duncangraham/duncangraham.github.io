@@ -304,7 +304,7 @@ header {
   opacity: 1;
   /*FUN FACT! animating width fucks with line height, effectively making it 0*/ }
 
-.char5 {
+header .char5 {
   position: absolute;
   -webkit-transform: rotate(180deg);
   margin-top: 1px;
@@ -314,10 +314,10 @@ header {
   -o-transform: rotate(180deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
 
-.char2:hover {
+header .char2:hover {
   cursor: pointer; }
 
-.char6 {
+header .char6 {
   padding-left: 1em; }
 
 /*****************************************************************************/
@@ -334,7 +334,8 @@ header {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .4em;
-  overflow: scroll; }
+  overflow: scroll;
+  margin-bottom: 3em; }
 .entry-content code {
   border: 1px solid #ddd;
   background-color: #eef;

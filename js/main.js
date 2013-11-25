@@ -41,12 +41,12 @@ var colorize = function (e) {
             'border-bottom-color': 'rgb(' + rgb2.join(',') + ')'
         });
 
-        $('.char2').css('color', '#FFF');
+        $('header .char2').css('color', '#FFF');
 
         console.log('rgb(' + rgb2.join(',') + ')');
 
     } else {
-        $('.char2').css('color', 'rgb(' + rgb.join(',') + ')');
+        $('header .char2').css('color', 'rgb(' + rgb.join(',') + ')');
     }
 };
 
@@ -56,7 +56,7 @@ $win.resize(getWidth).mousemove(function (e) {
     colorize(mousePos);
 }).resize();
 
-$('.char2.insanity').on('click', function () {
+$('header .char2.insanity').on('click', function () {
     if ($body.hasClass('insanity')) {
         $body.removeClass('insanity');
 
