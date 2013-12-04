@@ -18,15 +18,15 @@
     margin: 0px auto;
     }
     .grid {
-    width: 200%;
+    width: 140%;
     list-style-type: none;
     padding-top: 2em;
     }
     .grid_item {
     background-color: #CCC;
-    height: 10em;
-    width: 10em;
-    margin: .2em;
+    height: 15em;
+    width: 15em;
+    margin: 3em;
     float: left;
     border-radius: 50%;
     -webkit-transform: scale(.1);
@@ -43,147 +43,28 @@
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="main">
+      <h2>Device Orientation</h2>
+      <table>
+        <tbody><tr>
+          <td>Event Supported</td>
+          <td id="doEvent">DeviceOrientation</td>
+        </tr>
+        <tr>
+          <td>Tilt Left/Right [gamma]</td>
+          <td id="doTiltLR">-1</td>
+        </tr>
+        <tr>
+          <td>Tilt Front/Back [beta]</td>
+          <td id="doTiltFB">0</td>
+        </tr>
+        <tr>
+          <td>Direction [alpha]</td>
+          <td id="doDirection">0</td>
+        </tr>
+      </tbody></table>
+    </div>
     <ul class="grid center">
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
         <li class='grid_item'></li>
         <li class='grid_item'></li>
         <li class='grid_item'></li>
@@ -201,38 +82,130 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
     $(function() {
-    // get mouse position
-    var mouseX = 0;
-    var mouseY = 0;
-    var $items = $('.grid_item');
-    var spanX = [$items.length];
-    var spanY = [$items.length];
-    $items.each(function(i) {
-    var offset = $(this).offset();
-    spanX[i] = offset.left + $(this).width()/2;
-    spanY[i] = offset.top + $(this).height()/2;
-    });
+
+    init();
     
-    $('html').mousemove(function(e) {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
-    $items.each(function(i) {
-    var x = spanX[i] - mouseX,
-    y = spanY[i] - mouseY,
-    br = Math.round(Math.sqrt( x*x + y*y ))*.1,
-    s = 8 / br;
-    if ( s > 1 ){
-    s = 1;
+    var count = 0,
+        body = $('body'),
+        widthMid = ( $(window).width() )/2,
+        heightMid = ( $(window).height() )/2,
+        $items = $('.grid_item'),
+        $itemsLen = $items.length,
+        spanX = [$items.length],
+        spanY = [$items.length],
+        rainbow = function (numOfSteps, step) {
+            //there are 360 distinct hue values in hsl
+            //unique number representing % through items. increases approaching 360
+            var h = (360 / numOfSteps) * step;
+            // FUN FACT! ~~ is shorthand for Math.floor(). not relevant anymore, but still useful.
+
+            var color = "hsla(" + h + ", 75%, 60%, 1)";
+            return (color);
+        }
+
+    $items.each(function( key ) {
+        console.log($itemsLen);
+        console.log(key);
+        var color = rainbow( $itemsLen, key );
+        console.log(color);
+
+        $(this).css('background-color', color );
+    });
+
+    //TODO: Get initial values, then base movement off of delta values.
+    
+    function init() {
+
+      if (window.DeviceOrientationEvent) {
+        document.getElementById("doEvent").innerHTML = "DeviceOrientation";
+        // Listen for the deviceorientation event and handle the raw data
+        window.addEventListener('deviceorientation', function(eventData) {
+          // gamma is the left-to-right tilt in degrees, where right is positive
+          var tiltLR = eventData.gamma;
+          
+          // beta is the front-to-back tilt in degrees, where front is positive
+          var tiltFB = eventData.beta;
+          
+          // alpha is the compass direction the device is facing in degrees
+          var dir = eventData.alpha
+          
+          // call our orientation event handler
+          deviceOrientationHandler(tiltLR, tiltFB, dir);
+          }, false);
+      } else {
+        document.getElementById("doEvent").innerHTML = "Not supported on your device or browser.  Sorry."
+      }
     }
-    // RUNAWAY!
-    if ( br < 50 ) {
-    $(this).css({
-    'border-radius': br + '%',
-    'webkitTransform': 'scale('+s+')'
-    });
+  
+    function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+        var left = $('body').offset().left,
+            top = $('body').offset().top;
+
+
+        $items.each(function(i) {
+            var offset = $(this).offset();
+            spanX[i] = offset.left + $(this).width()/2;
+            spanY[i] = offset.top + $(this).height()/2;
+            
+            var diffX  = 100/Math.abs( widthMid-spanX[i] )/2,
+                diffY = 100/Math.abs( heightMid-spanY[i] )/2;
+
+            if ( diffY > 1 ) {
+                diffY = 1;
+            }
+
+            if ( diffX > 1 ) {
+                diffX = 1;
+            }
+
+            diffSum = diffY * diffX;
+            $(this).css({
+                    'webkitTransform': 'scale('+diffSum+')'
+            });
+        });
+
+        document.getElementById("doTiltLR").innerHTML = Math.round(tiltLR);
+        document.getElementById("doTiltFB").innerHTML = Math.round(tiltFB);
+        document.getElementById("doDirection").innerHTML = Math.round(dir);
+
+        $('body').offset({ top: top-tiltFB , left: left-tiltLR });
     }
-    });
-    });
+    
+
+    // If user uses mouse, rather than gyroscope.
+
+    // get mouse position
+    // var mouseX = 0;
+    // var mouseY = 0;
+    // var $items = $('.grid_item');
+    // var spanX = [$items.length];
+    // var spanY = [$items.length];
+    // $items.each(function(i) {
+    // var offset = $(this).offset();
+    // spanX[i] = offset.left + $(this).width()/2;
+    // spanY[i] = offset.top + $(this).height()/2;
+    // });
+    
+    // $('html').mousemove(function(e) {
+    //     mouseX = e.pageX;
+    //     mouseY = e.pageY;
+    //     $items.each(function(i) {
+    //         var x = spanX[i] - mouseX,
+    //         y = spanY[i] - mouseY,
+    //         br = Math.round(Math.sqrt( x*x + y*y ))*.1,
+    //         s = 8 / br;
+    //         if ( s > 1 ){
+    //         s = 1;
+    //         }
+
+    //         if ( br < 50 ) {
+    //             $(this).css({
+    //                 'border-radius': br + '%',
+    //                 'webkitTransform': 'scale('+s+')'
+    //             });
+    //         }
+    //     });
+    // });
     
     });
     </script>
