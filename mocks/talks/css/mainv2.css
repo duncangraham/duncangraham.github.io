@@ -1680,6 +1680,11 @@ font-size: 1em;
 body {
 font-size: 62.50%;
 min-width: 1024px;
+background: url(../img/bg.jpg)no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 .bg-img {
 background: url(../img/bg.jpg)no-repeat center center fixed;
@@ -1742,6 +1747,7 @@ text-align: center;
 overflow: auto;
 margin: 4em 5em 0em;
 }
+
 #header {
 z-index: 1;
 height: 100%;
@@ -1749,12 +1755,6 @@ width:100%;
 float: left;
 color: #333;
 text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
-background: url(../img/bg.jpg)no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-position: fixed;
 }
 .home #header {
 position: fixed;

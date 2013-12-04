@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "glitch text"
+type: "experiment"
+date:   2013-11-22 23:00:00
+---
+<style>
+.glitchText span {
+	position: static;
+}
+</style>
+
+
+<p class="first-paragraph glitchText">For a few weeks now I've been interested in glitch art. For a few weeks now I've been interested in glitch art. For a few weeks now I've been interested in glitch art. For a few weeks now I've been interested in glitch art. For a few weeks now I've been interested in glitch art. For a few weeks now I've been interested in glitch art.</p>
+<script src="/js/jquery.lettering-0.6.1.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$(".glitchText").lettering();
+	
+	var $el = $('.glitchText span');
+	var spanX = new Array( $el.length );
+	var spanY = new Array( $el.length );
+	var origArr = [];
+	var charLoop = {};
+	var $this;
+	var mouseX = 0;
+	var mouseY = 0;
+
+	$el.each(function(k,v){
+		origArr[k] = v.innerHTML;
+	});
+
+	$('body').mousemove(function(e) {
+		mouseX = e.pageX;
+		mouseY = e.pageY;
+		$el.each(function(k, v) {
+			var offset = $(this).offset();
+			spanX[k] = offset.left + $(this).width()/2;
+			spanY[k] = offset.top + $(this).height()/2;
+
+			v = $(v);
+			var x = spanX[k] - mouseX;
+			var y = spanY[k] - mouseY;
+			var d = Math.round(Math.sqrt( x*x + y*y )*4);
+			if (d < 200) {
+				charLoop[k] = setInterval(function () {
+				randomChar(v);
+				}, d*2);
+			} else {
+				if(charLoop[k]) {
+					clearInterval( charLoop[k] );
+					$el[k].innerHTML = origArr[k];
+				}
+			}
+		});
+	});
+
+	var randomChar = function (char) {
+
+		var uni = Math.random() * (9999 - 127) + 127;
+		return char.text(String.fromCharCode(uni));
+	};
+});
+</script>

@@ -7,11 +7,21 @@ var windowOffset;
 
 $('.nav-item').on('click', function(e){
   e.preventDefault();
-  var $this = $(this).attr('href').replace('#', '');
+  var $this = $(this).attr('href');
+  var scrollTo;
 
-  console.log($this);
+  if ($this == "#careers") {
+    scrollTo = careers;
+  } else if ($this == "#lifeAtPost") {
+    scrollTo = lifeAtPost;
+  } else if ($this == "#internships") {
+    scrollTo = intern;
+  } else {
+    scrollTo = social;
+  }
 
-  $("html, body").animate({ scrollTop: $this }, 400);
+
+  $("html, body").animate({ scrollTop: scrollTo-30+'px' }, 600);
 });
 
 
@@ -101,9 +111,9 @@ $('.face').on('click', function(){
   $('.quote-author').text(testimonials[i].author);
 });
 
-// setInterval(function(){
-//   var $this = $('.face.current').next();
 
-//   $this.trigger('click');
-// }, 4000);
+$('.job-sort').on('click',function(){
+  $('.list-job-sort').slideToggle();
+});
+
 

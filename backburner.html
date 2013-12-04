@@ -15,18 +15,19 @@ title: dvncan
   <li class="sort-opt font-light"><a href="/backburner.html">BACKBURNER</a></li>
   <li class="sort-opt font-light"><a href="https://twitter.com/duncangraham">TWITTER</a></li>
 </ul>
+
 <ul class="entries font-large space-top">
   {% for post in site.posts %}
+  {% if post.type == 'idea' %}
   <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry tk-adobe-garamond-pro ">
     <a href="{{ post.url }}" class="display-block">
     <span>{{ post.title }}</span>
     <ul class="float-right font-mini space-top_mini">
       <li class="sort-opt sort-date post-date">{{ post.date | date: "%m.%d.%Y" }}</li>
-<!--       <li class="sort-opt font-light">|</li>
-      <li class="sort-opt sort-type post-type font-light ">{{ post.type }}</li> -->
     </ul>
     </a>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
 <!-- <nav class="footer tk-adobe-garamond-pro">

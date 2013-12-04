@@ -42,7 +42,7 @@ p {
 	border-top: 1px solid #e0e0e0;
 	border-bottom: 1px solid #e0e0e0;
 	margin: 0em auto;
-	width:10.5em;
+	width:20em;
 }
 
 .entry-sort.meta {
@@ -64,6 +64,10 @@ p {
 
 .sort-opt:last-child {
 	padding-right: 0em;
+}
+
+.sort-opt:hover {
+	color:#333;
 }
 
 .entry {
