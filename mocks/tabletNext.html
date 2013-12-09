@@ -14,26 +14,36 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
     <style>
+    body {
+    background-color: #F9F9F9;
+    }
+
     .center {
     margin: 0px auto;
     }
-    .grid {
-    width: 140%;
+
+    #node-field {
+    background-color: #FFF;
+    margin: 2em;
+    width: 100%;
     list-style-type: none;
     padding-top: 2em;
+    -webkit-transform: translate( 10px, 10px );
     }
-    .grid_item {
+
+    .node {
     background-color: #CCC;
     height: 15em;
     width: 15em;
-    margin: 3em;
     float: left;
     border-radius: 50%;
+    box-sizing: content-box;
     -webkit-transform: scale(.1);
-    transistion: all .4s;
-    ---webkit-transition: all .4s;
+    transistion: all .2s;
+    -webkit-transition: all .2s ease-in-out;
     }
-    .grid_item:hover {
+
+    .node:active {
     border-radius: 0% !important;
     -webkit-transform: scale(1) !important;
     }
@@ -64,33 +74,28 @@
         </tr>
       </tbody></table>
     </div>
-    <ul class="grid center">
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
-        <li class='grid_item'></li>
+    <ul id="node-field" class="center">
+<!--         <li class='node'></li>
+        <li class='node'></li>
+        <li class='node'></li>
+        <li class='node'></li>
+        <li class='node'></li>
+        <li class='node'></li>
+        <li class='node'></li>
+        <li class='node'></li> -->
     </ul>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
     <script type="text/javascript">
     $(function() {
 
     init();
     
     var count = 0,
-        body = $('body'),
-        widthMid = ( $(window).width() )/2,
-        heightMid = ( $(window).height() )/2,
-        $items = $('.grid_item'),
-        $itemsLen = $items.length,
+        widthMid = $(window).width()/2,
+        heightMid = $(window).height()/2,
+        // $items = $('.grid_item'),
+        // $itemsLen = $items.length,
         spanX = [$items.length],
         spanY = [$items.length],
         rainbow = function (numOfSteps, step) {
@@ -101,22 +106,53 @@
 
             var color = "hsla(" + h + ", 75%, 60%, 1)";
             return (color);
-        }
+        },
+        // shim layer with setTimeout fallback
+        // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+        requestAnimFrame = (function(){
+          return  window.requestAnimationFrame       || 
+                  window.webkitRequestAnimationFrame || 
+                  window.mozRequestAnimationFrame    || 
+                  window.oRequestAnimationFrame      || 
+                  window.msRequestAnimationFrame     || 
+                  function( callback, element){
+                    window.setTimeout(callback, 1000 / 60);
+                  };
+        })();
 
-    $items.each(function( key ) {
-        console.log($itemsLen);
-        console.log(key);
-        var color = rainbow( $itemsLen, key );
-        console.log(color);
+    //the node constructor
+    function Node ( nodeField ) {    
+        this.nodeField = nodeField;
 
-        $(this).css('background-color', color );
-    });
+        this.element = document.createElement('li');
+        this.element.className = 'node';
 
-    //TODO: Get initial values, then base movement off of delta values.
-    
-    function init() {
+    };
 
-      if (window.DeviceOrientationEvent) {
+    //the container object
+    function NodeField ( $el ) {
+        this.element = $el;
+        this.height = this.element.offsetHeight;
+        this.width = this.element.offsetWidth;  
+
+        this.nodes = [];
+
+        var frag = document.createDocumentFragment(),
+            node = new Node( this.element );
+
+        frag.appendChild( node.element );
+        this.nodes.push( node );
+
+        console.log(this.element);
+        this.element.appendChild( frag );
+
+        //dynamically create nodes later with a document fragment
+        //also, postion each absolutely with webkit transforms
+
+        this.animate();
+    };
+
+    NodeField.prototype.animate = function () {
         document.getElementById("doEvent").innerHTML = "DeviceOrientation";
         // Listen for the deviceorientation event and handle the raw data
         window.addEventListener('deviceorientation', function(eventData) {
@@ -132,33 +168,63 @@
           // call our orientation event handler
           deviceOrientationHandler(tiltLR, tiltFB, dir);
           }, false);
-      } else {
+
+        for( i = 0; i < this.nodes.length; i++ ) {
+            this.nodes[i].render();
+        }
+
+        var frame = this;
+        requestAnimFrame( function () { frame.animate(); } );
+    };   
+
+
+    // $items.each(function( key ) {
+    //     var color = rainbow( $itemsLen, key );
+
+    //     $(this).css('background-color', color );
+    // });
+
+    //TODO: Get initial values, then base movement off of delta values.
+    
+    function init() {
+        var $nf = document.getElementById('node-field');
+        new NodeField ( $nf );
+
+      if (!window.DeviceOrientationEvent) {
         document.getElementById("doEvent").innerHTML = "Not supported on your device or browser.  Sorry."
       }
     }
   
+    // this should be moved to the animate function
     function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-        var left = $('body').offset().left,
-            top = $('body').offset().top;
-
-
+        var style = window.getComputedStyle($('.grid').get(0)),
+            matrix = new WebKitCSSMatrix(style.webkitTransform),
+            currX = matrix.m41,
+            currY = matrix.m42;
+            deltaX = currX-tiltLR,
+            deltaY = currY-tiltFB;
+            
         $items.each(function(i) {
             var offset = $(this).offset();
             spanX[i] = offset.left + $(this).width()/2;
-            spanY[i] = offset.top + $(this).height()/2;
+            spanY[i] = offset.top;
             
-            var diffX  = 100/Math.abs( widthMid-spanX[i] )/2,
-                diffY = 100/Math.abs( heightMid-spanY[i] )/2;
+            var diffX  = (widthMid - (Math.abs(widthMid - spanX[i])))/widthMid,
+                diffY = (heightMid - (Math.abs(heightMid - spanY[i])))/heightMid,
+                diffSum;
 
-            if ( diffY > 1 ) {
-                diffY = 1;
+            if (diffX < .1 ) {
+                diffX = .1
+            }
+            if (diffY < .1 ) {
+                diffY = .1
             }
 
-            if ( diffX > 1 ) {
-                diffX = 1;
-            }
+            diffSum = ( diffX + diffY )/2;
 
-            diffSum = diffY * diffX;
+            console.log(diffSum);
+
+
             $(this).css({
                     'webkitTransform': 'scale('+diffSum+')'
             });
@@ -168,44 +234,11 @@
         document.getElementById("doTiltFB").innerHTML = Math.round(tiltFB);
         document.getElementById("doDirection").innerHTML = Math.round(dir);
 
-        $('body').offset({ top: top-tiltFB , left: left-tiltLR });
+        //definitely smoother.
+        $('.grid').css( 'transform', 'translate(' + deltaX + 'px,' + deltaY + 'px)' );        
     }
     
 
-    // If user uses mouse, rather than gyroscope.
-
-    // get mouse position
-    // var mouseX = 0;
-    // var mouseY = 0;
-    // var $items = $('.grid_item');
-    // var spanX = [$items.length];
-    // var spanY = [$items.length];
-    // $items.each(function(i) {
-    // var offset = $(this).offset();
-    // spanX[i] = offset.left + $(this).width()/2;
-    // spanY[i] = offset.top + $(this).height()/2;
-    // });
-    
-    // $('html').mousemove(function(e) {
-    //     mouseX = e.pageX;
-    //     mouseY = e.pageY;
-    //     $items.each(function(i) {
-    //         var x = spanX[i] - mouseX,
-    //         y = spanY[i] - mouseY,
-    //         br = Math.round(Math.sqrt( x*x + y*y ))*.1,
-    //         s = 8 / br;
-    //         if ( s > 1 ){
-    //         s = 1;
-    //         }
-
-    //         if ( br < 50 ) {
-    //             $(this).css({
-    //                 'border-radius': br + '%',
-    //                 'webkitTransform': 'scale('+s+')'
-    //             });
-    //         }
-    //     });
-    // });
     
     });
     </script>
