@@ -23,12 +23,10 @@
     }
 
     #node-field {
-    background-color: #FFF;
     margin: 2em;
     width: 100%;
     list-style-type: none;
     padding-top: 2em;
-    -webkit-transform: translate( 10px, 10px );
     }
 
     .node {
@@ -37,10 +35,8 @@
     width: 15em;
     float: left;
     border-radius: 50%;
+    position: absolute;
     box-sizing: content-box;
-    -webkit-transform: scale(.1);
-    transistion: all .2s;
-    -webkit-transition: all .2s ease-in-out;
     }
 
     .node:active {
@@ -50,58 +46,37 @@
     </style>
 </head>
 <body>
-    <!--[if lt IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="main">
-      <h2>Device Orientation</h2>
-      <table>
-        <tbody><tr>
-          <td>Event Supported</td>
-          <td id="doEvent">DeviceOrientation</td>
-        </tr>
-        <tr>
-          <td>Tilt Left/Right [gamma]</td>
-          <td id="doTiltLR">-1</td>
-        </tr>
-        <tr>
-          <td>Tilt Front/Back [beta]</td>
-          <td id="doTiltFB">0</td>
-        </tr>
-        <tr>
-          <td>Direction [alpha]</td>
-          <td id="doDirection">0</td>
-        </tr>
-      </tbody></table>
-    </div>
     <ul id="node-field" class="center">
-<!--         <li class='node'></li>
-        <li class='node'></li>
-        <li class='node'></li>
-        <li class='node'></li>
-        <li class='node'></li>
-        <li class='node'></li>
-        <li class='node'></li>
-        <li class='node'></li> -->
     </ul>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script type="text/javascript">
+    /* Modernizr 2.0 (Custom Build) | MIT & BSD
+     * Contains: csstransforms | csstransforms3d | cssclasses | prefixed | teststyles | testprop | testallprops | prefixes | domprefixes
+     */
+    /*global Modernizr: true */
+    ;window.Modernizr=function(a,b,c){function C(a,b){var c=a.charAt(0).toUpperCase()+a.substr(1),d=(a+" "+o.join(c+" ")+c).split(" ");return B(d,b)}function B(a,b){for(var d in a)if(k[a[d]]!==c)return b=="pfx"?a[d]:!0;return!1}function A(a,b){return!!~(""+a).indexOf(b)}function z(a,b){return typeof a===b}function y(a,b){return x(n.join(a+";")+(b||""))}function x(a){k.cssText=a}var d="2.0",e={},f=!0,g=b.documentElement,h=b.head||b.getElementsByTagName("head")[0],i="modernizr",j=b.createElement(i),k=j.style,l,m=Object.prototype.toString,n=" -webkit- -moz- -o- -ms- -khtml- ".split(" "),o="Webkit Moz O ms Khtml".split(" "),p={},q={},r={},s=[],t=function(a,c,d,e){var f,h,j,k=b.createElement("div");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:i+(d+1),k.appendChild(j);f=["&shy;","<style>",a,"</style>"].join(""),k.id=i,k.innerHTML+=f,g.appendChild(k),h=c(k,a),k.parentNode.removeChild(k);return!!h},u,v={}.hasOwnProperty,w;!z(v,c)&&!z(v.call,c)?w=function(a,b){return v.call(a,b)}:w=function(a,b){return b in a&&z(a.constructor.prototype[b],c)};var D=function(a,c){var d=a.join(""),f=c.length;t(d,function(a,c){var d=b.styleSheets[b.styleSheets.length-1],g=d.cssText||d.cssRules[0].cssText,h=a.childNodes,i={};while(f--)i[h[f].id]=h[f];e.csstransforms3d=i.csstransforms3d.offsetLeft===9},f,c)}([,["@media (",n.join("transform-3d),("),i,")","{#csstransforms3d{left:9px;position:absolute}}"].join("")],[,"csstransforms3d"]);p.csstransforms=function(){return!!B(["transformProperty","WebkitTransform","MozTransform","OTransform","msTransform"])},p.csstransforms3d=function(){var a=!!B(["perspectiveProperty","WebkitPerspective","MozPerspective","OPerspective","msPerspective"]);a&&"webkitPerspective"in g.style&&(a=e.csstransforms3d);return a};for(var E in p)w(p,E)&&(u=E.toLowerCase(),e[u]=p[E](),s.push((e[u]?"":"no-")+u));x(""),j=l=null,e._version=d,e._prefixes=n,e._domPrefixes=o,e.testProp=function(a){return B([a])},e.testAllProps=C,e.testStyles=t,e.prefixed=function(a){return C(a,"pfx")},g.className=g.className.replace(/\bno-js\b/,"")+(f?" js "+s.join(" "):"");return e}(this,this.document);
+
+
+
+
     $(function() {
 
-    init();
-    
     var count = 0,
+        tiltLR,
+        tiltFB,
+        dir,
         widthMid = $(window).width()/2,
         heightMid = $(window).height()/2,
+        transformProp = Modernizr.prefixed('transform')
         // $items = $('.grid_item'),
         // $itemsLen = $items.length,
-        spanX = [$items.length],
-        spanY = [$items.length],
-        rainbow = function (numOfSteps, step) {
+        // spanX = [$items.length],
+        // spanY = [$items.length],
+        rainbow = function () {
             //there are 360 distinct hue values in hsl
-            //unique number representing % through items. increases approaching 360
-            var h = (360 / numOfSteps) * step;
+            var h = Math.random() * 360;
             // FUN FACT! ~~ is shorthand for Math.floor(). not relevant anymore, but still useful.
 
             var color = "hsla(" + h + ", 75%, 60%, 1)";
@@ -120,54 +95,91 @@
                   };
         })();
 
+    // Listen for the deviceorientation event and handle the raw data
+    window.addEventListener('deviceorientation', function(eventData) {
+        // gamma is the left-to-right tilt in degrees, where right is positive
+        tiltLR = eventData.gamma/2;
+              
+        // beta is the front-to-back tilt in degrees, where front is positive
+        tiltFB = eventData.beta/2;
+              
+        // alpha is the compass direction the device is facing in degrees
+        dir = eventData.alpha/2;
+        // call our orientation event handler
+        // deviceOrientationHandler(tiltLR, tiltFB, dir);
+    }, false);    
+
     //the node constructor
-    function Node ( nodeField ) {    
+    function Node ( nodeField, transX, transY ) {    
         this.nodeField = nodeField;
 
         this.element = document.createElement('li');
+        this.element.style.backgroundColor = rainbow();
         this.element.className = 'node';
+        this.offsetY = this.element.offsetTop;
+        this.offsetX = this.element.offsetLeft;
+        this.compStyle = window.getComputedStyle( this.element );
+
+        this.element.style[ transformProp ] = 'translate(' + transX + 'px,' + transY + 'px) scale(1)'; 
 
     };
 
+    Node.prototype.render = function ( ) {   
+
+        var style = this.compStyle,
+            matrix = new WebKitCSSMatrix( style.webkitTransform ),
+            width = this.element.offsetWidth/2,
+            height = this.element.offsetHeight/2,
+            currX = matrix.m41,
+            currY = matrix.m42,
+            deltaX = currX+tiltLR,
+            deltaY = currY+tiltFB;    
+
+        var diffX  = (widthMid - (Math.abs(widthMid - (deltaX+width) )))/widthMid,
+            diffY = (heightMid - (Math.abs(heightMid - (deltaY+height)  )))/heightMid,
+            diffSum;
+
+
+
+        diffSum = Math.sqrt( (diffX*diffX) + (diffY*diffY) )/2;
+
+        //definitely smoother.
+        this.element.style[ transformProp ] = 'translate(' + deltaX + 'px,' + deltaY + 'px) scale(' + diffSum + ')'; 
+    };
+
     //the container object
-    function NodeField ( $el ) {
+    function NodeField ( $el, rows, cols ) {
         this.element = $el;
         this.height = this.element.offsetHeight;
         this.width = this.element.offsetWidth;  
 
         this.nodes = [];
 
-        var frag = document.createDocumentFragment(),
-            node = new Node( this.element );
 
-        frag.appendChild( node.element );
-        this.nodes.push( node );
+        var frag = document.createDocumentFragment();
 
-        console.log(this.element);
+        var transX = 0,
+            transY = 0;
+
+        //TODO finish this
+        for ( var r = 0; r < rows; r++ ) {
+            for ( var c = 0; c < cols; c++ ) {
+                var node = new Node( this.element, transX, transY );
+                frag.appendChild( node.element );
+                this.nodes.push( node );
+                transX = transX + 240;
+            }
+            transY = transY + 240;
+            transX = 0;
+        }
+
+
         this.element.appendChild( frag );
-
-        //dynamically create nodes later with a document fragment
-        //also, postion each absolutely with webkit transforms
 
         this.animate();
     };
 
     NodeField.prototype.animate = function () {
-        document.getElementById("doEvent").innerHTML = "DeviceOrientation";
-        // Listen for the deviceorientation event and handle the raw data
-        window.addEventListener('deviceorientation', function(eventData) {
-          // gamma is the left-to-right tilt in degrees, where right is positive
-          var tiltLR = eventData.gamma;
-          
-          // beta is the front-to-back tilt in degrees, where front is positive
-          var tiltFB = eventData.beta;
-          
-          // alpha is the compass direction the device is facing in degrees
-          var dir = eventData.alpha
-          
-          // call our orientation event handler
-          deviceOrientationHandler(tiltLR, tiltFB, dir);
-          }, false);
 
         for( i = 0; i < this.nodes.length; i++ ) {
             this.nodes[i].render();
@@ -177,69 +189,18 @@
         requestAnimFrame( function () { frame.animate(); } );
     };   
 
-
-    // $items.each(function( key ) {
-    //     var color = rainbow( $itemsLen, key );
-
-    //     $(this).css('background-color', color );
-    // });
-
     //TODO: Get initial values, then base movement off of delta values.
     
     function init() {
         var $nf = document.getElementById('node-field');
-        new NodeField ( $nf );
+        new NodeField ( $nf, 10, 10 );
 
       if (!window.DeviceOrientationEvent) {
         document.getElementById("doEvent").innerHTML = "Not supported on your device or browser.  Sorry."
       }
     }
-  
-    // this should be moved to the animate function
-    function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-        var style = window.getComputedStyle($('.grid').get(0)),
-            matrix = new WebKitCSSMatrix(style.webkitTransform),
-            currX = matrix.m41,
-            currY = matrix.m42;
-            deltaX = currX-tiltLR,
-            deltaY = currY-tiltFB;
-            
-        $items.each(function(i) {
-            var offset = $(this).offset();
-            spanX[i] = offset.left + $(this).width()/2;
-            spanY[i] = offset.top;
-            
-            var diffX  = (widthMid - (Math.abs(widthMid - spanX[i])))/widthMid,
-                diffY = (heightMid - (Math.abs(heightMid - spanY[i])))/heightMid,
-                diffSum;
 
-            if (diffX < .1 ) {
-                diffX = .1
-            }
-            if (diffY < .1 ) {
-                diffY = .1
-            }
-
-            diffSum = ( diffX + diffY )/2;
-
-            console.log(diffSum);
-
-
-            $(this).css({
-                    'webkitTransform': 'scale('+diffSum+')'
-            });
-        });
-
-        document.getElementById("doTiltLR").innerHTML = Math.round(tiltLR);
-        document.getElementById("doTiltFB").innerHTML = Math.round(tiltFB);
-        document.getElementById("doDirection").innerHTML = Math.round(dir);
-
-        //definitely smoother.
-        $('.grid').css( 'transform', 'translate(' + deltaX + 'px,' + deltaY + 'px)' );        
-    }
-    
-
-    
+    window.addEventListener( 'load', init, false);
     });
     </script>
 </body>
