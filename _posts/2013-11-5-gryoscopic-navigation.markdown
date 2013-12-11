@@ -12,12 +12,16 @@ date:   2013-12-11 11:00:00
 	}
 	header, .twitter {
 		z-index: 1000;
+		position: fixed;
+		left: 0em
+	}
+
+	header {
+		top: 0em;
 	}
 
 	.twitter {
-		position: fixed;
 		bottom:.5em;
-		left:0em;
 		width:100%;
 	}
 
