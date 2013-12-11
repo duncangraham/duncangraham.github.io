@@ -7,6 +7,9 @@ date:   2013-12-5 11:00:00
 
 <!-- Post specific styles -->
 <style>
+	nav .home, nav .nav {
+		z-index: 1001;
+	}
 	header, .twitter {
 		z-index: 1000;
 	}
