@@ -22,6 +22,16 @@
 
     }
 
+    #fan {
+        position: absolute;
+        top: 50%;
+        left:50%;
+    }
+
+    #fan:hover {
+        cursor: ew-resize;
+    }
+
     #origin {
         position: fixed;
         top:50%;
@@ -29,8 +39,9 @@
         z-index: 100;
     }
 
-    #stack {
+    .stack {
         list-style-type: none;
+        position: absolute;
     }
 
     .card {
@@ -38,6 +49,7 @@
         position: absolute;
         top:0;
         left: 0;
+        background-color: #FFF;
         transition: all .3s;
     }
 
@@ -52,7 +64,7 @@
 </head>
 <body>
     <div id="origin">+</div>
-    <ul id="stack" class="center">
+    <ul id="fan" class="center">
     </ul>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -74,17 +86,9 @@
         midY = window.innerHeight/2;
         posX = 0,
         posY = 0,
-        width = 500,
-        height = 250,
+        width = 250,
+        height = 500,
         transformProp = Modernizr.prefixed('transform'),
-        rainbow = function () {
-            //there are 360 distinct hue values in hsl
-            var h = Math.random() * 360;
-            // FUN FACT! ~~ is shorthand for Math.floor(). not relevant anymore, but still useful.
-
-            var color = "hsla(" + h + ", 100%, 75%, .8)";
-            return (color);
-        },
         // shim layer with setTimeout fallback
         // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
         requestAnimFrame = (function(){
@@ -106,15 +110,7 @@
         this.element.className = 'card';
         this.element.style.width = width + 'px';
         this.element.style.height = height + 'px';
-        this.element.style.backgroundColor = rainbow();
-
-
-        //makes an unshuffled stack
-        posX = midX-(width/2) + (Math.random()*100);
-        posY = midY-(height/2) + (Math.random()*100);
-
         this.element.style[ transformProp ]  = 'translate( ' + posX + 'px, ' + posY + 'px )';
-
     };
 
     Card.prototype.render = function ( x, y ) {
@@ -122,22 +118,30 @@
     };
 
     //the container object
-    function Stack ( $el, numCards ) {
-        this.element = $el;
+    function Stack ( $fan, numCards, rotate ) {
+        this.fan = $fan;
         this.state = 'stack';
 
+        
         this.cards = [];
         var frag = document.createDocumentFragment();
+        this.element = document.createElement('ul');
+        this.element.className = 'stack'; 
+        frag.appendChild( this.element );
 
 
         //make this a prototype.stack method
-        for ( i; i < numCards; i++ ) {
+        for ( i = 0 ; i < numCards; i++ ) {
             var card = new Card( this.element );
             this.cards.push(card);
-            frag.appendChild( card.element );
+            frag.querySelectorAll('.stack')[0].appendChild( card.element );
         }
 
-        this.element.appendChild( frag );
+        this.fan.appendChild( frag );
+
+        this.element.style.width = width + 'px';
+        this.element.style.height = height + 'px';
+        this.element.style[ transformProp ]  = 'translate( ' + posX + 'px, ' + posY + 'px ) rotate(' + rotate + 'deg)';
 
         this.clickEvents();
     }
@@ -164,8 +168,8 @@
 
         for( i ; i < this.cards.length; i++ ) {
             //makes an unshuffled stack
-            posX = midX-(width/2) + (Math.random()*100);
-            posY = midY-(height/2) + (Math.random()*100);
+            posX = midX-(width/2);
+            posY = midY-(height/2);
             this.cards[i].render( posX, posY );
         }
 
@@ -198,31 +202,25 @@
         requestAnimFrame( function () { frame.grid(); } );
     };   
 
-    Stack.prototype.contract = function () {
+    function Fan ( $el, numStacks, numCards ) {
+        this.element = $el;
+        var stack,
+            rotate = 0,
+            deg = 360/numStacks;
 
-        for( i = 0; i < this.nodes.length; i++ ) {
-            this.nodes[i].render();
-        }
+        for ( var i = 0; i < numStacks; i ++ ) {
+            stack = new Stack ( this.element, numCards, rotate );
+            rotate = rotate + deg;
+        };
 
-        var frame = this;
-        requestAnimFrame( function () { frame.animate(); } );
-    };   
 
-    Stack.prototype.sort = function () {
-
-        for( i = 0; i < this.nodes.length; i++ ) {
-            this.nodes[i].render();
-        }
-
-        var frame = this;
-        requestAnimFrame( function () { frame.animate(); } );
-    };   
+    };
 
     //TODO: Get initial values, then base movement off of delta values.
     
     function init() {
-        var stack = document.getElementById('stack');
-        var myStack = new Stack ( stack, 25 );
+        var fan = document.getElementById('fan');
+        var myFan = new Fan ( fan, 25, 25 );
     }
 
 

@@ -217,7 +217,7 @@ date:   2013-12-11 11:00:00
         new NodeField ( $nf, 10, 10 );
 
       if (!window.DeviceOrientationEvent) {
-        document.getElementById("gyroAlert").innerHTML = "Not supported on your device or browser.  Sorry."
+        $('header').text("NO  GYROSCOPE  DETECTED  :(");
       }
     }
 
