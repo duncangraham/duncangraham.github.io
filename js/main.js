@@ -8,7 +8,26 @@ var $win = $(window),
     getWidth = function () {
         w = $win.width();
         h = $win.height();
+    },
+    rainbow = function () {
+        //there are 360 distinct hue values in hsl
+        var h = Math.random() * 360;
+        // FUN FACT! ~~ is shorthand for Math.floor(). not relevant anymore, but still useful
+        var color = "hsla(" + h + ", 75%, 60%, 1)";
+        return (color);
     };
+
+$('.entry').each( function () {
+    var hoverColor = rainbow(),
+        $this = $(this);
+
+    $this.hover( 
+            function () {
+                $this.css('color', hoverColor);
+            }, function () {
+                $this.css('color', '#444');
+            });
+});  
 
 $win.mousemove(function (e) {
     mousePos = e;
@@ -125,6 +144,8 @@ $('.sort-type a').on('click', function () {
     console.log(entArr);
     $('.entries').html(entArr);
 });
+
+
 
 var changeSort = function ($this) {
     $('.selected').removeClass('selected');

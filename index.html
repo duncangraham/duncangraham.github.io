@@ -1,7 +1,8 @@
 ---
-layout: dvncan
+layout: dvncan-dark
 title: dvncan
 ---
+<div class="head">
 <header class="name">
   <span class="char1">D</span>
   <span class="char2 insanity">V</span>
@@ -12,20 +13,25 @@ title: dvncan
 </header>
 <ul class="entry-sort flexbox flex_space-around">
   <li class="sort-opt font-light"><a href="/index.html">BLOG</a></li>
-  <li class="sort-opt font-light"><a href="/backburner.html">PROJECTS</a></li>
+  <li class="sort-opt font-light"><a href="/ideas.html">IDEAS</a></li>
   <li class="sort-opt font-light"><a href="/about.html">ABOUT</a></li>
   <li class="sort-opt font-light"><a href="https://twitter.com/duncangraham">TWITTER</a></li>
 </ul>
-<ul class="entries font-large space-top">
+</div>
+<div class="desc">
+  <h2 class=""></h2>
+  <p></p>
+</div>
+<ul class="entries content-spacing space-top">
   {% for post in site.posts %}
-  <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry tk-adobe-garamond-pro ">
-    <a href="{{ post.url }}" class="display-block">
-    <span>{{ post.title }}</span>
-    <ul class="float-right font-mini space-top_mini">
+  <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry">
+    <a href="{{ post.url }}">
+    <h2>{{ post.title }}</h2>
+    <!-- <ul class="float-right font-mini space-top_mini">
       <li class="sort-opt sort-date post-date">{{ post.date | date: "%m.%d.%Y" }}</li>
-<!--       <li class="sort-opt font-light">|</li>
-      <li class="sort-opt sort-type post-type font-light ">{{ post.type }}</li> -->
-    </ul>
+      <li class="sort-opt font-light">|</li>
+      <li class="sort-opt sort-type post-type font-light ">{{ post.type }}</li>
+    </ul> -->
     </a>
   </li>
   {% endfor %}
