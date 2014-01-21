@@ -55,6 +55,8 @@ A week ago I saw <a href="http://work.heinley.com/pixels#asset-656032">"Nightpix
 <canvas id="myCanvas5" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/sonofman.jpg" id="sonofman"/>
 
+<p>I'm currently turning this into a game. If you want to collaborate, shoot me an email: hello@dvncan.com or hit me up on twitter <a href="https://twitter.com/duncangraham">@duncangraham</a></p>
+
 <script type="text/javascript">
 
 window.onload = function() {
