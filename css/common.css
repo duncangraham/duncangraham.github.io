@@ -466,6 +466,9 @@ h2 {
   color: #FFF;
   background-color: #00F; }
 
+.first-paragraph::first-line {
+  text-transform: uppercase; }
+
 .entry-sort {
   height: 1em;
   padding: 2.6em 0em .76em;

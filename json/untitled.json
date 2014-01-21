@@ -1,0 +1,406 @@
+{
+   "data":[
+      {
+         "sport":"MLB",
+         "migrations":[
+            {
+               "year":1902,
+               "left":{
+                  "name":"Brewers",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "arrived":{
+                  "name":"Browns",
+                  "city":"St. Louis",
+                  "state":"Missouri"
+               },
+               "notes":""
+            },
+            {
+               "year":1903,
+               "left":{
+                  "name":"Orioles",
+                  "city":"Baltimore",
+                  "state":"Maryland"
+               },
+               "arrived":{
+                  "name":"Highlanders",
+                  "city":"New York",
+                  "state":"New York"
+               },
+               "notes":"The team was renamed the Yankees in 1913"
+            },
+            {
+               "year":1953,
+               "left":{
+                  "name":"Braves",
+                  "city":"Boston",
+                  "state":"Massachusets"
+               },
+               "arrived":{
+                  "name":"Braves",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "notes":"This was the first relocation in 50 years. During those 50 years, there had also been no expansions or contractions—Major League Baseball had consisted of the same 16 teams, 8 in each league, playing in the same 10 cities without interruption for half a century."
+            },
+            {
+               "year":1954,
+               "left":{
+                  "name":"Browns",
+                  "city":"St. Louis",
+                  "state":"Missouri"
+               },
+               "arrived":{
+                  "name":"Orioles",
+                  "city":"Baltimore",
+                  "state":"Maryland"
+               },
+               "notes":""
+            },
+            {
+               "year":1955,
+               "left":{
+                  "name":"Athletics",
+                  "city":"Philadelphia",
+                  "state":"Pennsylvania"
+               },
+               "arrived":{
+                  "name":"Athletics",
+                  "city":"Kansas City",
+                  "state":"Missouri"
+               },
+               "notes":""
+            },
+            {
+               "year":1958,
+               "left":{
+                  "name":"Dodgers",
+                  "city":"Brooklyn",
+                  "state":"New York"
+               },
+               "arrived":{
+                  "name":"Dodgers",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "notes":""
+            },
+            {
+               "year":1958,
+               "left":{
+                  "name":"Gians",
+                  "city":"New York",
+                  "state":"New York"
+               },
+               "arrived":{
+                  "name":"Giants",
+                  "city":"San Francisco",
+                  "state":"California"
+               },
+               "notes":"One of the first major league teams on the West Coast; the teams moved simultaneously to facilitate travel for other National League (NL) teams"
+            },
+            {
+               "year":1958,
+               "left":{
+                  "name":"Gians",
+                  "city":"New York",
+                  "state":"New York"
+               },
+               "arrived":{
+                  "name":"Giants",
+                  "city":"San Francisco",
+                  "state":"California"
+               },
+               "notes":"One of the first major league teams on the West Coast; the teams moved simultaneously to facilitate travel for other National League (NL) teams"
+            },
+            {
+               "year":1961,
+               "left":{
+                  "name":"Senators",
+                  "city":"Washington",
+                  "state":"Washington DC"
+               },
+               "arrived":{
+                  "name":"Twins",
+                  "city":"Twin Cities",
+                  "state":"Minnesota"
+               },
+               "notes":"Not wishing to alienate Washington, D.C. and its powerful baseball fans, the American League (AL) granted the city a new expansion franchise, also called the Senators."
+            },
+            {
+               "year":1966,
+               "left":{
+                  "name":"Braves",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "arrived":{
+                  "name":"Braves",
+                  "city":"Atlanta",
+                  "state":"Georgia"
+               },
+               "notes":""
+            },
+            {
+               "year":1968,
+               "left":{
+                  "name":"Athletics",
+                  "city":"Kansas City",
+                  "state":"Missouri"
+               },
+               "arrived":{
+                  "name":"Athletics",
+                  "city":"Oakland",
+                  "state":"California"
+               },
+               "notes":"Because Charles O. Finley broke a recently signed lease and public bonds were already issued for the building of what is now known as Kauffman Stadium, Major League Baseball was in danger of anti-trust legislation from Missouri Senator Stuart Symington. As a result, the AL granted Kansas City a new expansion franchise in 1969."
+            },
+            {
+               "year":1970,
+               "left":{
+                  "name":"Pilots",
+                  "city":"Seattle",
+                  "state":"Washington"
+               },
+               "arrived":{
+                  "name":"Brewers",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "notes":"The AL would grant Seattle a new expansion franchise in 1977."
+            },
+            {
+               "year":1972,
+               "left":{
+                  "name":"Senators",
+                  "city":"Washington",
+                  "state":"Washington DC"
+               },
+               "arrived":{
+                  "name":"Rangers",
+                  "city":"Arlington",
+                  "state":"Texas"
+               },
+               "notes":""
+            },
+            {
+               "year":2005,
+               "left":{
+                  "name":"Expos",
+                  "city":"Montreal",
+                  "state":"Canada"
+               },
+               "arrived":{
+                  "name":"Nationals",
+                  "city":"Washington",
+                  "state":"Washington DC"
+               },
+               "notes":"The Expos had split time between Montreal and San Juan, Puerto Rico in 2003 and 2004. This was the first relocation in 33 years."
+            }
+         ]
+      },
+      {
+         "sport":"NBA",
+         "migrations":[
+            {
+               "year":1946,
+               "left":{
+                  "name":"Gems",
+                  "city":"Detroit",
+                  "state":"Michigan"
+               },
+               "arrived":{
+                  "name":"Lakers",
+                  "city":"Minneapolis",
+                  "state":"Minnesota"
+               },
+               "notes":""
+            },
+            {
+               "year":1951,
+               "left":{
+                  "name":"Blackhawks",
+                  "city":"Tri Cities",
+                  "state":"Mississippi"
+               },
+               "arrived":{
+                  "name":"Hawks",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "notes":""
+            },
+            {
+               "year":1955,
+               "left":{
+                  "name":"Hawks",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "arrived":{
+                  "name":"Hawks",
+                  "city":"St. Louis",
+                  "state":"Missouri"
+               },
+               "notes":""
+            },
+            {
+               "year":1957,
+               "left":{
+                  "name":"Pistons",
+                  "city":"Fort Wayne",
+                  "state":"Indiana"
+               },
+               "arrived":{
+                  "name":"Pistons",
+                  "city":"Detroit",
+                  "state":"Michigan"
+               },
+               "notes":""
+            },
+            {
+               "year":1957,
+               "left":{
+                  "name":"Royals",
+                  "city":"Rochester",
+                  "state":"New York"
+               },
+               "arrived":{
+                  "name":"Royals",
+                  "city":"Cincinnati",
+                  "state":"Ohio"
+               },
+               "notes":""
+            },
+            {
+               "year":1960,
+               "left":{
+                  "name":"Lakers",
+                  "city":"Minneapolis",
+                  "state":"Minnesota"
+               },
+               "arrived":{
+                  "name":"Lakers",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "notes":""
+            },
+            {
+               "year":1962,
+               "left":{
+                  "name":"Warriors",
+                  "city":"Philadelphia",
+                  "state":"Pennsylvania"
+               },
+               "arrived":{
+                  "name":"Warriors",
+                  "city":"San Francisco",
+                  "state":"California"
+               },
+               "notes":""
+            },
+            {
+               "year":1963,
+               "left":{
+                  "name":"Zephrs",
+                  "city":"Chicago",
+                  "state":"Illinois"
+               },
+               "arrived":{
+                  "name":"Bullets",
+                  "city":"Baltimore",
+                  "state":"Maryland"
+               },
+               "notes":""
+            },
+            {
+               "year":1961,
+               "left":{
+                  "name":"Senators",
+                  "city":"Washington",
+                  "state":"Washington DC"
+               },
+               "arrived":{
+                  "name":"Twins",
+                  "city":"Twin Cities",
+                  "state":"Minnesota"
+               },
+               "notes":"Not wishing to alienate Washington, D.C. and its powerful baseball fans, the American League (AL) granted the city a new expansion franchise, also called the Senators."
+            },
+            {
+               "year":1966,
+               "left":{
+                  "name":"Braves",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "arrived":{
+                  "name":"Braves",
+                  "city":"Atlanta",
+                  "state":"Georgia"
+               },
+               "notes":""
+            },
+            {
+               "year":1968,
+               "left":{
+                  "name":"Athletics",
+                  "city":"Kansas City",
+                  "state":"Missouri"
+               },
+               "arrived":{
+                  "name":"Athletics",
+                  "city":"Oakland",
+                  "state":"California"
+               },
+               "notes":"Because Charles O. Finley broke a recently signed lease and public bonds were already issued for the building of what is now known as Kauffman Stadium, Major League Baseball was in danger of anti-trust legislation from Missouri Senator Stuart Symington. As a result, the AL granted Kansas City a new expansion franchise in 1969."
+            },
+            {
+               "year":1970,
+               "left":{
+                  "name":"Pilots",
+                  "city":"Seattle",
+                  "state":"Washington"
+               },
+               "arrived":{
+                  "name":"Brewers",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin"
+               },
+               "notes":"The AL would grant Seattle a new expansion franchise in 1977."
+            },
+            {
+               "year":1972,
+               "left":{
+                  "name":"Senators",
+                  "city":"Washington",
+                  "state":"Washington DC"
+               },
+               "arrived":{
+                  "name":"Rangers",
+                  "city":"Arlington",
+                  "state":"Texas"
+               },
+               "notes":""
+            },
+            {
+               "year":2005,
+               "left":{
+                  "name":"Expos",
+                  "city":"Montreal",
+                  "state":"Canada"
+               },
+               "arrived":{
+                  "name":"Nationals",
+                  "city":"Washington",
+                  "state":"Washington DC"
+               },
+               "notes":"The Expos had split time between Montreal and San Juan, Puerto Rico in 2003 and 2004. This was the first relocation in 33 years."
+            }
+         ]
+      }
+   ]
+}

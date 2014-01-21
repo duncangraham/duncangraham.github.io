@@ -32,6 +32,8 @@ A week ago I saw <a href="http://work.heinley.com/pixels#asset-656032">"Nightpix
 	As I progressed, I found myself tweaking the level of abstraction so much, I decided to change the initial purpose of the experiment. Below are highly abstracted famous works of art. Clicking them will bring you closer and closer to the original. The experience is a bit like putting on glasses for the first time and realizing that before you couldn't see the leaves on the trees.
 </p>
 
+<p>(TIP: don't rush it! the individual frames and process of discovery are the best part, not the final image. how many clicks does it take for you to guess the final image?)</p>
+
 <script type="text/javascript" src="{{ root_path }}/js/paper-full.js"></script>
 
 <canvas id="myCanvas1" width="671" height="600"></canvas>
