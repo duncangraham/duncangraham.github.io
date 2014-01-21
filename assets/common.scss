@@ -13,6 +13,16 @@
   transition: $prop $time $ease;
 }
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 
 /* Global Reset */
 
@@ -24,11 +34,12 @@
 body {
   background-color: #FFF;
   color:#333;
-  &.dark {
-    background-color: #212121;
+}
+
+.dark {
+    background-color: #14081B;
     color:#444;
   }
-}
 
 a {
   color:inherit;
@@ -52,10 +63,11 @@ left: 50%;
 margin-left: -21rem;
 padding-bottom: 1em;
 border-bottom: 1px solid hsl(0, 0%, 20%);
+z-index:100;
 }
 
 header {
-  width: 59%;
+width: 59%;
 float: left;
 font-size: 1.75em;
 margin: 1em 0em .5em 0em;
@@ -130,6 +142,10 @@ margin: 1em 0em .5em 0em;
 
 .space-top_mini {
   margin-top: .6em;
+}
+
+.space_big {
+  margin: 4em 0em 15em 0em;
 }
 
 .space-bottom {
@@ -547,6 +563,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 article { 
   font-size: 1.25em;
   line-height: 1.75em;
+  background-color: #FFF;
 }
 
 p {
@@ -559,11 +576,9 @@ p {
 }
 
 .desc {
-background-color: hsl(0, 0%, 13%);
 padding: 8em 24% 3em;
-z-index: -1;
 border-bottom: 0px;
-color: hsl(0, 100%, 100%);
+color: hsla(0, 100%, 100%, .9);
 line-height: 1.5em;
 position: relative;
 overflow: hidden;
@@ -599,18 +614,27 @@ h2 {
 }
 
 .entry-content .name {
-color: hsl(0, 0%, 94%);
-width: 100%;
-margin: 2em 0em;
-text-align: center;
+  display: none;
+// color: #333;
+// width: 100%;
+// margin: 2em 0em;
+// border-bottom: 1px solid #E0E0E0;
+// padding-bottom: .5em;
+// font-size: 1.5em;
 }
 
+
 .first-paragraph:first-letter {
-  font-size: 3em;
-  padding-top: .35em;
-  padding-right: .2em;
-  padding-left: .2em;
-  float: left;
+font-size: 3em;
+padding-top: .25em;
+padding-right: .1em;
+margin-right: .2em;
+padding-left: .17em;
+margin-left: 0em;
+padding-bottom: .15em;
+float: left;
+color: #FFF;
+background-color: #00F;
 }
 
 .entry-sort {
@@ -681,13 +705,14 @@ width: 20em;
 }
 
 article a, .idea a {
-  background-color: #333;
-  color:#FFF;
-  padding: 0em 5px;
+color: #14081B;
+text-decoration: underline;
+padding: 0em 5px;
 }
 
 article a:hover, .idea a:hover {
-  background-color:blue;
+text-decoration: none;
+color: blue;
 }
 
 article .font-small {
@@ -734,10 +759,13 @@ img {
 }
 
 .twitter {
-  font-family: 'Lato', sans-serif;
-  text-transform: uppercase;
-  color: #CCC;
-  margin-bottom: .75em;
+font-family: 'Lato', sans-serif;
+text-transform: uppercase;
+color: #CCC;
+position: fixed;
+bottom: 1em;
+width: inherit;
+z-index: -1;
 }
 
 .twitter a {

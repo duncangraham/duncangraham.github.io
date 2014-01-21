@@ -23,7 +23,7 @@ body {
 
 .about {
   font-size: 80%;
-  margin-top: 3em; }
+}
 .post {
   font-size: 2em;
   text-align: center;
@@ -148,6 +148,13 @@ body {
 .post:nth-child(n+12) {
   display: none; }
 
+.space_big {
+	margin:0em;
+}
+
+.twitter {
+	width:100%;
+}
 </style>
 <!-- Post Content -->
 </div>

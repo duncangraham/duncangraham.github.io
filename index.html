@@ -2,50 +2,24 @@
 layout: dvncan-dark
 title: dvncan
 ---
-<div class="head">
-<header class="name">
-  <span class="char1">D</span>
-  <span class="char2 insanity">V</span>
-  <span class="char3">N</span>
-  <span class="char4">C</span>
-  <span class="char5">V</span>
-  <span class="char6">N</span>
-</header>
-<ul class="entry-sort flexbox flex_space-around">
-  <li class="sort-opt font-light"><a href="/index.html">BLOG</a></li>
-  <li class="sort-opt font-light"><a href="/ideas.html">IDEAS</a></li>
-  <li class="sort-opt font-light"><a href="https://twitter.com/duncangraham">TWITTER</a></li>
-</ul>
-</div>
 <div class="desc">
-  <h2 class=""></h2>
+  <span class=".tk-adobe-garamond-pro italic">latest</span>
+  {% for post in site.posts limit: 1 %}
+  <a href="{{ post.url }}">
+  <h2>{{ post.title }}</h2>
+  </a>
+  {% endfor %}
   <p></p>
 </div>
-<ul class="entries content-spacing space-top">
-  {% for post in site.posts %}
-  <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry">
-    <a href="{{ post.url }}">
-    <h2>{{ post.title }}</h2>
-    <!-- <ul class="float-right font-mini space-top_mini">
-      <li class="sort-opt sort-date post-date">{{ post.date | date: "%m.%d.%Y" }}</li>
-      <li class="sort-opt font-light">|</li>
-      <li class="sort-opt sort-type post-type font-light ">{{ post.type }}</li>
-    </ul> -->
-    </a>
-  </li>
-  {% endfor %}
-</ul>
-<!-- <nav class="footer tk-adobe-garamond-pro">
-  <ul class="flexbox flex_space-between">
-    <li class="more nav-item">
-      <a href="http://www.twitter.com/duncangraham">twitter</a>
-    </li>
-    <li class="more right">
-      <a href="about.html">
-      about
-      <span class="shape view-option_diamond "></span>
+
+<div class="content-spacing">
+  <ul class="entries">
+    {% for post in site.posts %}
+    <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry">
+      <a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2>
       </a>
     </li>
+    {% endfor %}
   </ul>
-</nav> -->
-</div> <!-- end site div -->
+</div>

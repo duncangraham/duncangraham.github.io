@@ -66,6 +66,7 @@ var colorize = function (e) {
 
     } else {
         $('header .char2').css('color', 'rgb(' + rgb.join(',') + ')');
+        $('.first-paragraph:first-letter').css('color', 'rgb(' + rgb.join(',') + ')');
     }
 };
 

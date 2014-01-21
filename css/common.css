@@ -12,9 +12,10 @@
 body {
   background-color: #FFF;
   color: #333; }
-  body.dark {
-    background-color: #212121;
-    color: #444; }
+
+.dark {
+  background-color: #14081B;
+  color: #444; }
 
 a {
   color: inherit;
@@ -34,7 +35,8 @@ ul {
   left: 50%;
   margin-left: -21rem;
   padding-bottom: 1em;
-  border-bottom: 1px solid #333333; }
+  border-bottom: 1px solid #333333;
+  z-index: 100; }
 
 header {
   width: 59%;
@@ -92,6 +94,9 @@ header {
 
 .space-top_mini {
   margin-top: .6em; }
+
+.space_big {
+  margin: 4em 0em 15em 0em; }
 
 .space-bottom {
   margin-bottom: 2em; }
@@ -402,7 +407,8 @@ header {
 /*****************************************************************************/
 article {
   font-size: 1.25em;
-  line-height: 1.75em; }
+  line-height: 1.75em;
+  background-color: #FFF; }
 
 p {
   padding: .75em 0em 1em 0em; }
@@ -412,11 +418,9 @@ p {
   font-size: .9em; }
 
 .desc {
-  background-color: #212121;
   padding: 8em 24% 3em;
-  z-index: -1;
   border-bottom: 0px;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.5em;
   position: relative;
   overflow: hidden;
@@ -448,17 +452,19 @@ h2 {
   font-family: 'Lato', sans-serif; }
 
 .entry-content .name {
-  color: #f0f0f0;
-  width: 100%;
-  margin: 2em 0em;
-  text-align: center; }
+  display: none; }
 
 .first-paragraph:first-letter {
   font-size: 3em;
-  padding-top: .35em;
-  padding-right: .2em;
-  padding-left: .2em;
-  float: left; }
+  padding-top: .25em;
+  padding-right: .1em;
+  margin-right: .2em;
+  padding-left: .17em;
+  margin-left: 0em;
+  padding-bottom: .15em;
+  float: left;
+  color: #FFF;
+  background-color: #00F; }
 
 .entry-sort {
   height: 1em;
@@ -517,12 +523,13 @@ h2 {
   left: 1em; }
 
 article a, .idea a {
-  background-color: #333;
-  color: #FFF;
+  color: #14081B;
+  text-decoration: underline;
   padding: 0em 5px; }
 
 article a:hover, .idea a:hover {
-  background-color: blue; }
+  text-decoration: none;
+  color: blue; }
 
 article .font-small {
   font-size: .8em;
@@ -568,7 +575,10 @@ img {
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   color: #CCC;
-  margin-bottom: .75em; }
+  position: fixed;
+  bottom: 1em;
+  width: inherit;
+  z-index: -1; }
 
 .twitter a {
   text-decoration: underline; }

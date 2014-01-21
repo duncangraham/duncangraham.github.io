@@ -6,7 +6,7 @@ date:   2013-10-28 23:00:00
 ---
 <style>
 	.experiment-container {
-		margin: 8em 0em 0em 55%;
+		margin: 8em 0em 1em 55%;
 	}
 	.golden-ratio{
 		font-size: 1.618033988749894848204586834em;
@@ -308,11 +308,6 @@ It's pretty basic, but it's a start. I'm interested in exploring what else can b
 
 Now, time to tackle the <a href="http://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot set</a>.
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 
 <script src="/js/jquery.mousewheel.js"></script>

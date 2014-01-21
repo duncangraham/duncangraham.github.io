@@ -47,13 +47,6 @@ Disclaimer: I work at the Washington Post, but I built this one weekend on my ow
 	<div class="author">Thomas Jefferson</div>
 </div>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 <script type="text/javascript">
 $(function() {
