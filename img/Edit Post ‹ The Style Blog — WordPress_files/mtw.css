@@ -1,0 +1,104 @@
+/** Details **/
+.media-sidebar .setting .expanded-height {
+    height: 200px;
+}
+
+.loading-img {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 100%;
+    margin-left: -8px;
+}
+
+.loading-img img {
+    display: inline-block;
+}
+
+.attachments-error .error {
+    font-size: 14px;
+    padding: 0 10px;
+}
+.attachments-error .error {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.attachments-error .error span {
+    color: red;
+}
+
+.attachments-error .notsure {
+    font-weight: bold;
+}
+
+.attachments-error ul li {
+    padding-left: 15px;
+}
+
+.mtw-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+}
+
+.mtw-media-modal-backdrop {
+    background-color: #333;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.mtw-image-container .mtw-media-modal {
+    text-align: center;
+    height: 100%;
+}
+
+.mtw-image-container .mtw-media-modal table {
+    width: 100%;
+    height: 100%;
+}
+
+.mtw-image-container .mtw-media-modal img {
+    margin-top: 10px;
+    position: relative;
+    z-index: 300;
+    max-height: 500px;
+}
+
+.noresults {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 100%;
+    margin-left: -8px;
+}
+
+.noresults h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 200;
+    margin-bottom: 1.6em;
+}
+
+/** Database Selection Toolbar **/
+.wp-admin .media-frame .media-toolbar-secondary .database-selector {
+    margin-top: 11px;
+}
+
+/** Loading Zone **/
+.mm-center {
+    text-align: center;
+}
+
+.mm-embed-code {
+    width: 100%;
+    height: 120px;
+}

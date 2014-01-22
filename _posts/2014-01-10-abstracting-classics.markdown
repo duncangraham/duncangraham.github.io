@@ -39,6 +39,9 @@ A week ago I saw <a href="http://work.heinley.com/pixels#asset-656032">"Nightpix
 <canvas id="myCanvas1" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/starrynight.jpg" id="starrynight"/>
 
+<canvas id="myCanvas7" width="671" height="600"></canvas>
+<img style="display:none" src="{{ root_path }}/img/pearl.jpg" id="pearl"/>
+
 <canvas id="myCanvas2" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/david.jpg" id="david"/>
 
@@ -77,7 +80,6 @@ var setupCanvas = function (canvasName, rasterName) {
 
 	var clarify = function(rasterName, size, rastRatio) {
 		paths = [];
-		paper.project.activeLayer.removeChildren();
 
 		var raster =  new paper.Raster(rasterName),
 			w,
@@ -110,6 +112,12 @@ var setupCanvas = function (canvasName, rasterName) {
 				h = w*rastRatio,
 				gridSize = (canvas.width)/w;
 			}	
+
+			if ( gridSize <= 5 ) {
+				return;
+			} else {
+				paper.project.activeLayer.removeChildren();
+			}
 
 			raster.size = new paper.Size(w, h);
 
@@ -169,6 +177,7 @@ function initialDraw() {
 	setupCanvas('myCanvas4', 'creationofadam');
 	setupCanvas('myCanvas5', 'sonofman');
 	setupCanvas('myCanvas6', 'dad');
+	setupCanvas('myCanvas7', 'pearl');
 };
 
 initialDraw();

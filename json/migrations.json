@@ -412,9 +412,350 @@
                   "city":"San Diego",
                   "state":"California"
                },
-               "notes":"They were renamed the Capital Bullets. The team was renamed as the Washington Bullets in 1974 and the Wizards in 1997."
-          	},
+               "notes":""
+            },
+            {
+               "year":1979,
+               "left":{
+                  "name":"Jazz",
+                  "city":"New Orleans",
+                  "state":"Louisiana"
+               },
+               "arrived":{
+                  "name":"Jazz",
+                  "city":"Salt Lake City",
+                  "state":"Utah"
+               },
+               "notes":"Wait Salt Lake City isn't known for its Jazz scene?"
+            },
+            {
+               "year":1984,
+               "left":{
+                  "name":"Clippers",
+                  "city":"San Diego",
+                  "state":"California"
+               },
+               "arrived":{
+                  "name":"Clippers",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "notes":""
+            },
+            {
+               "year":1985,
+               "left":{
+                  "name":"Kings",
+                  "city":"Kansas City",
+                  "state":"Missouri"
+               },
+               "arrived":{
+                  "name":"Kings",
+                  "city":"Sacramento",
+                  "state":"California"
+               },
+               "notes":""
+            },
+            {
+               "year":2001,
+               "left":{
+                  "name":"Grizzlies",
+                  "city":"Vancouver",
+                  "state":"Canada"
+               },
+               "arrived":{
+                  "name":"Grizzlies",
+                  "city":"Memphis",
+                  "state":"Tennessee"
+               },
+               "notes":"more: https://en.wikipedia.org/wiki/Vancouver_Grizzlies_relocation_to_Memphis"
+            },
+            {
+               "year":2002,
+               "left":{
+                  "name":"Hornets",
+                  "city":"Charlotte",
+                  "state":"North Carolina"
+               },
+               "arrived":{
+                  "name":"Hornets",
+                  "city":"New Orleans",
+                  "state":"Louisiana"
+               },
+               "notes":"The NBA granted Charlotte a new expansion franchise in 2004, with the Hornets name returning to Charlotte in 2014."
+            },
+            {
+               "year":2005,
+               "left":{
+                  "name":"Hornets",
+                  "city":"New Orleans",
+                  "state":"Louisiana"
+               },
+               "arrived":{
+                  "name":"Hornets",
+                  "city":"Oklahoma City",
+                  "state":"Oklahoma"
+               },
+               "notes":"Temporary move to Oklahoma City following Hurricane Katrina and became the New Orleans/Oklahoma City Hornets."
+            },
+            {
+               "year":2005,
+               "left":{
+                  "name":"Hornets",
+                  "city":"Oklahoma City",
+                  "state":"Oklahoma"
+               },
+               "arrived":{
+                  "name":"Hornets",
+                  "city":"New Orleans",
+                  "state":"Louisiana"
+               },
+               "notes":"Permanantly moved back (Time will tell though - Duncan). The team was renamed as the Pelicans in 2013."
+            },
+            {
+               "year":2008,
+               "left":{
+                  "name":"SuperSonics",
+                  "city":"Seattle",
+                  "state":"Washington"
+               },
+               "arrived":{
+                  "name":"Thunder",
+                  "city":"Oklahoma City",
+                  "state":"Oklahoma"
+               },
+               "notes":"More: https://en.wikipedia.org/wiki/Seattle_SuperSonics_relocation_to_Oklahoma_City"
+            },
+            {
+               "year":2012,
+               "left":{
+                  "name":"Nets",
+                  "city":"New Jersey",
+                  "state":"New Jersey"
+               },
+               "arrived":{
+                  "name":"Nets",
+                  "city":"Brooklyn",
+                  "state":"New York"
+               },
+               "notes":"Finally this happened. The whole New Jersey Nets but we're based in New York was weird."
+            }
          ]
+      },
+      {
+      	"sport": "NFL",
+      	"migrations": [
+      	{
+               "year":1921,
+               "left":{
+                  "name":"Staleys",
+                  "city":"Decatur",
+                  "state":"Illinois"
+               },
+               "arrived":{
+                  "name":"Bears",
+                  "city":"Chicago",
+                  "state":"Illinois"
+               },
+               "notes":"The team became the Bears one year after the move"
+            },
+            {
+               "year":1934,
+               "left":{
+                  "name":"Spartans",
+                  "city":"Portsmouth",
+                  "state":"Ohio"
+               },
+               "arrived":{
+                  "name":"Lions",
+                  "city":"Detrior",
+                  "state":"Michigan"
+               },
+               "notes":""
+            },
+            {
+               "year":1937,
+               "left":{
+                  "name":"Redskins",
+                  "city":"Boston",
+                  "state":"Massachusets"
+               },
+               "arrived":{
+                  "name":"Redskins",
+                  "city":"Washington",
+                  "state":"Washington DC"
+               },
+               "notes":""
+            },
+            {
+               "year":1946,
+               "left":{
+                  "name":"Rams",
+                  "city":"Cleveland",
+                  "state":"Ohio"
+               },
+               "arrived":{
+                  "name":"Rams",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "notes":""
+            },
+            {
+               "year":1949,
+               "left":{
+                  "name":"Yanks",
+                  "city":"Boston",
+                  "state":"Massachusets"
+               },
+               "arrived":{
+                  "name":"Bulldogs",
+                  "city":"New York",
+                  "state":"New York"
+               },
+               "notes":""
+            },
+            {
+               "year":1960,
+               "left":{
+                  "name":"Cardinals",
+                  "city":"Chicago",
+                  "state":"Illinois"
+               },
+               "arrived":{
+                  "name":"Cardinals",
+                  "city":"St. Louis",
+                  "state":"Missouri"
+               },
+               "notes":""
+            },
+            {
+               "year":1961,
+               "left":{
+                  "name":"Chargers",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "arrived":{
+                  "name":"Chargers",
+                  "city":"San Diego",
+                  "state":"California"
+               },
+               "notes":""
+            },
+            {
+               "year":1963,
+               "left":{
+                  "name":"Texans",
+                  "city":"Dallas",
+                  "state":"Texas"
+               },
+               "arrived":{
+                  "name":"Chiefs",
+                  "city":"Kansas City",
+                  "state":"Missouri"
+               },
+               "notes":"Happened after winning the AFL championship"
+            },
+            {
+               "year":1982,
+               "left":{
+                  "name":"Raiders",
+                  "city":"Oakland",
+                  "state":"California"
+               },
+               "arrived":{
+                  "name":"Raiders",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "notes":"The NFL refused permission for the move, but the team won the right to relocate in a court case."
+            },
+            {
+               "year":1984,
+               "left":{
+                  "name":"Colts",
+                  "city":"Baltimore",
+                  "state":"Maryland"
+               },
+               "arrived":{
+                  "name":"Colts",
+                  "city":"Indianapolis",
+                  "state":"Indiana"
+               },
+               "notes":"The team's offices were slipped out of Baltimore in the middle of the night to avoid a proposed eminent domain seizure by the state of Maryland."
+            },
+            {
+               "year":1988,
+               "left":{
+                  "name":"Cardinals",
+                  "city":"St. Louis",
+                  "state":"Missouri"
+               },
+               "arrived":{
+                  "name":"Cardinals",
+                  "city":"Tempe",
+                  "state":"Arizona"
+               },
+               "notes":"The team now plays in another Phoenix suburb, Glendale. The team was renamed the Arizona Cardinals in 1994."
+            },
+            {
+               "year":1995,
+               "left":{
+                  "name":"Raiders",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "arrived":{
+                  "name":"Raiders",
+                  "city":"Oakland",
+                  "state":"California"
+               },
+               "notes":"After 13 previous seasons, this was the first 'return' relocation of a North American professional sports team."
+            },
+            {
+               "year":1995,
+               "left":{
+                  "name":"Rams",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "arrived":{
+                  "name":"Rams",
+                  "city":"Los Angeles",
+                  "state":"California"
+               },
+               "notes":"Since then, Los Angeles, the nation's second-largest market, has not hosted a NFL franchise."
+            },
+            {
+               "year":1996,
+               "left":{
+                  "name":"Browns",
+                  "city":"Cleveland",
+                  "state":"Ohio"
+               },
+               "arrived":{
+                  "name":"Ravens",
+                  "city":"Baltimore",
+                  "state":"Maryland"
+               },
+               "notes":"The move was one of the most controversial in major professional sports history. In response to a fan revolt and legal threats, the NFL awarded a new franchise to Cleveland in 1999, which for historical purposes is considered a continuation of the original Browns franchise."
+          	},
+          	{
+               "year":1997,
+               "left":{
+                  "name":"Oilers",
+                  "city":"Houston",
+                  "state":"Texas"
+               },
+               "arrived":{
+                  "name":"Oilers",
+                  "city":"Memphis",
+                  "state":"Tennessee"
+               },
+               "notes":"The team originally planned to play both 1997 and 1998 in Liberty Bowl Memorial Stadium in Memphis before moving to their intended destination of Nashville. However, due to poor attendance, the team moved to Nashville in 1998, playing in Vanderbilt University's stadium. The team was renamed as the Titans in 1999, when their new stadium was opened. The NFL granted Houston a new expansion franchise in 2002."
+            }
+      	]
       }
    ]
 }
