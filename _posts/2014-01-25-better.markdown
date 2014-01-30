@@ -33,7 +33,7 @@ I asked myself, "what if I disabled the snooze button?". Or, an even more radica
 
 I stopped using an alarm for two weeks to find out. I wrote down the time I wanted to wake up before falling asleep. Upon rising, I recorded the actual wake up time. Here is the data:
 
-<img class="space-top" style="width:60%; margin-left:20%;" src="/img/alarms.png" alt="sorry it's an image and not d3 or something cool" />
+<img class="space-top" style="width:60%; margin-left:20%;" src="/img/Letter@2x.png" alt="sorry it's an image and not d3 or something cool" />
 
 **It worked!** Every morning I woke 3 to 30 minutes before the desired time. Twice I was able to do this with less than 5 hours of sleep. This surprised me, and so I researched the biology behind what seemed like an internal alarm clock.
 
