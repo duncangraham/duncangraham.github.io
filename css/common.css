@@ -31,18 +31,27 @@ ul {
   position: absolute;
   width: 42rem;
   font-size: 0.9em;
-  margin: 0em auto;
   left: 50%;
   margin-left: -21rem;
   padding-bottom: 1em;
   border-bottom: 1px solid #333333;
   z-index: 100; }
+  @media screen and (max-width: 767px) {
+    .head {
+      width: 80%;
+      margin: 0em auto;
+      left: 10%; } }
 
 header {
   width: 59%;
   float: left;
   font-size: 1.75em;
   margin: 1em 0em .5em 0em; }
+  @media screen and (max-width: 767px) {
+    header {
+      margin: 1em auto 0em;
+      width: 8.6rem;
+      float: none; } }
 
 ::selection {
   background: #333;
@@ -51,6 +60,10 @@ header {
 .content-spacing {
   width: 42rem;
   margin: 0em auto; }
+  @media screen and (max-width: 767px) {
+    .content-spacing {
+      width: 80%;
+      padding-left: 5%; } }
 
 .float-left {
   float: left; }
@@ -425,6 +438,9 @@ p {
   position: relative;
   overflow: hidden;
   font-size: 1.25em; }
+  @media screen and (max-width: 767px) {
+    .desc {
+      padding-top: 9em; } }
 
 .vsco {
   background: url(http://image.vsco.co/1/52c1fc1fd7f3e235324/52c8615a736708963d000012/800x534/vsco_010414_6.jpg) no-repeat center center;
