@@ -14,7 +14,7 @@ display: block;
 </style>
 
 <!-- Post Content -->
-<p class="first-paragraph">Our species' success is due to an unmatched predilection to better our lives & environments through tool making. With the current exponential progress we're experiencing though, I wonder if we've outpaced our ability to examine and edit our tools- especially those we pereive as essential. If we can't cleary remember how life was before the tool, how good are we at answering the question, "Is this better?".</p>
+<p class="first-paragraph">Our species' success is due to an unmatched predilection to better our lives & environments through tool making. With the current exponential progress we're experiencing though, I wonder if we've outpaced our ability to examine and edit our tools- especially those we perceive as essential. If we can't cleary remember how life was before the tool, how good are we at answering the question, "Is this better?".</p>
 
 I've been wrestling with this question (and resulting ones like, <a href="http://www.smithsonianmag.com/history/what-the-luddites-really-fought-against-264412/">"am I a Luddite?"</a>) a lot recently. Below are two cases studies in which I gave up tools generally accepted as essential in our culture.
 
