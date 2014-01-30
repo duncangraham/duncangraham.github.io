@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "is this better?"
+type: "writing"
+date:   2014-01-25 17:00:00
+---
+
+<!-- Post specific styles -->
+<style>
+#youtube-player {
+margin: 2em auto 1em;
+display: block;
+}
+</style>
+
+<!-- Post Content -->
+<p class="first-paragraph">Our species' success is due to an unmatched predilection to better our lives & environments through tool making. With the current exponential progress we're experiencing though, I wonder if we've outpaced our ability to examine and edit our tools- especially those we pereive as essential. If we can't cleary remember how life was before the tool, how good are we at answering the question, "Is this better?".</p>
+
+I've been wrestling with this question (and resulting ones like, <a href="http://www.smithsonianmag.com/history/what-the-luddites-really-fought-against-264412/">"am I a Luddite?"</a>) a lot recently. Below are two cases studies in which I gave up tools generally accepted as essential in our culture.
+
+<p>
+## The snooze button
+
+A bit of historical perspective: <a href="https://en.wikipedia.org/wiki/Water-powered_clock#Greco-Roman_world">As old as alarm clocks are</a>, the snooze button is a relatively new invention. The first snooze alarm was the <a href="http://www.telechron.net/eod/7h241.htm">1956 General Electric Telechron</a>. Three years later the Westclox Drowse popularized the concept. In 2000 the "drowse" button was renamed to the snooze we know of today. In my lifetime, a clock without a snooze option has been a rarity. 
+
+<div videoID="UahqgK60vuk" startTime="232" endTime="277" height="400" width="400" id="youtube-player"></div>
+
+<script src="http://labnol.googlecode.com/files/youtube-embed.js"></script>
+
+I've had an unhealthy relationship with the snooze button for years. If given the option, I’ll hit it every morning. The self induced sleep limbo leaves me groggy and wastes 5-30 minutes every day. I’ve seen products like <a href="http://www.fitbit.com/force#sleep-well">fitbits</a>  and <a href="https://itunes.apple.com/us/app/sleep-cycle-alarm-clock/id320606217?mt=8&ign-mpt=uo%3D2">mobile apps</a> that offer fixes. But none have made my mornings significantly better.
+
+I asked myself, "what if I disabled the snooze button?". Or, an even more radical idea, what if I removed the alarm altogether?  My logic being, the safety net of control I feel from the alarm is what fuels the habit. Without the alarm, I won't be able to snooze. But would I be able to wake up on time? If so, how far could I push myself?
+
+I stopped using an alarm for two weeks to find out. I wrote down the time I wanted to wake up before falling asleep. Upon rising, I recorded the actual wake up time. Here is the data:
+
+<img class="space-top" style="width:60%; margin-left:20%;" src="/img/alarms.png" alt="sorry it's an image and not d3 or something cool" />
+
+**It worked!** Every morning I woke 3 to 30 minutes before the desired time. Twice I was able to do this with less than 5 hours of sleep. This surprised me, and so I researched the biology behind what seemed like an internal alarm clock.
+
+I found <a href="http://www.salk.edu/news/pressrelease_details.php?press_id=521">this study</a>, which held the explanation to my data.
+
+"The body is essentially a collection of clocks," says <a href="http://www.salk.edu/faculty/panda.html">Satchindananda Panda</a>, an associate professor in Salk's Regulatory Biology Laboratory. Panda and other researchers discovered the protein JARID1a, which is responsible for activating human's internal alarm clock. It doesn’t explain the near precision I found in my experiment, but they do note in the study that JARID1a degrades over time. If I continued the data collection, it’s likely I’d see more varied results over time.
+
+
+<p>
+## Facebook
+
+I'd argue that the leading tool for social connecting in the digital age is increasingly making us more alone. I thought the tool made things better or easier, but we're getting a watered down version of reality at best, and a poisoned one at worst.
+
+For a social connection to be made, there needs to be an exchange of recognition. Facebook facilitates this with likes, comments, and messages, but I would posit that these exchanges are in the minority and that most "connections" are one-way and passive. This is hurting both parties. The onlookers glean a false sense of connection, while the looked upon (with no likes or comments) are sharing into the perceived digital void. Of course, <a href="https://www.youtube.com/watch?v=l9ZqXlHl65g">you can always pay for more people to see your posts and hopefully reach out</a>.
+
+I think a bit of digital voyuerism (see also: stalking) is fine, but I realized that I was spending hours a day using Facebook. I wondered if this was the best use of time. 7 months ago, I deleted my account.
+
+For the first few weeks, I would navigate to facebook.com unconsciously. Every day I'd have moments when I thought, "What do I do now?". I reached out to old friends. I spent more and more time building things. I began reading for fun again. It wasn't the easiest transistion- I found I didn't have many of my friend's phone numbers or emails. Maintaining relationships took more effort, but with that effort came quality. 
+
+If Facebook is to exist long term it need a massive shift in purpose and execution. (It launched <a href="">Paper</a> while I was writing this. I'm intrigued, but reserving judgement till I use it). Alternatively, it can become an acquisition machine, riding the social media ouroboros.
+
+<p>
+## Closing
+
+I'm now wondering often how many other tools fit in this box. Which ones should be given up? Which have good intentions but fail in their execution? As a designer I've already begun to examine not only the products I use, but the ones I spend time making. If you decide to try out either experiment or know of other examples, I'd love to hear from you: hello@dvncan.com.
+
+
+
+Related Links:
+<a href="http://www.youtube.com/watch?v=EzpX0TLKS9Q">Phones and the Culture of Distraction</a>
+<a href="http://clockhistory.com/westclox/products/electric/drowse/index.html">Genesis of the Snooze Button</a>
+
+
+
+<!-- Post specific js -->
+<script type="text/javascript">
+
+</script>
