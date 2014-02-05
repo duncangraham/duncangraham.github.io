@@ -1,0 +1,22 @@
+
+      {
+         "sport":"MLB",
+         "migrations":[
+            {
+               "year":1902,
+               "left":{
+                  "name":"Brewers",
+                  "city":"Milwaukee",
+                  "state":"Wisconsin",
+                  "coords": [-87.95, 43.05]
+               },
+               "arrived":{
+                  "name":"Browns",
+                  "city":"St. Louis",
+                  "state":"Missouri",
+                  "coords": [-90.197778, 38.627222]
+               },
+               "notes":""
+            }
+            ]
+      }

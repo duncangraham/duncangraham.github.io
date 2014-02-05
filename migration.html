@@ -33,6 +33,17 @@ date:   2014-01-10 13:47:00
   margin: 2em 0em;
 }
 
+circle {
+  fill: #666;
+}
+
+.link {
+  fill: none;
+  stroke: red;
+  stroke-width: 1.5px;
+}
+
+
 </style>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
@@ -56,10 +67,11 @@ var svg = d3.select("body").append("svg")
 svg.append("rect")
     .attr("class", "background")
     .attr("width", width)
-    .attr("height", height)
-    .on("click", clicked);
+    .attr("height", height);
+    // .on("click", clicked);
 
 var g = svg.append("g");
+
 
 d3.json("/json/us.json", function(error, us) {
   g.append("g")
@@ -67,38 +79,64 @@ d3.json("/json/us.json", function(error, us) {
     .selectAll("path")
       .data(topojson.feature(us, us.objects.states).features)
     .enter().append("path")
-      .attr("d", path)
-      .on("click", clicked);
+      .attr("d", path);
+      // .on("click", clicked);
 
   g.append("path")
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
       .attr("id", "state-borders")
       .attr("d", path);
+
+  d3.json("/json/migrations.json", function(error, m) {
+
+    var mig;
+
+    for  (var i = 0; i < m.length-1; i++) {
+
+      mig = m[i].migrations;
+
+      for (var j = 0; j < mig.length-1; j++) {
+        var start = projection(mig[j].left.coords),
+            end = projection(mig[j].arrived.coords);
+        g.append("path")
+         .attr("d", function(d) {
+                      var dx = start[0] - end[0],
+                          dy = start[1] - end[1],
+                          dr = Math.sqrt(dx * dx + dy * dy);
+                      return "M" + start[0] + "," + start[1] + "A" + dr + "," + dr +
+                  " 0 0,1 " + end[0] + "," + end[1];
+                    })
+         .attr("class","link");
+
+        g.append('circle')
+         .attr('cx', start[0])
+         .attr('cy', start[1])
+         .attr('r', 3);
+
+        g.append('circle')
+         .attr('cx', end[0])
+         .attr('cy', end[1])
+         .attr('r', 3);
+      }
+
+    }
+  });
+
+
+
+
+
 });
-
-function clicked(d) {
-  var x, y, k;
-
-  if (d && centered !== d) {
-    var centroid = path.centroid(d);
-    x = centroid[0];
-    y = centroid[1];
-    k = 4;
-    centered = d;
-  } else {
-    x = width / 2;
-    y = height / 2;
-    k = 1;
-    centered = null;
-  }
-
-  g.selectAll("path")
-      .classed("active", centered && function(d) { return d === centered; });
-
-  g.transition()
-      .duration(750)
-      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-      .style("stroke-width", 1.5 / k + "px");
-}
-
 </script>
+
+
+
+<!--
+footnotes
+
+things that helped
+https://github.com/mbostock/d3/wiki/Geo-Paths
+http://bl.ocks.org/enoex/6201948
+https://groups.google.com/forum/#!topic/d3-js/MLZX1AbS7-Y
+
+-->

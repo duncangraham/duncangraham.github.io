@@ -1,6 +1,5 @@
-{
-   "data":[
-      {
+[
+    {
          "sport":"MLB",
          "migrations":[
             {
@@ -8,12 +7,14 @@
                "left":{
                   "name":"Brewers",
                   "city":"Milwaukee",
-                  "state":"Wisconsin"
+                  "state":"Wisconsin",
+                  "coords": [-87.95, 43.05]
                },
                "arrived":{
                   "name":"Browns",
                   "city":"St. Louis",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-90.197778,38.627222]
                },
                "notes":""
             },
@@ -22,12 +23,14 @@
                "left":{
                   "name":"Orioles",
                   "city":"Baltimore",
-                  "state":"Maryland"
+                  "state":"Maryland",
+                  "coords": [-76.616667, 39.283333]
                },
                "arrived":{
                   "name":"Highlanders",
                   "city":"New York",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-73.94, 40.67]
                },
                "notes":"The team was renamed the Yankees in 1913"
             },
@@ -36,12 +39,14 @@
                "left":{
                   "name":"Braves",
                   "city":"Boston",
-                  "state":"Massachusets"
+                  "state":"Massachusets",
+                  "coords": [-71.063611, 42.358056]
                },
                "arrived":{
                   "name":"Braves",
                   "city":"Milwaukee",
-                  "state":"Wisconsin"
+                  "state":"Wisconsin",
+                  "coords": [-87.95, 43.05]
                },
                "notes":"This was the first relocation in 50 years. During those 50 years, there had also been no expansions or contractions—Major League Baseball had consisted of the same 16 teams, 8 in each league, playing in the same 10 cities without interruption for half a century."
             },
@@ -50,12 +55,14 @@
                "left":{
                   "name":"Browns",
                   "city":"St. Louis",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-90.197778,38.627222]
                },
                "arrived":{
                   "name":"Orioles",
                   "city":"Baltimore",
-                  "state":"Maryland"
+                  "state":"Maryland",
+                  "coords": [-76.616667, 39.283333]
                },
                "notes":""
             },
@@ -64,12 +71,14 @@
                "left":{
                   "name":"Athletics",
                   "city":"Philadelphia",
-                  "state":"Pennsylvania"
+                  "state":"Pennsylvania",
+                  "coords": [-75.166667, 39.95]
                },
                "arrived":{
                   "name":"Athletics",
                   "city":"Kansas City",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-94.578333, 39.099722]
                },
                "notes":""
             },
@@ -78,12 +87,14 @@
                "left":{
                   "name":"Dodgers",
                   "city":"Brooklyn",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-73.990278, 40.692778]
                },
                "arrived":{
                   "name":"Dodgers",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "notes":""
             },
@@ -92,12 +103,14 @@
                "left":{
                   "name":"Gians",
                   "city":"New York",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-73.94, 40.67]
                },
                "arrived":{
                   "name":"Giants",
                   "city":"San Francisco",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-122.416667, 37.783333]
                },
                "notes":"One of the first major league teams on the West Coast; the teams moved simultaneously to facilitate travel for other National League (NL) teams"
             },
@@ -106,12 +119,14 @@
                "left":{
                   "name":"Gians",
                   "city":"New York",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-73.94, 40.67]
                },
                "arrived":{
                   "name":"Giants",
                   "city":"San Francisco",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-122.416667, 37.783333]
                },
                "notes":"One of the first major league teams on the West Coast; the teams moved simultaneously to facilitate travel for other National League (NL) teams"
             },
@@ -120,12 +135,14 @@
                "left":{
                   "name":"Senators",
                   "city":"Washington",
-                  "state":"Washington DC"
+                  "state":"Washington DC",
+                  "coords": [-77.036667, 38.895111]
                },
                "arrived":{
                   "name":"Twins",
                   "city":"Twin Cities",
-                  "state":"Minnesota"
+                  "state":"Minnesota",
+                  "coords": [-93.266667, 44.983333]
                },
                "notes":"Not wishing to alienate Washington, D.C. and its powerful baseball fans, the American League (AL) granted the city a new expansion franchise, also called the Senators."
             },
@@ -134,12 +151,14 @@
                "left":{
                   "name":"Braves",
                   "city":"Milwaukee",
-                  "state":"Wisconsin"
+                  "state":"Wisconsin",
+                  "coords": [-87.95, 43.05]
                },
                "arrived":{
                   "name":"Braves",
                   "city":"Atlanta",
-                  "state":"Georgia"
+                  "state":"Georgia",
+                  "coords": [-84.39, 33.755]
                },
                "notes":""
             },
@@ -148,12 +167,14 @@
                "left":{
                   "name":"Athletics",
                   "city":"Kansas City",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-94.578333, 39.099722]
                },
                "arrived":{
                   "name":"Athletics",
                   "city":"Oakland",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-122.270833, 37.804444]
                },
                "notes":"Because Charles O. Finley broke a recently signed lease and public bonds were already issued for the building of what is now known as Kauffman Stadium, Major League Baseball was in danger of anti-trust legislation from Missouri Senator Stuart Symington. As a result, the AL granted Kansas City a new expansion franchise in 1969."
             },
@@ -162,12 +183,14 @@
                "left":{
                   "name":"Pilots",
                   "city":"Seattle",
-                  "state":"Washington"
+                  "state":"Washington",
+                  "coords": [-122.333056, 47.609722]
                },
                "arrived":{
                   "name":"Brewers",
                   "city":"Milwaukee",
-                  "state":"Wisconsin"
+                  "state":"Wisconsin",
+                  "coords": [-87.95, 43.05]
                },
                "notes":"The AL would grant Seattle a new expansion franchise in 1977."
             },
@@ -176,12 +199,14 @@
                "left":{
                   "name":"Senators",
                   "city":"Washington",
-                  "state":"Washington DC"
+                  "state":"Washington DC",
+                  "coords": [-77.036667, 38.895111]
                },
                "arrived":{
                   "name":"Rangers",
                   "city":"Arlington",
-                  "state":"Texas"
+                  "state":"Texas",
+                  "coords": [-97.122839, 32.705033]
                },
                "notes":""
             },
@@ -190,12 +215,14 @@
                "left":{
                   "name":"Expos",
                   "city":"Montreal",
-                  "state":"Canada"
+                  "state":"Canada",
+                  "coords": [-73.566667, 45.5]
                },
                "arrived":{
                   "name":"Nationals",
                   "city":"Washington",
-                  "state":"Washington DC"
+                  "state":"Washington DC",
+                  "coords": [-77.036667, 38.895111]
                },
                "notes":"The Expos had split time between Montreal and San Juan, Puerto Rico in 2003 and 2004. This was the first relocation in 33 years."
             }
@@ -209,12 +236,14 @@
                "left":{
                   "name":"Gems",
                   "city":"Detroit",
-                  "state":"Michigan"
+                  "state":"Michigan",
+                  "coords": [-83.045833, 42.331389]
                },
                "arrived":{
                   "name":"Lakers",
                   "city":"Minneapolis",
-                  "state":"Minnesota"
+                  "state":"Minnesota",
+                  "coords": [-93.266667, 44.983333]
                },
                "notes":""
             },
@@ -223,12 +252,14 @@
                "left":{
                   "name":"Blackhawks",
                   "city":"Tri Cities",
-                  "state":"Mississippi"
+                  "state":"Mississippi",
+                  "coords": [-90.499722, 41.485833]
                },
                "arrived":{
                   "name":"Hawks",
                   "city":"Milwaukee",
-                  "state":"Wisconsin"
+                  "state":"Wisconsin",
+                  "coords": [-87.95, 43.05]
                },
                "notes":""
             },
@@ -237,12 +268,14 @@
                "left":{
                   "name":"Hawks",
                   "city":"Milwaukee",
-                  "state":"Wisconsin"
+                  "state":"Wisconsin",
+                  "coords": [-87.95, 43.05]
                },
                "arrived":{
                   "name":"Hawks",
                   "city":"St. Louis",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-90.197778,38.627222]
                },
                "notes":""
             },
@@ -251,12 +284,14 @@
                "left":{
                   "name":"Pistons",
                   "city":"Fort Wayne",
-                  "state":"Indiana"
+                  "state":"Indiana",
+                  "coords": [-85.13915, 41.08045]
                },
                "arrived":{
                   "name":"Pistons",
                   "city":"Detroit",
-                  "state":"Michigan"
+                  "state":"Michigan",
+                  "coords": [-83.045833, 42.331389]
                },
                "notes":""
             },
@@ -265,12 +300,14 @@
                "left":{
                   "name":"Royals",
                   "city":"Rochester",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-77.611389, 43.165556]
                },
                "arrived":{
                   "name":"Royals",
                   "city":"Cincinnati",
-                  "state":"Ohio"
+                  "state":"Ohio",
+                  "coords": [-84.516667,39.1]
                },
                "notes":""
             },
@@ -279,12 +316,14 @@
                "left":{
                   "name":"Lakers",
                   "city":"Minneapolis",
-                  "state":"Minnesota"
+                  "state":"Minnesota",
+                  "coords": [-93.266667, 44.983333]
                },
                "arrived":{
                   "name":"Lakers",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "notes":""
             },
@@ -293,12 +332,14 @@
                "left":{
                   "name":"Warriors",
                   "city":"Philadelphia",
-                  "state":"Pennsylvania"
+                  "state":"Pennsylvania",
+                  "coords": [-75.166667, 39.95]
                },
                "arrived":{
                   "name":"Warriors",
                   "city":"San Francisco",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-122.416667, 37.783333]
                },
                "notes":""
             },
@@ -307,12 +348,14 @@
                "left":{
                   "name":"Zephrs",
                   "city":"Chicago",
-                  "state":"Illinois"
+                  "state":"Illinois",
+                  "coords": [-87.627778, 41.881944]
                },
                "arrived":{
                   "name":"Bullets",
                   "city":"Baltimore",
-                  "state":"Maryland"
+                  "state":"Maryland",
+                  "coords": [-76.616667, 39.283333]
                },
                "notes":""
             },
@@ -321,12 +364,14 @@
                "left":{
                   "name":"Nationals",
                   "city":"Syracuse",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-76.144423, 43.046899]
                },
                "arrived":{
                   "name":"76ers",
                   "city":"Philadelphia",
-                  "state":"Pennsylvania"
+                  "state":"Pennsylvania",
+                  "coords": [-75.166667, 39.95]
                },
                "notes":""
             },
@@ -335,12 +380,14 @@
                "left":{
                   "name":"Hawks",
                   "city":"St. Louis",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-90.197778,38.627222]
                },
                "arrived":{
                   "name":"Hawks",
                   "city":"Atlanta",
-                  "state":"Georgia"
+                  "state":"Georgia",
+                  "coords": [-84.39, 33.755]
                },
                "notes":""
             },
@@ -349,12 +396,14 @@
                "left":{
                   "name":"Rockets",
                   "city":"San Diego",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-117.1625, 32.715]
                },
                "arrived":{
                   "name":"Rockets",
                   "city":"Houston",
-                  "state":"Texas"
+                  "state":"Texas",
+                  "coords": [-95.383056, 29.762778]
                },
                "notes":""
             },
@@ -363,12 +412,14 @@
                "left":{
                   "name":"Royals",
                   "city":"Cincinnati",
-                  "state":"Ohio"
+                  "state":"Ohio",
+                  "coords": [-84.516667,39.1]
                },
                "arrived":{
                   "name":"Kings",
                   "city":"Kansas City",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-94.578333, 39.099722]
                },
                "notes":"They also had a secondary home in Omaha, and became the Kansas City-Omaha Kings. The team ceased Omaha operations in 1975."
             },
@@ -377,12 +428,14 @@
                "left":{
                   "name":"Chaparrals",
                   "city":"Dallas",
-                  "state":"Texas"
+                  "state":"Texas",
+                  "coords": [-96.796667, 32.775833]
                },
                "arrived":{
                   "name":"Spurs",
                   "city":"San Antonio",
-                  "state":"Texas"
+                  "state":"Texas",
+                  "coords": [-98.5, 29.416667]
                },
                "notes":""
             },
@@ -390,13 +443,15 @@
                "year":1973,
                "left":{
                   "name":"Bullets",
-                  "city":"Washington",
-                  "state":"Washington DC"
+                  "city":"Baltimore",
+                  "state":"Maryland",
+                  "coords": [-76.616667, 39.283333]
                },
                "arrived":{
                   "name":"Bullets",
                   "city":"Washington",
-                  "state":"Washington DC"
+                  "state":"Washington DC",
+                  "coords": [-77.036667, 38.895111]
                },
                "notes":"They were renamed the Capital Bullets. The team was renamed as the Washington Bullets in 1974 and the Wizards in 1997."
           	},
@@ -405,12 +460,14 @@
                "left":{
                   "name":"Braves",
                   "city":"Buffalo",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-78.849444, 42.904722]
                },
                "arrived":{
                   "name":"Clippers",
                   "city":"San Diego",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-117.1625, 32.715]
                },
                "notes":""
             },
@@ -419,12 +476,14 @@
                "left":{
                   "name":"Jazz",
                   "city":"New Orleans",
-                  "state":"Louisiana"
+                  "state":"Louisiana",
+                  "coords": [-90.05, 29.966667]
                },
                "arrived":{
                   "name":"Jazz",
                   "city":"Salt Lake City",
-                  "state":"Utah"
+                  "state":"Utah",
+                  "coords": [-111.883333, 40.75]
                },
                "notes":"Wait Salt Lake City isn't known for its Jazz scene?"
             },
@@ -433,12 +492,14 @@
                "left":{
                   "name":"Clippers",
                   "city":"San Diego",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-117.1625, 32.715]
                },
                "arrived":{
                   "name":"Clippers",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "notes":""
             },
@@ -447,12 +508,14 @@
                "left":{
                   "name":"Kings",
                   "city":"Kansas City",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-94.578333, 39.099722]
                },
                "arrived":{
                   "name":"Kings",
                   "city":"Sacramento",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-121.468889, 38.555556]
                },
                "notes":""
             },
@@ -461,12 +524,14 @@
                "left":{
                   "name":"Grizzlies",
                   "city":"Vancouver",
-                  "state":"Canada"
+                  "state":"Canada",
+                  "coords": [-123.1, 49.25]
                },
                "arrived":{
                   "name":"Grizzlies",
                   "city":"Memphis",
-                  "state":"Tennessee"
+                  "state":"Tennessee",
+                  "coords": [-89.971068, 35.117365]
                },
                "notes":"more: https://en.wikipedia.org/wiki/Vancouver_Grizzlies_relocation_to_Memphis"
             },
@@ -475,12 +540,14 @@
                "left":{
                   "name":"Hornets",
                   "city":"Charlotte",
-                  "state":"North Carolina"
+                  "state":"North Carolina",
+                  "coords": [-80.843333, 35.226944]
                },
                "arrived":{
                   "name":"Hornets",
                   "city":"New Orleans",
-                  "state":"Louisiana"
+                  "state":"Louisiana",
+                  "coords": [-90.05, 29.966667]
                },
                "notes":"The NBA granted Charlotte a new expansion franchise in 2004, with the Hornets name returning to Charlotte in 2014."
             },
@@ -489,12 +556,14 @@
                "left":{
                   "name":"Hornets",
                   "city":"New Orleans",
-                  "state":"Louisiana"
+                  "state":"Louisiana",
+                  "coords": [-90.05, 29.966667]
                },
                "arrived":{
                   "name":"Hornets",
                   "city":"Oklahoma City",
-                  "state":"Oklahoma"
+                  "state":"Oklahoma",
+                  "coords": [-97.535, 35.482222]
                },
                "notes":"Temporary move to Oklahoma City following Hurricane Katrina and became the New Orleans/Oklahoma City Hornets."
             },
@@ -503,12 +572,14 @@
                "left":{
                   "name":"Hornets",
                   "city":"Oklahoma City",
-                  "state":"Oklahoma"
+                  "state":"Oklahoma",
+                  "coords": [-97.535, 35.482222]
                },
                "arrived":{
                   "name":"Hornets",
                   "city":"New Orleans",
-                  "state":"Louisiana"
+                  "state":"Louisiana",
+                  "coords": [-90.05, 29.966667]
                },
                "notes":"Permanantly moved back (Time will tell though - Duncan). The team was renamed as the Pelicans in 2013."
             },
@@ -517,12 +588,14 @@
                "left":{
                   "name":"SuperSonics",
                   "city":"Seattle",
-                  "state":"Washington"
+                  "state":"Washington",
+                  "coords": [-122.333056, 47.609722]
                },
                "arrived":{
                   "name":"Thunder",
                   "city":"Oklahoma City",
-                  "state":"Oklahoma"
+                  "state":"Oklahoma",
+                  "coords": [-97.535, 35.482222]
                },
                "notes":"More: https://en.wikipedia.org/wiki/Seattle_SuperSonics_relocation_to_Oklahoma_City"
             },
@@ -531,12 +604,14 @@
                "left":{
                   "name":"Nets",
                   "city":"New Jersey",
-                  "state":"New Jersey"
+                  "state":"New Jersey",
+                  "coords": [-73.633333, 40.733333]
                },
                "arrived":{
                   "name":"Nets",
                   "city":"Brooklyn",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-73.990278, 40.692778]
                },
                "notes":"Finally this happened. The whole New Jersey Nets but we're based in New York was weird."
             }
@@ -550,12 +625,14 @@
                "left":{
                   "name":"Staleys",
                   "city":"Decatur",
-                  "state":"Illinois"
+                  "state":"Illinois",
+                  "coords": [-88.944167, 39.851667]
                },
                "arrived":{
                   "name":"Bears",
                   "city":"Chicago",
-                  "state":"Illinois"
+                  "state":"Illinois",
+                  "coords": [-87.627778, 41.881944]
                },
                "notes":"The team became the Bears one year after the move"
             },
@@ -564,12 +641,14 @@
                "left":{
                   "name":"Spartans",
                   "city":"Portsmouth",
-                  "state":"Ohio"
+                  "state":"Ohio",
+                  "coords": [-82.965556, 38.743056]
                },
                "arrived":{
                   "name":"Lions",
-                  "city":"Detrior",
-                  "state":"Michigan"
+                  "city":"Detroit",
+                  "state":"Michigan",
+                  "coords": [-83.045833, 42.331389]
                },
                "notes":""
             },
@@ -578,12 +657,14 @@
                "left":{
                   "name":"Redskins",
                   "city":"Boston",
-                  "state":"Massachusets"
+                  "state":"Massachusets",
+                  "coords": [-71.063611, 42.358056]
                },
                "arrived":{
                   "name":"Redskins",
                   "city":"Washington",
-                  "state":"Washington DC"
+                  "state":"Washington DC",
+                  "coords": [-77.036667, 38.895111]
                },
                "notes":""
             },
@@ -592,12 +673,14 @@
                "left":{
                   "name":"Rams",
                   "city":"Cleveland",
-                  "state":"Ohio"
+                  "state":"Ohio",
+                  "coords": [-81.669722, 41.482222]
                },
                "arrived":{
                   "name":"Rams",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "notes":""
             },
@@ -606,12 +689,14 @@
                "left":{
                   "name":"Yanks",
                   "city":"Boston",
-                  "state":"Massachusets"
+                  "state":"Massachusets",
+                  "coords": [-71.063611, 42.358056]
                },
                "arrived":{
                   "name":"Bulldogs",
                   "city":"New York",
-                  "state":"New York"
+                  "state":"New York",
+                  "coords": [-73.94, 40.67]
                },
                "notes":""
             },
@@ -620,12 +705,14 @@
                "left":{
                   "name":"Cardinals",
                   "city":"Chicago",
-                  "state":"Illinois"
+                  "state":"Illinois",
+                  "coords": [-87.627778, 41.881944]
                },
                "arrived":{
                   "name":"Cardinals",
                   "city":"St. Louis",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-90.197778,38.627222]
                },
                "notes":""
             },
@@ -634,12 +721,14 @@
                "left":{
                   "name":"Chargers",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "arrived":{
                   "name":"Chargers",
                   "city":"San Diego",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-117.1625, 32.715]
                },
                "notes":""
             },
@@ -648,12 +737,14 @@
                "left":{
                   "name":"Texans",
                   "city":"Dallas",
-                  "state":"Texas"
+                  "state":"Texas",
+                  "coords": [-96.796667, 32.775833]
                },
                "arrived":{
                   "name":"Chiefs",
                   "city":"Kansas City",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-94.578333, 39.099722]
                },
                "notes":"Happened after winning the AFL championship"
             },
@@ -662,12 +753,14 @@
                "left":{
                   "name":"Raiders",
                   "city":"Oakland",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-122.270833, 37.804444]
                },
                "arrived":{
                   "name":"Raiders",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "notes":"The NFL refused permission for the move, but the team won the right to relocate in a court case."
             },
@@ -676,12 +769,14 @@
                "left":{
                   "name":"Colts",
                   "city":"Baltimore",
-                  "state":"Maryland"
+                  "state":"Maryland",
+                  "coords": [-76.616667, 39.283333]
                },
                "arrived":{
                   "name":"Colts",
                   "city":"Indianapolis",
-                  "state":"Indiana"
+                  "state":"Indiana",
+                  "coords": [-86.148, 39.791]
                },
                "notes":"The team's offices were slipped out of Baltimore in the middle of the night to avoid a proposed eminent domain seizure by the state of Maryland."
             },
@@ -690,12 +785,14 @@
                "left":{
                   "name":"Cardinals",
                   "city":"St. Louis",
-                  "state":"Missouri"
+                  "state":"Missouri",
+                  "coords": [-90.197778,38.627222]
                },
                "arrived":{
                   "name":"Cardinals",
                   "city":"Tempe",
-                  "state":"Arizona"
+                  "state":"Arizona",
+                  "coords": [-111.943056, 33.429444]
                },
                "notes":"The team now plays in another Phoenix suburb, Glendale. The team was renamed the Arizona Cardinals in 1994."
             },
@@ -704,12 +801,14 @@
                "left":{
                   "name":"Raiders",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "arrived":{
                   "name":"Raiders",
                   "city":"Oakland",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-122.270833, 37.804444]
                },
                "notes":"After 13 previous seasons, this was the first 'return' relocation of a North American professional sports team."
             },
@@ -718,12 +817,14 @@
                "left":{
                   "name":"Rams",
                   "city":"Los Angeles",
-                  "state":"California"
+                  "state":"California",
+                  "coords": [-118.25, 34.05]
                },
                "arrived":{
                   "name":"Rams",
-                  "city":"Los Angeles",
-                  "state":"California"
+                  "city":"St. Louis",
+                  "state":"Missouri",
+                  "coords": [-90.197778,38.627222]
                },
                "notes":"Since then, Los Angeles, the nation's second-largest market, has not hosted a NFL franchise."
             },
@@ -732,12 +833,14 @@
                "left":{
                   "name":"Browns",
                   "city":"Cleveland",
-                  "state":"Ohio"
+                  "state":"Ohio",
+                  "coords": [-81.669722, 41.482222]
                },
                "arrived":{
                   "name":"Ravens",
                   "city":"Baltimore",
-                  "state":"Maryland"
+                  "state":"Maryland",
+                  "coords": [-76.616667, 39.283333]
                },
                "notes":"The move was one of the most controversial in major professional sports history. In response to a fan revolt and legal threats, the NFL awarded a new franchise to Cleveland in 1999, which for historical purposes is considered a continuation of the original Browns franchise."
           	},
@@ -746,16 +849,17 @@
                "left":{
                   "name":"Oilers",
                   "city":"Houston",
-                  "state":"Texas"
+                  "state":"Texas",
+                  "coords": [-95.383056, 29.762778]
                },
                "arrived":{
                   "name":"Oilers",
                   "city":"Memphis",
-                  "state":"Tennessee"
+                  "state":"Tennessee",
+                  "coords": [-89.971068, 35.117365]
                },
                "notes":"The team originally planned to play both 1997 and 1998 in Liberty Bowl Memorial Stadium in Memphis before moving to their intended destination of Nashville. However, due to poor attendance, the team moved to Nashville in 1998, playing in Vanderbilt University's stadium. The team was renamed as the Titans in 1999, when their new stadium was opened. The NFL granted Houston a new expansion franchise in 2002."
             }
       	]
       }
    ]
-}
