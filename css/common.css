@@ -516,7 +516,10 @@ h2 {
   font-size: 1.75em;
   float: left;
   opacity: .5;
-  transition: all .3s; }
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
 
 .entry:hover {
   opacity: 1; }

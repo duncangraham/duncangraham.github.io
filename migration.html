@@ -98,7 +98,7 @@ d3.json("/json/us.json", function(error, us) {
       for (var j = 0; j < mig.length-1; j++) {
         var start = projection(mig[j].left.coords),
             end = projection(mig[j].arrived.coords);
-        g.append("path")
+        var path = g.append("path")
          .attr("d", function(d) {
                       var dx = start[0] - end[0],
                           dy = start[1] - end[1],
@@ -107,6 +107,19 @@ d3.json("/json/us.json", function(error, us) {
                   " 0 0,1 " + end[0] + "," + end[1];
                     })
          .attr("class","link");
+         //set stroke dash array to 
+         //animate stroke dash offset
+         //linkz
+
+        var totalLength = path.node().getTotalLength();
+
+        path
+          .attr("stroke-dasharray", totalLength + " " + totalLength)
+          .attr("stroke-dashoffset", totalLength)
+          .transition()
+            .duration(2000)
+            .ease("linear")
+            .attr("stroke-dashoffset", 0);
 
         g.append('circle')
          .attr('cx', start[0])

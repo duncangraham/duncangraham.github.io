@@ -687,7 +687,7 @@ width: 20em;
   font-size: 1.75em;
   float: left;
   opacity: .5;
-  transition: all .3s;
+  @include transition(color, .3s, ease);
 }
 
 .entry:hover { 
