@@ -514,12 +514,17 @@ h2 {
 
 .entry {
   font-size: 1.75em;
+  line-height: .5em;
   float: left;
   opacity: .5;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.entry a {
+  display: inline-block;
+  line-height: .8em; }
 
 .entry:hover {
   opacity: 1; }

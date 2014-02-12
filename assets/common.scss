@@ -685,9 +685,15 @@ width: 20em;
 
 .entry {
   font-size: 1.75em;
+  line-height: .5em;
   float: left;
   opacity: .5;
-  @include transition(color, .3s, ease);
+  @include transition(all, .3s, ease);
+}
+
+.entry a {
+  display: inline-block;
+  line-height: .8em;
 }
 
 .entry:hover { 

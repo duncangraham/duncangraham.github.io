@@ -3,6 +3,7 @@ layout: post
 title:  "abstracting classics"
 type: "experiment"
 date:   2014-01-10 13:47:00
+color: "purple"
 ---
 <!-- Post Content -->
 <style>

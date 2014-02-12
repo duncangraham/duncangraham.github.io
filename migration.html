@@ -7,6 +7,13 @@ date:   2014-01-10 13:47:00
 
 <style>
 
+#year {
+  position: absolute;
+  top:1em;
+  left:1em;
+  font-size: 3em;
+}
+
 .background {
   fill: none;
   pointer-events: all;
@@ -45,6 +52,7 @@ circle {
 
 
 </style>
+<h2 id="year">1900</h2>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script>
@@ -89,13 +97,20 @@ d3.json("/json/us.json", function(error, us) {
 
   d3.json("/json/migrations.json", function(error, m) {
 
-    var mig;
 
-    for  (var i = 0; i < m.length-1; i++) {
 
-      mig = m[i].migrations;
+    var mig = m.migrations,
+        year = 1900,
+        yearDiv = $('#year'),
+        len = mig.length-1;   
 
-      for (var j = 0; j < mig.length-1; j++) {
+
+    for (var j = 0; j < len; j++) {
+
+        var currYear = mig[j].year;
+
+
+
         var start = projection(mig[j].left.coords),
             end = projection(mig[j].arrived.coords);
         var path = g.append("path")
@@ -117,7 +132,12 @@ d3.json("/json/us.json", function(error, us) {
           .attr("stroke-dasharray", totalLength + " " + totalLength)
           .attr("stroke-dashoffset", totalLength)
           .transition()
-            .duration(2000)
+            .duration(500)
+            .delay(function(d,i) { 
+              console.log(j);
+              var d = ((currYear-1900)*100);
+              console.log(d);
+              return d; })
             .ease("linear")
             .attr("stroke-dashoffset", 0);
 
@@ -132,11 +152,17 @@ d3.json("/json/us.json", function(error, us) {
          .attr('r', 3);
       }
 
+
+  var dateCount = setInterval(function(){
+    year = year + 1;
+    yearDiv.html(year);
+
+    if (year == 2014) {
+      clearInterval(dateCount);
     }
+  }, 100)
+
   });
-
-
-
 
 
 });
