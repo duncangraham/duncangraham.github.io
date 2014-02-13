@@ -549,6 +549,10 @@ h2 {
   bottom: 0.15em;
   left: 1em; }
 
+sup {
+  font-size: .6em;
+  padding-left: .2em; }
+
 article a, .idea a {
   color: #14081B;
   text-decoration: underline;
@@ -564,6 +568,10 @@ article .font-small {
 
 img {
   width: 100%; }
+
+.img-half {
+  width: 50%;
+  margin: 0px 25%; }
 
 .home {
   position: fixed;

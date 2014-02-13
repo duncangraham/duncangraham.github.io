@@ -52,6 +52,10 @@ var colorize = function (e) {
             'background-color': 'rgb(' + rgb.join(',') + ')',
             'color': 'rgb(' + rgb2.join(',') + ')'
         });
+        $('.desc').css({
+            'background-color': 'rgb(' + rgb.join(',') + ')',
+            'color': 'rgb(' + rgb2.join(',') + ')'
+        });
         $('.sort-opt a, .font-light').css({
             'color': 'rgb(' + rgb2.join(',') + ')'
         });
@@ -80,9 +84,20 @@ $('header .char2.insanity').on('click', function () {
     if ($body.hasClass('insanity')) {
         $body.removeClass('insanity');
 
-        $body.css({
-            'background-color': '#FFFFFF',
-            'color': '#333'
+        if($body.hasClass('dark')) {
+            $body.css({
+                'background-color': '#14081B',
+                'color': '#444'
+            });
+        } else {
+            $body.css({
+                'background-color': '#FFF',
+                'color': '#333'
+            });
+        }
+        $('.desc').css({
+            'background-color': '#14081B',
+            'color': '#FFF'
         });
         $('.sort-opt a').css({
             'color': 'inherit'
@@ -96,7 +111,7 @@ $('header .char2.insanity').on('click', function () {
         });
         colorize(mousePos);
     } else {
-        $body.addClass('insanity');
+        $body.addClass('insanity');      
         colorize(mousePos);
 
     }
