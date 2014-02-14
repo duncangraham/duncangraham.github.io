@@ -15,7 +15,7 @@ date:   2014-02-11 23:00:00
 <a href="http://asherv.com/threes/">Threes!</a> is a game about making pairs of increasing value. It begins with a 4X4 grid of seven empty spaces<sup><a id="footnote1" href="#footnotes">1</a></sup> and nine filled randomly with 1's, 2's, and 3's. you slide the pieces orthoganally to combine like numbers, building up to bigger and bigger values. After a few days of play, I've figured out a solid strategy and a few supporting techniques.</p>
 
 <p class="space-top">
-<img class="img-half" src="/img/threes.png" />
+<img class="img-half" src="{{ root_path }}/img/threes.png" />
 <div class="font-small show-code center cursor-pointer space-bottom">
 I broke my own rule and pulled a 384 out of the corner, but only to pair with another 384. The entire purpose of my strategy is to get the highest value possible.
 </div>
@@ -26,7 +26,7 @@ I broke my own rule and pulled a 384 out of the corner, but only to pair with an
 Push your largest piece to your chosen corner, then use the rest of the board to build up to that number. The two adjacent walls to your chosen corner should hold a blocks that, when combined with one another, can be built up to the corner value. The opposite walls and middle space are your playground. Get blocks in here to the adjacent walls.
 
 <p class="space-top">
-<img class="img-half" src="/img/threes_waterfall.png" />
+<img class="img-half" src="{{ root_path }}/img/threes_waterfall.png" />
 <div class="font-small show-code center cursor-pointer space-bottom">
 This shows the waterfalling paradigm nicely. I would probably swipe up, combining the 1 and 2. Then left, pairing the newly made 3 withe the existing 3. Then up to combine the 6's then again to combine the 12's.
 </div>
