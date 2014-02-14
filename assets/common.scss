@@ -581,6 +581,14 @@ p {
   padding:.75em 0em 1em 0em;
 }
 
+p.no-pad {
+  padding: 0em;
+}
+
+p.bold {
+  font-weight: bold;
+}
+
 .idea p, .entry p {
   line-height: 1.5em;
   font-size: .9em;
