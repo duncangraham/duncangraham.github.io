@@ -16,29 +16,31 @@ rect {
 
 <!-- Post Content -->
 <p class="first-paragraph">
-Marking the largest acquisition of a venture backed startup ever, Facebook bought the mobile messaging service <a href="http://www.whatsapp.com/">Whatsapp</a> for $19B yesterday. I was shocked by the sum and unsure what to think of the deal, so I worked on putting things into perspective.
+Facebook bought the mobile messaging service WhatsApp for $19 billion on Wednesday, marking the largest acquisition of a venture-backed start-up ever. I was shocked by the sum and unsure what to think of the deal, so I worked on putting things into perspective.
 </p>
 
-As a web based messaging app tied to your phone contacts, Whatsapp's value proposition is the ease of SMS without the fees. After a free trial year, a subscription will run you a paltry $1 annually. Whatsapp collects no user data, and deletes delivered messages from their servers, resulting in much smaller data storage needs.
+As a Web-based messaging app tied to your phone contacts, WhatsApp's value proposition is the ease of SMS without the fees. After a free trial year, a subscription costs just $1 annually. Whatsapp collects no user data, and it deletes delivered messages from their servers, resulting in much smaller data storage needs.
 
 
 ## Market Cap (Billions)
 <div id="market-cap" class="space-bottom space-top"></div>
 
-Whatsapp's acquisition puts its market cap in the range of <a href="http://finance.yahoo.com/q?s=TWTR">Twitter</a> and <a href="http://finance.yahoo.com/q?s=NFLX">Netflix</a> (Also around the GDP of Afghanistan). As large as these numbers are, they are still relatively small compared Google and Microsoft's $300-$400B market caps.
+WhatsApp's acquisition puts its market cap in the range of Twitter and Netflix (Also around the economic output of Afghanistan). As large as these numbers are, they are still relatively small compared to Microsoft and Google, which are worth $300 billion to $400 billion.
 
-In its 5 years of existence, its ex-Yahoo founders <a href="https://twitter.com/brianacton/status/3109544383">Brian Acton</a> and <a href="http://www.businessinsider.com/whatsapp-jan-koum-lived-on-food-stamps-2014-2">Jan Koum</a> have grown it to half the value of their previous company. Even more remarkable is how small the team behind Whatsapp is, especially when compared to its valuation. Below are the values per employee for each company. 
+Still, in just five years ex-Yahoo employees <a href="https://twitter.com/brianacton/status/3109544383">Brian Acton</a> and <a href="http://www.businessinsider.com/whatsapp-jan-koum-lived-on-food-stamps-2014-2">Jan Koum</a> have grown WhatsApp to half the value of their previous employer. Even more remarkable is how small the team behind WhatsApp is, especially when compared to its valuation:
+
 
 <div id="market-cap-employee" class="space-bottom space-top"></div>
 
-At >500M per employee, Facebook even surpassed the $77M figured it reached acquiring Instagram ($1B/13 employees). 
+WhatsApp's purchase price makes it worth an astonishing $500 million per employee. That's even higher than the $77 million per employee Facebook paid for Instagram.
+What accounts for this high valuation? Whatsapp has a lot of monthly active users:
 
 
 <h2 class="space-top">Monthly Active Users (MAU)</h2>
 
 <div id="mau-chart" class="space-bottom space-top"></div>
 
-Even though Facebook is doing marginally better than many in the mobile-only space, Whatsapp blows it away with 134% more MAUs. It also beats out Tencent's WeChat, which has dominated Asia. Surprisingly, Snapchat, which recently turned down Facebook's $3 billion acquisition offer, is rumored to only have 30M active monthly users. 
+Facebook has 296 million monthly active users who only access the site through mobile devices. In contrast, WhatsApp has 450 million mobile users. That beats out Tencent's WeChat, which has dominated Asia. Surprisingly, Snapchat, which recently turned down Facebook's $3 billion acquisition offer, is rumored to only have 30M active monthly users.
 
 <h2 class="space-top space-bottom">Other VC Backed Acquisitions</h2>
 
@@ -47,14 +49,14 @@ Even though Facebook is doing marginally better than many in the mobile-only spa
 Whatsapp's deal dwarfs Instagram's and Snapchat's deals combined. The only acquistion that get's close to it was US West Media scopping up Cablevision in 1996 at 62% of the Whatsapp price. Viber, another messaging app, was also recently acquired for only 900 million.
 
 <h2 class="space-top space-bottom">So, Whatsapp-ening?</h2>
+So, WhatsApp-ening?
+Even if the 2.9 billion individuals on the planet with Internet access all downloaded WhatsApp and began paying instantly, it would take about seven years for Facebook to recoup its investment at $1 per user per year. WhatsApp has no plans to integrate ads into its product.
 
-1. Even if the 2.9 billion individuals with internet access all downloaded Whatsapp and began paying instantly, it would take about 7 years to reach the $19B value Facebook paid.
-2. There are no plans to integrate ads.
-3. $3B of the $19B is in <a href="https://en.wikipedia.org/wiki/Restricted_stock">RSUs</a>
+So why was Facebook chief executive Mark Zuckerberg willing to pay so much? Facebook has been <a href="http://readwrite.com/2012/08/23/how-facebook-ditched-the-mobile-web-went-native-with-its-new-ios-app#awesm=~ownMsLfIXLhclm">trying to</a>  <a href="http://bgr.com/2013/04/15/facebook-home-google-play-reviews-438930/">figure out</a>  <a href="https://www.facebook.com/mobile/messenger">mobile</a>  <a href="http://www.theverge.com/2014/1/30/5360358/facebook-paper-iphone-app">for years now</a>, and WhatsApp is quickly becoming a giant in that market. It could be Facebook's solution. If not, then it's a competitor removed from the field.
 
-Facebook has been <a href="http://readwrite.com/2012/08/23/how-facebook-ditched-the-mobile-web-went-native-with-its-new-ios-app#awesm=~ownMsLfIXLhclm">trying to</a>  <a href="http://bgr.com/2013/04/15/facebook-home-google-play-reviews-438930/">figure out</a>  <a href="https://www.facebook.com/mobile/messenger">mobile</a>  <a href="http://www.theverge.com/2014/1/30/5360358/facebook-paper-iphone-app">for years now</a>. 
+Second, the structure of the deal suggests that Facebook believes the team behind WhatsApp is stellar. Of the $19 billion acquisition price, $3 billion is in the form of restricted stock units that employees will receive if they stay with the company for up to four years. That suggests that the acquisition was as much about the team as the product.
 
-And after writing this, I have a better idea on the reasons surrounding the acquisition. First, Whatsapp is quickly becoming a giant in mobile. It could be Facebook's solution. If not, then it's a competitor removed from the field. Secondly, the team behind Whatsapp is stellar. The market cap / employees graph proves this, and the RSUs back up the point that this aqcuisition was as much about the team as the product. Lastly, even though Whatsapp will remain ad free, there's no promise that it won't be used as a data collection source.
+Lastly, even though WhatsApp will remain ad free, there's no promise that it won't be used as a data collection source. That could be a major benefit to Facebook in the coming years.
 
 (I couldn't find much data on the nationalities of Whatsapp users vs Facebook users, but I assume this was also a strong selling point. Whatsapp wants to grow its United States userbase and Facebook wants to grow globally.)
 

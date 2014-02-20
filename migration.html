@@ -184,9 +184,6 @@ d3.json("/json/us.json", function(error, us) {
         var animatedObject = 
             g.append('path')
             .attr('d', 'M 0,0 7,3.5 0,7 1.5,3.5 ')
-            .attr('r', 3)
-            .attr('px', path.node().getPointAtLength(totalLength).x)
-            .attr('py', path.node().getPointAtLength(totalLength).y)
             .attr("transform", "translate(" + x1 + "," + y1 + ")")
             .attr('style', 'visibility: hidden');
 
