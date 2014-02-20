@@ -50,7 +50,7 @@ Whatsapp's deal dwarfs Instagram's and Snapchat's deals combined. The only acqui
 
 1. Even if the 2.9 billion individuals with internet access all downloaded Whatsapp and began paying instantly, it would take about 7 years to reach the $19B value Facebook paid.
 2. There are no plans to integrate ads.
-3. $3B of the $19B is in <a href="https://en.wikipedia.org/wiki/Restricted_stock">RSOs</a>
+3. $3B of the $19B is in <a href="https://en.wikipedia.org/wiki/Restricted_stock">RSUs</a>
 
 Facebook has been <a href="http://readwrite.com/2012/08/23/how-facebook-ditched-the-mobile-web-went-native-with-its-new-ios-app#awesm=~ownMsLfIXLhclm">trying to</a>  <a href="http://bgr.com/2013/04/15/facebook-home-google-play-reviews-438930/">figure out</a>  <a href="https://www.facebook.com/mobile/messenger">mobile</a>  <a href="http://www.theverge.com/2014/1/30/5360358/facebook-paper-iphone-app">for years now</a>. 
 
