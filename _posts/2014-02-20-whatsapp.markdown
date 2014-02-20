@@ -22,7 +22,7 @@ Facebook bought the mobile messaging service WhatsApp for $19 billion on Wednesd
 As a Web-based messaging app tied to your phone contacts, WhatsApp's value proposition is the ease of SMS without the fees. After a free trial year, a subscription costs just $1 annually. Whatsapp collects no user data, and it deletes delivered messages from their servers, resulting in much smaller data storage needs.
 
 
-## Market Cap (Billions)
+<h2 class="space-bottom space-top">Market Cap (Billions)</h2>
 <div id="market-cap" class="space-bottom space-top"></div>
 
 WhatsApp's acquisition puts its market cap in the range of Twitter and Netflix (Also around the economic output of Afghanistan). As large as these numbers are, they are still relatively small compared to Microsoft and Google, which are worth $300 billion to $400 billion.
