@@ -130,7 +130,7 @@ date:   2013-12-11 11:00:00
         // call our orientation event handler
         // deviceOrientationHandler(tiltLR, tiltFB, dir);
 
-        console.log('eventData ' + eventData);
+        console.log(eventData);
         console.log('titlLR ' + tiltLR);
         console.log('tiltFB ' + tiltFB);
 
