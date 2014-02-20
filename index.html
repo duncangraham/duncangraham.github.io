@@ -15,13 +15,11 @@ title: dvncan
 </div>
 
 <div class="content-spacing">
-  <ul class="entries">
+  <div class="entries">
     {% for post in site.posts %}
-    <li class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry">
-      <a href="{{ post.url }}">
-      <h2>{{ post.title }}</h2>
+      <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
+      {{ post.title }}
       </a>
-    </li>
     {% endfor %}
   </ul>
 </div>

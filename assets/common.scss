@@ -694,9 +694,11 @@ width: 20em;
 .entry {
   font-size: 1.75em;
   line-height: .5em;
-  float: left;
   opacity: .5;
   @include transition(all, .3s, ease);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
 
 .entry a {
