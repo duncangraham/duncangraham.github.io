@@ -1,0 +1,287 @@
+---
+layout: post
+title:  "Whatsapp-ening? An Acquisition in Perspective"
+type: "blog"
+date:   2014-02-20 23:00:00
+---
+
+<!-- Post specific styles -->
+<style>
+	
+rect {
+	stroke-width: 2.5px;
+}
+
+</style>
+
+<!-- Post Content -->
+<p class="first-paragraph">
+Marking the largest acquisition of a venture backed startup ever, Facebook bought the mobile messaging service <a href="http://www.whatsapp.com/">Whatsapp</a> for $19B yesterday. I was shocked by the sum and unsure what to think of the deal, so I worked on putting things into perspective.
+</p>
+
+As a web based messaging app tied to your phone contacts, Whatsapp's value proposition is the ease of SMS without the fees. After a free trial year, a subscription will run you a paltry $1 annually. Whatsapp collects no user data, and deletes delivered messages from their servers, resulting in much smaller data storage needs.
+
+
+## Market Cap (Billions)
+<div id="market-cap" class="space-bottom space-top"></div>
+
+Whatsapp's acquisition puts its market cap in the range of <a href="http://finance.yahoo.com/q?s=TWTR">Twitter</a> and <a href="http://finance.yahoo.com/q?s=NFLX">Netflix</a> (Also around the GDP of Afghanistan). As large as these numbers are, they are still relatively small compared Google and Microsoft's $300-$400B market caps.
+
+In its 5 years of existence, its ex-Yahoo founders <a href="https://twitter.com/brianacton/status/3109544383">Brian Acton</a> and <a href="http://www.businessinsider.com/whatsapp-jan-koum-lived-on-food-stamps-2014-2">Jan Koum</a> have grown it to half the value of their previous company. Even more remarkable is how small the team behind Whatsapp is, especially when compared to its valuation. Below are the values per employee for each company. 
+
+<div id="market-cap-employee" class="space-bottom space-top"></div>
+
+At >500M per employee, Facebook even surpassed the $77M figured it reached acquiring Instagram ($1B/13 employees). 
+
+
+<h2 class="space-top">Monthly Active Users (MAU)</h2>
+
+<div id="mau-chart" class="space-bottom space-top"></div>
+
+Even though Facebook is doing marginally better than many in the mobile-only space, Whatsapp blows it away with 134% more MAUs. It also beats out Tencent's WeChat, which has dominated Asia. Surprisingly, Snapchat, which recently turned down Facebook's $3 billion acquisition offer, is rumored to only have 30M active monthly users. 
+
+<h2 class="space-top space-bottom">So, Whatsapp-ening?</h2>
+
+1. Even if the 2.9 billion individuals with internet access all downloaded Whatsapp and began paying instantly, it would take about 7 years to reach the $19B value Facebook paid.
+2. There are no plans to integrate ads.
+3. $3B of the $19B is in <a href="">RSUs</a>
+
+Facebook has been <a href="http://readwrite.com/2012/08/23/how-facebook-ditched-the-mobile-web-went-native-with-its-new-ios-app#awesm=~ownMsLfIXLhclm">trying to</a>  <a href="http://bgr.com/2013/04/15/facebook-home-google-play-reviews-438930/">figure out</a>  <a href="https://www.facebook.com/mobile/messenger">mobile</a>  <a href="http://www.theverge.com/2014/1/30/5360358/facebook-paper-iphone-app">for years now</a>. 
+
+And after writing this, I have a better idea on the reasons surrounding the acquisition. First, Whatsapp is quickly becoming a giant in mobile. It could be Facebook's solution. If not, then it's a competitor removed from the field. Secondly, the team behind Whatsapp is stellar. The market cap / employees graph proves this, and the RSUs back up the point that this aqcuisition was as much about the team as the product. Lastly, even though Whatsapp will remain ad free, there's no promise that it won't be used as a data collection source.
+
+(I couldn't find much data on the nationalities of Whatsapp users vs Facebook users, but I assume this was also a strong selling point. Whatsapp wants to grow its United States userbase and Facebook wants to grow globally.)
+
+
+
+
+
+<h2 class="space-top">FOOTNOTES</h2>
+
+<a href="http://sequoiacapital.tumblr.com/post/77211282835/four-numbers-that-explain-why-facebook-acquire
+">Whatsapp MAU</a>
+<a href="http://files.shareholder.com/downloads/AMDA-NJ5DZ/2971387046x0x721748/be75c513-b84a-486d-a838-25cdc79c6a16/FB_Q413EarningsSlidesFINAL.pdf">Facebook MAU (slides 5-7)</a>
+<a href="http://techcrunch.com/2013/01/30/zuck-facebook-will-grow-headcount-quickly-in-2013-to-develop-future-money-making-products/">Facebook Market Cap/Employees</a>
+<a href="http://mashable.com/2013/09/08/instagram-150-million-monthly-active-users/">Instagram MAU</a>
+<a href="http://www.businessinsider.com/snapchat-active-users-exceed-30-million-2013-12#ixzz2nL7tY74w">Snapchat MAU</a>
+<a href="http://thenextweb.com/twitter/2014/02/05/twitter-passes-million-monthly-active-users-x-million-mobile-users/#!wy0fy">Twitter MAU</a>
+<a href="http://www.geekwire.com/2013/twitter-employs-2300/">Twitter Market Cap/Employees</a>
+<a href="http://blogs.wsj.com/digits/2014/01/27/chinas-wechat-app-targets-u-s-users/">WeChat MAU</a>
+<a href="http://www.macroaxis.com/invest/ratio/NFLX--Number-of-Employees">Netflix Market Cap/Employees</a>
+<a href="http://investor.yahoo.net/faq.cfm">Yahoo Market Cap/Employees</a>
+<a href="http://blogs.wsj.com/digits/2013/09/17/tencent-market-value-tops-100-billion-nearing-facebook/">Tencent Market Cap/Employees</a>
+
+
+
+
+<script src="http://d3js.org/d3.v2.min.js"></script>
+<script>
+function renderChart() {
+
+var data = d3.csv.parse(d3.select('#csv').text());
+var valueLabelWidth = 40; // space reserved for value labels (right)
+var barHeight = 30; // height of one bar
+var barLabelWidth = 120; // space reserved for bar labels
+var barLabelPadding = 5; // padding between bar and bar labels (left)
+var gridLabelHeight = 18; // space reserved for gridline labels
+var gridChartOffset = 3; // space between start of grid and first bar
+var maxBarWidth = 560; // width of the bar with the max value
+ 
+// accessor functions 
+var barLabel = function(d) { return d['Name']; };
+var barValue = function(d) { return parseFloat(d[' Market Cap (Bil)']); };
+ 
+// scales
+var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
+var y = function(d, i) { return yScale(i); };
+var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
+var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
+// svg container element
+var chart = d3.select('#market-cap').append("svg")
+  .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth)
+  .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
+var labelsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 90 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+labelsContainer.selectAll('text').data(data).enter().append('text')
+  .attr('y', yText)
+  .attr('stroke', 'none')
+  .attr('fill', 'black')
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr('text-anchor', 'end')
+  .text(barLabel);
+// bars
+var barsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 100 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+barsContainer.selectAll("rect").data(data).enter().append("rect")
+  .attr('y', y)
+  .attr('height', yScale.rangeBand())
+  .attr('width', function(d) { return x(barValue(d)); })
+  .attr('stroke', 'white')
+  .attr('fill', 'blue');
+// bar value labels
+barsContainer.selectAll("text").data(data).enter().append("text")
+  .attr("x", function(d) { return x(barValue(d)); })
+  .attr("y", yText)
+  .attr("dx", 3) // padding-left
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr("text-anchor", "start") // text-align: right
+  .attr("fill", "black")
+  .attr("stroke", "none")
+  .text(function(d) { return d3.round(barValue(d), 2); });
+// start line
+barsContainer.append("line")
+  .attr("y1", -gridChartOffset)
+  .attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
+  .style("stroke", "#000");
+
+
+var data = d3.csv.parse(d3.select('#mcEmployee').text());
+var valueLabelWidth = 40; // space reserved for value labels (right)
+var barHeight = 30; // height of one bar
+var barLabelWidth = 120; // space reserved for bar labels
+var barLabelPadding = 5; // padding between bar and bar labels (left)
+var gridLabelHeight = 18; // space reserved for gridline labels
+var gridChartOffset = 3; // space between start of grid and first bar
+var maxBarWidth = 360; // width of the bar with the max value
+ 
+// accessor functions 
+var barLabel = function(d) { return d['Name']; };
+var barValue = function(d) { return parseFloat(d[' Value per Employee (Mil)']); };
+ 
+// scales
+var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
+var y = function(d, i) { return yScale(i); };
+var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
+var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
+// svg container element
+var chart = d3.select('#market-cap-employee').append("svg")
+  .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth + 200)
+  .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
+var labelsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 225 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+labelsContainer.selectAll('text').data(data).enter().append('text')
+  .attr('y', yText)
+  .attr('stroke', 'none')
+  .attr('fill', 'black')
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr('text-anchor', 'end')
+  .text(barLabel);
+// bars
+var barsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 235 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+barsContainer.selectAll("rect").data(data).enter().append("rect")
+  .attr('y', y)
+  .attr('height', yScale.rangeBand())
+  .attr('width', function(d) { return x(barValue(d)); })
+  .attr('stroke', 'white')
+  .attr('fill', 'blue');
+// bar value labels
+barsContainer.selectAll("text").data(data).enter().append("text")
+  .attr("x", function(d) { return x(barValue(d)); })
+  .attr("y", yText)
+  .attr("dx", 3) // padding-left
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr("text-anchor", "start") // text-align: right
+  .attr("fill", "black")
+  .attr("stroke", "none")
+  .text(function(d) { return d3.round(barValue(d), 2); });
+// start line
+barsContainer.append("line")
+  .attr("y1", -gridChartOffset)
+  .attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
+  .style("stroke", "#000");  
+
+
+var data = d3.csv.parse(d3.select('#mau').text());
+var valueLabelWidth = 40; // space reserved for value labels (right)
+var barHeight = 30; // height of one bar
+var barLabelWidth = 120; // space reserved for bar labels
+var barLabelPadding = 5; // padding between bar and bar labels (left)
+var gridLabelHeight = 18; // space reserved for gridline labels
+var gridChartOffset = 3; // space between start of grid and first bar
+var maxBarWidth = 450; // width of the bar with the max value
+ 
+// accessor functions 
+var barLabel = function(d) { return d['Name']; };
+var barValue = function(d) { return parseFloat(d[' MAU']); };
+ 
+// scales
+var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
+var y = function(d, i) { return yScale(i); };
+var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
+var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
+// svg container element
+var chart = d3.select('#mau-chart').append("svg")
+  .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth+100)
+  .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
+var labelsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 150 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+labelsContainer.selectAll('text').data(data).enter().append('text')
+  .attr('y', yText)
+  .attr('stroke', 'none')
+  .attr('fill', 'black')
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr('text-anchor', 'end')
+  .text(barLabel);
+// bars
+var barsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 160 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+barsContainer.selectAll("rect").data(data).enter().append("rect")
+  .attr('y', y)
+  .attr('height', yScale.rangeBand())
+  .attr('width', function(d) { return x(barValue(d)); })
+  .attr('stroke', 'white')
+  .attr('fill', 'blue');
+// bar value labels
+barsContainer.selectAll("text").data(data).enter().append("text")
+  .attr("x", function(d) { return x(barValue(d)); })
+  .attr("y", yText)
+  .attr("dx", 3) // padding-left
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr("text-anchor", "start") // text-align: right
+  .attr("fill", "black")
+  .attr("stroke", "none")
+  .text(function(d) { return d3.round(barValue(d), 2); });
+// start line
+barsContainer.append("line")
+  .attr("y1", -gridChartOffset)
+  .attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
+  .style("stroke", "#000");  
+
+
+}
+</script>
+<script id="csv" type="text/csv">Name, Market Cap (Bil)
+Whatsapp, 19
+Twitter, 20
+Netflix, 25.5
+Yahoo, 39.28
+Facebook, 173.5
+Tencent, 138
+</script>
+
+<script id="mcEmployee" type="text/csv">Name, Value per Employee (Mil)
+Whatsapp ($19B/35), 593
+Twitter ($20B/2300), 8.7
+Netflix ($25.5B/2040), 12.25
+Yahoo ($39.28B/12300), 3
+Facebook (173.5B/~5000), 34.7
+Tencent ($138/26962), 5
+</script>
+
+<script id="mau" type="text/csv">Name, MAU
+Whatsapp, 450
+Facebook, 1228
+FB (Mobile), 945
+FB (Mobile Only), 296
+WeChat (Tencent), 272
+Twitter, 241
+Twitter (Mobile), 184
+Instagram, 150
+Snapchat, 30
+</script>
+<script>renderChart();</script>
+
+
+
+

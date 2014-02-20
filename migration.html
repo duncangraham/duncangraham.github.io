@@ -23,10 +23,6 @@ date:   2014-01-10 13:47:00
   fill: #CCC;
 }
 
-#states .active {
-  fill: orange;
-}
-
 #state-borders {
   fill: none;
   stroke: #fff;
@@ -40,14 +36,46 @@ date:   2014-01-10 13:47:00
   margin: 2em 0em;
 }
 
+.hide {
+  display: none;
+}
+
 circle {
-  fill: #666;
+  fill: #333;
+}
+
+.arrow {
+  fill: blue;
 }
 
 .link {
   fill: none;
   stroke: red;
   stroke-width: 1.5px;
+}
+
+.link.nfl {
+  stroke: #002244;
+}
+
+.arrow.nfl {
+  fill: #002244;
+}
+
+.link.nba {
+  stroke: #006CB7;
+}
+
+.arrow.nba {
+  fill: #006CB7;
+}
+
+.link.mlb {
+  stroke: #0a2769;
+}
+
+.arrow.mlb {
+  fill: #0a2769;
 }
 
 
@@ -90,6 +118,18 @@ d3.json("/json/us.json", function(error, us) {
       .attr("d", path);
       // .on("click", clicked);
 
+
+//I thought that maybe I could make this whole thing easier by animating the marker-end attr
+  // g.append("defs").append("marker")
+  //   .attr("id", "arrowhead")
+  //   .attr("refX", 6 + 3) /*must be smarter way to calculate shift*/
+  //   .attr("refY", 2)
+  //   .attr("markerWidth", 6)
+  //   .attr("markerHeight", 4)
+  //   .attr("orient", "auto")
+  //   .append("path")
+  //   .attr("d", "M 0,0 V 4 L6,2 Z"); //this is actual shape for arrowhead
+
   g.append("path")
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
       .attr("id", "state-borders")
@@ -107,7 +147,8 @@ d3.json("/json/us.json", function(error, us) {
 
     for (var j = 0; j < len; j++) {
 
-        var currYear = mig[j].year;
+        var currYear = mig[j].year,
+            league = mig[j].sport;
 
 
 
@@ -120,36 +161,87 @@ d3.json("/json/us.json", function(error, us) {
                           dr = Math.sqrt(dx * dx + dy * dy);
                       return "M" + start[0] + "," + start[1] + "A" + dr + "," + dr +
                   " 0 0,1 " + end[0] + "," + end[1];
-                    })
-         .attr("class","link");
+                    });
          //set stroke dash array to 
          //animate stroke dash offset
          //linkz
 
-        var totalLength = path.node().getTotalLength();
+        var totalLength = path.node().getTotalLength(),
+            x1 = path.node().getPointAtLength(0).x,
+            y1 = path.node().getPointAtLength(0).y;
 
         path
           .attr("stroke-dasharray", totalLength + " " + totalLength)
           .attr("stroke-dashoffset", totalLength)
           .transition()
-            .duration(500)
-            .delay(function(d,i) { 
-              console.log(j);
+            .duration(1000)
+            .delay(function(d,i) {
               var d = ((currYear-1900)*100);
-              console.log(d);
               return d; })
             .ease("linear")
             .attr("stroke-dashoffset", 0);
 
+        var animatedObject = 
+            g.append('path')
+            .attr('d', 'M 0,0 7,3.5 0,7 1.5,3.5 ')
+            .attr('r', 3)
+            .attr('px', path.node().getPointAtLength(totalLength).x)
+            .attr('py', path.node().getPointAtLength(totalLength).y)
+            .attr("transform", "translate(" + x1 + "," + y1 + ")")
+            .attr('style', 'visibility: hidden');
+
+        if (league == "MLB") {
+          path.attr('class', 'mlb link');
+          animatedObject.attr('class','mlb arrow')
+        } else if (league == "NFL") {
+          path.attr('class', 'nfl link');
+          animatedObject.attr('class','nfl arrow')
+        } else {
+          path.attr('class', 'nba link');
+          animatedObject.attr('class','nba arrow')
+        } 
+
+        transition();    
+
+        function transition () {
+          animatedObject.transition()
+                        .duration(1000)
+                        .ease("ease-out")
+                        .delay(function(d,i) { 
+                          var d = ((currYear-1900)*100);
+                          return d; })
+                        .attrTween("transform", translateAlong(path.node()))
+                        .attr('style', 'visibility: visible');
+        }
+
+        // Returns an attrTween for translating along the specified path element.
+        function translateAlong(pathNode) {
+          //this is hacky, but helps make the animation less jumpy
+          var l1 = pathNode.getTotalLength()-.01,
+              l2 = pathNode.getTotalLength(),
+              t0 = 0
+          return function( i ) {
+            return function(t) {
+              var p0 = pathNode.getPointAtLength(t0 * l1);//previous point
+              var p = pathNode.getPointAtLength(t * l2);////current point
+              var angle = Math.atan2(p.y - p0.y, p.x - p0.x) * 180 / Math.PI;//angle for tangent
+              t0 = t;
+              var centerX = p.x - 7,
+                  centerY = p.y - 3.5;
+              return "translate(" + centerX + "," + centerY + ")rotate(" + angle + " 7" + " 3.5" +")";
+            };
+          };
+        }
+
         g.append('circle')
          .attr('cx', start[0])
          .attr('cy', start[1])
-         .attr('r', 3);
+         .attr('r', 2);
 
         g.append('circle')
          .attr('cx', end[0])
          .attr('cy', end[1])
-         .attr('r', 3);
+         .attr('r', 2);
       }
 
 
