@@ -40,11 +40,17 @@ At >500M per employee, Facebook even surpassed the $77M figured it reached acqui
 
 Even though Facebook is doing marginally better than many in the mobile-only space, Whatsapp blows it away with 134% more MAUs. It also beats out Tencent's WeChat, which has dominated Asia. Surprisingly, Snapchat, which recently turned down Facebook's $3 billion acquisition offer, is rumored to only have 30M active monthly users. 
 
+<h2 class="space-top space-bottom">Other VC Backed Acquisitions</h2>
+
+<div id="acq-chart" class="space-bottom space-top"></div>
+
+Whatsapp's deal dwarfs Instagram's and Snapchat's deals combined. The only acquistion that get's close to it was US West Media scopping up Cablevision in 1996 at 62% of the Whatsapp price. Viber, another messaging app, was also recently acquired for only 900 million.
+
 <h2 class="space-top space-bottom">So, Whatsapp-ening?</h2>
 
 1. Even if the 2.9 billion individuals with internet access all downloaded Whatsapp and began paying instantly, it would take about 7 years to reach the $19B value Facebook paid.
 2. There are no plans to integrate ads.
-3. $3B of the $19B is in <a href="">RSUs</a>
+3. $3B of the $19B is in <a href="https://en.wikipedia.org/wiki/Restricted_stock">RSOs</a>
 
 Facebook has been <a href="http://readwrite.com/2012/08/23/how-facebook-ditched-the-mobile-web-went-native-with-its-new-ios-app#awesm=~ownMsLfIXLhclm">trying to</a>  <a href="http://bgr.com/2013/04/15/facebook-home-google-play-reviews-438930/">figure out</a>  <a href="https://www.facebook.com/mobile/messenger">mobile</a>  <a href="http://www.theverge.com/2014/1/30/5360358/facebook-paper-iphone-app">for years now</a>. 
 
@@ -248,6 +254,63 @@ barsContainer.append("line")
   .attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
   .style("stroke", "#000");  
 
+var data = d3.csv.parse(d3.select('#acq').text());
+var valueLabelWidth = 40; // space reserved for value labels (right)
+var barHeight = 30; // height of one bar
+var barLabelWidth = 120; // space reserved for bar labels
+var barLabelPadding = 5; // padding between bar and bar labels (left)
+var gridLabelHeight = 18; // space reserved for gridline labels
+var gridChartOffset = 3; // space between start of grid and first bar
+var maxBarWidth = 200; // width of the bar with the max value
+ 
+// accessor functions 
+var barLabel = function(d) { return d['Name']; };
+var barValue = function(d) { return parseFloat(d[' Price']); };
+var buyer = function(d) { return d[' Buyer']; };
+ 
+// scales
+var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
+var y = function(d, i) { return yScale(i); };
+var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
+var x = d3.scale.linear().domain([0, d3.max(data, barValue)]).range([0, maxBarWidth]);
+// svg container element
+var chart = d3.select('#acq-chart').append("svg")
+  .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth+200)
+  .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
+var labelsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 200 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+labelsContainer.selectAll('text').data(data).enter().append('text')
+  .attr('y', yText)
+  .attr('stroke', 'none')
+  .attr('fill', 'black')
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr('text-anchor', 'end')
+  .text(barLabel);
+// bars
+var barsContainer = chart.append('g')
+  .attr('transform', 'translate(' + 210 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+barsContainer.selectAll("rect").data(data).enter().append("rect")
+  .attr('y', y)
+  .attr('height', yScale.rangeBand())
+  .attr('width', function(d) { return x(barValue(d)); })
+  .attr('stroke', 'white')
+  .attr('fill', 'blue');
+// bar value labels
+barsContainer.selectAll("text").data(data).enter().append("text")
+  .attr("x", function(d) { return x(barValue(d)); })
+  .attr("y", yText)
+  .attr("dx", 6) // padding-left
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr('stroke', 'none')
+  .attr('fill', 'black')
+  .attr("dy", ".35em") // vertical-align: middle
+  // .attr('text-anchor', 'end')
+  .text(buyer);
+// start line
+barsContainer.append("line")
+  .attr("y1", -gridChartOffset)
+  .attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
+  .style("stroke", "#000");  
 
 }
 </script>
@@ -280,8 +343,19 @@ Twitter (Mobile), 184
 Instagram, 150
 Snapchat, 30
 </script>
-<script>renderChart();</script>
 
+<script id="acq" type="text/csv">Name, Price, Buyer
+Whatsapp, 19, $19B - Facebook
+Instagram, 1, $1B - FB
+Snapchat, 3, $3B - FB (not realized) 
+Paypal, 1.5, $1.5B - Ebay
+Skype, 2.6, $2.6B - Ebay
+Skype, 8.5, $8.5B - Microsoft
+Continental Cablevision, 11.8, $11.8B - US West Media
+Nest, 3.2, $3.2B - Google
+Viber, .9, $.9B - Ratuken
+</script>
+<script>renderChart();</script>
 
 
 
