@@ -216,7 +216,7 @@ date:   2013-12-11 11:00:00
         var $nf = document.getElementById('node-field');
         new NodeField ( $nf, 10, 10 );
 
-      if (!window.DeviceOrientationEvent) {
+      if (typeof window.DeviceOrientationEvent == 'undefined') {
         $('header').text("NO  GYROSCOPE  DETECTED  :(").show();
       }
     }
