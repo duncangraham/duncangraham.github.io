@@ -118,6 +118,7 @@ date:   2013-12-11 11:00:00
 
     // Listen for the deviceorientation event and handle the raw data
     window.addEventListener('deviceorientation', function(eventData) {
+
         // gamma is the left-to-right tilt in degrees, where right is positive
         tiltLR = eventData.gamma/2;
               
@@ -128,6 +129,11 @@ date:   2013-12-11 11:00:00
         dir = eventData.alpha/2;
         // call our orientation event handler
         // deviceOrientationHandler(tiltLR, tiltFB, dir);
+
+        console.log('eventData ' + eventData);
+        console.log('titlLR ' + tiltLR);
+        console.log('tiltFB ' + tiltFB);
+
     }, false);    
 
     //the node constructor
