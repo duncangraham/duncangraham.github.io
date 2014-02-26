@@ -109,7 +109,7 @@ header {
   margin-top: .6em; }
 
 .space_big {
-  margin: 4em 0em 15em 0em; }
+  margin: 4em 0em 10em 0em; }
 
 .space-bottom {
   margin-bottom: 2em; }
@@ -593,7 +593,7 @@ img {
   transition: color 0.2s linear; }
 
 .home:hover {
-  color: #000; }
+  color: #14081B; }
 
 .nav {
   position: fixed;
@@ -606,13 +606,44 @@ img {
   transition: color 0.2s linear; }
 
 .nav:hover {
-  color: #000; }
+  color: #14081B; }
 
 .nav.next {
   right: 0em; }
 
 .nav.previous {
   left: 0em; }
+
+#mc_embed_signup label {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: #CCC; }
+
+#mc_embed_signup #mc-embedded-subscribe-form input.email {
+  margin: 0 auto 10px;
+  padding: 6px 0;
+  font-size: 1.25em;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    #mc_embed_signup #mc-embedded-subscribe-form input.email {
+      width: 80%; } }
+
+#mc_embed_signup #mc-embedded-subscribe-form input.button {
+  margin: 0 auto;
+  width: 58%;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  background-color: #CCC;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear; }
+  @media screen and (max-width: 767px) {
+    #mc_embed_signup #mc-embedded-subscribe-form input.button {
+      width: 80%; } }
+
+#mc_embed_signup #mc-embedded-subscribe-form input.button:hover {
+  background-color: #14081B; }
 
 .twitter {
   font-family: 'Lato', sans-serif;

@@ -52,7 +52,7 @@ A week ago I saw <a href="http://work.heinley.com/pixels#asset-656032">"Nightpix
 <canvas id="myCanvas4" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/creationofadam.jpg" id="creationofadam"/>
 
-<p>this last one is for my dad. Sorry if you can't guess it! (<a href="http://online.wsj.com/news/articles/SB10001424052748704584804575644900237353756">and here's an article on the painting and the artist.</a>)</p>
+<p>This one is for my dad. Sorry if you can't guess it! (<a href="http://online.wsj.com/news/articles/SB10001424052748704584804575644900237353756">and here's an article on the painting and the artist.</a>)</p>
 <canvas id="myCanvas6" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/dad.jpg" id="dad"/>
 
