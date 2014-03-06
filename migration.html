@@ -7,6 +7,11 @@ date:   2014-01-10 13:47:00
 
 <style>
 
+#mc_embed_signup {
+display: none;
+}
+
+
 #meta {
   position: absolute;
   top:1em;
@@ -61,34 +66,53 @@ circle {
   fill: none;
   stroke: red;
   stroke-width: 1.5px;
+  -webkit-transition: stroke-width .2s;
+  -moz-transition: stroke-width .2s;
+  -o-transition: stroke-width .2s;
+  transition: stroke-width .2s;
+}
+
+.link:hover {
+  stroke-width: 6px;
+
 }
 
 .link.nfl {
-  stroke: #3939FF;
+  stroke: #313AFF;
 }
 
 .arrow.nfl {
-  fill: #3939FF;
+  fill: #313AFF;
 }
 
 .link.nba {
-  stroke: #FF4732;
+  stroke: #9224FF;
 }
 
 .arrow.nba {
-  fill: #FF4732;
+  fill: #9224FF;
 }
 
 .link.mlb {
-  stroke: #22FF60;
+  stroke: #24A1FF;
 }
 
 .arrow.mlb {
-  fill: #22FF60;
+  fill: #24A1FF;
 }
 
+#tooltip {
+  position: absolute;
+  display:none;
+}
 
 </style>
+<div id='tooltip'>
+  <p class="sport"></p>
+  <p class="year"></p>
+  <p>Departed from <span class="depart-city"></span>, <span class="depart-state"></span> as the <span class="depart-name"></span></p>
+  <p>And arrived at <span class="arrive-city"></span>, <span class="arrive-state"></span> as the <span class="arrive-name"></span></p>
+</div>
 <div id="meta">
 <h2 id="year" class="space-bottom font-large">1900</h2>
 <a class="replay">replay</a>
@@ -160,9 +184,6 @@ d3.json("/json/us.json", function(error, us) {
     $('.relocPaths').remove();
     var g = svg.append("g").attr('class', 'relocPaths');
 
-    tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return "<strong>Frequency:</strong> <span style='color:red'>testtestest</span>"; });
-    g.call(tip);
-
     d3.json("/json/migrations.json", function(error, m) {
 
       var mig = m.migrations,
@@ -177,11 +198,10 @@ d3.json("/json/us.json", function(error, us) {
               league = mig[j].sport;
 
 
-
           var start = projection(mig[j].left.coords),
               end = projection(mig[j].arrived.coords);
           var path = g.append("path")
-           .attr("d", function(d) {
+                      .attr("d", function(d) {
                         var dx = start[0] - end[0],
                             dy = start[1] - end[1],
                             dr = Math.sqrt(dx * dx + dy * dy);
@@ -199,8 +219,6 @@ d3.json("/json/us.json", function(error, us) {
           path
             .attr("stroke-dasharray", totalLength + " " + totalLength)
             .attr("stroke-dashoffset", totalLength)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
             .transition()
               .duration(1000)
               .delay(function(d,i) {

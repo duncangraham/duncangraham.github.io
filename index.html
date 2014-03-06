@@ -15,11 +15,9 @@ title: dvncan
 </div>
 
 <div class="content-spacing">
-  <div class="entries">
     {% for post in site.posts %}
       <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
       {{ post.title }}
       </a>
     {% endfor %}
-  </ul>
 </div>

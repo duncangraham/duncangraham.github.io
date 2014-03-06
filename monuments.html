@@ -28,33 +28,37 @@ color: "purple"
 
 <canvas id="myCanvas1" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/monuments/hill.jpg" id="hill"/>
-
-<canvas id="myCanvas2" width="671" height="600"></canvas>
-<img style="display:none" src="{{ root_path }}/img/monuments/jefferson.jpg" id="jefferson"/>
+<h2>Clicks: <span class="hill">0</span></h2>
 
 <canvas id="myCanvas3" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/monuments/jefferson2.jpg" id="jefferson2"/>
-
-<canvas id="myCanvas4" width="671" height="600"></canvas>
-<img style="display:none" src="{{ root_path }}/img/monuments/lincoln.jpg" id="lincoln"/>
+<h2>Clicks: <span class="jefferson2">0</span></h2>
 
 <canvas id="myCanvas5" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/monuments/lincoln2.jpg" id="lincoln2"/>
+<h2>Clicks: <span class="lincoln2">0</span></h2>
 
 <canvas id="myCanvas6" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/monuments/whitehouse.jpg" id="whitehouse"/>
-
-<canvas id="myCanvas7" width="671" height="600"></canvas>
-<img style="display:none" src="{{ root_path }}/img/monuments/monument.jpg" id="monument"/>
+<h2>Clicks: <span class="whitehouse">0</span></h2>
 
 <canvas id="myCanvas8" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/monuments/monument2.jpg" id="monument2"/>
+<h2>Clicks: <span class="monument2">0</span></h2>
 
 <canvas id="myCanvas9" width="671" height="600"></canvas>
 <img style="display:none" src="{{ root_path }}/img/monuments/panda.jpg" id="panda"/>
+<h2>Clicks: <span class="panda">0</span></h2>
 
-<canvas id="myCanvas10" width="671" height="600"></canvas>
-<img style="display:none" src="{{ root_path }}/img/monuments/panda2.jpg" id="panda2"/>
+
+<h2>Capitol Hill Clicks: <span class="hillTotal">0</span></h2>
+<h2>Jefferson Memorial Clicks: <span class="jefferson2Total">0</span></h2>
+<h2>Lincoln Memorial Clicks: <span class="lincoln2Total">0</span></h2>
+<h2>Whitehouse Clicks: <span class="whitehouseTotal">0</span></h2>
+<h2>Washington Monument Clicks: <span class="monument2Total">0</span></h2>
+<h2>Panda Clicks: <span class="pandaTotal">0</span></h2>
+<h2>Total Score: <span class="total">0</span></h2>
+
 
 
 <script type="text/javascript">
@@ -158,6 +162,16 @@ var setupCanvas = function (canvasName, rasterName) {
 	paper.tool.onMouseDown = function(event) {
 		size = size*1.25;
 		clarify(rasterName, size, rastRatio);
+		var clickSpan = $('.'+rasterName);
+		var clickNum = parseInt(clickSpan.text());
+		console.log(clickNum);
+		clickNum = clickNum + 1;
+		clickSpan.text(clickNum);
+		$('.'+rasterName+'Total').text(clickNum);
+
+		var total = parseInt($('.total').text());
+		total = total + 1;
+		$('.total').text(total);
 	};
 
 	//draw things!
@@ -167,15 +181,11 @@ var setupCanvas = function (canvasName, rasterName) {
 
 function initialDraw() {
 	setupCanvas('myCanvas1', 'hill');
-	setupCanvas('myCanvas2', 'jefferson');
 	setupCanvas('myCanvas3', 'jefferson2');
-	setupCanvas('myCanvas4', 'lincoln');
 	setupCanvas('myCanvas5', 'lincoln2');
 	setupCanvas('myCanvas6', 'whitehouse');
-	setupCanvas('myCanvas7', 'monument');
 	setupCanvas('myCanvas8', 'monument2');
 	setupCanvas('myCanvas9', 'panda');
-	setupCanvas('myCanvas10', 'panda2');
 };
 
 initialDraw();
