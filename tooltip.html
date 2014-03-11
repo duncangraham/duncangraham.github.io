@@ -72,7 +72,7 @@ circle {
 }
 
 .link:hover {
-  stroke-width: 6px;
+  stroke-width: 3px;
 
 }
 
@@ -115,6 +115,18 @@ circle {
   display:none;
 }
 
+.label.nfl {
+  color: #313AFF;
+}
+
+.label.nba {
+  color: #9224FF;
+}
+
+.label.mlb {
+  color: #24A1FF;
+}
+
 </style>
 <div id='tooltip'>
   <p class="no-pad">Departed <strong class="cityDepart"></strong>, <strong class="stateDepart"></strong> as the <strong class="nameDepart"></strong></p>
@@ -125,9 +137,9 @@ circle {
 <div id="meta">
 <h2 id="year" class="space-bottom font-large">1900</h2>
 <a class="replay">replay</a>
-<h2 class="label" data-sport="nfl">NFL</h2>
-<h2 class="label" data-sport="nba">NBA</h2>
-<h2 class="label" data-sport="mlb">MLB</h2>
+<h2 class="label nfl" data-sport="nfl">NFL</h2>
+<h2 class="label nba" data-sport="nba">NBA</h2>
+<h2 class="label mlb" data-sport="mlb">MLB</h2>
 </div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
@@ -136,7 +148,7 @@ circle {
 
 $('.label').hover(function(){
 
-  var sport = $(this).attr('data-sport');
+  var sport = $(this).data('sport');
 
   if ( sport == 'nba' ) {
     $('.link.nfl, .link.mlb, .arrow.nfl, .arrow.mlb').animate({opacity: '.2'}, 200);
@@ -270,14 +282,36 @@ d3.json("/json/us.json", function(error, us) {
           path.on('mouseout', function() {
             $('body').on('mousemove', function(d){
               tooltip.css('display', 'none');
-              $('.link').animate({opacity: '1'}, 200);
             });
           });
 
-          //d3.select(id of tooltip).css()
-          //d3.mouse?
-          //tooltip.style.top = e.pageY*1 + 5 + "px";
-          //     tooltip.style.left = e.pageX*1 + 5 + "px";
+        //   voronoiGroup.selectAll(".link")
+        //     .data(voronoi(d3.nest()
+        //         .key(function(d) { return x(d.date) + "," + y(d.value); })
+        //         .rollup(function(v) { return v[0]; })
+        //         .entries(d3.merge(cities.map(function(d) { return d.values; })))
+        //         .map(function(d) { return d.values; })))
+        //   .enter().append("path")
+        //     .attr("d", function(d) { return "M" + d.join("L") + "Z"; })
+        //     .datum(function(d) { return d.point; })
+        //     .on("mouseover", mouseover)
+        //     .on("mouseout", mouseout);
+
+        // d3.select("#show-voronoi")
+        //     .property("disabled", false)
+        //     .on("change", function() { voronoiGroup.classed("voronoi--show", this.checked); });
+
+        // function mouseover(d) {
+        //   d3.select(d.city.line).classed("city--hover", true);
+        //   d.city.line.parentNode.appendChild(d.city.line);
+        //   focus.attr("transform", "translate(" + x(d.date) + "," + y(d.value) + ")");
+        //   focus.select("text").text(d.city.name);
+        // }
+
+        // function mouseout(d) {
+        //   d3.select(d.city.line).classed("city--hover", false);
+        //   focus.attr("transform", "translate(-100,-100)");
+        // }
 
           var animatedObject =
               g.append('path')
