@@ -11,11 +11,17 @@ date:   2014-01-10 13:47:00
 display: none;
 }
 
+.flexbox {
+  margin: 3.5em 0em;
+  padding: 1em;
+}
+
+
 #meta {
   position: absolute;
-  top:1em;
-  left:1em;
-  line-height: 1.2em;
+}
+
+.site {
 }
 
 .d3-tip {
@@ -73,7 +79,7 @@ circle {
 
 .link:hover {
   stroke-width: 3px;
-
+  cursor: none;
 }
 
 .link.nfl {
@@ -128,22 +134,37 @@ circle {
 }
 
 </style>
+</div> <!-- close entry-spacing div, maybe bring it onto this page? would make it more extensible -->
+<div id="relocations"></div>
 <div id='tooltip'>
   <p class="no-pad">Departed <strong class="cityDepart"></strong>, <strong class="stateDepart"></strong> as the <strong class="nameDepart"></strong></p>
   <p class="no-pad">Arrived <strong class="cityArrive"></strong>, <strong class="stateArrive"></strong> as the <strong class="nameArrive"></strong></p>
   <span> Year: <strong class="year nopad"></strong> | Sport: <strong class="sport"></strong></span>
   
 </div>
-<div id="meta">
-<h2 id="year" class="space-bottom font-large">1900</h2>
-<a class="replay">replay</a>
-<h2 class="label nfl" data-sport="nfl">NFL</h2>
-<h2 class="label nba" data-sport="nba">NBA</h2>
-<h2 class="label mlb" data-sport="mlb">MLB</h2>
+<div class="bottom space-top">
+  <div class="entry-content content-spacing">
+    <ul class="flexbox flex_space-between space-top">
+                    <li class="sort-opt font-dark">
+                      <h2 id="year" class="font-large">1900</h2>
+                    </li>
+                    <li class="sort-opt">
+                      <h2 class="label nfl font-large" data-sport="nfl">NFL</h2>
+                    </li>
+                    <li class="sort-opt">
+                      <h2 class="label nba font-large" data-sport="nba">NBA</h2>
+                    </li>
+                    <li class="sort-opt">
+                      <h2 class="label mlb font-large" data-sport="mlb">MLB</h2>
+                    </li>
+                    <li class="sort-opt font-dark">
+                      <h2 class="label replay font-large">REPLAY</h2>
+                    </li>
+                </ul>  
+  </div>
 </div>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="{{ root_path }}js/d3.min.js"></script>
+<script src="{{ root_path }}js/topojson.v1.min.js"></script>
 <script>
 
 $('.label').hover(function(){
@@ -160,10 +181,10 @@ $('.label').hover(function(){
 
 },function(){
   $('.link, .arrow').animate({opacity: '1'}, 200);
-})
+});
 
-var width = document.body.offsetWidth || 960,
-    height = document.body.offsetHeight || 500,
+var width =  document.body.offsetWidth || 960,
+    height = 500,
     centered,
     projection = d3.geo.albersUsa()
                    .scale(1070)
@@ -171,7 +192,7 @@ var width = document.body.offsetWidth || 960,
     path = d3.geo
              .path()
              .projection(projection),
-    svg = d3.select("body")
+    svg = d3.select("#relocations")
             .append("svg")
             .attr("width", width)
             .attr("height", height),
@@ -196,202 +217,217 @@ d3.json("/json/us.json", function(error, us) {
       .attr("id", "state-borders")
       .attr("d", path);
 
-  drawPaths();
 
-  function drawPaths () {
-    $('.relocPaths').remove();
-    var g = svg.append("g").attr('class', 'relocPaths');
-
-    d3.json("/json/migrations.json", function(error, data) {
-
+  d3.json("/json/migrations.json", function(error, data) {
       var m = data.migrations,
           year = 1900,
           yearDiv = $('#year'),
           len = m.length-1;
 
-      for (var j = 0; j < len; j++) {
-
-          var mig = m[j],
-              currYear = mig.year,
-              sport = mig.sport,
-              nameDepart = mig.left.name,
-              cityDepart = mig.left.city,
-              stateDepart = mig.left.state,
-              nameArrive = mig.arrived.name,
-              cityArrive = mig.arrived.city,
-              stateArrive = mig.arrived.state,
-              start = projection(mig.left.coords),
-              end = projection(mig.arrived.coords);
 
 
-          var path = g.append("path")
-           .attr("d", function(d) {
-                        var dx = start[0] - end[0],
-                            dy = start[1] - end[1],
-                            dr = Math.sqrt(dx * dx + dy * dy);
-                        return "M" + start[0] + "," + start[1] + "A" + dr + "," + dr +
-                    " 0 0,1 " + end[0] + "," + end[1];
-                      });
-           //set stroke dash array to
-           //animate stroke dash offset
-           //linkz
+    svg.append("g").attr('id', 'relocPaths')
+      .selectAll('circle')
+       .data(m)
+       .enter()
+        .append('circle')
+        .attr('r', 2)
+        .attr("transform", function(d) {return "translate(" + projection([d.left.coords[0],d.left.coords[1]]) + ")";});
 
-          var totalLength = path.node().getTotalLength(),
-              x1 = path.node().getPointAtLength(0).x,
-              y1 = path.node().getPointAtLength(0).y;
-
-          path
-            .attr("stroke-dasharray", totalLength + " " + totalLength)
-            .attr("stroke-dashoffset", totalLength)
-            .attr('data-sport', sport)
-            .attr('data-year', currYear)
-            .attr('data-namedepart', nameDepart)
-            .attr('data-citydepart', cityDepart)
-            .attr('data-statedepart', stateDepart)
-            .attr('data-namearrive', nameArrive)
-            .attr('data-cityarrive', cityArrive)
-            .attr('data-statearrive', stateArrive)
-            .transition()
-              .duration(1000)
-              .delay(function(d,i) {
-                var d = ((currYear-1900)*100);
-                return d; })
-              .ease("linear")
-              .attr("stroke-dashoffset", 0);
-
-          path.on('mouseover', function() {
-            var $path = $(this);
-            $('body').on('mousemove', function(d){
-
-              //this is dumb
-              tooltip.find('.sport').text($path.data('sport'));
-              tooltip.find('.year').text($path.data('year'));
-              tooltip.find('.cityDepart').text($path.data('citydepart'));
-              tooltip.find('.stateDepart').text($path.data('statedepart'));
-              tooltip.find('.nameDepart').text($path.data('namedepart'));
-              tooltip.find('.cityArrive').text($path.data('cityarrive'));
-              tooltip.find('.stateArrive').text($path.data('statearrive'));
-              tooltip.find('.nameArrive').text($path.data('namearrive'));
-
-              tooltip.css('display', 'block');
-              tooltip.css('top', d.pageY*1 + 5 + "px");
-              tooltip.css('left', d.pageX*1 + 5 + "px");
-            });
-          });
-
-          path.on('mouseout', function() {
-            $('body').on('mousemove', function(d){
-              tooltip.css('display', 'none');
-            });
-          });
-
-        //   voronoiGroup.selectAll(".link")
-        //     .data(voronoi(d3.nest()
-        //         .key(function(d) { return x(d.date) + "," + y(d.value); })
-        //         .rollup(function(v) { return v[0]; })
-        //         .entries(d3.merge(cities.map(function(d) { return d.values; })))
-        //         .map(function(d) { return d.values; })))
-        //   .enter().append("path")
-        //     .attr("d", function(d) { return "M" + d.join("L") + "Z"; })
-        //     .datum(function(d) { return d.point; })
-        //     .on("mouseover", mouseover)
-        //     .on("mouseout", mouseout);
-
-        // d3.select("#show-voronoi")
-        //     .property("disabled", false)
-        //     .on("change", function() { voronoiGroup.classed("voronoi--show", this.checked); });
-
-        // function mouseover(d) {
-        //   d3.select(d.city.line).classed("city--hover", true);
-        //   d.city.line.parentNode.appendChild(d.city.line);
-        //   focus.attr("transform", "translate(" + x(d.date) + "," + y(d.value) + ")");
-        //   focus.select("text").text(d.city.name);
-        // }
-
-        // function mouseout(d) {
-        //   d3.select(d.city.line).classed("city--hover", false);
-        //   focus.attr("transform", "translate(-100,-100)");
-        // }
-
-          var animatedObject =
-              g.append('path')
-              .attr('d', 'M 0,0 7,3.5 0,7 1.5,3.5 ')
-              .attr("transform", "translate(" + x1 + "," + y1 + ")")
-              .attr('style', 'visibility: hidden');
-
-          if (sport == "MLB") {
-            path.attr('class', 'mlb link');
-            animatedObject.attr('class','mlb arrow')
-          } else if (sport == "NFL") {
-            path.attr('class', 'nfl link');
-            animatedObject.attr('class','nfl arrow')
-          } else {
-            path.attr('class', 'nba link');
-            animatedObject.attr('class','nba arrow')
-          }
-
-          transition();
-
-          function transition () {
-            animatedObject.transition()
-                          .duration(1000)
-                          .ease("ease-out")
-                          .delay(function(d,i) {
-                            var d = ((currYear-1900)*100);
-                            return d; })
-                          .attrTween("transform", translateAlong(path.node()))
-                          .attr('style', 'visibility: visible');
-          }
-
-          // Returns an attrTween for translating along the specified path element.
-          function translateAlong(pathNode) {
-            //this is hacky, but helps make the animation less jumpy
-            var l1 = pathNode.getTotalLength()-.01,
-                l2 = pathNode.getTotalLength(),
-                t0 = 0
-            return function( i ) {
-              return function(t) {
-                var p0 = pathNode.getPointAtLength(t0 * l1);//previous point
-                var p = pathNode.getPointAtLength(t * l2);////current point
-                var angle = Math.atan2(p.y - p0.y, p.x - p0.x) * 180 / Math.PI;//angle for tangent
-                t0 = t;
-                var centerX = p.x - 7,
-                    centerY = p.y - 3.5;
-                return "translate(" + centerX + "," + centerY + ")rotate(" + angle + " 7" + " 3.5" +")";
-              };
-            };
-          }
-
-          g.append('circle')
-           .attr('cx', start[0])
-           .attr('cy', start[1])
-           .attr('r', 2);
-
-          g.append('circle')
-           .attr('cx', end[0])
-           .attr('cy', end[1])
-           .attr('r', 2);
-        }
-
-
-    var dateCount = setInterval(function(){
-      year = year + 1;
-      yearDiv.html(year);
-
-      if (year == 2014) {
-        clearInterval(dateCount);
-      }
-    }, 100)
-
-    });
-
-  }
-
-  $('.replay').on('click', function (){
-    drawPaths();
-  })
+  });
 
 });
+
+  // drawPaths();
+
+  // function drawPaths () {
+  //   $('.relocPaths').remove();
+  //   var g = g.append("g").attr('class', 'relocPaths');
+
+
+      // g.selectAll("path")
+      //  .data(m)
+      //  .enter()
+      //  .append("path")
+      //  .attr("d", function(d) {
+      //     console.log(d);
+      //     var start = d.left.coords,
+      //         end = d.arrived.coords;
+      //     var dx = start[0] - end[0],
+      //         dy = start[1] - end[1],
+      //         dr = Math.sqrt(dx * dx + dy * dy);
+                        
+      //     return "M" + start[0] + "," + start[1] + "A" + dr + "," + dr + " 0 0,1 " + end[0] + "," + end[1];
+      //  }).attr('class', 'mlb link');
+
+
+          // g.append('circle')
+          //  .attr('cx', start[0])
+          //  .attr('cy', start[1])
+          //  .attr('r', 2);
+
+          // g.append('circle')
+          //  .attr('cx', end[0])
+          //  .attr('cy', end[1])
+          //  .attr('r', 2);
+
+
+
+      // for (var j = 0; j < len; j++) {
+
+      //     var mig = m[j],
+      //         currYear = mig.year,
+      //         sport = mig.sport,
+      //         nameDepart = mig.left.name,
+      //         cityDepart = mig.left.city,
+      //         stateDepart = mig.left.state,
+      //         nameArrive = mig.arrived.name,
+      //         cityArrive = mig.arrived.city,
+      //         stateArrive = mig.arrived.state,
+      //         start = projection(mig.left.coords),
+      //         end = projection(mig.arrived.coords);
+
+
+      //     var path = g.append("path")
+      //      .attr("d", function(d) {
+      //                   var dx = start[0] - end[0],
+      //                       dy = start[1] - end[1],
+      //                       dr = Math.sqrt(dx * dx + dy * dy);
+      //                   return "M" + start[0] + "," + start[1] + "A" + dr + "," + dr +
+      //               " 0 0,1 " + end[0] + "," + end[1];
+      //                 });
+      //      //set stroke dash array to
+      //      //animate stroke dash offset
+      //      //linkz
+
+      //     var totalLength = path.node().getTotalLength(),
+      //         x1 = path.node().getPointAtLength(0).x,
+      //         y1 = path.node().getPointAtLength(0).y;
+
+      //     path
+      //       .attr("stroke-dasharray", totalLength + " " + totalLength)
+      //       .attr("stroke-dashoffset", totalLength)
+      //       .attr('data-sport', sport)
+      //       .attr('data-year', currYear)
+      //       .attr('data-namedepart', nameDepart)
+      //       .attr('data-citydepart', cityDepart)
+      //       .attr('data-statedepart', stateDepart)
+      //       .attr('data-namearrive', nameArrive)
+      //       .attr('data-cityarrive', cityArrive)
+      //       .attr('data-statearrive', stateArrive)
+      //       .transition()
+      //         .duration(1000)
+      //         .delay(function(d,i) {
+      //           var d = ((currYear-1900)*100);
+      //           return d; })
+      //         .ease("linear")
+      //         .attr("stroke-dashoffset", 0);
+
+      //     path.on('mouseover', function() {
+      //       var $path = $(this);
+      //       $('body').on('mousemove', function(d){
+
+      //         //this is dumb
+      //         tooltip.find('.sport').text($path.data('sport'));
+      //         tooltip.find('.year').text($path.data('year'));
+      //         tooltip.find('.cityDepart').text($path.data('citydepart'));
+      //         tooltip.find('.stateDepart').text($path.data('statedepart'));
+      //         tooltip.find('.nameDepart').text($path.data('namedepart'));
+      //         tooltip.find('.cityArrive').text($path.data('cityarrive'));
+      //         tooltip.find('.stateArrive').text($path.data('statearrive'));
+      //         tooltip.find('.nameArrive').text($path.data('namearrive'));
+
+      //         tooltip.css('display', 'block');
+      //         tooltip.css('top', d.pageY*1 + "px");
+      //         tooltip.css('left', d.pageX*1 + "px");
+      //       });
+      //     });
+
+      //     path.on('mouseout', function() {
+      //       $('body').on('mousemove', function(d){
+      //         tooltip.css('display', 'none');
+      //       });
+      //     });
+
+      //     var animatedObject =
+      //         g.append('path')
+      //         .attr('d', 'M 0,0 7,3.5 0,7 1.5,3.5 ')
+      //         .attr("transform", "translate(" + x1 + "," + y1 + ")")
+      //         .attr('style', 'visibility: hidden');
+
+      //     if (sport == "MLB") {
+      //       path.attr('class', 'mlb link');
+      //       animatedObject.attr('class','mlb arrow')
+      //     } else if (sport == "NFL") {
+      //       path.attr('class', 'nfl link');
+      //       animatedObject.attr('class','nfl arrow')
+      //     } else {
+      //       path.attr('class', 'nba link');
+      //       animatedObject.attr('class','nba arrow')
+      //     }
+
+      //     transition();
+
+      //     function transition () {
+      //       animatedObject.transition()
+      //                     .duration(1000)
+      //                     .ease("ease-out")
+      //                     .delay(function(d,i) {
+      //                       var d = ((currYear-1900)*100);
+      //                       return d; })
+      //                     .attrTween("transform", translateAlong(path.node()))
+      //                     .attr('style', 'visibility: visible');
+      //     }
+
+      //     // Returns an attrTween for translating along the specified path element.
+      //     function translateAlong(pathNode) {
+      //       //this is hacky, but helps make the animation less jumpy
+      //       var l1 = pathNode.getTotalLength()-.01,
+      //           l2 = pathNode.getTotalLength(),
+      //           t0 = 0
+      //       return function( i ) {
+      //         return function(t) {
+      //           var p0 = pathNode.getPointAtLength(t0 * l1);//previous point
+      //           var p = pathNode.getPointAtLength(t * l2);////current point
+      //           var angle = Math.atan2(p.y - p0.y, p.x - p0.x) * 180 / Math.PI;//angle for tangent
+      //           t0 = t;
+      //           var centerX = p.x - 7,
+      //               centerY = p.y - 3.5;
+      //           return "translate(" + centerX + "," + centerY + ")rotate(" + angle + " 7" + " 3.5" +")";
+      //         };
+      //       };
+      //     }
+
+      //     g.append('circle')
+      //      .attr('cx', start[0])
+      //      .attr('cy', start[1])
+      //      .attr('r', 2);
+
+      //     g.append('circle')
+      //      .attr('cx', end[0])
+      //      .attr('cy', end[1])
+      //      .attr('r', 2);
+      //   }
+
+
+    // var dateCount = setInterval(function(){
+    //   year = year + 1;
+    //   yearDiv.html(year);
+
+    //   if (year == 2014) {
+    //     clearInterval(dateCount);
+    //   }
+    // }, 100)
+
+//     });
+
+//   }
+
+//   $('.replay').on('click', function (){
+//     drawPaths();
+//   })
+
+// });
 </script>
 
 
