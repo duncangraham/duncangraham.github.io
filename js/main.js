@@ -66,13 +66,16 @@ var colorize = function (e) {
 
         $('header .char2').css('color', '#FFF');
 
-        console.log('rgb(' + rgb2.join(',') + ')');
-
     } else {
         $('header .char2').css('color', 'rgb(' + rgb.join(',') + ')');
         $('.first-paragraph:first-letter').css('color', 'rgb(' + rgb.join(',') + ')');
     }
 };
+
+
+var icoCounter = 2;
+var ico = $('#favicon');  
+
 
 
 
@@ -110,9 +113,21 @@ $('header .char2.insanity').on('click', function () {
             'border-bottom-color': '#333'
         });
         colorize(mousePos);
+        clearInterval(crazyFavicon);
+        ico.attr('href', '/img/favicon.png');
     } else {
         $body.addClass('insanity');      
-        colorize(mousePos);
+        colorize(mousePos);  
+        crazyFavicon = setInterval(function(){
+                                if ( icoCounter < 7 ) {
+                                    icoCounter = icoCounter + 1;
+                                } else {
+                                    icoCounter = 1;
+                                }
+
+                                ico.attr('href', '/img/favicon' + icoCounter + '.png');
+
+                            }, 50);
 
     }
 });
