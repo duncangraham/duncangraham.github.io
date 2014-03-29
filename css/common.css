@@ -656,3 +656,32 @@ img {
 
 .twitter a {
   text-decoration: underline; }
+
+.portfolio a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+
+.portfolio a:hover {
+  border-bottom: 1px solid #FFF; }
+
+.portfolio li {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.25); }
+
+.browser {
+  position: relative;
+  height: 21.5em;
+  overflow: hidden; }
+
+.iframe-container {
+  width: 99.7%;
+  padding-left: .1%;
+  height: 87.5%;
+  border: 1px;
+  position: absolute;
+  top: 11.2%;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden; }
+
+.browser iframe {
+  width: 100%;
+  height: 100%;
+  border: none; }

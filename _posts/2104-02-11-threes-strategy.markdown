@@ -11,6 +11,9 @@ date:   2014-02-11 23:00:00
 </style>
 
 <!-- Post Content -->
+
+<p>Disclaimer: I'm not sure if I believe anything I wrote below anymore. This game is incredible and more complex than I currently imagined. Go buy it. Like, Now.</p>
+
 <p class="first-paragraph">
 <a href="http://asherv.com/threes/">Threes!</a> is a game about making pairs of increasing value. It begins with a 4X4 grid of seven empty spaces<sup><a id="footnote1" href="#footnotes">1</a></sup> and nine filled randomly with 1's, 2's, and 3's. you slide the pieces orthoganally to combine like numbers, building up to bigger and bigger values. After a few days of play, I've figured out a solid strategy and a few supporting techniques.</p>
 
