@@ -297,6 +297,7 @@ d3.json("/json/us.json", function(error, us) {
 
 
       function transition() {
+        console.log( this.getAttribute('d') );
         var totalLength = this.getTotalLength();
         d3.select(this).attr("stroke-dasharray", totalLength + " " + totalLength)
                        .attr("stroke-dashoffset", totalLength);

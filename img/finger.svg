@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="422px" height="362.5px" viewBox="0 0 422 362.5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>animated comp 2</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="finger" sketch:type="MSArtboardGroup" transform="translate(0.000000, 0.500000)">
+            <g id="finger-copy-2" sketch:type="MSLayerGroup">
+                <rect id="Rectangle-50" fill="#FFDDB3" sketch:type="MSShapeGroup" transform="translate(220.000000, 186.500000) rotate(39.000000) translate(-220.000000, -186.500000) " x="-6" y="146" width="452" height="81"></rect>
+                <path d="M40,83 C62.0913911,83 80,64.4198183 80,41.5 C80,18.5801817 62.0913911,0 40,0 C17.9086089,0 0,18.5801817 0,41.5 C0,64.4198183 17.9086089,83 40,83 Z" id="Oval-1" fill="#FFDDB3" sketch:type="MSShapeGroup"></path>
+                <path d="M38.5,64 C52.030977,64 63,52.8071194 63,39 C63,25.1928806 52.030977,14 38.5,14 C24.969023,14 14,25.1928806 14,39 C14,52.8071194 24.969023,64 38.5,64 Z" id="Oval-1-copy-2" fill="#FFF9F2" sketch:type="MSShapeGroup"></path>
+                <path d="M40.5,66 C54.030977,66 65,54.8071194 65,41 C65,27.1928806 54.030977,16 40.5,16 C26.969023,16 16,27.1928806 16,41 C16,54.8071194 26.969023,66 40.5,66 Z" id="Oval-1-copy" fill="#FCEEDE" sketch:type="MSShapeGroup"></path>
+                <rect id="Rectangle-51" fill="#D8BA96" sketch:type="MSShapeGroup" transform="translate(80.500000, 70.500000) rotate(313.000000) translate(-80.500000, -70.500000) " x="60" y="69" width="41" height="3" rx="8"></rect>
+                <rect id="Rectangle-51-copy" fill="#D8BA96" sketch:type="MSShapeGroup" transform="translate(87.500000, 75.500000) rotate(313.000000) translate(-87.500000, -75.500000) " x="67" y="74" width="41" height="3" rx="8"></rect>
+                <rect id="Rectangle-51-copy-2" fill="#D8BA96" sketch:type="MSShapeGroup" transform="translate(93.500000, 79.500000) rotate(313.000000) translate(-93.500000, -79.500000) " x="73" y="78" width="41" height="3" rx="8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -685,3 +685,28 @@ img {
   width: 100%;
   height: 100%;
   border: none; }
+
+.svg-container {
+  width: 19.7em;
+  margin: 0em auto;
+  position: relative;
+  overflow: hidden; }
+
+#svg-tablet {
+  position: relative;
+  z-index: 100; }
+
+#svg-background {
+  height: 86.2%;
+  position: absolute;
+  top: 1.7em;
+  left: .1%; }
+
+#svg-active {
+  position: absolute;
+  width: 94%;
+  top: 6.5em;
+  left: 3%; }
+
+.animated-svg {
+  position: absolute; }

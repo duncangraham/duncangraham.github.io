@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="622px" height="1038px" viewBox="0 0 622 1038" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>animated comp 8</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <linearGradient x1="50%" y1="-167.44186%" x2="50%" y2="118.663699%" id="linearGradient-1">
+            <stop stop-color="#1A141D" stop-opacity="0.634133732" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup">
+            <path d="M28.9979055,0 C12.9828045,0 0,12.9831184 0,28.9990318 L0,1009.00097 C0,1025.01669 12.991354,1038 28.9979055,1038 L593.002094,1038 C609.017195,1038 622,1025.01688 622,1009.00097 L622,28.9990318 C622,12.9833088 609.008646,0 593.002094,0 L28.9979055,0 Z M20,54 L20,961 L602,961 L602,54 L20,54 Z" id="Rectangle-85-copy" fill="#302735" sketch:type="MSShapeGroup"></path>
+            <path d="M311.5,1020 C323.374123,1020 333,1010.37412 333,998.5 C333,986.625877 323.374123,977 311.5,977 C299.625877,977 290,986.625877 290,998.5 C290,1010.37412 299.625877,1020 311.5,1020 Z" id="Oval-11" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+            <rect id="Rectangle-109" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup" x="276" y="27" width="71" height="10" rx="29"></rect>
+            <circle id="Oval-12" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup" cx="312" cy="16" r="5"></circle>
+        </g>
+    </g>
+</svg>

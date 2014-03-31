@@ -172,7 +172,6 @@ $('.sort-type a').on('click', function () {
     $('.sort-date').addClass('font-light');
     $('.sort-type').removeClass('font-light');
 
-    console.log(entArr);
     $('.entries').html(entArr);
 });
 
