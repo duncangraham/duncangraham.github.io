@@ -7,6 +7,15 @@ date:   2014-01-10 13:47:00
 
 <style>
 
+#relocations {
+  margin-top: -3em;
+}
+
+#relocations svg {
+  padding-bottom: 2em;
+  margin-top: -2em;
+}
+
 #mc_embed_signup {
 display: none;
 }
@@ -133,6 +142,12 @@ circle {
   color: #24A1FF;
 }
 
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
 </style>
 </div> <!-- close entry-spacing div, maybe bring it onto this page? would make it more extensible -->
 <div id="relocations"></div>
@@ -143,10 +158,10 @@ circle {
   
 </div>
 <div class="bottom space-top">
-  <div class="entry-content content-spacing">
+<!--   <div class="entry-content content-spacing">
     <ul class="flexbox flex_space-between space-top">
                     <li class="sort-opt font-dark">
-                      <h2 id="year" class="font-large">1900</h2>
+                      
                     </li>
                     <li class="sort-opt">
                       <h2 class="label nfl font-large" data-sport="nfl">NFL</h2>
@@ -161,7 +176,7 @@ circle {
                       <h2 class="label replay font-large">REPLAY</h2>
                     </li>
                 </ul>  
-  </div>
+  </div> -->
 </div>
 <script src="{{ root_path }}js/d3.min.js"></script>
 <script src="{{ root_path }}js/topojson.v1.min.js"></script>
@@ -184,7 +199,7 @@ $('.label').hover(function(){
 });
 
 var width =  document.body.offsetWidth || 960,
-    height = 500,
+    height = 650,
     centered,
     projection = d3.geo.albersUsa()
                    .scale(1070)
@@ -197,11 +212,9 @@ var width =  document.body.offsetWidth || 960,
             .attr("width", width)
             .attr("height", height),
     g = svg.append("g"),
-    tooltip = $("#tooltip"),
-    voronoi = d3.geom.voronoi()
-                .x(function(d) { return d.x; })
-                .y(function(d) { return d.y; })
-                .clipExtent([[0, 0], [width, height]]);
+    tooltip = $("#tooltip");
+
+
 
 d3.json("/json/us.json", function(error, us) {
   g.append("g")
@@ -221,6 +234,22 @@ d3.json("/json/us.json", function(error, us) {
       var m = data.migrations,
           year = 1900,
           yearDiv = $('#year');
+  
+      var x = d3.time.scale()
+                     .domain([new Date(1900, 7, 1), new Date(2014, 7, 1)])
+                     .rangeRound([0, width*.8]);
+      var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient('bottom')
+                    .ticks(d3.time.years, 5)
+                    .tickFormat(d3.time.format('%Y'))
+                    .tickSize(4)
+                    .tickPadding(8);
+
+      svg.append('g')
+        .attr('class', 'x axis')
+        .attr('transform', 'translate(' + width/10 + ', ' + height + ')')
+        .call(xAxis);
 
     svg.append("g").attr('id', 'departPoints')
       .selectAll('circle')
@@ -264,6 +293,22 @@ d3.json("/json/us.json", function(error, us) {
                       }
                      })
                      .each(transition);
+      var rects = groups.append("rect")
+                        .attr("x", function(d) { 
+                          var year = new Date(d.year, 1, 1);
+                          return x(year)+width/10; })
+                        .attr("width", "10px")
+                        .attr("y", height/2-10)
+                        .attr("height", "10px")
+                        .style("fill", function(d) {
+                          if( d.sport === 'NBA' ) {
+                            return '#9224FF'
+                          } else if ( d.sport === 'NFL' ) {
+                            return '#313AFF'
+                          } else {
+                            return '#24A1FF'
+                          }
+                        });
 
       groups.append("path")
        .attr('d', 'M 0,0 7,3.5 0,7 1.5,3.5 ')
@@ -280,24 +325,7 @@ d3.json("/json/us.json", function(error, us) {
        .attr("transform", function(d) {return "translate(" + projection([d.left.coords[0],d.left.coords[1]]) + ")";})
        .each(transitionArrows);
 
-
-      var voronoiGroup = svg.append("g")
-                            .attr("class", "voronoi");
-
-      voronoiGroup.selectAll("path")
-                  .data(voronoi(
-                    //Despair, all ye who code here.
-                    ))
-                .enter().append("path")
-                  .attr("d", function(d) {
-                    return d + "Z"; })
-                  .datum(function(d) { return d.point; })
-                  .on("mouseover", mouseover)
-                  .on("mouseout", mouseout);
-
-
       function transition() {
-        console.log( this.getAttribute('d') );
         var totalLength = this.getTotalLength();
         d3.select(this).attr("stroke-dasharray", totalLength + " " + totalLength)
                        .attr("stroke-dashoffset", totalLength);
@@ -319,7 +347,7 @@ d3.json("/json/us.json", function(error, us) {
                      .attr('style', 'visibility: visible');
      }
 
-          // Returns an attrTween for translating along the specified path element.
+     // Returns an attrTween for translating along the specified path element.
      function translateAlong(pathNode) {
       var pathNode = this.parentNode.getElementsByTagName("path")[0];
       var l1 = pathNode.getTotalLength()-.01,

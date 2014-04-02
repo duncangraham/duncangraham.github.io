@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bigvideo.css">
+	<link rel="stylesheet" href="css/videostyling.css">
+	<link rel="stylesheet"type="text/css" href="css/style.css">
+	
+	<style>
+	
+	input, button {
+		height: 3em;
+		width: 80%;
+		margin: 2%;
+		font-size: 2em;
+		padding-left: .5em;
+	}
+	
+	label {
+		display: inline-block;
+		font-size: 3em;
+	}
+		
+	#content #theRealDeal {
+		position:relative;
+		width:100%;
+		height:100em;
+		z-index:1000;
+		display:none;
+	}
+	
+	.floatLeft {
+		float:left;
+	}
+	
+	.floatRight {
+		float:right;
+	}
+	
+	header {
+		padding: .25em 1em;
+		display: inline-block;
+		width: 100%;
+		font-size: 2em;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index:2000;
+	}
+	
+	header img {
+		width: 2.5em;
+	}
+	
+	header span {
+		padding:.1em;
+	}
+	
+	header span:hover {
+		cursor:pointer;
+	}
+	
+	header ul {
+		font-size: .5em;
+		padding: .7em 0em;
+	}
+
+	header a {
+		color: #333333;
+		font-family: Helvetica, Arial, sans-serif;
+		font-style: initial;
+		margin-right: 2.5em;
+		border-bottom:2px solid transparent;
+		padding-bottom: .25em;
+	}
+	
+	header a:hover {
+		border-bottom:2px solid #333333;
+	}
+	
+	#theRealDeal .fullWindow {
+		padding:12% 0%;
+		background:#f1f1f1;
+	}
+	
+	#theRealDeal p {
+		color:#f1f1f1;
+		text-shadow: none;
+		font-size: 4em;
+		line-height: 1em;
+		text-align: left;
+		margin:0em;
+		-webkit-transition: color 0.3s ease;
+		-moz-transition: color 0.3s ease;
+		-o-transition: color 0.3s ease;
+		transition: color 0.3s ease;
+	}
+	
+	#theRealDeal .rightContent p {
+		display:none;
+		font-family:PermanentMarker;
+		color:#333333;
+		font-size:3.5em;
+		margin:5em 0em 0em 2em;
+	}
+	
+	#about p.textHover {
+		color:#333333;
+		-webkit-transition: color 0.4s ease;
+		-moz-transition: color 0.4s ease;
+		-o-transition: color 0.4s ease;
+		transition: color 0.4s ease;
+	}
+	
+	.rightContent {
+		width: 55%;
+		font-size: .5em;
+		text-align: right;
+		padding-left: 5%;
+	}
+	
+	#sponsors .rightContent, #companies .rightContent {
+		width: 42%;
+		padding-left: 10%;
+	}
+	
+	#sponsors .rightContent img, #companies .rightContent img {
+		padding-bottom:4em;
+	}
+	
+	.title {
+		padding: 5% 0% 5% 10%;
+	}
+	
+	#about .title {
+		background-color:#ba1a20;
+	}
+	
+	#sponsors .title {
+		background-color:#22b4ff;
+	}
+	
+	#companies .title {
+		background-color:#28de8b;
+	}
+
+	#apply .title {
+		background-color:#999999;
+	}	
+	
+	img.fullWidth {
+		width:100%;
+	}
+	
+	img.thirdWidth {
+		width:33%;
+	}
+	
+	
+	</style>
+	
+	
+</head>
+<body>
+
+<header>
+	<span class="floatLeft scrollToHome">
+		<img class="floatLeft" src="assets/outline.png"/>
+		<span class="floatLeft">startupshell</span>
+	</span>
+	<ul class="floatRight">
+		<li><a id="companiesLink" href="#">companies</a></li>
+		<li><a id="sponsorsLink" href="#">sponsors</a></li>
+		<li><a id="applyLink" href="#">apply</a></li>
+	</ul>
+</header>
+
+<div id="content">
+
+	<div id="holyShitThatsAwesome">
+		<p id="banner">university of maryland's student-run startup incubator</p>
+		<p class="fadeIn scrollToHome">learn more & apply</p>
+		<i class="icon-circle-arrow-down scrollToHome"></i>
+	</div>
+	
+	<div id="theRealDeal">
+	
+		<div id="about" class="fullWindow">
+			<div class="floatLeft title">
+				<p class="1">we</p>
+				<p class="2">are
+				<br/>
+				building</p>
+				<p class="3">something<br/>great</p>		
+			</div>	
+			<div class="rightContent floatLeft">
+				<p id="we">student run, student founded startup incubator at the University of Maryland.</p>
+				<p id="areBuilding">with mentors, a device lab, and a decked out coworking space, we have what you need to get your startup to the next level</p>
+				<p id="somethingGreat">check out some of our companies!</p>
+			
+			</div>
+		</div>
+		
+		<div id="companies" class="fullWindow">
+			<div class="floatLeft title">
+				<p>these</p>
+				<p>folks</p>
+				<p>are</p>
+				<p>killin' it</p>		
+			</div>
+			
+			
+			<div class="rightContent floatLeft">
+				<a href="http://ventureboard.co/"><img class="fullWidth" src="assets/ventureboard.png" /></a>
+				<a href="http://imaginex.co/"><img class="fullWidth" src="assets/imaginex.png" /></a>
+				<a href="http://512technology.com/"><img class="thirdWidth" src="assets/logohq.png" /></a>
+				<a href="http://www.paralleltracks.com/"><img class="thirdWidth" src="assets/paralleltracks.png" /></a>
+				<a href="https://www.linkedin.com/in/adamshurwitz/"><img class="thirdWidth" src="assets/carpe.png" /></a>
+			</div>
+		</div>
+		
+		<div id="sponsors" class="fullWindow">
+	
+			<div class="floatLeft title">
+				<p>we</p>
+				<p>love</p>
+				<p>our</p>
+				<p>sponsors</p>		
+			</div>
+			
+			<div class="rightContent floatLeft">
+				<a href="http://www.atlassian.com/"><img class="fullWidth" src="assets/atlassian_logo_detail.png" /></a>
+				<a href="http://www.washingtonpost.com/"><img class="fullWidth" src="assets/washington_post_logo.png" /></a>
+				<a href="http://spinnakr.com/"><img class="thirdWidth" src="assets/logo.png" /></a>
+				<a href="http://www.mtech.umd.edu/"><img class="thirdWidth" src="assets/mtech_logo.png" /></a>
+				<a href="http://www.rhsmith.umd.edu/dingman/"><img class="thirdWidth" src="assets/dingman-logo-small.png" /></a>
+			</div>
+				
+		</div>
+		
+		<div id="apply" class="fullWindow">
+			<div class="floatLeft title">
+				<p>join us</p>
+				<p>and</p>
+				<p>change</p>
+				<p>the world</p>
+			</div>
+			
+			<div class="rightContent floatLeft">
+				<form>
+					<div>
+						<label>name</label>
+						<input type="text" placeholder="let's see that John Hancock" />
+					</div>
+					<div>
+						<label>pitch</label>
+						<input type="text" placeholder="why do you want to be part of the shell?" />
+					</div>
+					<div>
+						<label>show off</label>
+						<input type="text" placeholder="why does the shell want you?" />
+					</div>
+					<div>
+						<label>email</label>
+						<input type="text" placeholder="lemme get them digits" />
+					</div>
+					<div>
+						<button type="submit">submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>	
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+<script src="js/bigvideo.js"></script>
+<script src="js/scrollTo.js"></script>
+<script src="js/jqueryUI.js"></script>	
+<script>
+$(function(){
+var winHeight = $(window).height();
+
+$('#about .title p').hover(
+	function(){
+		var $this = $(this);
+		$(this).addClass('textHover');
+		if ($this.hasClass('1')) {
+			$('#we').fadeIn().addClass('contentText');
+		} else if($this.hasClass('2')) {
+			$('#areBuilding').fadeIn().addClass('contentText');
+		} else {
+			$('#somethingGreat').fadeIn().addClass('contentText');
+		}
+		
+	}, function(){
+		$(this).removeClass('textHover');
+		$('.contentText').hide();
+	}
+);
+
+$('.fullWindow').css('height',winHeight);
+
+$('.scrollToHome').on('click', function(){
+	$(window).height();
+	$('#theRealDeal').css('marginTop',winHeight);
+	$('#theRealDeal').show();
+	$('body').animate({
+	    scrollTop: $("#theRealDeal").offset().top
+	 }, 400);
+
+	return false;
+});
+
+$('#companiesLink').on('click', function(){
+	$('body').animate({
+	    scrollTop: $("#companies").offset().top
+	 }, 400);
+});
+
+
+$('#sponsorsLink').on('click', function(){
+	$('body').animate({
+	    scrollTop: $("#sponsors").offset().top
+	 }, 400);
+});
+
+$('#applyLink').on('click', function(){
+	$('body').animate({
+	    scrollTop: $("#apply").offset().top
+	 }, 400);
+});var count = 1;
+  
+});
+</script>
+<script>
+	$(function() {
+	    var BV = new $.BigVideo();
+	    BV.init();
+	    BV.show('assets/paintTheShell.mp4',{ambient:true});
+	});
+</script>
+</body>
+</html>

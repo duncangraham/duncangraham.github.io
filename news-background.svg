@@ -114,7 +114,7 @@
                 </text>
                 <circle id="Oval-34" stroke="#979797" opacity="0.4" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="43" cy="21" r="5"></circle>
                 <path d="M37.997432,27.282328 C36.3139559,24.7626322 35.5707278,34.4736012 35.012227,37.5907223 C34.4537263,40.7078433 53.2204818,40.8969507 51.9370266,37.5907219 C50.6535712,34.2844933 48.4118939,23.1898178 47.4052297,26.6665665 C46.3985654,30.1433153 39.680908,29.802024 37.997432,27.282328 Z" id="Rectangle-204" stroke="#979797" opacity="0.4" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
-                <g id="Info-Least" transform="translate(204.000000, 14.000000)" fill="#D8D8D8" sketch:type="MSShapeGroup">
+                <g id="Info-Least" transform="translate(204.000000, 14.000000)" fill="#D8D8D8" sketch:type="MSShapeGroup" opacity="0.253338068">
                     <rect id="Rectangle-189" x="7" y="0" width="27" height="5"></rect>
                     <rect id="Rectangle-189-copy" x="0" y="0" width="5" height="5"></rect>
                     <rect id="Rectangle-189-copy" x="7" y="10" width="27" height="5"></rect>
@@ -127,7 +127,7 @@
                     <rect id="Rectangle-189-copy" x="0" y="9" width="34" height="7"></rect>
                     <rect id="Rectangle-189-copy-2" x="0" y="17" width="34" height="8"></rect>
                 </g>
-                <g id="Info-Most" transform="translate(376.000000, 14.000000)" fill="#D8D8D8" sketch:type="MSShapeGroup">
+                <g id="Info-Most" transform="translate(376.000000, 14.000000)" fill="#D8D8D8" sketch:type="MSShapeGroup" opacity="0.25">
                     <rect id="Rectangle-189" x="0" y="0" width="16" height="8"></rect>
                     <rect id="Rectangle-189-copy" x="18" y="0" width="16" height="8"></rect>
                     <rect id="Rectangle-189-copy" x="0" y="9" width="16" height="7"></rect>

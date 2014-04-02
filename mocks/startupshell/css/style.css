@@ -1,0 +1,206 @@
+@font-face {
+	font-family: 'TitilliumLight';
+	src: url('TitilliumTextLight.otf');
+}
+
+@font-face {
+	font-family: 'PermanentMarker';
+	src: url('PermanentMarker.ttf');
+}
+
+* {
+margin:0em;
+pading:0em;
+}
+
+body {
+background-color:#FFF;
+width:100%;
+height:100%;
+font-family:'TitilliumLight', sans-serif;
+text-align:center;
+}
+a {
+text-decoration:none;
+}
+
+ul {
+list-style:none
+}
+
+li {
+display:inline;
+}
+
+#holyShitThatsAwesome {
+z-index: 999;
+position: fixed;
+bottom: 5%;
+width:100%;
+text-align:center;
+}
+
+#i:hover, .fadeIn:hover {
+cursor:pointer;
+}
+
+		
+#holyShitThatsAwesome p {
+margin-bottom:1em;
+font-size:2em;
+}
+		
+#holyShitThatsAwesome i {
+position:absolute;
+left: 48.5%;
+font-size: 2.5em;
+color:#d3d3d3; /* mostly because I love data visualization */
+bottom:0em;
+text-shadow:
+ 0 -1px 0 rgba(0, 0, 0, 0.8), /* shadow */
+ 0 1px 0 rgba(255, 255, 255, 0.5); /* highlight */
+-webkit-transition: color 0.3s ease, bottom 0.3s ease;
+-moz-transition: color 0.3s ease, bottom 0.3s ease;
+-o-transition: color 0.3s ease, bottom 0.3s ease;
+transition: color 0.3s ease, bottom 0.3s ease;
+}
+		
+#holyShitThatsAwesome:hover i {
+position:absolute;
+left: 48.5%;
+cursor:pointer;			
+color:#ffffff;
+bottom:-.5em;
+-webkit-transition: color 0.3s ease, bottom 0.3s ease;
+-moz-transition: color 0.3s ease, bottom 0.3s ease;
+-o-transition: color 0.3s ease, bottom 0.3s ease;
+transition: color 0.3s ease, bottom 0.3s ease;
+			
+font-size: 2.5em;
+text-shadow:
+ 0 -1px 0 rgba(0, 0, 0, 0.8), /* shadow */
+0px 1px 5px rgba(255, 255, 255, .5) /* highlight */
+}
+
+#holyShitThatsAwesome .fadeIn {
+opacity:0.0;
+font-size:1.25em;
+padding-bottom:.25em;
+-webkit-transition: opacity 0.3s ease;
+-moz-transition: opacity 0.3s ease;
+-o-transition: opacity 0.3s ease;
+transition: opacity 0.3s ease;
+margin-bottom:1em;
+}
+
+#holyShitThatsAwesome:hover .fadeIn {
+opacity:1.0;
+-webkit-transition: opacity 0.3s ease;
+-moz-transition: opacity 0.3s ease;
+-o-transition: opacity 0.3s ease;
+transition: opacity 0.3s ease;
+margin-bottom:1em;
+}
+
+#container {
+	@font-face {
+	font-family: 'TitilliumLight';
+	src: url('TitilliumTextLight.otf');
+}
+
+* {
+margin:0em;
+pading:0em;
+}
+
+body {
+background-color:#FFF;
+width:100%;
+height:100%;
+font-family:'TitilliumLight', sans-serif;
+text-align:center;
+}
+a {
+text-decoration:none;
+}
+
+ul {
+list-style:none
+}
+
+li {
+display:inline;
+}
+
+#holyShitThatsAwesome {
+z-index: 999;
+position: absolute;
+bottom: 5%;
+width:100%;
+text-align:center;
+}
+
+#i:hover, .fadeIn:hover {
+cursor:pointer;
+}
+
+		
+#holyShitThatsAwesome p {
+margin-bottom:1em;
+font-size:2em;
+}
+		
+#holyShitThatsAwesome i {
+position:absolute;
+margin-left: 48.5%;
+font-size: 2.5em;
+color:#d3d3d3; /* mostly because I love data visualization */
+bottom:0em;
+text-shadow:
+ 0 -1px 0 rgba(0, 0, 0, 0.8), /* shadow */
+ 0 1px 0 rgba(255, 255, 255, 0.5); /* highlight */
+-webkit-transition: color 0.3s ease, bottom 0.3s ease;
+-moz-transition: color 0.3s ease, bottom 0.3s ease;
+-o-transition: color 0.3s ease, bottom 0.3s ease;
+transition: color 0.3s ease, bottom 0.3s ease;
+}
+		
+#holyShitThatsAwesome:hover i {
+position:absolute;
+margin-left: 48.5%;
+cursor:pointer;			
+color:#ffffff;
+bottom:-.5em;
+-webkit-transition: color 0.3s ease, bottom 0.3s ease;
+-moz-transition: color 0.3s ease, bottom 0.3s ease;
+-o-transition: color 0.3s ease, bottom 0.3s ease;
+transition: color 0.3s ease, bottom 0.3s ease;
+			
+font-size: 2.5em;
+text-shadow:
+ 0 -1px 0 rgba(0, 0, 0, 0.8), /* shadow */
+0px 1px 5px rgba(255, 255, 255, .5) /* highlight */
+}
+
+
+
+#holyShitThatsAwesome .fadeIn {
+opacity:0.0;
+font-size:1.25em;
+padding-bottom:.25em;
+-webkit-transition: opacity 0.3s ease;
+-moz-transition: opacity 0.3s ease;
+-o-transition: opacity 0.3s ease;
+transition: opacity 0.3s ease;
+margin-bottom:1em;
+}
+
+#holyShitThatsAwesome:hover .fadeIn {
+opacity:1.0;
+-webkit-transition: opacity 0.3s ease;
+-moz-transition: opacity 0.3s ease;
+-o-transition: opacity 0.3s ease;
+transition: opacity 0.3s ease;
+margin-bottom:1em;
+}		
+	

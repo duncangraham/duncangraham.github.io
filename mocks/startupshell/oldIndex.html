@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet"type="text/css" href="style.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="container">
+
+	<header>
+	<img src="startupshellblock.png" />
+	</header>
+	
+	<p id="meatAndPotatoes">
+	<a class="bellAndWhistle 1 textHover" href="#">we 
+	<span style="right:9em">student run, student founded startup incubator at the University of Maryland</span></a> 
+	are 
+	<a class="bellAndWhistle 2" href="#">building
+	<span style="right:9em">with mentors, a device lab, and a decked out coworking space, we have what you need to get your startup started</span>
+	</a> 
+	<a class="bellAndWhistle 3" href="#">something great 
+	<span style="right:9em">check out some of our featured startups</span></a>
+	</p>
+	
+	<div id="callToAction">
+		<p>join us.</p>
+		<ul style="margin-left:-3em;">
+		  <li><a href="#">apply</a></li>
+		  <li> | </li>
+		  <li><a href="#"> blog</a></li>
+		  <li> | </li>
+		  <li><a href="#"> sponsor</a></li>
+		</ul>
+	</div>
+	
+</div>
+
+<script>
+$(function(){
+
+var count = 1;
+
+setInterval(function(){
+  $('.textHover').removeClass('textHover');
+  $('.'+count).addClass('textHover');
+  if (count == 3) {
+  	count = 1;
+  } else {
+  	count ++;
+  }
+}, 2000);    
+});
+</script>
+
+</body>
+</html>
