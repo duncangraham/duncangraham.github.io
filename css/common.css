@@ -315,6 +315,10 @@ header {
   text-transform: uppercase;
   font-family: 'Lato', sans-serif; }
 
+.lato {
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif; }
+
 .footer {
   font-size: 1.5em;
   padding: .25em 0em;

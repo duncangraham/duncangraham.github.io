@@ -107,7 +107,7 @@
       "arrived":{
          "name":"Redskins",
          "city":"Washington",
-         "state":"Washington DC",
+         "state":"DC",
          "coords":[
             -77.036667,
             38.895111
@@ -349,7 +349,7 @@
       "year":1958,
       "sport":"MLB",
       "left":{
-         "name":"Gians",
+         "name":"Giants",
          "city":"New York",
          "state":"New York",
          "coords":[
@@ -390,29 +390,6 @@
          ]
       },
       "notes":""
-   },
-   {
-      "year":1958,
-      "sport":"MLB",
-      "left":{
-         "name":"Gians",
-         "city":"New York",
-         "state":"New York",
-         "coords":[
-            -73.94,
-            40.67
-         ]
-      },
-      "arrived":{
-         "name":"Giants",
-         "city":"San Francisco",
-         "state":"California",
-         "coords":[
-            -122.416667,
-            37.783333
-         ]
-      },
-      "notes":"One of the first major league teams on the West Coast; the teams moved simultaneously to facilitate travel for other National League (NL) teams"
    },
    {
       "year":1960,
@@ -466,7 +443,7 @@
       "left":{
          "name":"Senators",
          "city":"Washington",
-         "state":"Washington DC",
+         "state":"DC",
          "coords":[
             -77.036667,
             38.895111
@@ -719,7 +696,7 @@
       "left":{
          "name":"Senators",
          "city":"Washington",
-         "state":"Washington DC",
+         "state":"DC",
          "coords":[
             -77.036667,
             38.895111
@@ -774,7 +751,7 @@
       "arrived":{
          "name":"Bullets",
          "city":"Washington",
-         "state":"Washington DC",
+         "state":"DC",
          "coords":[
             -77.036667,
             38.895111
@@ -1119,7 +1096,7 @@
       "arrived":{
          "name":"Nationals",
          "city":"Washington",
-         "state":"Washington DC",
+         "state":"DC",
          "coords":[
             -77.036667,
             38.895111
@@ -1151,7 +1128,7 @@
       "notes":"Temporary move to Oklahoma City following Hurricane Katrina and became the New Orleans/Oklahoma City Hornets."
    },
    {
-      "year":2005,
+      "year":2007,
       "sport":"NBA",
       "left":{
          "name":"Hornets",

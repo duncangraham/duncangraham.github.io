@@ -13,7 +13,7 @@ date:   2014-01-10 13:47:00
 
 #relocations svg {
   padding-bottom: 2em;
-  margin-top: -2em;
+  margin-top: -75px;
 }
 
 #mc_embed_signup {
@@ -72,6 +72,11 @@ circle {
   fill: #333;
 }
 
+rect {
+  stroke:#FFF;
+  stroke-width:1;
+}
+
 .arrow {
   fill: blue;
 }
@@ -95,25 +100,38 @@ circle {
   stroke: #313AFF;
 }
 
-.arrow.nfl {
-  fill: #313AFF;
-}
-
 .link.nba {
   stroke: #9224FF;
-}
-
-.arrow.nba {
-  fill: #9224FF;
 }
 
 .link.mlb {
   stroke: #24A1FF;
 }
 
+.arrow.nfl {
+  fill: #313AFF;
+}
+
+.arrow.nba {
+  fill: #9224FF;
+}
+
 .arrow.mlb {
   fill: #24A1FF;
 }
+
+.block.nfl {
+  fill: #313AFF;
+}
+
+.block.nba {
+  fill: #9224FF;
+}
+
+.block.mlb {
+  fill: #24A1FF;
+}
+
 
 .link.inactive {
 
@@ -148,8 +166,73 @@ circle {
     shape-rendering: crispEdges;
 }
 
+.filters {
+  position: absolute;
+  top: 3em;
+  left:2em;
+  width: 10em;
+}
+
+.filters li {
+  padding-bottom: 1em
+}
+
+.data {
+  position: absolute;
+  top: 3em;
+  right:2em;
+  width: 10em;
+}
+
+.plane {
+  -webkit-transform: rotate(90deg);
+}
+
+.stateList {
+  position: absolute;
+  top:0;
+}
+
+/* Not a fan of this. */
+#Alaska, #Hawaii {
+  display: none;
+}
+
+.state#DC {
+  position: absolute;
+  top:250px;
+  left:960px;
+  color:#CCC;
+}
+
 </style>
 </div> <!-- close entry-spacing div, maybe bring it onto this page? would make it more extensible -->
+
+<ul class="filters">
+  <li class="font-dark sort-opt">
+    <h2 class="label font-large">1900</h2>
+  </li>
+  <li class="sort-opt font-dark">
+    <h2 class="replay">REPLAY</h2>
+  </li>
+  <li class="sort-opt space-top">
+    <h2 class="label nfl font-large" data-sport="nfl">NFL</h2>
+  </li>
+  <li class="sort-opt">
+     <h2 class="label nba font-large" data-sport="nba">NBA</h2>
+  </li>
+  <li class="sort-opt">
+    <h2 class="label mlb font-large" data-sport="mlb">MLB</h2>
+  </li>
+</ul> 
+
+<ul class="stateList">
+</ul>
+
+<ul class="data">
+
+</ul>
+
 <div id="relocations"></div>
 <div id='tooltip'>
   <p class="no-pad">Departed <strong class="cityDepart"></strong>, <strong class="stateDepart"></strong> as the <strong class="nameDepart"></strong></p>
@@ -158,48 +241,12 @@ circle {
   
 </div>
 <div class="bottom space-top">
-<!--   <div class="entry-content content-spacing">
-    <ul class="flexbox flex_space-between space-top">
-                    <li class="sort-opt font-dark">
-                      
-                    </li>
-                    <li class="sort-opt">
-                      <h2 class="label nfl font-large" data-sport="nfl">NFL</h2>
-                    </li>
-                    <li class="sort-opt">
-                      <h2 class="label nba font-large" data-sport="nba">NBA</h2>
-                    </li>
-                    <li class="sort-opt">
-                      <h2 class="label mlb font-large" data-sport="mlb">MLB</h2>
-                    </li>
-                    <li class="sort-opt font-dark">
-                      <h2 class="label replay font-large">REPLAY</h2>
-                    </li>
-                </ul>  
-  </div> -->
 </div>
 <script src="{{ root_path }}js/d3.min.js"></script>
 <script src="{{ root_path }}js/topojson.v1.min.js"></script>
 <script>
-
-$('.label').hover(function(){
-
-  var sport = $(this).data('sport');
-
-  if ( sport == 'nba' ) {
-    $('.link.nfl, .link.mlb, .arrow.nfl, .arrow.mlb').animate({opacity: '.05'}, 200);
-  } else if ( sport == 'nfl' ) {
-    $('.link.nba, .link.mlb, .arrow.nba, .arrow.mlb').animate({opacity: '.05'}, 200);
-  } else {
-    $('.link.nfl, .link.nba, .arrow.nfl, .arrow.nba').animate({opacity: '.05'}, 200);
-  }
-
-},function(){
-  $('.link, .arrow').animate({opacity: '1'}, 200);
-});
-
 var width =  document.body.offsetWidth || 960,
-    height = 650,
+    height = 700,
     centered,
     projection = d3.geo.albersUsa()
                    .scale(1070)
@@ -222,7 +269,11 @@ d3.json("/json/us.json", function(error, us) {
     .selectAll("path")
       .data(topojson.feature(us, us.objects.states).features)
     .enter().append("path")
+      .attr("class", "state")
+      .attr("id", function(d) { return d.properties.name })
       .attr("d", path);
+
+  $('#relocations').append('<div id="DC" class="lato state">DC</div>')
 
   g.append("path")
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
@@ -241,7 +292,7 @@ d3.json("/json/us.json", function(error, us) {
       var xAxis = d3.svg.axis()
                     .scale(x)
                     .orient('bottom')
-                    .ticks(d3.time.years, 5)
+                    .ticks(d3.time.years, 10)
                     .tickFormat(d3.time.format('%Y'))
                     .tickSize(4)
                     .tickPadding(8);
@@ -267,63 +318,78 @@ d3.json("/json/us.json", function(error, us) {
         .attr('r', 2)
         .attr("transform", function(d) {return "translate(" + projection([d.arrived.coords[0],d.arrived.coords[1]]) + ")";});
 
-    var groups = svg.append("g").selectAll("path")
-                    .data(m)
-                    .enter()
-                    .append('g');
 
-    var paths = groups.append("path")
-                     .attr("d", function(d) {
-                        var start = projection(d.left.coords),
-                            end = projection(d.arrived.coords);
 
-                        var dx = start[0] - end[0],
-                            dy = start[1] - end[1],
-                            dr = Math.sqrt(dx * dx + dy * dy);
+    var drawArcs = function () {
+      var groups = svg.append("g")
+                      .attr('id', 'moves')
+                      .selectAll("path")
+                      .data(m)
+                      .enter()
+                      .append('g');
+      var paths = groups.append("path")
+                       .attr("d", function(d) {
+                          var start = projection(d.left.coords),
+                              end = projection(d.arrived.coords);
 
-                        return "M" + start[0] + "," + start[1] + "A" + dr + "," + dr + " 0 0,1 " + end[0] + "," + end[1];
-                     })
-                     .attr('class', function(d){
-                      if( d.sport === 'NBA' ) {
-                        return 'link nba'
-                      } else if ( d.sport === 'NFL' ) {
-                        return 'link nfl'
-                      } else {
-                        return 'link mlb'
-                      }
-                     })
-                     .each(transition);
-      var rects = groups.append("rect")
-                        .attr("x", function(d) { 
-                          var year = new Date(d.year, 1, 1);
-                          return x(year)+width/10; })
-                        .attr("width", "10px")
-                        .attr("y", height/2-10)
-                        .attr("height", "10px")
-                        .style("fill", function(d) {
-                          if( d.sport === 'NBA' ) {
-                            return '#9224FF'
-                          } else if ( d.sport === 'NFL' ) {
-                            return '#313AFF'
-                          } else {
-                            return '#24A1FF'
-                          }
-                        });
+                          var dx = start[0] - end[0],
+                              dy = start[1] - end[1],
+                              dr = Math.sqrt(dx * dx + dy * dy);
 
-      groups.append("path")
-       .attr('d', 'M 0,0 7,3.5 0,7 1.5,3.5 ')
-       .attr('class', function(d){
-        if( d.sport === 'NBA' ) {
-          return 'arrow nba'
-        } else if ( d.sport === 'NFL' ) {
-          return 'arrow nfl'
-        } else {
-          return 'arrow mlb'
-        }
-       })
-       .attr('style', 'visibility: hidden')
-       .attr("transform", function(d) {return "translate(" + projection([d.left.coords[0],d.left.coords[1]]) + ")";})
-       .each(transitionArrows);
+                          return "M" + start[0] + "," + start[1] + "A" + dr + "," + dr + " 0 0,1 " + end[0] + "," + end[1];
+                       })
+                       .attr('class', function(d){
+                        if( d.sport === 'NBA' ) {
+                          return 'link nba move ' + d.left.state + ' ' + d.arrived.state
+                        } else if ( d.sport === 'NFL' ) {
+                          return 'link nfl move ' + d.left.state + ' ' + d.arrived.state
+                        } else {
+                          return 'link mlb move ' + d.left.state + ' ' + d.arrived.state
+                        }
+                       })
+                       .on("mouseover", function(d){ 
+                            $(this).parent().children().each(function(){
+                              var classNames = this.getAttribute('class') + ' active';
+                              this.setAttribute('class', classNames)
+                            });
+
+                            var tooltipInfo = '<li>' +
+                                              '<p class="center no-pad lato">' + d.sport + ' | ' + d.year + '</p>' +
+                                              '<p class="center no-pad tk-inconsolata space-top_mini">' + d.left.city + ' ' + d.left.name + '</p>' +
+                                              '<p class="center no-pad plane" style="padding-top: 3px"> ✈ </p>' +
+                                              '<p class="center no-pad tk-inconsolata">' + d.arrived.city + ' ' + d.arrived.name + '</p></li>';
+
+
+                            $('.data').html(tooltipInfo);
+
+                            $('.move').not( ".active" ).css({opacity: '.1'});
+                       })
+                       .on("mouseout", function(){ 
+                            $('.move').css({opacity: '1'});
+                            $('.data').html('');
+                            $(this).parent().children().each(function(){
+                              var classNames = this.getAttribute('class');
+                              classNames = classNames.substring(0, classNames.length - 7)
+                              this.setAttribute('class', classNames)
+                            });
+                       })
+                       .each(transition);
+
+        groups.append("path")
+         .attr('d', 'M 0,0 7,3.5 0,7 1.5,3.5 ')
+         .attr('class', function(d){
+          if( d.sport === 'NBA' ) {
+            return 'arrow nba move ' + d.left.state + ' ' + d.arrived.state
+          } else if ( d.sport === 'NFL' ) {
+            return 'arrow nfl move ' + d.left.state + ' ' + d.arrived.state
+          } else {
+            return 'arrow mlb move ' + d.left.state + ' ' + d.arrived.state
+          }
+         })
+         .attr('style', 'visibility: hidden')
+         .attr("transform", function(d) {return "translate(" + projection([d.left.coords[0],d.left.coords[1]]) + ")";})
+         .each(transitionArrows);
+
 
       function transition() {
         var totalLength = this.getTotalLength();
@@ -364,6 +430,126 @@ d3.json("/json/us.json", function(error, us) {
            return "translate(" + centerX + "," + centerY + ")rotate(" + angle + " 7" + " 3.5" +")";
       };
      }
+
+       var yearHash = {};
+      var rects = groups.append("rect")
+                        .attr("x", function(d) { 
+                          var year = new Date(d.year, 1, 1);
+                          return x(year)+width/10; })
+                        .attr("width", "10px")
+                        .attr("y", function(d) {
+                          if( yearHash[d.year] > 0 ) {
+                            yearHash[d.year] = yearHash[d.year]+1;
+                          } else {
+                            yearHash[d.year] = 1;
+                          }
+                          var yPos = 20*yearHash[d.year]+1;
+                          return height-yPos;
+                        })
+                        .attr("height", "20px")
+                        .attr("shape-rendering", "crispEdges")
+                        .attr("class", function(d) {
+                          if( d.sport === 'NBA' ) {
+                            return 'move block nba ' + d.left.state + ' ' + d.arrived.state
+                          } else if ( d.sport === 'NFL' ) {
+                            return 'move block nfl ' + d.left.state + ' ' + d.arrived.state
+                          } else {
+                            return 'move block mlb ' + d.left.state + ' ' + d.arrived.state
+                          }
+                        })
+                        .on("mouseover", function(d){ 
+                          $(this).parent().children().each(function(){
+                            var classNames = this.getAttribute('class') + ' active';
+                            this.setAttribute('class', classNames)
+                          });
+                          var tooltipInfo = '<li>' +
+                                            '<p class="center no-pad lato">' + d.sport + ' | ' + d.year + '</p>' +
+                                            '<p class="center no-pad tk-inconsolata space-top_mini">' + d.left.city + ' ' + d.left.name + '</p>' +
+                                            '<p class="center no-pad plane" style="padding-top: 3px"> ✈ </p>' +
+                                            '<p class="center no-pad tk-inconsolata">' + d.arrived.city + ' ' + d.arrived.name + '</p>'+
+                                            '</li>';
+
+                          $('.data').html(tooltipInfo);
+
+                          $('.move').not( ".active" ).css({opacity: '.1'});
+                        })
+                        .on("mouseout", function(){ 
+                          $('.move').css({opacity: '1'});
+                          $('.data').html('');
+                          $(this).parent().children().each(function(){
+                            var classNames = this.getAttribute('class');
+                            classNames = classNames.substring(0, classNames.length - 7)
+                            this.setAttribute('class', classNames)
+                          });
+
+                        });
+    }
+
+     drawArcs();
+
+
+      var departHash = {},
+          arriveHash = {};
+
+      $.each(m, function( i, v ) {
+        if( departHash[v.left.state] > 0 ) {
+          departHash[v.left.state] = departHash[v.left.state]+1;
+        } else {
+          departHash[v.left.state] = 1;
+        }
+
+        if( arriveHash[v.arrived.state] > 0 ) {
+          arriveHash[v.arrived.state] = arriveHash[v.arrived.state]+1;
+        } else {
+          arriveHash[v.arrived.state] = 1;
+        }
+      });
+
+      $('.label').hover(function(){
+
+        var sport = $(this).data('sport');
+
+        $('.move').not('.' + sport).css('opacity', .1);
+        
+
+      },function(){
+        $('.move').css('opacity', 1);
+      });
+
+
+      $('.state').hover(function() {
+        var stateName = $(this).attr('id'),
+            arrivals = (arriveHash[stateName]) ? arriveHash[stateName] : 0,
+            departures = (departHash[stateName]) ? departHash[stateName] : 0,
+            sliceStart = stateName.indexOf(' ');
+
+        if ( sliceStart > 0 ) {
+          var splitState = stateName.split(' ');
+          console.log('.'+splitState[1]+' .'+splitState[0]);
+          $('.move').not('.'+splitState[0]+'.'+splitState[1]).css('opacity', .1);
+        } else {
+          $('.move').not('.'+stateName).css('opacity', .1);
+        }
+
+        
+
+
+         var tooltipInfo = '<li>' +
+                           '<p class="center no-pad lato">' + stateName + '</p>' +
+                           '<p class="center no-pad tk-inconsolata space-top_mini">' + arrivals + ' Arrivals</p>' +
+                           '<p class="center no-pad tk-inconsolata">'+ departures +' Departures</p></li>';
+
+          $('.data').html(tooltipInfo);
+
+      }, function() {
+        $('.move').css('opacity', 1);
+      });
+
+     $('.replay').on('click', function(){
+      $('#moves').remove();
+      drawArcs();
+     })
+
   });
 
 });
@@ -381,5 +567,6 @@ https://github.com/mbostock/d3/wiki/Geo-Paths
 http://bl.ocks.org/enoex/6201948
 https://groups.google.com/forum/#!topic/d3-js/MLZX1AbS7-Y
 http://fiddle.jshell.net/RnNsE/2/
+https://groups.google.com/forum/#!topic/d3-js/kxMRr-CzZkY
 
 -->
