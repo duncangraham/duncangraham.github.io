@@ -277,10 +277,10 @@ rect {
 <script src="{{ root_path }}/js/topojson.v1.min.js"></script>
 <script>
 var width =  document.body.offsetWidth || 960,
-    height = 700,
+    height = (width < 320) ? 500 : width,
     centered,
     projection = d3.geo.albersUsa()
-                   .scale(1070)
+                   .scale(width)
                    .translate([width / 2, height / 2]),
     path = d3.geo
              .path()
@@ -292,7 +292,7 @@ var width =  document.body.offsetWidth || 960,
     g = svg.append("g"),
     tooltip = $("#tooltip");
 
-
+alert(width);
 
 d3.json("/json/us.json", function(error, us) {
   g.append("g")
