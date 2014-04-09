@@ -190,7 +190,7 @@
       "left":{
          "name":"Blackhawks",
          "city":"Tri Cities",
-         "state":"Mississippi",
+         "state":"Illinois",
          "coords":[
             -90.499722,
             41.485833
@@ -757,7 +757,7 @@
             38.895111
          ]
       },
-      "notes":"They were renamed the Capital Bullets. The team was renamed as the Washington Bullets in 1974 and the Wizards in 1997."
+      "notes":"They were initially renamed the Capital Bullets. The team was later named as the Washington Bullets in 1974 and the Wizards in 1997."
    },
    {
       "year":1973,
@@ -1125,7 +1125,7 @@
             35.482222
          ]
       },
-      "notes":"Temporary move to Oklahoma City following Hurricane Katrina and became the New Orleans/Oklahoma City Hornets."
+      "notes":"Temporary move to Oklahoma City following Hurricane Katrina. Name became the New Orleans/Oklahoma City Hornets."
    },
    {
       "year":2007,
@@ -1148,7 +1148,7 @@
             29.966667
          ]
       },
-      "notes":"Permanantly moved back (Time will tell though - Duncan). The team was renamed as the Pelicans in 2013."
+      "notes":"Permanantly moved back to NOLA. The team was renamed as the Pelicans in 2013."
    },
    {
       "year":2008,

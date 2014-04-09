@@ -1,11 +1,18 @@
 ---
-layout: post
-title:  "team migration"
+layout: experiment
+title:  "sport team relocations"
 type: "experiment"
-date:   2014-01-10 13:47:00
+date:   2014-03-09 10:08:00
 ---
-
+<!-- Post specific styles -->
 <style>
+header {
+  display: none;
+}
+
+.site {
+  font-size: .75em;
+}
 
 #relocations {
   margin-top: -3em;
@@ -226,8 +233,6 @@ rect {
 .nameChangeList li:nth-child(odd) { clear: left; }
 
 </style>
-</div> <!-- close entry-spacing div, maybe bring it onto this page? would make it more extensible -->
-
 <ul class="filters">
   <li class="font-dark sort-opt">
     <h2 id="year" class="label font-large">1900</h2>
@@ -258,29 +263,18 @@ rect {
 <article class="space-top space-bottom">
   <div class="space-top entry-content content-spacing">
     <p class="first-paragraph">Months ago I had an idea for a news service that would bring current events into perspective. For every big story, it would display similar threads from the past. My hope was that the context would cut down on sensationalism and better inform readers.</p>
-
-    During that time, the Washington Redskins were in the spotlight for their <a href="https://en.wikipedia.org/wiki/List_of_sports_team_names_and_mascots_derived_from_indigenous_peoples">controversial name</a>. With a newfound appreciation for history (I never really liked it in school), I started looking up historical sport team name changes. I found that many occurred during <a href="https://en.wikipedia.org/wiki/Relocation_of_professional_sports_teams">relocations</a>. The data looked interesting and I had wanted to learn D3 for a while, so I began coding in earnest.
-
-    <div id="nameChanges">
+    <p>During that time, the Washington Redskins were in the spotlight for their <a href="https://en.wikipedia.org/wiki/List_of_sports_team_names_and_mascots_derived_from_indigenous_peoples">controversial name</a>. With a newfound appreciation for history (I never really liked it in school), I started looking up historical sport team name changes. I found that many occurred during <a href="https://en.wikipedia.org/wiki/Relocation_of_professional_sports_teams">relocations</a>. The data looked interesting and I had wanted to learn D3 for a while, so I began coding in earnest.</p><div id="nameChanges">
       <ul class="nameChangeList font-small float-right"></ul>
     </div>
     <div class="font-small show-code center cursor-pointer space-bottom">
        20 teams (38% of all relocations) changed names!
-    </div>
-
-    <p>As I worked with the data set, stories began to bubble up. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p>
-
-    <p></p>
-
-    <p></p>
-
-    <p>I also learned all about the ins and outs of D3, which is awesome in its own right.</p>
+    </div><p>As I worked with the data set, I started seeing patterns and stories. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p><p>At the time, the graphic showed the dataset, but offered no ways to explore it interactively. Without explicitly telling a story or allowing the audience to find stories for themselves, it was pretty lifeless.</p><p>Since everyone roots for different teams and enjoys different sports, I chose to be less explicit, letting the audience choose their own adventures. I hope you enjoy the graphic as much as I enjoyed making it. If you want to extend what I've already done, <a href="{{ root_path }}/json/migrations.json">here's the dataset</a>.</p>
   </div>
 </article>
 
 
-<script src="{{ root_path }}js/d3.min.js"></script>
-<script src="{{ root_path }}js/topojson.v1.min.js"></script>
+<script src="{{ root_path }}/js/d3.min.js"></script>
+<script src="{{ root_path }}/js/topojson.v1.min.js"></script>
 <script>
 var width =  document.body.offsetWidth || 960,
     height = 700,
@@ -357,10 +351,6 @@ d3.json("/json/us.json", function(error, us) {
 
     var drawArcs = function () {
       $('#moves').remove();
-      clearInterval(dateCount);
-
-      var year = 1900,
-          yearDiv = $('#year');
 
       var groups = svg.append("g")
                       .attr('id', 'moves')
@@ -535,18 +525,34 @@ d3.json("/json/us.json", function(error, us) {
 
                         });
 
-      var dateCount = setInterval(function(){
-        year = year + 1;
-        yearDiv.html(year);
-
-        if (year == 2014) {
-          clearInterval(dateCount);
-        }
-      }, 100);
+      
     }
 
      drawArcs();
+      var year = 1900,
+          yearDiv = $('#year'),
+          dateCount = setInterval(function(){
+                          year = year + 1;
+                          yearDiv.html(year);
 
+                          if (year == 2014) {
+                            clearInterval(dateCount);
+                          }
+                        }, 100);
+
+      $('.replay').on('click', function(){
+        year = 1900;
+        clearInterval(dateCount);
+        dateCount = setInterval(function(){
+                          year = year + 1;
+                          yearDiv.html(year);
+
+                          if (year == 2014) {
+                            clearInterval(dateCount);
+                          }
+                        }, 100);
+        drawArcs();
+      });
 
       var departHash = {},
           arriveHash = {},
@@ -658,7 +664,6 @@ d3.json("/json/us.json", function(error, us) {
             this.setAttribute("class", "state locked lato");
             locked = stateName;
             lockType = 'state';
-            console.log(locked);
             $('.move').css('opacity', 1);
             hoverFunction( $(this) );
             $('.lock-text').html('click state to unlock');
@@ -672,7 +677,6 @@ d3.json("/json/us.json", function(error, us) {
           hoverFunction( $(this) );
         }
       }, function() {
-        console.log()
         if( !locked ) {
           $('.move').css('opacity', 1);
           $('.data').html('');
@@ -700,10 +704,6 @@ d3.json("/json/us.json", function(error, us) {
             $('.data').html(tooltipInfo);
       };
 
-     $('.replay').on('click', function(){
-      drawArcs();
-     });
-
 
     //name changes
     var nameHash = [{'name': 'noChange', 'value': 32}, {'name': 'change', 'value': 20}],
@@ -717,8 +717,6 @@ d3.json("/json/us.json", function(error, us) {
         $('.nameChangeList').append('<li>' + nameChangeString + '</li>');
       }
     });
-
-    console.log(nameList);
 
     var radius = Math.min(width, height) / 6;
     var arc = d3.svg.arc()
