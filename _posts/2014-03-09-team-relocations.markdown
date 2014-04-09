@@ -15,12 +15,12 @@ header {
 }
 
 #relocations {
+  position: relative;
   margin-top: -3em;
 }
 
 #relocations svg {
   padding-bottom: 2em;
-  margin-top: -75px;
 }
 
 #mc_embed_signup {
@@ -194,6 +194,7 @@ rect {
   top: 3em;
   left:2em;
   width: 10em;
+  z-index: 100;
 }
 
 .filters li {
@@ -223,8 +224,8 @@ rect {
 
 .state#DC {
   position: absolute;
-  top:250px;
-  left:960px;
+  top:40%;
+  right:23%;
   color:#CCC;
 }
 
@@ -277,11 +278,11 @@ rect {
 <script src="{{ root_path }}/js/topojson.v1.min.js"></script>
 <script>
 var width =  document.body.offsetWidth || 960,
-    height = width*.55,
+    height = width*.5,
     centered,
     projection = d3.geo.albersUsa()
                    .scale(width*.8)
-                   .translate([width / 2, height / 2]),
+                   .translate([width / 2, height / 2.25]),
     path = d3.geo
              .path()
              .projection(projection),
