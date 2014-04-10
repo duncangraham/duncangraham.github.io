@@ -24,7 +24,7 @@ header {
 }
 
 #mc_embed_signup {
-display: none;
+
 }
 
 .flexbox {
@@ -236,10 +236,10 @@ rect {
 </style>
 <ul class="filters">
   <li class="font-dark sort-opt">
-    <h2 id="year" class="label font-large">1900</h2>
+    <h2 id="year" class="font-large">1900</h2>
   </li>
   <li class="sort-opt font-dark">
-    <h2 class="replay">REPLAY</h2>
+    <h2 class="label replay">REPLAY</h2>
   </li>
   <li class="sort-opt space-top">
     <h2 id="NFL" class="label nfl font-large" data-sport="nfl">NFL</h2>
