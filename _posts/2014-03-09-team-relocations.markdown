@@ -270,7 +270,10 @@ rect {
     <div class="font-small show-code center cursor-pointer space-bottom">
        20 teams (38% of all relocations) changed names!
     </div><p>As I worked with the data set, I started seeing patterns and stories. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p><p>At the time, the graphic showed the dataset, but offered no ways to explore it interactively. Without explicitly telling a story or allowing the audience to find stories for themselves, it was pretty lifeless.</p><p>Since everyone roots for different teams and enjoys different sports, I chose to be less explicit, letting the audience choose their own adventures. I hope you enjoy the graphic as much as I enjoyed making it. If you want to extend what I've already done, <a href="{{ root_path }}/json/migrations.json">here's the dataset</a>.</p>
-  </div>
+  
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+</div>
 </article>
 
 
