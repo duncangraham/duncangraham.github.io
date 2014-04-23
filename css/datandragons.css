@@ -2,28 +2,23 @@
   overflow: auto; }
 
 .curated {
-  margin-top: 2em; }
+  margin: 2em auto;
+  width: 70%; }
+
+.curated .block {
+  border-width: 0em;
+  cursor: pointer; }
 
 .block.h20 {
-  height: 20.4em; }
+  height: 20em; }
 
 .clear {
   margin-top: 1em;
   clear: both; }
 
 .w50 {
-  width: 46%;
+  width: 50%;
   float: left; }
-
-.small {
-  margin-bottom: 1.5em;
-  height: 9em; }
-
-.w50:first-child {
-  margin-right: 2%; }
-
-.w50:last-child {
-  margin-left: 2%; }
 
 .block-nav {
   position: fixed;
@@ -44,7 +39,7 @@
 .block {
   height: 10em;
   background-color: #666;
-  border-size: 2%;
+  border-width: 2%;
   border-style: solid;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;

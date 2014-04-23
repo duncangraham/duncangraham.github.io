@@ -6,11 +6,11 @@ title: dvncan
 <link rel="stylesheet" href="/css/datandragons.css" />
 
 <div class='block-nav'>
-		<p class='tk-inconsolata prev'>▴ Previous</p>
-		<p class='tk-inconsolata next'>▾ Next</p>	
+		<p class='center tk-inconsolata prev'>▴ Previous</p>
+		<p class='center tk-inconsolata next'>▾ Next</p>	
 </div>
 
-<div class="content-spacing"> 
+<h2 class="space-top center font-light">Curated</h2>
 	<div class="col curated">
 			<div class="block h20 w50"></div>
 			<div class="w50">
@@ -19,7 +19,30 @@ title: dvncan
 				<div class="block clear"></div>
 			</div>
 	</div>
+
+<h2 class="space-top center font-light">Stream</h2>
+<div class="content-spacing"> 
 	<div class="block full"></div>
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="jumpto block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
+	<div class="block full"></div> 
 	<div class="block full"></div> 
 	<div class="block full"></div>
 	<div class="block full"></div>
@@ -47,7 +70,7 @@ $this.css({'background-color': bgColor,
 });  
 
 			
-$('.block').on('click', function(){
+$('.content-spacing .block').on('click', function(){
 	var $this = $(this);
 
 	if($this.hasClass('open')){
@@ -64,6 +87,14 @@ $('.block').on('click', function(){
 	
 });
 
+	
+$('.curated .block').on('click', function(){
+	var $jumpto = $('.jumpto');
+
+	$jumpto.trigger('click');	
+	$("html, body").animate({ scrollTop: $jumpto.offset().top - 100 });
+});
+
 $('.next').on('click',function() {
 	var next = $('.open').next();
 	var color = next.css('border-color');
@@ -71,6 +102,7 @@ $('.next').on('click',function() {
 		$('.open').removeClass('open');
 		next.addClass('open');
 		changeNav(color);
+		$("html, body").animate({ scrollTop: next.offset().top - 700 });
 	} else {
 		$('.block-nav p').hide();
 		$('.open').removeClass('open');
@@ -84,6 +116,7 @@ $('.prev').on('click',function() {
 		$('.open').removeClass('open');
 		prev.addClass('open');
 		changeNav(color);
+		$("html, body").animate({ scrollTop: prev.offset().top - 70 });
 	} else {
 		$('.block-nav p').hide();
 		$('.open').removeClass('open');
