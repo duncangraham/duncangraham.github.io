@@ -1,0 +1,99 @@
+---
+layout: dvncan
+title: dvncan
+---
+
+<link rel="stylesheet" href="/css/datandragons.css" />
+
+<div class='block-nav'>
+		<p class='tk-inconsolata prev'>▴ Previous</p>
+		<p class='tk-inconsolata next'>▾ Next</p>	
+</div>
+
+<div class="content-spacing"> 
+	<div class="col curated">
+			<div class="block h20 w50"></div>
+			<div class="w50">
+				<div class="block w50 small"></div>
+				<div class="block w50 small"></div>
+				<div class="block clear"></div>
+			</div>
+	</div>
+	<div class="block full"></div>
+	<div class="block full"></div> 
+	<div class="block full"></div>
+	<div class="block full"></div>
+	<div class="block full"></div>
+</div>
+
+<script src="{{ root_path }}js/jquery.js"></script>
+            
+<script>
+	var rainbow = function () {
+        //there are 360 distinct hue values in hsl
+        var h = Math.random() * 360;
+        // FUN FACT! ~~ is shorthand for Math.floor(). not relevant anymore, but still useful
+        var color = "hsla(" + h + ", 75%, 60%, 1)";
+
+        return (color);
+    };
+
+$('.block').each( function () {
+    var bgColor = rainbow(),
+        $this = $(this);
+
+$this.css({'background-color': bgColor,
+				'border-color': bgColor });
+});  
+
+			
+$('.block').on('click', function(){
+	var $this = $(this);
+
+	if($this.hasClass('open')){
+		$this.removeClass('open');
+		$('.block-nav p').hide();
+	} else {
+		var color = $(this).css('border-color');
+		$('.open').removeClass('open');
+		$this.addClass('open');
+		$this.addClass('open').css('background-color', 'auto');
+	  changeNav(color);												
+	}
+
+	
+});
+
+$('.next').on('click',function() {
+	var next = $('.open').next();
+	var color = next.css('border-color');
+	if (color){
+		$('.open').removeClass('open');
+		next.addClass('open');
+		changeNav(color);
+	} else {
+		$('.block-nav p').hide();
+		$('.open').removeClass('open');
+	}
+});
+
+$('.prev').on('click',function() {
+	var prev = $('.open').prev();
+	var color = prev.css('border-color');
+	if (color){
+		$('.open').removeClass('open');
+		prev.addClass('open');
+		changeNav(color);
+	} else {
+		$('.block-nav p').hide();
+		$('.open').removeClass('open');
+	}
+});
+
+
+var changeNav = function(color) {
+	$('.block-nav p').css({'border-color': color,
+														'color': color}).show();	
+};
+</script> 
+

@@ -1,0 +1,83 @@
+@mixin transition($prop, $time, $ease) {
+  -webkit-transition: $prop $time $ease;
+  -moz-transition: $prop $time $ease;
+  -o-transition: $prop $time $ease;
+  transition: $prop $time $ease;
+}
+
+.col {
+	overflow: auto;
+}
+
+.curated {
+	margin-top: 2em;
+}
+
+.block.h20 {
+	height: 20.4em;
+}
+
+.clear {
+	margin-top: 1em;
+	clear: both;
+}
+
+.w50 {
+	width: 46%;
+	float: left;
+}
+
+.small {
+	margin-bottom: 1.5em;
+	height: 9em;
+}
+
+
+
+.w50:first-child {
+	margin-right: 2%;
+}
+
+.w50:last-child {
+	margin-left: 2%;
+}
+
+.block-nav {
+	position: fixed;
+	top: 5em;
+	right: 5em;
+}
+.block-nav p {
+	cursor: pointer;
+	padding: 1em 2em;
+	color: #4CE6A6;
+	border-size: 1em;
+	border-style: solid;
+	display: none;
+}
+
+.head {
+	display: none;
+}
+
+.block {
+	height: 10em;
+	background-color: #666; 
+	border-size: 2%;
+	border-style: solid;
+	cursor: pointer;
+
+	@include transition(all, .3s, ease-in-out);
+}
+
+.full {
+	width: 96%;
+	margin-top: 2em;
+}	
+
+.open {
+	height: 50em;
+	width: 110%;
+	margin-left: -5%;
+	background-color: #FFF !important; 
+}
