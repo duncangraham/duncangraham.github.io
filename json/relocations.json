@@ -45,6 +45,29 @@
          ]
       },
       "notes":"The team was renamed the Yankees in 1913"
+   },   
+   {
+      "year":1920,
+      "sport":"NHL",
+      "left":{
+         "name":"Bulldogs",
+         "city":"Quebec",
+         "state":"Canada",
+         "coords": [
+          -71.22,
+           43.05
+         ]
+      },
+      "arrived":{
+         "name":"Tigers",
+         "city":"Hamilton",
+         "state":"Canada",
+         "coords":[
+            -79.87,
+            43.25
+         ]
+      },
+      "notes":""
    },
    {
       "year":1921,
@@ -68,6 +91,75 @@
          ]
       },
       "notes":"The team became the Bears one year after the move"
+   },
+   {
+      "year":1925,
+      "sport":"NHL",
+      "left":{
+         "name":"Tigers",
+         "city":"Hamilton",
+         "state":"Canada",
+         "coords":[
+            -79.87,
+            43.25
+         ]
+      },
+      "arrived":{
+         "name":"Americans",
+         "city":"New York",
+         "state":"New York",
+         "coords":[
+            -73.94,
+            40.67
+         ]
+      },
+      "notes":"The Tiger's franchise was dissolved and the player's rights were acquired by the Americans, which folded in 1942 due to financial strains and WWII."
+   },
+   {
+      "year":1930,
+      "sport":"NHL",
+      "left":{
+         "name":"Pirates",
+         "city":"Pittsburgh",
+         "state":"Pennsylvania",
+         "coords":[
+            -80,
+            40.44
+         ]
+      },
+      "arrived":{
+         "name":"Quakers",
+         "city":"Philadelphia",
+         "state":"Pennsylvania",
+         "coords":[
+            -75.166667,
+            39.95
+         ]
+      },
+      "notes":"The move occurred due to economic pressures of the Great Depression. The Quakers lasted only one season before folding."
+   },
+   {
+      "year":1934,
+      "sport":"NHL",
+      "left":{
+         "name":"Senators",
+         "city":"Ottawa",
+         "state":"Canada",
+         "coords":[
+            -75.5,
+            45.42
+         ]
+      },
+      "arrived":{
+         "name":"Eagles",
+         "city":"St. Louis",
+         "state":"Missouri",
+         "coords":[
+            -90.197778,
+            38.627222
+         ]
+      },
+      "notes":""
    },
    {
       "year":1934,
@@ -783,6 +875,52 @@
       "notes":""
    },
    {
+      "year":1976,
+      "sport":"NHL",
+      "left":{
+         "name":"Golden Seals",
+         "city":"Oakland",
+         "state":"California",
+         "coords":[
+            -122.270833,
+            37.804444
+         ]
+      },
+      "arrived":{
+         "name":"Barons",
+         "city":"Cleveland",
+         "state":"Ohio",
+         "coords":[
+            -81.669722,
+            41.482222
+         ]
+      },
+      "notes":"In 1978, the Barons merged with the Minnesota North Stars. In 1991, the Barons split from the North Stars to return to the West Coast and to join the San Jose Sharks"
+   },
+   {
+      "year":1976,
+      "sport":"NHL",
+      "left":{
+         "name":"Scouts",
+         "city":"Kansas City",
+         "state":"Missouri",
+         "coords":[
+            -94.578333,
+            39.099722
+         ]
+      },
+      "arrived":{
+         "name":"Rockies",
+         "city":"Denver",
+         "state":"Colorado",
+         "coords":[
+            -104.98,
+            39.74
+         ]
+      },
+      "notes":"The Rockies later moved to New Jersey and became the Devils"
+   },
+   {
       "year":1978,
       "sport":"NBA",
       "left":{
@@ -829,6 +967,29 @@
       "notes":"Wait Salt Lake City isn't known for its Jazz scene?"
    },
    {
+      "year":1980,
+      "sport":"NHL",
+      "left":{
+         "name":"Flames",
+         "city":"Atlanta",
+         "state":"Georgia",
+         "coords":[
+            -84.39,
+            33.755
+         ]
+      },
+      "arrived":{
+         "name":"Flames",
+         "city":"Calgary",
+         "state":"Canada",
+         "coords":[
+            -114.1,
+            51.05
+         ]
+      },
+      "notes":"Atlanta was awarded an expansion team in 1999, which later left to become the Winnipeg Jets"
+   },
+   {
       "year":1982,
       "sport":"NFL",
       "left":{
@@ -850,6 +1011,29 @@
          ]
       },
       "notes":"The NFL refused permission for the move, but the team won the right to relocate in a court case."
+   },
+   {
+      "year":1982,
+      "sport":"NHL",
+      "left":{
+         "name":"Rockies",
+         "city":"Denver",
+         "state":"Colorado",
+         "coords":[
+           -104.98,
+            39.74
+         ]
+      },
+      "arrived":{
+         "name":"Devils",
+         "city":"East Rutherford",
+         "state":"New Jersey",
+         "coords":[
+            -74.09,
+            40.82
+         ]
+      },
+      "notes":"The Devils are currently the only professional sports team that brand themselves as a New Jersey franchse."
    },
    {
       "year":1984,
@@ -944,6 +1128,29 @@
       "notes":"The team now plays in another Phoenix suburb, Glendale. The team was renamed the Arizona Cardinals in 1994."
    },
    {
+      "year":1993,
+      "sport":"NHL",
+      "left":{
+         "name":"North Stars",
+         "city":"Bloomington",
+         "state":"Minnesota",
+         "coords":[
+            -93.31,
+            44.83
+         ]
+      },
+      "arrived":{
+         "name":"Stars",
+         "city":"Dallas",
+         "state":"Texas",
+         "coords":[
+            -96.796667,
+            32.775833
+         ]
+      },
+      "notes":"Minnesota was awarded an expansion team in 2000, which became Minnesota Wild"
+   },
+   {
       "year":1995,
       "sport":"NFL",
       "left":{
@@ -990,6 +1197,29 @@
       "notes":"After 13 previous seasons, this was the first 'return' relocation of a North American professional sports team."
    },
    {
+      "year":1995,
+      "sport":"NHL",
+      "left":{
+         "name":"Nordiques",
+         "city":"Quebec",
+         "state":"Canada",
+         "coords":[
+          -71.22,
+           43.05
+         ]
+      },
+      "arrived":{
+         "name":"Avalanche",
+         "city":"Denver",
+         "state":"Colorado",
+         "coords":[
+            -104.98,
+            39.74
+         ]
+      },
+      "notes":""
+   },
+   {
       "year":1996,
       "sport":"NFL",
       "left":{
@@ -1011,6 +1241,52 @@
          ]
       },
       "notes":"The move was one of the most controversial in major professional sports history. In response to a fan revolt and legal threats, the NFL awarded a new franchise to Cleveland in 1999, which for historical purposes is considered a continuation of the original Browns franchise."
+   },
+   {
+      "year":1996,
+      "sport":"NHL",
+      "left":{
+         "name":"Jets",
+         "city":"Winnipeg",
+         "state":"Canada",
+         "coords":[
+            -97.14,
+            49.9
+         ]
+      },
+      "arrived":{
+         "name":"Coyotes",
+         "city":"Phoenix",
+         "state":"Arizona",
+         "coords":[
+            -112.07,
+            33.45
+         ]
+      },
+      "notes":""
+   },
+   {
+      "year":1997,
+      "sport":"NHL",
+      "left":{
+         "name":"Whalers",
+         "city":"Hartford",
+         "state":"Connecticut",
+         "coords":[
+            -72.67,
+            41.76
+         ]
+      },
+      "arrived":{
+         "name":"Hurricanes",
+         "city":"Raleigh",
+         "state":"North Carolina",
+         "coords":[
+            -78.64,
+            35.82
+         ]
+      },
+      "notes":"For two years they played home games in Greensboro while an arena was under construction in Raleigh."
    },
    {
       "year":1997,
@@ -1172,6 +1448,29 @@
          ]
       },
       "notes":"More: https://en.wikipedia.org/wiki/Seattle_SuperSonics_relocation_to_Oklahoma_City"
+   },
+   {
+      "year":2011,
+      "sport":"NHL",
+      "left":{
+         "name":"Thrashers",
+         "city":"Atlanta",
+         "state":"Georgia",
+         "coords":[
+            -84.39,
+            33.755
+         ]
+      },
+      "arrived":{
+         "name":"Jets",
+         "city":"Winnipeg",
+         "state":"Canada",
+         "coords":[
+            -97.14,
+            49.9
+         ]
+      },
+      "notes":""
    },
    {
       "year":2012,

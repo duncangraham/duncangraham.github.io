@@ -115,12 +115,26 @@ rect {
   stroke: #313AFF;
 }
 
+.link.nhl {
+	stroke:#30DDB3;
+}
+
+
+.link.nfl {
+  stroke: #313AFF;
+}
+
 .link.nba {
   stroke: #9224FF;
 }
 
 .link.mlb {
   stroke: #24A1FF;
+}
+
+.arrow.nhl {
+	fill: #30DDB3;
+
 }
 
 .arrow.nfl {
@@ -147,6 +161,9 @@ rect {
   fill: #24A1FF;
 }
 
+.block.nhl {
+	fill: #30DDB3;
+}
 
 .link.inactive {
 
@@ -177,6 +194,10 @@ rect {
 
 .label.mlb {
   color: #24A1FF;
+}
+
+.label.nhl {
+  color:#30DDB3; 
 }
 
 .axis {
@@ -250,6 +271,9 @@ rect {
   <li class="sort-opt">
     <h2 id="MLB" class="label mlb font-large" data-sport="mlb">MLB</h2>
   </li>
+  <li class="sort-opt">
+    <h2 id="NHL" class="label nhl font-large" data-sport="nhl">NHL</h2>
+  </li>
 </ul> 
 
 <ul class="stateList">
@@ -269,7 +293,7 @@ rect {
     </div>
     <div class="font-small show-code center cursor-pointer space-bottom">
        20 teams (38% of all relocations) changed names!
-    </div><p>As I worked with the data set, I started seeing patterns and stories. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p><p>At the time, the graphic showed the dataset, but offered no ways to explore it interactively. Without explicitly telling a story or allowing the audience to find stories for themselves, it was pretty lifeless.</p><p>Since everyone roots for different teams and enjoys different sports, I chose to be less explicit, letting the audience choose their own adventures. I hope you enjoy the graphic as much as I enjoyed making it. If you want to extend what I've already done, <a href="{{ root_path }}/json/migrations.json">here's the dataset</a>.</p>
+    </div><p>As I worked with the data set, I started seeing patterns and stories. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p><p>At the time, the graphic showed the dataset, but offered no ways to explore it interactively. Without explicitly telling a story or allowing the audience to find stories for themselves, it was pretty lifeless.</p><p>Since everyone roots for different teams and enjoys different sports, I chose to be less explicit, letting the audience choose their own adventures. I hope you enjoy the graphic as much as I enjoyed making it. If you want to extend what I've already done, <a href="{{ root_path }}/json/github.json">here's the dataset</a>.</p>
   
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
@@ -314,7 +338,7 @@ d3.json("/json/us.json", function(error, us) {
       .attr("d", path);
 
 
-  d3.json("/json/migrations.json", function(error, data) {
+  d3.json("/json/github.json", function(error, data) {
       var m = data.migrations;
   
       var x = d3.time.scale()
@@ -376,6 +400,8 @@ d3.json("/json/us.json", function(error, us) {
                           return 'link nba move ' + d.left.state + ' ' + d.arrived.state
                         } else if ( d.sport === 'NFL' ) {
                           return 'link nfl move ' + d.left.state + ' ' + d.arrived.state
+                        } else if ( d.sport === 'NHL' ) {
+                          return 'link nhl move ' + d.left.state + ' ' + d.arrived.state
                         } else {
                           return 'link mlb move ' + d.left.state + ' ' + d.arrived.state
                         }
@@ -420,6 +446,8 @@ d3.json("/json/us.json", function(error, us) {
             return 'arrow nba move ' + d.left.state + ' ' + d.arrived.state
           } else if ( d.sport === 'NFL' ) {
             return 'arrow nfl move ' + d.left.state + ' ' + d.arrived.state
+          } else if ( d.sport === 'NHL' ) {
+            return 'arrow nhl move ' + d.left.state + ' ' + d.arrived.state
           } else {
             return 'arrow mlb move ' + d.left.state + ' ' + d.arrived.state
           }
@@ -491,6 +519,8 @@ d3.json("/json/us.json", function(error, us) {
                             return 'move block nba ' + d.left.state + ' ' + d.arrived.state
                           } else if ( d.sport === 'NFL' ) {
                             return 'move block nfl ' + d.left.state + ' ' + d.arrived.state
+                          } else if ( d.sport === 'NHL' ) {
+                            return 'move block nhl ' + d.left.state + ' ' + d.arrived.state
                           } else {
                             return 'move block mlb ' + d.left.state + ' ' + d.arrived.state
                           }
