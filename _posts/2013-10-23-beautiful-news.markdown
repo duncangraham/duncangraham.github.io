@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "beautiful news"
+layout: entry
+title:  "Beautiful News"
 type: "project"
 date:   2013-10-23 17:00:00
 ---
@@ -15,9 +15,9 @@ I was reading an article on the Washington Post not long ago and I was struck by
 
 
 <img src="/img/beautifulNews1.png" alt="the current state of digital newspapers" />
-<div class="font-small center">
+<small>
 before even getting to the content, there are dozens of ways to leave the page.
-</div>
+</small>
 
 So in the spirit of solving a problem rather than complaining about it, I built a chrome extension to fix the issue. It removes anything I thought was visual clutter and leaves the actual content of the article, surrounded by gorgeous white space. (I left in an ad initially because it fit and didn't look awful. I'm beginning to second guess myself though.)
 
@@ -30,23 +30,18 @@ So in the spirit of solving a problem rather than complaining about it, I built 
 <a href="#">Beautiful News for Firefox coming soon</a>
 
 
-<div class="font-small">
+<small>
 Disclaimer: I work at the Washington Post, but I built this one weekend on my own time.
-</div>
+</small>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-<div class="quote center">
+<!--- <div class="quote center">
 	<div class="mark fancy mark_left">“</div>
 	Whenever the people are well informed, they can be trusted with their own government; that whenever things get so far wrong as to attract their notice, they may be relied on to set them to rights.
 	<div class="mark fancy mark_right">”</div>
 	<div class="author">Thomas Jefferson</div>
 </div>
-
+--->
 
 <script type="text/javascript">
 $(function() {

@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name='twitter:site' content='@duncangraham'>
-    <!-- rad fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet" type="text/css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<head>
+        <title>{{ page.title }}</title>
+        <meta name="description" width="the digital emesis of Duncan Graham. No little plans made.">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <meta name=”twitter:site” content=”@duncangraham>
+
+        <link rel="shortcut icon" id="favicon" href="/img/favicon.png" type="image/png">
+				
+        <link rel="stylesheet" href="/css/main.css">
+
+				
+        <!-- Icon Fonts CSS -->
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="/css/icons-ie7.css">
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+   		  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/icons.css">
+
     <!-- syntax highlighting CSS -->
     <link rel="stylesheet" href="/css/syntax.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/common.css">
-    <!-- Icon Fonts CSS -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/dvncan.css">
     <link rel="stylesheet" href="/css/animation.css">
-    <link rel="shortcut icon" id="favicon" href="/img/favicon.png" type="image/png">
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="/css/dvncan-ie7.css">
-    <![endif]-->
-    <!-- JS -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-    <script type="text/javascript" src="//use.typekit.net/iil6ecz.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script>
-      !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
-      arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
-      d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
-      insertBefore(d,q)}(window,document,'script','_gs');
-      
-      _gs('GSN-301040-Q');
-    </script>
-  </head>
-  <body>
-    <div class="site">
-        {{ content }}
-    </div>
+
+	  <script  type="text/javascript" src="/js/jquery.js"></script>
+    <script  type="text/javascript" src="/js/main.js"></script>
+
+</head>
+  <body id="post">
+		<article>
+			<h1>{{ page.title }}</h1>
+
+			{{ content }}
+
+
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="duncangraham">
+							<i class="icon-twitter"></i>
+							<p>tweet</p></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'htdattp':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+		</article>
     <nav class="">
       <ul class="">
         {% if page.previous.url %}
         <li class="previous nav">
           <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" class="">
           <i class="icon-left-open-big"></i>
-          <span  class="tk-adobe-garamond-pro hover-show">PREVIOUS</span>
+          <span  class="tk-adobe-garamond-pro hover-show"></span>
           </a>
         </li>
         {% endif %}
         {% if page.next.url %}
         <li class="next nav">
           <a href="{{page.next.url}}" title="Previous Post: {{page.next.title}}" class="">
-          <span  class="tk-adobe-garamond-pro hover-show">NEXT</span>
+          <span  class="tk-adobe-garamond-pro hover-show"></span>
           <i class="icon-right-open-big"></i>
           </a>
         </li>
@@ -66,7 +70,13 @@
         </li>
       </ul>
     </nav>
-    <script type="javascript" src="/js/jquery.js"></script>
-    <script src="/js/main.js"></script>
-  </body>
+		{% include footer.html %}
+<script type="text/javascript" src="//use.typekit.net/iil6ecz.js"></script>
+        <script type="text/javascript">
+                try {
+                        Typekit.load();
+                } catch (e) {}
+        </script>
+
+     </body>
 </html>

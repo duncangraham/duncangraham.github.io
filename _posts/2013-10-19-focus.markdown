@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: entry
 title:  "focus"
 type: "experiment"
 date:   2013-10-19 17:00:00
@@ -7,6 +7,9 @@ desc: An experiement in relating interaction to meaning.
 ---
 
 <style>
+h1 {
+	display: none;
+}
 	.focus {
 		padding-top:3em;
 		text-align: center;

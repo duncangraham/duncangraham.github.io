@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "is this better?"
+layout: entry
+title:  "Is This Better?"
 type: "writing"
 date:   2014-01-25 17:00:00
 color: "orange"

@@ -1,12 +1,12 @@
 ---
-layout: post
-title:  "css and the golden ratio"
+layout: entry
+title:  "CSS and the Golden Ratio"
 type: "experiment"
 date:   2013-10-28 23:00:00
 ---
 <style>
 	.experiment-container {
-		margin: 8em 0em 1em 55%;
+		margin: 8em 0em 4em 55%;
 	}
 	.golden-ratio{
 		font-size: 1.618033988749894848204586834em;
@@ -102,11 +102,9 @@ Getting the basic shape was easy enough, though I needed to do some tweaking wit
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="font-small show-code center cursor-pointer">
+</div><small class="font-small show-code center cursor-pointer no-margin">
 	click to toggle css visibility
-</div>
+</small>
 <div class="hide">
 	{% highlight css %}
 	.golden-ratio{
@@ -131,10 +129,9 @@ Getting the basic shape was easy enough, though I needed to do some tweaking wit
 	right:1em;
 	}
 	{% endhighlight %}
-</div>
-<div class="font-small show-code center cursor-pointer">
+</div><small class="font-small show-code center cursor-pointer no-margin">
 	click to toggle html visibility
-</div>
+</small>
 <div class="hide">
 	{% highlight html %}
 	<div class="experiment-container">
@@ -164,11 +161,9 @@ Then I began work to create the ubiquitous golden spiral. however, after a bit, 
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="font-small show-code center cursor-pointer">
+</div><small class="font-small show-code center cursor-pointer no-margin">
 	click to toggle css visibility
-</div>
+</small>
 <div class="hide">
 	{% highlight css %}
 	/* below is the additional css for the curve */
@@ -196,10 +191,9 @@ Then I began work to create the ubiquitous golden spiral. however, after a bit, 
 	-webkit-border-radius: 0 1.618033988749894848204586834em 1.618033988749894848204586834em 0;
 	}
 	{% endhighlight %}
-</div>
-<div class="font-small show-code center cursor-pointer">
+</div><small class="font-small show-code center cursor-pointer">
 	click to toggle html visibility (same old, just some more classes)
-</div>
+</small>
 <div class="hide">
 	{% highlight html %}
 	<div class="experiment-container">
@@ -229,11 +223,9 @@ After getting lost in the possibilities and hacking away at the CSS, I realized 
 			</div>
 		</div>
 	</div>
-</div>
-<p></p>
-<div class="font-small show-code center cursor-pointer">
+</div><small class="font-small show-code center cursor-pointer no-margin">
 	click to toggle css visibility
-</div>
+</small>
 <div class="hide">
 	{% highlight css %}
 	.golden-ratio.spiral {
@@ -260,10 +252,9 @@ After getting lost in the possibilities and hacking away at the CSS, I realized 
 	-webkit-border-radius: 0 12em 8em 0;
 	}
 	{% endhighlight %}
-</div>
-<div class="font-small show-code center cursor-pointer">
+</div><small class="font-small show-code center cursor-pointer no-margin">
 	click to toggle html visibility (only the classes really change)
-</div>
+</small>
 <div class="hide">
 	{% highlight html %}
 	<div class="experiment-container">

@@ -1,12 +1,13 @@
 ---
-layout: post
-title:  "focus: the tutorial"
+layout: entry
+title:  "Focus: the tutorial"
 type: "tutorial"
 date:   2013-11-20 17:00:00
 ---
 
 
-<a href='/2013/10/19/focus.html'>Focus</a> was a pretty quick experiment, but once you know how it was done there are tons of directions you can take the code and concept in.
+<p class="first-paragraph">
+<a href='/2013/10/19/focus.html'>Focus</a> was a pretty quick experiment, but once you know how it was done there are tons of directions you can take the code and concept in.</p>
 
 The HTML is pretty cut and dry: A div with span elements containing the individual characters.
 {% highlight html %}

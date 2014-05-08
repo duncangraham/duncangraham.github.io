@@ -1,4 +1,5 @@
 /*****************************************************************************/
+
 /*
 /* Common
 /*
@@ -27,17 +28,8 @@
 $break: 767px;
 
 
+
 /* Global Reset */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #FFF;
-  color:#333;
-}
 
 .dark {
     background-color: #14081B;
@@ -129,38 +121,6 @@ margin: 1em 0em .5em 0em;
 .span2 {
   width: 50%;
   float: left;
-}
-
-.font-large {
-  font-size:1.5em;
-}
-
-.font-mini {
-  font-size: .5em;
-}
-
-.font-dark {
-  color: #333;
-}
-
-.font-light {
-  color: #e0e0e0;
-}
-
-.space-top {
-  margin-top:2em;
-}
-
-.space-top_mini {
-  margin-top: .6em;
-}
-
-.space_big {
-  margin: 4em 0em 10em 0em;
-}
-
-.space-bottom {
-  margin-bottom:2em;
 }
 
   .flexbox {
@@ -568,15 +528,6 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 /* ENTRIES
 /*
 /*****************************************************************************/
-article { 
-  font-size: 1.25em;
-  line-height: 1.75em;
-  background-color: #FFF;
-}
-
-p {
-  padding:.75em 0em 1em 0em;
-}
 
 p.no-pad {
   padding: 0em;
@@ -625,33 +576,8 @@ opacity: 0.25;
   font-size: 1.25em;
 }
 
-h2 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
-}
-
 .entry-content .name {
   display: none;
-}
-
-
-.first-paragraph:first-letter {
-font-size: 1.5em;
-padding-top: 0.5em;
-padding-right: .7em;
-margin-right: .5em;
-padding-left: .7em;
-margin-left: 0em;
-padding-bottom: .5em;
-float: left;
-color: #FFF;
-background-color: #00F;
-}
-
-.first-paragraph::first-line {
-text-transform: uppercase;
 }
 
 .entry-sort {
@@ -734,17 +660,6 @@ sup {
   padding-left: .2em;
 }
 
-article a, .idea a {
-color: #14081B;
-text-decoration: underline;
-padding: 0em 5px;
-}
-
-article a:hover, .idea a:hover {
-text-decoration: none;
-color: blue;
-}
-
 article .font-small {
   font-size: .8em;
   line-height: 1.2em;
@@ -770,75 +685,6 @@ img {
 
 .home:hover {
   color: #14081B;
-}
-
-.nav {
-  position: fixed;
-  bottom:50%;
-  font-size: 2.5em;
-  color:#CCC;
-
-  @include transition(color, .2s, linear);
-}
-
-.nav:hover {
-  color: #14081B;
-}
-
-.nav.next {
-  right:0em;
-}
-
-.nav.previous {
-  left:0em;
-}
-
-#mc_embed_signup form {
-text-align: left;
-margin-bottom: 2em;
-overflow: auto;
-width: 69%;
-margin: 0 auto 1em;
-}
-
-#mc_embed_signup label {
-font-family: 'Lato', sans-serif;
-text-transform: uppercase;
-color: #CCC;
-}
-
-#mc_embed_signup #mc-embedded-subscribe-form input.email {
-  padding: 6px 0;
-  font-size: 1.25em;
-  float: left;
-  clear:none;
-  margin:0em;
-  border: 0px solid #999;
-  width: 70%;
-  @media screen and (max-width: $break) {
-    width: 80%;
-  }
-}
-
-#mc_embed_signup #mc-embedded-subscribe-form input.button { //gross selector
-  display: block;
-  line-height: 2.5em;
-  border-radius: 0;
-  height: auto;
-  float: left;
-  clear:none;
-  width: 10%;
-  font-family: 'Lato', sans-serif;
-  text-transform: uppercase;
-  background-color: #CCC;
-  @include transition( background-color, .2s, linear );
-  @media screen and (max-width: $break) {
-    width: 80%;
-  }
-}
-
-#mc_embed_signup #mc-embedded-subscribe-form input.button:hover {
-  background-color: #14081B;
 }
 
 

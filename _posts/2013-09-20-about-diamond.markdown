@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: entry
 title:  "diamond kaleidoscope"
-type: ""
+type: "experiment"
 date:   2013-9-20 5:00:00
 desc: I wanted to make a kind of scrolling kaleidoscopic diamond. It ended up being a really fun problem to solve and kickstarted the entire redesign of this site.
 ---
@@ -11,9 +11,13 @@ body {
 	overflow:hidden;
 }
 
+h1 {
+	display: none;
+}
+
 .posts {
-  font-size: 115%;
   line-height: 1.5em;
+	width: 64em;
   margin: -1.75em auto 0em auto;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);

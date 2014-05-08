@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "abstracting classics"
+layout: entry
+title:  "Abstracting Classics"
 type: "experiment"
 date:   2014-01-10 13:47:00
 color: "purple"

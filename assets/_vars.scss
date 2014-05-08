@@ -1,0 +1,21 @@
+$font-sans-serif:  'effra', Helvetica, Arial, sans-serif;
+$font-serif: 'merriweather', Palantino, Georgia, serif;
+$font-accent: 'inconsolata';
+$font-fancy: "acta-display";
+
+$gray: #222;
+$gray-mid: #888;
+$gray-light: #E6E8EC;
+$accent: #0074D9;
+
+$break: 767px;
+
+//Mixins
+
+@mixin transition($prop, $time, $ease) {
+  -webkit-transition: $prop $time $ease;
+  -moz-transition: $prop $time $ease;
+  -o-transition: $prop $time $ease;
+  transition: $prop $time $ease;
+}
+

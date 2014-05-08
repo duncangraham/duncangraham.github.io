@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "gyroscopic navigation"
+layout: entry
+title:  "Gyroscopic Navigation"
 type: "experiment"
 date:   2013-12-11 11:00:00
 ---
@@ -57,6 +57,11 @@ date:   2013-12-11 11:00:00
     position: absolute;
     box-sizing: content-box;
     }
+
+footer {
+	position: fixed;
+	bottom: 0em;
+}
 
 /*    .node:active {
     border-radius: 0% !important;

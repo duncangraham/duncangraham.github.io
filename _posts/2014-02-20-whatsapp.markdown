@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: entry
 title:  "Whatsapp-ening? An Acquisition in Perspective"
-type: "blog"
+type: "writing"
 date:   2014-02-20 23:00:00
 ---
 
@@ -125,7 +125,7 @@ barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('height', yScale.rangeBand())
   .attr('width', function(d) { return x(barValue(d)); })
   .attr('stroke', 'white')
-  .attr('fill', 'blue');
+  .attr('fill', '#0074D9');
 // bar value labels
 barsContainer.selectAll("text").data(data).enter().append("text")
   .attr("x", function(d) { return x(barValue(d)); })
@@ -182,7 +182,7 @@ barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('height', yScale.rangeBand())
   .attr('width', function(d) { return x(barValue(d)); })
   .attr('stroke', 'white')
-  .attr('fill', 'blue');
+  .attr('fill', '#0074D9');
 // bar value labels
 barsContainer.selectAll("text").data(data).enter().append("text")
   .attr("x", function(d) { return x(barValue(d)); })
@@ -239,7 +239,7 @@ barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('height', yScale.rangeBand())
   .attr('width', function(d) { return x(barValue(d)); })
   .attr('stroke', 'white')
-  .attr('fill', 'blue');
+  .attr('fill', '#0074D9');
 // bar value labels
 barsContainer.selectAll("text").data(data).enter().append("text")
   .attr("x", function(d) { return x(barValue(d)); })
@@ -296,7 +296,7 @@ barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('height', yScale.rangeBand())
   .attr('width', function(d) { return x(barValue(d)); })
   .attr('stroke', 'white')
-  .attr('fill', 'blue');
+  .attr('fill', '#0074D9');
 // bar value labels
 barsContainer.selectAll("text").data(data).enter().append("text")
   .attr("x", function(d) { return x(barValue(d)); })

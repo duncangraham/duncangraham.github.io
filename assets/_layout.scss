@@ -1,0 +1,43 @@
+.container {
+
+}
+
+#post nav li {
+	position: fixed;
+	margin-left: 0em;
+ 	line-height: 1.3333em;	
+}
+
+.nav {
+	top: 40%;
+	font-size: 2.25em;
+}
+
+nav .next {
+	right: 0em;
+}
+
+nav .previous {
+	left: 0em;
+}
+
+nav .home {
+	font-size: 1.5em;
+	bottom: .6667em;
+	left: .6667em;
+}
+
+
+//whatsappening fix
+#post svg {
+	display: block;
+	margin: 1em auto 4em;
+}
+
+.no-margin {
+	margin: 0em;
+}
+
+.space {
+	padding: 1em 0em;
+}

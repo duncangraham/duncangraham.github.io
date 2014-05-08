@@ -1,0 +1,102 @@
+.grid-item { 
+	height: 16em;
+	padding: 2em;
+	float: left;
+	cursor: pointer;
+}
+
+.grid-item img {
+	height: 100%;
+}
+
+
+
+
+.first-paragraph {
+	margin-top: 4em;
+}
+
+.first-paragraph:first-letter {
+font-size: 3em;
+font-family: $font-fancy;
+padding: .6667em  .3333em;
+margin-right: .3333em;
+margin-left: 0em;
+float: left;
+color: #FFF;
+background-color: $accent;
+}
+
+//Mailchimp Signup
+footer #mc_embed_signup form {
+font-family: $font-sans-serif;
+text-align: left;
+margin-bottom: 2em;
+overflow: auto;
+width: 32em;
+margin: 0 auto 4em;
+padding: 19px 0 10px 3%;
+}
+
+#mc_embed_signup label {
+font-family: $font-sans-serif;
+text-transform: uppercase;
+color: #CCC;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input.email {
+  padding: 8px 0;
+  font-size: 1em;
+	font-family: $font-sans-serif;;
+  float: left;
+  clear:none;
+  margin:0em;
+  border: 0px solid #999;
+  width: 25em;
+  @media screen and (max-width: $break) {
+    width: 80%;
+  }
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input.button { //gross selector
+  display: block;
+  line-height: 2.5em;
+  border-radius: 0;
+  height: auto;
+  float: left;
+  clear:none;
+  width: 10%;
+  font-family: $font-sans-serif;
+  text-transform: uppercase;
+  background-color: $gray-mid;
+  @include transition( background-color, .2s, linear );
+  @media screen and (max-width: $break) {
+    width: 80%;
+  }
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input.button:hover {
+  background-color: $accent;
+}
+
+//Twitter
+//
+
+.twitter-share-button {
+	color: #AAA;
+	border-bottom: 0px solid transparent;
+	padding: 0em;
+	font-family: $font-sans-serif;
+	margin: 7em auto 0em;
+	display: block;
+	text-align: center;
+
+	p {
+		margin-top: .5em;
+	}
+}
+
+
+.icon-twitter {
+	font-size: 3em;
+}

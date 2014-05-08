@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Strategy Guide: Threes!"
-type: ""
+type: "writing"
 date:   2014-02-11 23:00:00
 ---
 
@@ -12,16 +12,16 @@ date:   2014-02-11 23:00:00
 
 <!-- Post Content -->
 
-<p>Disclaimer: I'm not sure if I believe anything I wrote below anymore. This game is incredible and more complex than I currently imagined. Go buy it. Like, Now.</p>
+<small>Disclaimer: I'm not sure if I believe anything I wrote below anymore. This game is incredible and more complex than I currently imagined. Go buy it. Like, Now.</small>
 
 <p class="first-paragraph">
 <a href="http://asherv.com/threes/">Threes!</a> is a game about making pairs of increasing value. It begins with a 4X4 grid of seven empty spaces<sup><a id="footnote1" href="#footnotes">1</a></sup> and nine filled randomly with 1's, 2's, and 3's. you slide the pieces orthoganally to combine like numbers, building up to bigger and bigger values. After a few days of play, I've figured out a solid strategy and a few supporting techniques.</p>
 
 <p class="space-top">
 <img class="img-half" src="{{ root_path }}/img/threes.PNG" />
-<div class="font-small show-code center cursor-pointer space-bottom">
+<small class="font-small show-code center cursor-pointer space-bottom">
 I broke my own rule and pulled a 384 out of the corner, but only to pair with another 384. The entire purpose of my strategy is to get the highest value possible.
-</div>
+</small>
 </p>
 
 <h2>THE GUIDING RULE: Push ruthlessly towards a corner</h2>
@@ -30,9 +30,9 @@ Push your largest piece to your chosen corner, then use the rest of the board to
 
 <p class="space-top">
 <img class="img-half" src="{{ root_path }}/img/threes_waterfall.PNG" />
-<div class="font-small show-code center cursor-pointer space-bottom">
+<small class="font-small show-code center cursor-pointer space-bottom">
 This shows the waterfalling paradigm nicely. I would probably swipe up, combining the 1 and 2. Then left, pairing the newly made 3 withe the existing 3. Then up to combine the 6's then again to combine the 12's.
-</div>
+</small>
 </p>
 
 With this strategy, you set yourself up to make the biggest pairings possible. And, the larger your highest value, the larger the bonus you'll receive and the larger your final score will be. 

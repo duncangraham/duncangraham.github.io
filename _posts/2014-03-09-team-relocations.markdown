@@ -1,12 +1,12 @@
 ---
-layout: experiment
+layout: entry
 title:  "sport team relocations"
 type: "experiment"
 date:   2014-03-09 10:08:00
 ---
 <!-- Post specific styles -->
 <style>
-header {
+h1 {
   display: none;
 }
 
@@ -229,8 +229,20 @@ rect {
   width: 10em;
 }
 
+.data p {
+	width: 10em;
+	font-size: .875em;
+  line-height: 1.714285714em;
+}
+
 .plane {
   -webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	position: relative;
+	height: 2em;
+ 	top: 4.5em;
+	left: 0em;
 }
 
 .stateList {
@@ -250,29 +262,33 @@ rect {
   color:#CCC;
 }
 
-.nameChangeList { width: 50%; margin-top: 5em; }
+.nameChangeList { 
+	width: 50%;
+  overflow: auto;
+  text-align: center;
+}
 .nameChangeList li { float: left; width: 50%; }
 .nameChangeList li:nth-child(odd) { clear: left; }
 
 </style>
 <ul class="filters">
   <li class="font-dark sort-opt">
-    <h2 id="year" class="font-large">1900</h2>
+    <h3 id="year" class="font-large">1900</h3>
   </li>
   <li class="sort-opt font-dark">
-    <h2 class="label replay">REPLAY</h2>
+    <h3 class="label replay">REPLAY</h3>
   </li>
   <li class="sort-opt space-top">
-    <h2 id="NFL" class="label nfl font-large" data-sport="nfl">NFL</h2>
+    <h3 id="NFL" class="label nfl font-large" data-sport="nfl">NFL</h3>
   </li>
   <li class="sort-opt">
-     <h2 id="NBA" class="label nba font-large" data-sport="nba">NBA</h2>
+     <h3 id="NBA" class="label nba font-large" data-sport="nba">NBA</h3>
   </li>
   <li class="sort-opt">
-    <h2 id="MLB" class="label mlb font-large" data-sport="mlb">MLB</h2>
+    <h3 id="MLB" class="label mlb font-large" data-sport="mlb">MLB</h3>
   </li>
   <li class="sort-opt">
-    <h2 id="NHL" class="label nhl font-large" data-sport="nhl">NHL</h2>
+    <h3 id="NHL" class="label nhl font-large" data-sport="nhl">NHL</h3>
   </li>
 </ul> 
 
@@ -285,24 +301,18 @@ rect {
 
 <div id="relocations"></div>
 
-<article class="space-top space-bottom">
   <div class="space-top entry-content content-spacing">
     <p class="first-paragraph">Months ago I had an idea for a news service that would bring current events into perspective. For every big story, it would display similar threads from the past. My hope was that the context would cut down on sensationalism and better inform readers.</p>
-    <p>During that time, the Washington Redskins were in the spotlight for their <a href="https://en.wikipedia.org/wiki/List_of_sports_team_names_and_mascots_derived_from_indigenous_peoples">controversial name</a>. With a newfound appreciation for history (I never really liked it in school), I started looking up historical sport team name changes. I found that many occurred during <a href="https://en.wikipedia.org/wiki/Relocation_of_professional_sports_teams">relocations</a>. The data looked interesting and I had wanted to learn D3 for a while, so I began coding in earnest.</p><div id="nameChanges">
+    <p>During that time, the Washington Redskins were in the spotlight for their <a href="https://en.wikipedia.org/wiki/List_of_sports_team_names_and_mascots_derived_from_indigenous_peoples">controversial name</a>. With a newfound appreciation for history (I never really liked it in school), I started looking up historical sport team name changes. I found that many occurred during <a href="https://en.wikipedia.org/wiki/Relocation_of_professional_sports_teams">relocations</a>. The data looked interesting and I had wanted to learn D3 for a while, so I began coding in earnest.</p><p id="nameChanges">
       <ul class="nameChangeList font-small float-right"></ul>
-    </div>
-    <div class="font-small show-code center cursor-pointer space-bottom">
+    </p>
+    <small class="font-small show-code center cursor-pointer space-bottom">
        20 teams (38% of all relocations) changed names!
-    </div><p>As I worked with the data set, I started seeing patterns and stories. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p><p>At the time, the graphic showed the dataset, but offered no ways to explore it interactively. Without explicitly telling a story or allowing the audience to find stories for themselves, it was pretty lifeless.</p><p>Since everyone roots for different teams and enjoys different sports, I chose to be less explicit, letting the audience choose their own adventures. I hope you enjoy the graphic as much as I enjoyed making it. If you want to extend what I've already done, <a href="{{ root_path }}/json/relocations.json">here's the dataset</a>.</p>
-  
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-</div>
-</article>
-
-
-<script src="{{ root_path }}/js/d3.min.js"></script>
-<script src="{{ root_path }}/js/topojson.v1.min.js"></script>
+    </small><p>As I worked with the data set, I started seeing patterns and stories. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p><p>At the time, the graphic showed the dataset, but offered no ways to explore it interactively. Without explicitly telling a story or allowing the audience to find stories for themselves, it was pretty lifeless.</p><p>Since everyone roots for different teams and enjoys different sports, I chose to be less explicit, letting the audience choose their own adventures. I hope you enjoy the graphic as much as I enjoyed making it. If you want to extend what I've already done, <a href="{{ root_path }}/json/relocations.json">here's the dataset</a>.</p>
+ 
+<!-- <script src="{{ root_path }}/js/jquery.js"></script> -->
+<script src="{{ root_path }}/js/d3.min.js" type="text/javascript"></script>
+<script src="{{ root_path }}/js/topojson.v1.min.js" type="text/javascript" ></script>
 <script>
 var width =  document.body.offsetWidth || 960,
     height = width*.5,
@@ -413,11 +423,11 @@ d3.json("/json/us.json", function(error, us) {
                             });
 
                             var tooltipInfo = '<li class="reloc-data">' +
-                                              '<p class="center no-pad lato">' + d.sport + ' | ' + d.year + '</p>' +
-                                              '<p class="center no-pad tk-inconsolata space-top_mini">' + d.left.city + ' ' + d.left.name + '</p>' +
-                                              '<p class="center no-pad plane" style="padding-top: 3px"> ✈ </p>' +
-                                              '<p class="center no-pad tk-inconsolata">' + d.arrived.city + ' ' + d.arrived.name + '</p>'
-                                              + '<p class="space-top font-small center no-pad tk-inconsolata" style="font-size:.7em">' + d.notes + '</p></li>';
+                                              '<p class="center no-margin tk-effra">' + d.sport + ' | ' + d.year + '</p>' +
+                                              '<p class="center no-margin tk-inconsolata space-top_mini">' + d.left.city + ' ' + d.left.name + '</p>' +
+                                              '<p class="center no-margin plane"> ✈ </p>' +
+                                              '<p class="center no-margin tk-inconsolata">' + d.arrived.city + ' ' + d.arrived.name + '</p>'
+                                              + '<p class="space-top font-small center no-margin tk-inconsolata" style="font-size:.7em">' + d.notes + '</p></li>';
 
 
                             $('.data').append(tooltipInfo);
@@ -531,11 +541,11 @@ d3.json("/json/us.json", function(error, us) {
                             this.setAttribute('class', classNames)
                           });
                           var tooltipInfo = '<li class="reloc-data">' +
-                                            '<p class="center no-pad lato">' + d.sport + ' | ' + d.year + '</p>' +
-                                            '<p class="center no-pad tk-inconsolata space-top_mini">' + d.left.city + ' ' + d.left.name + '</p>' +
-                                            '<p class="center no-pad plane" style="padding-top: 3px"> ✈ </p>' +
-                                            '<p class="center no-pad tk-inconsolata">' + d.arrived.city + ' ' + d.arrived.name + '</p>'+
-                                            '<p class="space-top center no-pad tk-inconsolata" style="font-size:.7em">' + d.notes + '</p></li>';
+                                              '<p class="center no-margin tk-effra">' + d.sport + ' | ' + d.year + '</p>' +
+                                              '<p class="center no-margin tk-inconsolata space-top_mini">' + d.left.city + ' ' + d.left.name + '</p>' +
+                                              '<p class="center no-margin plane"> ✈ </p>' +
+                                              '<p class="center no-margin tk-inconsolata">' + d.arrived.city + ' ' + d.arrived.name + '</p>'
+                                              + '<p class="space-top font-small center no-margin tk-inconsolata" style="font-size:.7em">' + d.notes + '</p></li>';
 
                           $('.data').append(tooltipInfo);
 
@@ -728,10 +738,10 @@ d3.json("/json/us.json", function(error, us) {
           }
 
            var tooltipInfo = '<li class="space-bottom">' +
-                             '<p class="center no-pad lato">' + stateName + '</p>' +
-                             '<p class="center no-pad tk-inconsolata space-top_mini">' + arrivals + ' Arrivals</p>' +
-                             '<p class="center no-pad tk-inconsolata">'+ departures +' Departures</p>'+
-                             '<p class="center no-pad tk-inconsolata font-small lock-text">click state to lock</p></li>';
+                             '<p class="center bold no-margin tk-effra">' + stateName + '</p>' +
+                             '<p class="center no-margin tk-inconsolata space-top_mini">' + arrivals + ' Arrivals</p>' +
+                             '<p class="center no-margin tk-inconsolata">'+ departures +' Departures</p>'+
+                             '<p class="center no-margin tk-inconsolata font-small lock-text">click state to lock</p></li>';
 
             $('.data').html(tooltipInfo);
       };
@@ -740,15 +750,6 @@ d3.json("/json/us.json", function(error, us) {
     //name changes
     var nameHash = [{'name': 'noChange', 'value': 32}, {'name': 'change', 'value': 20}],
         nameList = [];
-
-    $.each(m, function( i, v ){
-      if ( v.left.name !== v.arrived.name ) {
-        var nameChangeString = v.left.name + ' → ' + v.arrived.name;
-        nameList.push(nameChangeString);
-
-        $('.nameChangeList').append('<li>' + nameChangeString + '</li>');
-      }
-    });
 
     var radius = Math.min(width, height) / 6;
     var arc = d3.svg.arc()
@@ -760,7 +761,7 @@ d3.json("/json/us.json", function(error, us) {
                 .value(function(d) { return d.value; });
 
     var pieSvg = d3.select("#nameChanges").append("svg")
-                 .attr("width", "35%")
+                 .attr("width", "12em")
                  .attr("height", '16em')
                  .append("g")
                  .attr("transform", "translate(" + radius + "," + height / 4 + ")");
@@ -778,9 +779,19 @@ d3.json("/json/us.json", function(error, us) {
                   if ( d.data.name == 'noChange' ) {
                     return '#CCC';
                   } else {
-                    return '#00F';
+                    return '#0074D9';
                   }
                 });
+
+    $.each(m, function( i, v ){
+      if ( v.left.name !== v.arrived.name ) {
+        var nameChangeString = v.left.name + ' → ' + v.arrived.name;
+        nameList.push(nameChangeString);
+
+        $('.nameChangeList').append('<li>' + nameChangeString + '</li>');
+      }
+    });
+
   });
 
 });
