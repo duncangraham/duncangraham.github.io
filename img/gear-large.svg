@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="294px" height="293px" viewBox="0 0 294 293" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
+    <title>large</title>
+    <description>Created with Sketch.</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="gears" sketch:type="MSLayerGroup" transform="translate(-262.000000, -35.000000)" stroke="#C38C55">
+            <g id="large" transform="translate(228.000000, 0.000000)" sketch:type="MSShapeGroup">
+                <path d="M306.648912,234.834799 L55.3510875,128.165201" id="Line" stroke-width="20" stroke-linecap="square"></path>
+                <path d="M181,45 L181,318" id="Line-7" stroke-width="20" stroke-linecap="square"></path>
+                <path d="M306.648912,128.165201 L55.3510875,234.834799" id="Line-8" stroke-width="20" stroke-linecap="square"></path>
+                <path d="M181,45 L181,318" id="Line-9" stroke-width="20" stroke-linecap="square" transform="translate(181.000000, 181.500000) rotate(23.000000) translate(-181.000000, -181.500000) "></path>
+                <path d="M317.5,181.5 L44.5,181.5" id="Line-2" stroke-width="20" stroke-linecap="square"></path>
+                <path d="M129.8662,54.9394039 L232.1338,308.060596" id="Line-3" stroke-width="20" stroke-linecap="square"></path>
+                <path d="M84.4799244,84.9799244 L277.520076,278.020076" id="Line-4" stroke-width="20" stroke-linecap="square"></path>
+                <path d="M277.520076,84.9799244 L84.4799244,278.020076" id="Line-5" stroke-width="20" stroke-linecap="square"></path>
+                <path d="M89.990332,271.716775 C139.977441,321.703884 221.022559,321.703884 271.009668,271.716775 C320.996777,221.729665 320.996777,140.684548 271.009668,90.6974388 C221.022559,40.7103294 139.977441,40.7103294 89.990332,90.6974388 C40.0032227,140.684548 40.0032227,221.729665 89.990332,271.716775 Z" id="Oval-1" stroke-width="18" fill="#222222"></path>
+            </g>
+        </g>
+    </g>
+</svg>

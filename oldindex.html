@@ -1,33 +1,23 @@
 ---
-layout: about
+layout: dvncan-dark
 title: dvncan
 ---
+<div class="desc">
+  <div class="content-spacing">
+  <span class=".tk-adobe-garamond-pro italic">latest</span>
+  {% for post in site.posts limit: 1 %}
+  <a href="{{ post.url }}">
+  <h2>{{ post.title }}</h2>
+  </a>
+  {% endfor %}
+  <p></p>
+  </div>
+</div>
 
-
-  <ul class="entries">
-    <li class="center">i haven't quite moved in yet</li>
-    <li class="center">for older, not so recent stuff,</li>
-    <li class="center"><a href="http://www.dvncan.com">check out my old site</a></li>
-    <li class="center">&nbsp;</li>
-    <li class="center">&nbsp;</li>
-    <li class="center">for fascinating, minute to minute updates</li>
-    <li class="center"><a href="http://www.twitter.com/duncangraham">follow me on twitter</a></li>
-  </ul>
-
- <nav class="footer">
-            <ul class="flexbox">
-              <li class="more">
-                <a href="entries.html">
-                  ☰
-                  <span class="font-small">BROWSE </span>
-                  <span class="italic tk-adobe-garamond-pro entry-type">projects</span>
-                </a>
-              </li>
-              <li class="more">
-                <a href="about.html">
-                  <span class="font-small">ABOUT </span>
-                  <span class="shape view-option_diamond "></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+<div class="content-spacing">
+    {% for post in site.posts %}
+      <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
+      {{ post.title }}
+      </a>
+    {% endfor %}
+</div>

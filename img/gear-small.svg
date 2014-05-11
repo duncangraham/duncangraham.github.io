@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
+    <title>blue gear</title>
+    <description>Created with Sketch.</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="gears" sketch:type="MSLayerGroup" transform="translate(-177.000000, -276.000000)">
+            <g id="blue-gear" transform="translate(178.000000, 277.000000)" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-15" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(94.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
+                <rect id="Rectangle-17" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(124.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
+                <rect id="Rectangle-18" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(154.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
+                <rect id="Rectangle-19" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(184.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
+                <rect id="Rectangle-16" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(64.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
+                <rect id="Rectangle-13" fill="#79A2BD" transform="translate(98.866581, 98.992879) rotate(34.000000) translate(-98.866581, -98.992879) " x="89.0557673" y="-0.00712101373" width="19.6216268" height="198"></rect>
+                <circle id="Oval-2" stroke="#79A2BD" stroke-width="18" fill="#222222" cx="98.5" cy="98.5" r="75.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
