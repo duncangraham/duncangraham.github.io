@@ -23,31 +23,8 @@
 </head>
 
 <body>
-				<header class="l-space-top">
-               <!--  <ul class="l-list-horiz l-left relative">
-                        <li class="char1">D</li>
-                        <li class="char2 insanity">V</li>
-												<li class="char3">N</li>
-                        <li class="char4">C</li>
-                        <li class="char5">V</li>
-                        <li class="char6">N</li>
-								</ul> -->
-											
-								<nav>
-                <ul class="">
-                        <li class=""><a href="/index.html">BLOG</a>
-                        </li>
-                        <li class=""><a href="/portfolio.html">WORK</a>
-                        </li>
-                        <li class=""><a href="/ideas.html">IDEAS</a>
-                        </li>
-                        <li class=""><a href="/about.html">ABOUT</a>
-                        </li>
-                        <li class=""><a href="https://twitter.com/duncangraham">TWITTER</a>
-                        </li>
-								</ul>
-								</nav>
-        </header>
+				{% include nav.html %}
+
         {{ content }}
 
         <!-- JS -->

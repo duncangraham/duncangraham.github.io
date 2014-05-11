@@ -28,24 +28,9 @@ title: The Digital Playground of Duncan Graham
 </div>
 <img src="/img/bubble.svg" class="bubble option" />
 </div>
-
-				<nav>
-                <ul class="">
-                        <li id="blog"  class=""><a href="/index.html">BLOG</a>
-                        </li>
-                        <li id="work" class=""><a href="/portfolio.html">WORK</a>
-                        </li>
-                        <li id="ideas" class=""><a href="/ideas.html">IDEAS</a>
-                        </li>
-                        <li id="about" class=""><a href="/about.html">ABOUT</a>
-                        </li>
-                        <li id="twitter" class=""><a href="https://twitter.com/duncangraham">TWITTER</a>
-                        </li>
-								</ul>
-								</nav>
-
-				</div> <!-- end of illustration div -->
-  	<ul class="posts">
+{% include nav.html  %}
+								</div> <!-- end of illustration div -->
+  	<ul id="blog" class="posts">
     {% for post in site.posts %}
 		<li>
       <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
@@ -57,3 +42,6 @@ title: The Digital Playground of Duncan Graham
 
 
 <script src="{{ root_path }}js/d3.min.js"></script>
+
+
+{% include footer.html %}
