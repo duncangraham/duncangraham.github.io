@@ -1,6 +1,6 @@
 ---
 layout: entry
-title:  "sport team relocations"
+title:  "Sport Team Relocations"
 type: "experiment"
 date:   2014-03-09 10:08:00
 ---

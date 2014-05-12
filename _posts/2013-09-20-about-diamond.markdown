@@ -1,6 +1,6 @@
 ---
 layout: entry
-title:  "diamond kaleidoscope"
+title:  "Diamond Kaleidoscope"
 type: "experiment"
 date:   2013-9-20 5:00:00
 desc: I wanted to make a kind of scrolling kaleidoscopic diamond. It ended up being a really fun problem to solve and kickstarted the entire redesign of this site.
