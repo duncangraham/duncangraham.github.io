@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: entry
 title:  "Strategy Guide: Threes!"
 type: "writing"
 date:   2014-02-11 23:00:00
