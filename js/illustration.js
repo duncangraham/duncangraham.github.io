@@ -11,7 +11,6 @@ var openMouth = "M203.5,1010.5 C203.5,1010.5 111.373749,802.272707 57.4278601,63
 
 var head = d3.select('#Path-1');
 var opt;
-console.log(aboutArr);
 $('nav li').hover(function() {
  opt = $(this)[0].id;
 
@@ -41,7 +40,7 @@ $('nav li').hover(function() {
 		$("h1").text(' ').typed({
 					        strings: [about],
 					        typeSpeed: 0
-					        }).css({'z-index': '100'});	
+					        }).css({'z-index': '100', 'font-family': 'inconsolata', 'font-size': '1em', 'line-height': '1.5em', 'width': '25em', 'margin-top': '4em', 'margin-left': '-12.5em',  'text-align': 'left' });	
 $('.container').animate({'opacity': '.25'}, 200);
 
 				if ( fontColor == 13 )	{
