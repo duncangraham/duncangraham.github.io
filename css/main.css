@@ -60,6 +60,9 @@ article h1 {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
+  @media screen and (max-width: 767px) {
+    article h1 {
+      width: 80%; } }
 
 nav {
   margin: 2em auto;
@@ -88,6 +91,9 @@ p {
   font-family: "merriweather", Palantino, Georgia, serif;
   width: 38em;
   margin: 0 auto 1.5em; }
+  @media screen and (max-width: 767px) {
+    p {
+      width: 80%; } }
 
 h1 {
   text-align: center;
@@ -99,6 +105,9 @@ h1 {
   /* 48 */
   font-family: "acta-display";
   margin: 2em auto; }
+  @media screen and (max-width: 767px) {
+    h1 {
+      width: 80%; } }
 
 h2 {
   font-size: 1.5em;

@@ -129,7 +129,7 @@ footer #mc_embed_signup form {
 									  margin:0em;
 										  border: 0px solid #999;
 											  width: 25em;
-												  @media screen and (max-width: $break) {
+												  @media screen and (max-width: $mobile) {
 																	    width: 80%;
 																			  }
 																}
@@ -146,7 +146,7 @@ footer #mc_embed_signup form {
 																												  text-transform: uppercase;
 																													  background-color: $gray-mid;
 																														  @include transition( background-color, .2s, linear );
-																															  @media screen and (max-width: $break) {
+																															  @media screen and (max-width: $mobile) {
 																																				    width: 80%;
 																																						  }
 																																			}

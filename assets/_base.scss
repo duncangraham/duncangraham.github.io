@@ -62,9 +62,15 @@ font-family: $font-fancy;
 	text-align: center;
 	margin: 1.5em auto 1em;
 	width: 12.6667em;
-	@include transition(all, .2s, ease-in-out)
+	@include transition(all, .2s, ease-in-out);
+	@media screen and (max-width: $mobile) {
+		width: 80%;
+	 }
+
 	}
-}
+
+
+	  }
 
 nav {
 	margin: 2em auto;
@@ -104,6 +110,10 @@ p {
 	font-family: $font-serif;
 	width: 38em;
   margin: 0 auto 1.5em;
+
+	  @media screen and (max-width: $mobile) {
+						width: 80%;
+								  }
 }
 
 h1 {
@@ -114,6 +124,11 @@ h1 {
   line-height: 1em;     /* 48 */
 	font-family: $font-fancy;
   margin: 2em auto;
+
+	  @media screen and (max-width: $mobile) {
+						width: 80%;
+								  }
+
 }
 
 h2 {
