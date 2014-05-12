@@ -19,9 +19,20 @@ ul {
   list-style-type: none; }
 
 a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #0074d9;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   cursor: pointer;
   text-decoration: none;
   color: inherit; }
+
+a:hover {
+  padding-bottom: 0px;
+  border-bottom: 0px solid transparent;
+  color: #0074d9; }
 
 a:visted {
   color: inherit; }
@@ -33,17 +44,6 @@ img {
   display: block;
   margin: 0 auto; }
 
-article a {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #0074d9;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
-article a:hover {
-  padding-bottom: 0px;
-  border-bottom: 0px solid transparent;
-  color: #0074d9; }
 article h1 {
   font-size: 3em;
   /* 48 */
@@ -63,9 +63,11 @@ article h1 {
 
 nav {
   margin: 2em auto;
-  width: 28em;
+  width: 22em;
   overflow: auto;
   font-family: "effra", Helvetica, Arial, sans-serif; }
+  nav a {
+    border: 0px solid transparent; }
   nav li {
     float: left;
     margin-right: 3em; }
@@ -142,7 +144,8 @@ footer {
   width: 100%;
   overflow: auto; }
   footer a {
-    color: #0074d9; }
+    color: #0074d9;
+    border: 0px solid transparent; }
   footer p {
     width: 100%;
     text-align: center;
@@ -153,7 +156,7 @@ footer {
 
 #post nav li {
   position: fixed;
-  margin-left: 0em;
+  margin: 0em;
   line-height: 1.3333em; }
 
 .nav {
@@ -370,3 +373,12 @@ article h1:hover {
 
 .bold {
   font-weight: bold; }
+
+#typed-cursor {
+  display: none; }
+
+.posts a {
+  border: 0px solid transparent; }
+
+.twitter-share-button .icon-twitter {
+  font-size: 4em; }

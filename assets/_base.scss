@@ -24,10 +24,19 @@ ul {
 }
 
 a {
+	padding-bottom: 2px;
+	border-bottom: 1px solid $accent;
+	@include transition(all, .2s, ease-in);
 	cursor: pointer;
 	text-decoration: none;
 	color: inherit;
-}
+	}	
+
+	a:hover {
+	padding-bottom: 0px;
+	border-bottom: 0px solid transparent;
+	color: $accent;
+	}	
 
 a:visted {
 	color: inherit;
@@ -43,18 +52,6 @@ img {
 }
 
 article {
-	a {
-	padding-bottom: 2px;
-	border-bottom: 1px solid $accent;
-	@include transition(all, .2s, ease-in);
-	}	
-
-	a:hover {
-	padding-bottom: 0px;
-	border-bottom: 0px solid transparent;
-	color: $accent;
-	}	
-
 	h1 {
 	font-size: 3em;       /* 48 */
   line-height: 1em;     /* 48 */
@@ -71,10 +68,14 @@ font-family: $font-fancy;
 
 nav {
 	margin: 2em auto;
-	width: 28em;
+	width: 22em;
 	overflow: auto;
 	font-family: $font-sans-serif;
 	
+	a {
+		border: 0px solid transparent;
+	}	
+
 	li {
 		float: left;
 		margin-right: 3em;
@@ -163,7 +164,8 @@ footer {
 	overflow: auto;
 
 	a {
-	color: $accent
+	color: $accent;
+	border: 0px solid transparent;
 	}
 
 	p {
