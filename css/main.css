@@ -216,6 +216,7 @@ nav .home {
   background-color: #0074d9; }
 
 .illustration h1 {
+  display: none;
   left: 50%;
   position: absolute; }
 
