@@ -37,19 +37,11 @@ $('nav li').hover(function() {
 			}
 
 		}, 200)
-		$("h1").text(' ').typed({
+			$("h1").text(' ').typed({
 					        strings: [about],
 					        typeSpeed: 0
-					        }).css({'z-index': '100', 'font-family': 'inconsolata', 'font-size': '1em', 'line-height': '1.5em', 'width': '25em', 'margin-top': '3em', 'margin-left': '-12.5em',  'text-align': 'left' });	
-$('.container').animate({'opacity': '.25'}, 200);
-
-				if ( fontColor == 13 )	{
-					window.clearInterval(meInterval);
-				} else if ( fontColor <= 20) {
-					fontColor = 13;
-				} else if ( i%10 == 0 ){
-					fontColor = fontColor-4;
-				}
+					        }).css({'z-index': '100', 'font-family': 'inconsolata', 'font-size': '1em', 'line-height': '1.5em', 'width': '22em', 'margin-top': '3em', 'margin-left': '-10em',  'text-align': 'left' });	
+			$('.container').animate({'opacity': '.25'}, 200);
 		 } else if ( opt == 'twitter' ) {
 		$('#Path-2, #Path-3, #Path-4, #Path-5').hide();
 		head.transition().attr("d", twitter);	

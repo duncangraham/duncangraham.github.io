@@ -108,7 +108,7 @@ p {
 
 	//should this stuff go here or in theme or layout?
 	font-family: $font-serif;
-	width: 38em;
+	width: 36em;
   margin: 0 auto 1.5em;
 
 	  @media screen and (max-width: $mobile) {
@@ -134,7 +134,7 @@ h1 {
 h2 {
   font-size: 1.5em;     /* 24 */
   line-height: 1em;     /* 24 */
-  margin: 4em auto 2em;
+  margin: 4em 0em 2em;
 
 	//should this in _base?
 	font-family: $font-sans-serif;
