@@ -163,6 +163,11 @@ footer {
     color: #AAA;
     font-family: "effra", Helvetica, Arial, sans-serif; }
 
+hr {
+  color: #888888;
+  margin: 4em auto;
+  width: 36em; }
+
 #post nav li {
   position: fixed;
   margin: 0em;
