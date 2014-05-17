@@ -30,13 +30,15 @@ title: The Digital Playground of Duncan Graham
 </div>
 {% include nav.html  %}
 								</div> <!-- end of illustration div -->
-  	<ul id="blog" class="posts">
+  	<ul class="blog">
     {% for post in site.posts %}
+		{% if post.category != 'work' %}
 		<li>
       <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
       {{ post.title }}
       </a>
 		</li>
+		{% endif  %}
     {% endfor %}
 </ul>
 

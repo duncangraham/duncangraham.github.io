@@ -52,11 +52,11 @@
 .gears {
 position: absolute;
 display: none;
-height: 23em;
+height: 26em;
 width: 32em;
 overflow: auto;
 -webkit-transform: scale(0.2);
-top: -7em;
+top: -8em;
 left: -10em;
 }
 
@@ -110,9 +110,9 @@ footer #mc_embed_signup form {
 				text-align: left;
 				margin-bottom: 2em;
 				overflow: auto;
-				width: 32em;
+				width: 36em;
 				margin: 0 auto 4em;
-				padding: 19px 0 10px 3%;
+				padding: 1em 0em;
 }
 
 #mc_embed_signup label {
@@ -129,7 +129,7 @@ footer #mc_embed_signup form {
 								  clear:none;
 									  margin:0em;
 										  border: 0px solid #999;
-											  width: 25em;
+											  width: 31em;
 												  @media screen and (max-width: $mobile) {
 																	    width: 80%;
 																			  }
@@ -142,7 +142,7 @@ footer #mc_embed_signup form {
 																							  height: auto;
 																								  float: left;
 																									  clear:none;
-																										  width: 10%;
+																										  width: 2em;
 																											  font-family: $font-sans-serif;
 																												  text-transform: uppercase;
 																													  background-color: $gray-mid;
@@ -169,12 +169,66 @@ footer #mc_embed_signup form {
 																			}
 															}
 
-.posts {
+.blog {
 	margin-top: 4em;
 	font-size: 1em;
-	line-height: 4em;
 	font-family: $font-serif;
-	width: 25.3333em;
+
+	li {
+					font-family: $font-accent;
+					font-size: 1em;
+					text-transform: uppercase;
+					text-align: center;
+					color: $gray-mid;
+					font-weight: bold;
+					@include transition(all, .2s, ease-in-out);
+	}
+
+	li:hover {
+	color: $accent;
+	}
+
+	li a {
+	border-width: 0px;
+	line-height: 3em;
+	}
 }
 
+//WORK
 
+.work {
+	
+	article {
+		margin-top: 4em;
+	}
+ 	
+	p {
+		font-family: 'inconsolata';	
+	}
+
+	img {
+		width: 36em;
+	}
+
+nav ul .home {
+					top: 1em;
+					left: 1em;
+					font-size: 1.1em;
+} 
+
+nav ul .home a {
+					height: .5em;
+					line-height: .6em;
+					padding: .2em .5em .2em .15em;
+					color: $gray-mid;
+
+					i {
+						font-size: 0.7em;
+						position: relative;
+						}
+	}
+
+	nav ul .home a:hover{
+		color: $accent;
+	}
+}

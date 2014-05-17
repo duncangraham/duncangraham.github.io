@@ -16,18 +16,13 @@ var $win = $(window),
         var color = "hsla(" + h + ", 75%, 60%, 1)";
         return (color);
     };
-
+/*
 $('.entry').each( function () {
-    var hoverColor = rainbow(),
+    var color = rainbow(),
         $this = $(this);
-
-    $this.hover( 
-            function () {
-                $this.css('color', hoverColor);
-            }, function () {
-                $this.css('color', '#444');
-            });
+        $this.css('color', color);
 });  
+*/
 
 $win.mousemove(function (e) {
     mousePos = e;

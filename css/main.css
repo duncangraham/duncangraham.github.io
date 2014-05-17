@@ -42,7 +42,7 @@ div {
 
 img {
   display: block;
-  margin: 0 auto; }
+  margin: 2em auto; }
 
 article h1 {
   font-size: 3em;
@@ -114,11 +114,11 @@ h2 {
   /* 24 */
   line-height: 1em;
   /* 24 */
-  margin: 4em 0em 2em;
+  margin: 4em auto 2em;
   font-family: "effra", Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  width: 25.3333em;
+  width: 24em;
   color: #0074d9; }
 
 h3, h4, h5, h6 {
@@ -170,8 +170,7 @@ hr {
 
 #post nav li {
   position: fixed;
-  margin: 0em;
-  line-height: 1.3333em; }
+  margin: 0em; }
 
 .nav {
   top: 40%;
@@ -240,11 +239,11 @@ nav .home {
 .gears {
   position: absolute;
   display: none;
-  height: 23em;
+  height: 26em;
   width: 32em;
   overflow: auto;
   -webkit-transform: scale(0.2);
-  top: -7em;
+  top: -8em;
   left: -10em; }
 
 .gear {
@@ -310,9 +309,9 @@ footer #mc_embed_signup form {
   text-align: left;
   margin-bottom: 2em;
   overflow: auto;
-  width: 32em;
+  width: 36em;
   margin: 0 auto 4em;
-  padding: 19px 0 10px 3%; }
+  padding: 1em 0em; }
 
 #mc_embed_signup label {
   font-family: "effra", Helvetica, Arial, sans-serif;
@@ -327,7 +326,7 @@ footer #mc_embed_signup form {
   clear: none;
   margin: 0em;
   border: 0px solid #999;
-  width: 25em; }
+  width: 31em; }
   @media screen and (max-width: 767px) {
     #mc_embed_signup #mc-embedded-subscribe-form input.email {
       width: 80%; } }
@@ -339,7 +338,7 @@ footer #mc_embed_signup form {
   height: auto;
   float: left;
   clear: none;
-  width: 10%;
+  width: 2em;
   font-family: "effra", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   background-color: #888888;
@@ -365,12 +364,47 @@ footer #mc_embed_signup form {
   .twitter-share-button p {
     margin-top: .5em; }
 
-.posts {
+.blog {
   margin-top: 4em;
   font-size: 1em;
-  line-height: 4em;
-  font-family: "merriweather", Palantino, Georgia, serif;
-  width: 25.3333em; }
+  font-family: "merriweather", Palantino, Georgia, serif; }
+  .blog li {
+    font-family: "inconsolata";
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #888888;
+    font-weight: bold;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .blog li:hover {
+    color: #0074d9; }
+  .blog li a {
+    border-width: 0px;
+    line-height: 3em; }
+
+.work article {
+  margin-top: 4em; }
+.work p {
+  font-family: 'inconsolata'; }
+.work img {
+  width: 36em; }
+.work nav ul .home {
+  top: 1em;
+  left: 1em;
+  font-size: 1.1em; }
+.work nav ul .home a {
+  height: .5em;
+  line-height: .6em;
+  padding: .2em .5em .2em .15em;
+  color: #888888; }
+  .work nav ul .home a i {
+    font-size: 0.7em;
+    position: relative; }
+.work nav ul .home a:hover {
+  color: #0074d9; }
 
 .cursor-pointer {
   cursor: pointer; }
