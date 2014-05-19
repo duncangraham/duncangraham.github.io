@@ -1,6 +1,10 @@
 ---
-layout: default
+layout: project
 title: bckbrnr
 img: 'img/bckbrnr.png'
 category: work
 ---
+
+Bckbrnr was a productivity and project management tool I built to keep track of the variety of side projects I'm undertaking at any time.
+
+<img src="/img/bckbrnr-browser.png" />
