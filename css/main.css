@@ -228,13 +228,11 @@ nav .home {
   display: none;
   left: 50%;
   position: absolute; }
-
 .illustration .container {
   overflow: initial;
   width: 16em;
   margin: 6em auto 3em;
   position: relative; }
-
 .illustration .option {
   position: absolute; }
 
@@ -246,10 +244,10 @@ nav .home {
   display: none;
   height: 26em;
   width: 32em;
-  overflow: auto;
   -webkit-transform: scale(0.2);
-  top: -8em;
-  left: -10em; }
+  top: -9em;
+  left: -10em;
+  overflow: initial; }
 
 .gear {
   position: absolute; }
@@ -305,8 +303,8 @@ nav .home {
 
 .bubble {
   display: none;
-  top: 7em;
-  right: -6em;
+  top: 5em;
+  right: -6.5em;
   width: 6em; }
 
 footer #mc_embed_signup form {
