@@ -27,23 +27,24 @@
 
 //Illustrations
 
-.illustration h1 {
+.illustration {
+	h1 {
 	display: none;
 	left: 50%;
 	position: absolute;
-}
+	}
 
-.illustration .container {
+	.container {
 	overflow: initial;
 	width: 16em;			
 	margin: 6em auto 3em;
 	position: relative;
-}
+	}
 
-.illustration .option {
+	.option {
 	position: absolute;
+	}
 }
-
 .head {
 	width: 100%;
 }
@@ -56,8 +57,9 @@ height: 26em;
 width: 32em;
 overflow: auto;
 -webkit-transform: scale(0.2);
-top: -8em;
+top: -9em;
 left: -10em;
+overflow: initial;
 }
 
 .gear {
@@ -100,8 +102,8 @@ left: -10em;
 
 .bubble {
 	display: none;
-	top: 7em;
-	right: -6em;
+	top: 5em;
+	right: -6.5em;
 	width: 6em;
 }
 
