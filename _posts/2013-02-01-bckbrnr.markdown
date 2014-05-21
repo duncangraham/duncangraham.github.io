@@ -5,6 +5,13 @@ img: 'img/bckbrnr.png'
 category: work
 ---
 
+<video controls class="l-center space">
+  <source src="/assets/b.mp4"/>
+</video>
+
+
 Bckbrnr was a productivity and project management tool I built to keep track of the variety of side projects I'm undertaking at any time.
 
-<img src="/img/bckbrnr-browser.png" />
+It was a great experience to build a webapp from scratch, but I realized that what I had built, though minimal, was adding to my workload. Rather than continuing the project, I instead decided to hone my discipline, willpower, and memory. The results have been more impressive than any technological tool I've tried.
+ 
+<a href="http://bckbrnr.co">Check out the live site</a>
