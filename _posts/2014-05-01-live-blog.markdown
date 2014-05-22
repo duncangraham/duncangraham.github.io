@@ -1,0 +1,30 @@
+---
+layout: project
+title: Live Blog
+img: 'img/live-blog.png'
+category: work
+---
+
+This project is ongoing, but I'm too excited not to share some of the work I've been doing.
+
+
+The original Washington Post Live Blog was created in a rush and, while functional, needed a visual refresh to better serve the needs of  readers & reporters.
+
+</p><img class="m-img-large"  src="/img/wapo-live-blog-old.png"  />
+<small>The original (and current) live blog template</small>
+
+
+After talking to reporters and learning about users experience's and favorite features, I began iterating on the refresh.
+
+</p><img class="m-img-large"  src="/img/it.png"  />
+
+After figuring out the general iA and  setting a grid, I began typographic iterations.
+
+</p><img class="m-img-large"  src="/img/liveblog.gif"  />
+
+Here's where the design is currently. I'm working on adding views for the live chat aspect of the product.
+
+</p><img class="m-img-large"  src="/img/wapo-live-blog.png"  />
+
+
+

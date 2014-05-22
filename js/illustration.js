@@ -13,7 +13,9 @@ var head = d3.select('#Path-1');
 var opt;
 $('nav li').hover(function() {
  opt = $(this)[0].id;
-
+ $('h1').removeClass('about');
+ alignHeader();
+ $('.container').animate({'opacity': '1'}, 200);
  if ( opt == 'work' ) {
 		$('h1').text('Duncan Graham designs and codes');
  		$('.gears').show();

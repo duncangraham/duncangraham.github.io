@@ -51,7 +51,7 @@ article h1 {
   /* 48 */
   margin: 1em auto .5em;
   font-family: "acta-display";
-  color: #888888;
+  color: #666666;
   font-style: italic;
   text-align: center;
   margin: 1.5em auto 1em;
@@ -129,12 +129,12 @@ h3, h4, h5, h6 {
   font-family: "effra", Helvetica, Arial, sans-serif; }
 
 small {
-  font-size: 0.7em;
+  font-size: 0.8em;
   line-height: 1.714285714em;
   text-align: center;
   margin: 1em auto 2em;
   display: block;
-  color: #888888;
+  color: #666666;
   font-weight: 200;
   font-family: "effra", Helvetica, Arial, sans-serif; }
 
@@ -164,7 +164,7 @@ footer {
     font-family: "effra", Helvetica, Arial, sans-serif; }
 
 hr {
-  color: #888888;
+  color: #666666;
   margin: 4em auto;
   width: 36em; }
 
@@ -347,7 +347,7 @@ footer #mc_embed_signup form {
   width: 2em;
   font-family: "effra", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  background-color: #888888;
+  background-color: #666666;
   -webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
   -o-transition: background-color 0.2s linear;
@@ -491,7 +491,7 @@ footer #mc_embed_signup form {
     font-size: 1em;
     text-transform: uppercase;
     text-align: center;
-    color: #888888;
+    color: #666666;
     font-weight: bold;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -517,12 +517,15 @@ footer #mc_embed_signup form {
   height: .5em;
   line-height: .6em;
   padding: .2em .5em .2em .15em;
-  color: #888888; }
+  color: #666666; }
   .work nav ul .home a i {
     font-size: 0.7em;
     position: relative; }
 .work nav ul .home a:hover {
   color: #0074d9; }
+
+img.m-img-large {
+  width: 70%; }
 
 .cursor-pointer {
   cursor: pointer; }

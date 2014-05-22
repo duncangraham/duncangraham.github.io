@@ -16,3 +16,7 @@ In March of 2014, I spent 5 days at <a href="http://home.web.cern.ch/">CERN</a>,
 <p>
 While the hackathon's notceable lack of constraints left some teams feeling directionless, my team knew from an early moment what we wanted to accomplish: an educational, interactive video experience. Working with such a diverse group (a backend developer, a creative director/filmographer, a film & neuroscience student, and a scientist)  
 </p>
+
+
+<img src="/img/antimatter-storyboard.jpg">
+<small>This early storyboard set the framework the the experience at a very early stage in the jackathon.</small>

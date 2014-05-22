@@ -5,10 +5,7 @@ img: 'img/bckbrnr.png'
 category: work
 ---
 
-<video controls class="l-center space">
-  <source src="/assets/b.mp4"/>
-</video>
-
+<iframe class="l-center space" src="//player.vimeo.com/video/96001278?autoplay=1andamp;loop=1" width="642" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 
 Bckbrnr was a productivity and project management tool I built to keep track of the variety of side projects I'm undertaking at any time.
 
