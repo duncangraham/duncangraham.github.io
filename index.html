@@ -35,7 +35,8 @@ title: The Digital Playground of Duncan Graham
 		{% if post.category != 'work' %}
 		<li>
       <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
-      {{ post.title }}
+							<span> {{ post.title }}</span>
+							<span class="type"> {{ post.type}}</span>
       </a>
 		</li>
 		{% endif  %}

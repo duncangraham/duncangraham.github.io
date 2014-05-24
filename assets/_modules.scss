@@ -29,8 +29,8 @@
 
 .illustration {
 	h1 {
-	display: none;
-	left: 50%;
+	width: 100%;
+	text-align: center;
 	position: absolute;
 	}
 
@@ -101,7 +101,7 @@ overflow: initial;
 
 .bubble {
 	display: none;
-	top: 5em;
+	top: 2.5em;
 	right: -6.5em;
 	width: 6em;
 }
@@ -198,23 +198,29 @@ footer #mc_embed_signup form {
 	font-family: $font-serif;
 
 	li {
-					font-family: $font-accent;
-					font-size: 1em;
-					text-transform: uppercase;
-					text-align: center;
 					color: $gray-mid;
 					font-weight: bold;
-					@include transition(all, .2s, ease-in-out);
+
+					.type {
+								text-align: right;
+								float: right;
+								font-family: 'inconsolata';
+								font-size: .8em;
+								text-transform: uppercase;
+								line-height: 3em;
+				  	}
+
+					a {
+					border-width: 0px;
+					line-height: 3em;
+					transition: none;
+					}
+
+					a:hover {
+					color: $accent;
+					}
 	}
 
-	li:hover {
-	color: $accent;
-	}
-
-	li a {
-	border-width: 0px;
-	line-height: 3em;
-	}
 }
 
 //WORK
@@ -225,10 +231,6 @@ footer #mc_embed_signup form {
 		margin-top: 4em;
 	}
  	
-	p {
-		font-family: 'inconsolata';	
-	}
-
 	img {
 		width: 36em;
 	}

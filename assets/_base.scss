@@ -48,7 +48,7 @@ div {
 
 img {
 	display: block;
-	margin: 4em auto 2em;
+	margin: 6em auto;
 }
 
 article {
@@ -104,7 +104,7 @@ nav {
 
 p {
   font-size: 1em;       /* 16 */
-  line-height: 1.5em;   /* 24 */
+  line-height: 1.75em;
 
 	//should this stuff go here or in theme or layout?
 	font-family: $font-serif;
@@ -154,11 +154,12 @@ small {
 	font-size: 0.8em;
 	line-height: 1.714285714em;
 	text-align: center;
-	margin: 1em auto 2em;
+	margin: -6em auto 6em; //gross. fix.
 	display: block;
-	color: $gray-mid;
+	font-style: italic;
+	color: #9C9C9C;
 	font-weight: 200;
-	font-family: $font-sans-serif;
+	font-family: $font-serif;
 }
 
 pre {
@@ -189,7 +190,7 @@ footer {
 	font-size: .75em;
 	margin: 1.714285714em auto;
 	color: #AAA;
-	font-family: $font-sans-serif;
+	font-family: $font-accent;
 	}
 }
 

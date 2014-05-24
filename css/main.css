@@ -42,7 +42,7 @@ div {
 
 img {
   display: block;
-  margin: 4em auto 2em; }
+  margin: 6em auto; }
 
 article h1 {
   font-size: 3em;
@@ -86,8 +86,7 @@ nav {
 p {
   font-size: 1em;
   /* 16 */
-  line-height: 1.5em;
-  /* 24 */
+  line-height: 1.75em;
   font-family: "merriweather", Palantino, Georgia, serif;
   width: 36em;
   margin: 0 auto 1.5em; }
@@ -132,11 +131,12 @@ small {
   font-size: 0.8em;
   line-height: 1.714285714em;
   text-align: center;
-  margin: 1em auto 2em;
+  margin: -6em auto 6em;
   display: block;
-  color: #666666;
+  font-style: italic;
+  color: #9C9C9C;
   font-weight: 200;
-  font-family: "effra", Helvetica, Arial, sans-serif; }
+  font-family: "merriweather", Palantino, Georgia, serif; }
 
 pre {
   width: 36em;
@@ -161,7 +161,7 @@ footer {
     font-size: .75em;
     margin: 1.714285714em auto;
     color: #AAA;
-    font-family: "effra", Helvetica, Arial, sans-serif; }
+    font-family: "inconsolata"; }
 
 hr {
   color: #666666;
@@ -228,8 +228,8 @@ nav .home {
   background-color: #0074d9; }
 
 .illustration h1 {
-  display: none;
-  left: 50%;
+  width: 100%;
+  text-align: center;
   position: absolute; }
 .illustration .container {
   overflow: initial;
@@ -306,7 +306,7 @@ nav .home {
 
 .bubble {
   display: none;
-  top: 5em;
+  top: 2.5em;
   right: -6.5em;
   width: 6em; }
 
@@ -487,26 +487,24 @@ footer #mc_embed_signup form {
   font-size: 1em;
   font-family: "merriweather", Palantino, Georgia, serif; }
   .blog li {
-    font-family: "inconsolata";
-    font-size: 1em;
-    text-transform: uppercase;
-    text-align: center;
     color: #666666;
-    font-weight: bold;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-  .blog li:hover {
-    color: #0074d9; }
-  .blog li a {
-    border-width: 0px;
-    line-height: 3em; }
+    font-weight: bold; }
+    .blog li .type {
+      text-align: right;
+      float: right;
+      font-family: 'inconsolata';
+      font-size: .8em;
+      text-transform: uppercase;
+      line-height: 3em; }
+    .blog li a {
+      border-width: 0px;
+      line-height: 3em;
+      transition: none; }
+    .blog li a:hover {
+      color: #0074d9; }
 
 .work article {
   margin-top: 4em; }
-.work p {
-  font-family: 'inconsolata'; }
 .work img {
   width: 36em; }
 .work nav ul .home {
@@ -529,6 +527,16 @@ img.m-img-large {
 
 .cursor-pointer {
   cursor: pointer; }
+
+h1.about {
+  z-index: 100;
+  font-family: 'inconsolata';
+  font-size: 1em;
+  line-height: 1.5em;
+  width: 22em;
+  margin-top: 3em;
+  left: 50%;
+  text-align: left; }
 
 .font-small {
   font-size: .875em;

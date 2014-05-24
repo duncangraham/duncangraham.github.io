@@ -3,14 +3,13 @@ layout: default
 title: The Digital Playground of Duncan Graham
 ---
 <style>
-	.about {
+	h1.about {
 					z-index: 100; 
 					font-family: inconsolata;
 					font-size: 1em;
 					line-height: 1.5em;
 					width: 22em;
 					margin-top: 3em;
-					margin-left: -10em;
 					text-align: left;
 
 	}
@@ -45,11 +44,13 @@ title: The Digital Playground of Duncan Graham
 								</div> <!-- end of illustration div -->
   	<ul class="blog">
     {% for post in site.posts %}
+		{% if post.category != 'work' %}
 		<li>
       <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
       {{ post.title }}
       </a>
 		</li>
+		{% endif %}
     {% endfor %}
 </ul>
 
