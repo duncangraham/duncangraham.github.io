@@ -57,7 +57,7 @@ article {
   line-height: 1em;     /* 48 */
   margin: 1em auto .5em;
 font-family: $font-fancy;
-	color: $gray-mid; 
+	color: $dark; 
 	font-style: italic;
 	text-align: center;
 	margin: 1.5em auto 1em;
@@ -97,7 +97,7 @@ nav {
 	}
 
 	nav li a:hover {
-	color: #333;
+	color: $dark;
 	text-shadow: 0px 0px 2px $gray-light;
 	}
 }
@@ -141,7 +141,7 @@ h2 {
 	font-weight: bold;
 	text-transform: uppercase;
 	width: 24em;
-	color: $accent;
+	color: $dark;
 }
 
 h3, h4, h5, h6 {
@@ -154,12 +154,15 @@ small {
 	font-size: 0.8em;
 	line-height: 1.714285714em;
 	text-align: center;
-	margin: -6em auto 6em; //gross. fix.
 	display: block;
 	font-style: italic;
 	color: #9C9C9C;
 	font-weight: 200;
 	font-family: $font-serif;
+}
+
+img + small {
+	margin: -6em auto 6em; //gross. fix.
 }
 
 pre {
