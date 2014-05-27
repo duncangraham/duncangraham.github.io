@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="294px" height="293px" viewBox="0 0 294 293" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
-    <title>large</title>
+<svg width="293px" height="293px" viewBox="0 0 293 293" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.2 (7799) - http://www.bohemiancoding.com/sketch -->
+    <title>gear-medium</title>
     <description>Created with Sketch.</description>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="gears" sketch:type="MSLayerGroup" transform="translate(-262.000000, -35.000000)" stroke="#C38C55">
-            <g id="large" transform="translate(228.000000, 0.000000)" sketch:type="MSShapeGroup">
-                <path d="M306.648912,234.834799 L55.3510875,128.165201" id="Line" stroke-width="20" stroke-linecap="square"></path>
-                <path d="M181,45 L181,318" id="Line-7" stroke-width="20" stroke-linecap="square"></path>
-                <path d="M306.648912,128.165201 L55.3510875,234.834799" id="Line-8" stroke-width="20" stroke-linecap="square"></path>
-                <path d="M181,45 L181,318" id="Line-9" stroke-width="20" stroke-linecap="square" transform="translate(181.000000, 181.500000) rotate(23.000000) translate(-181.000000, -181.500000) "></path>
-                <path d="M317.5,181.5 L44.5,181.5" id="Line-2" stroke-width="20" stroke-linecap="square"></path>
-                <path d="M129.8662,54.9394039 L232.1338,308.060596" id="Line-3" stroke-width="20" stroke-linecap="square"></path>
-                <path d="M84.4799244,84.9799244 L277.520076,278.020076" id="Line-4" stroke-width="20" stroke-linecap="square"></path>
-                <path d="M277.520076,84.9799244 L84.4799244,278.020076" id="Line-5" stroke-width="20" stroke-linecap="square"></path>
-                <path d="M89.990332,271.716775 C139.977441,321.703884 221.022559,321.703884 271.009668,271.716775 C320.996777,221.729665 320.996777,140.684548 271.009668,90.6974388 C221.022559,40.7103294 139.977441,40.7103294 89.990332,90.6974388 C40.0032227,140.684548 40.0032227,221.729665 89.990332,271.716775 Z" id="Oval-1" stroke-width="18" fill="#222222"></path>
+        <g id="gear-medium" sketch:type="MSLayerGroup" transform="translate(146.000000, 146.500000) rotate(18.000000) translate(-146.000000, -146.500000) translate(-32.000000, -32.000000)">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="gears">
+                    <g id="blue-gear-2" transform="translate(177.868082, 178.616745) rotate(15.000000) translate(-177.868082, -178.616745) translate(32.368082, 33.116745)">
+                        <rect id="Rectangle-15" fill="#EEA161" transform="translate(13.896226, 135.351311) rotate(94.000000) translate(-13.896226, -135.351311) " x="-1.815042" y="122.564991" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-15-2" fill="#EEA161" transform="translate(277.104657, 153.756638) rotate(94.000000) translate(-277.104657, -153.756638) " x="261.393389" y="140.970318" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-17" fill="#EEA161" transform="translate(36.420072, 70.907820) rotate(124.000000) translate(-36.420072, -70.907820) " x="20.7088043" y="58.1214999" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-17-2" fill="#EEA161" transform="translate(255.255494, 218.259660) rotate(124.000000) translate(-255.255494, -218.259660) " x="239.75523" y="205.47086" width="31.1176863" height="25.5368838"></rect>
+                        <rect id="Rectangle-18" fill="#EEA161" transform="translate(88.148041, 26.360043) rotate(154.000000) translate(-88.148041, -26.360043) " x="72.4367729" y="13.5737225" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-18-2" fill="#EEA161" transform="translate(203.991008, 263.391387) rotate(154.000000) translate(-203.991008, -263.391387) " x="188.491008" y="250.605067" width="31.1176863" height="25.5368838"></rect>
+                        <rect id="Rectangle-19" fill="#EEA161" transform="translate(136.814338, 276.852951) rotate(184.000000) translate(-136.814338, -276.852951) " x="121.10307" y="264.066631" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-19-2" fill="#EEA161" transform="translate(155.219664, 13.644520) rotate(184.000000) translate(-155.219664, -13.644520) " x="139.508396" y="0.858200025" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-16" fill="#EEA161" transform="translate(26.611748, 202.422935) rotate(64.000000) translate(-26.611748, -202.422935) " x="10.9004805" y="189.636615" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-16-2" fill="#EEA161" transform="translate(263.759599, 86.758199) rotate(64.000000) translate(-263.759599, -86.758199) " x="248.048332" y="73.9718792" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-13" fill="#EEA161" transform="translate(71.023184, 254.261311) rotate(34.000000) translate(-71.023184, -254.261311) " x="55.3119159" y="241.474991" width="31.1176863" height="25.5547611"></rect>
+                        <rect id="Rectangle-13-2" fill="#EEA161" transform="translate(218.566879, 35.518787) rotate(34.000000) translate(-218.566879, -35.518787) " x="202.855612" y="22.7324666" width="31.1176863" height="25.5547611"></rect>
+                        <circle id="Oval-2" stroke="#EEA161" stroke-width="18" cx="144.993169" cy="144.62213" r="119.734482"></circle>
+                    </g>
+                </g>
             </g>
         </g>
     </g>

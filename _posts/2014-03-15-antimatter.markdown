@@ -19,4 +19,4 @@ While the hackathon's notceable lack of constraints left some teams feeling dire
 
 
 <img src="/img/antimatter-storyboard.jpg">
-<small>This early storyboard set the framework the the experience at a very early stage in the jackathon.</small>
+<small>This early storyboard set the framework the the experience at a very early stage in the hackathon.</small>

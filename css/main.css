@@ -20,7 +20,7 @@ ul {
 
 a {
   padding-bottom: 2px;
-  border-bottom: 1px solid #0074d9;
+  border-bottom: 1px solid #ce904e;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -32,7 +32,7 @@ a {
 a:hover {
   padding-bottom: 0px;
   border-bottom: 0px solid transparent;
-  color: #0074d9; }
+  color: #ce904e; }
 
 a:visted {
   color: inherit; }
@@ -86,8 +86,8 @@ nav {
 p {
   font-size: 1em;
   /* 16 */
-  line-height: 1.75em;
-  font-family: "merriweather", Palantino, Georgia, serif;
+  line-height: 1.5em;
+  font-family: "freight-text-pro", Palantino, Georgia, serif;
   width: 36em;
   margin: 0 auto 1.5em; }
   @media screen and (max-width: 767px) {
@@ -118,7 +118,7 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   width: 24em;
-  color: #0074d9; }
+  color: #ce904e; }
 
 h3, h4, h5, h6 {
   font-size: 1em;
@@ -136,7 +136,7 @@ small {
   font-style: italic;
   color: #9C9C9C;
   font-weight: 200;
-  font-family: "merriweather", Palantino, Georgia, serif; }
+  font-family: "freight-text-pro", Palantino, Georgia, serif; }
 
 pre {
   width: 36em;
@@ -153,7 +153,7 @@ footer {
   width: 100%;
   overflow: auto; }
   footer a {
-    color: #0074d9;
+    color: #ce904e;
     border: 0px solid transparent; }
   footer p {
     width: 100%;
@@ -225,7 +225,7 @@ nav .home {
   margin-left: 0em;
   float: left;
   color: #FFF;
-  background-color: #0074d9; }
+  background-color: #ce904e; }
 
 .illustration h1 {
   width: 100%;
@@ -357,7 +357,7 @@ footer #mc_embed_signup form {
       width: 80%; } }
 
 #mc_embed_signup #mc-embedded-subscribe-form input.button:hover {
-  background-color: #0074d9; }
+  background-color: #ce904e; }
 
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
 #mc_embed_signup form {
@@ -485,10 +485,9 @@ footer #mc_embed_signup form {
 .blog {
   margin-top: 4em;
   font-size: 1em;
-  font-family: "merriweather", Palantino, Georgia, serif; }
+  font-family: "freight-text-pro", Palantino, Georgia, serif; }
   .blog li {
-    color: #666666;
-    font-weight: bold; }
+    color: #666666; }
     .blog li .type {
       text-align: right;
       float: right;
@@ -501,7 +500,7 @@ footer #mc_embed_signup form {
       line-height: 3em;
       transition: none; }
     .blog li a:hover {
-      color: #0074d9; }
+      color: #ce904e; }
 
 .work article {
   margin-top: 4em; }
@@ -520,7 +519,7 @@ footer #mc_embed_signup form {
     font-size: 0.7em;
     position: relative; }
 .work nav ul .home a:hover {
-  color: #0074d9; }
+  color: #ce904e; }
 
 img.m-img-large {
   width: 70%; }
@@ -538,16 +537,16 @@ h1.about {
   left: 50%;
   text-align: left; }
 
+.s-dark {
+  color: #e6e8ec;
+  background: #364147; }
+
 .font-small {
   font-size: .875em;
   line-height: 1.71em; }
 
 article h1:hover {
   color: #222222; }
-
-.dark {
-  background-color: #222222;
-  color: #f7f7f7; }
 
 .bold {
   font-weight: bold; }

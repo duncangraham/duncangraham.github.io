@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="232px" height="232px" viewBox="0 0 232 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
-    <title>blue gear 2</title>
+<svg width="240px" height="237px" viewBox="0 0 240 237" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.2 (7799) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
     <description>Created with Sketch.</description>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="gears" sketch:type="MSLayerGroup" transform="translate(-26.000000, -105.000000)">
-            <g id="blue-gear-2" transform="translate(141.482509, 220.313424) rotate(15.000000) translate(-141.482509, -220.313424) translate(25.982509, 105.313424)" sketch:type="MSShapeGroup">
-                <rect id="Rectangle-15" fill="#DAD49B" transform="translate(115.946788, 115.034135) rotate(94.000000) translate(-115.946788, -115.034135) " x="104.338748" y="0.114537466" width="22.7768632" height="229.839196"></rect>
-                <rect id="Rectangle-17" fill="#DAD49B" transform="translate(115.946788, 115.034135) rotate(124.000000) translate(-115.946788, -115.034135) " x="104.338748" y="0.114537466" width="22.7768632" height="229.839196"></rect>
-                <rect id="Rectangle-18" fill="#DAD49B" transform="translate(115.946788, 115.034135) rotate(154.000000) translate(-115.946788, -115.034135) " x="104.338748" y="0.114537466" width="22.7768632" height="229.839196"></rect>
-                <rect id="Rectangle-19" fill="#DAD49B" transform="translate(115.946788, 115.034135) rotate(184.000000) translate(-115.946788, -115.034135) " x="104.338748" y="0.114537466" width="22.7768632" height="229.839196"></rect>
-                <rect id="Rectangle-16" fill="#DAD49B" transform="translate(115.946788, 115.034135) rotate(64.000000) translate(-115.946788, -115.034135) " x="104.338748" y="0.114537466" width="22.7768632" height="229.839196"></rect>
-                <rect id="Rectangle-13" fill="#DAD49B" transform="translate(115.764724, 114.911332) rotate(34.000000) translate(-115.764724, -114.911332) " x="104.376293" y="-0.00826610137" width="22.7768632" height="229.839196"></rect>
-                <circle id="Oval-2" stroke="#DAD49B" stroke-width="18" fill="#222222" cx="115.339196" cy="114.339196" r="87.6407035"></circle>
+        <g id="gear-medium" sketch:type="MSLayerGroup" transform="translate(-19.000000, -23.000000)">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="gears">
+                    <g id="blue-gear-2" transform="translate(141.836062, 141.925796) rotate(15.000000) translate(-141.836062, -141.925796) translate(25.836062, 26.425796)">
+                        <rect id="Rectangle-15" fill="#DAD49B" transform="translate(15.155774, 107.538262) rotate(94.000000) translate(-15.155774, -107.538262) " x="3.65577429" y="93.6407743" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-15-2" fill="#DAD49B" transform="translate(216.868238, 121.643371) rotate(94.000000) translate(-216.868238, -121.643371) " x="205.368238" y="107.745884" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-17" fill="#DAD49B" transform="translate(32.407146, 58.147011) rotate(124.000000) translate(-32.407146, -58.147011) " x="20.9071463" y="44.249524" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-17-2" fill="#DAD49B" transform="translate(200.042709, 171.218627) rotate(124.000000) translate(-200.042709, -171.218627) " x="188.542709" y="157.321139" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-18" fill="#DAD49B" transform="translate(72.042898, 23.998620) rotate(154.000000) translate(-72.042898, -23.998620) " x="60.5428978" y="10.1011326" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-18-2" fill="#DAD49B" transform="translate(160.683747, 205.739293) rotate(154.000000) translate(-160.683747, -205.739293) " x="149.183747" y="191.841805" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-19" fill="#DAD49B" transform="translate(109.337552, 215.955585) rotate(184.000000) translate(-109.337552, -215.955585) " x="97.8375517" y="202.058098" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-19-2" fill="#DAD49B" transform="translate(123.442661, 14.243121) rotate(184.000000) translate(-123.442661, -14.243121) " x="111.942661" y="0.345633843" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-16" fill="#DAD49B" transform="translate(24.911273, 158.938025) rotate(64.000000) translate(-24.911273, -158.938025) " x="13.411273" y="145.040538" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-16-2" fill="#DAD49B" transform="translate(206.651946, 70.297176) rotate(64.000000) translate(-206.651946, -70.297176) " x="195.151946" y="56.399689" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-13" fill="#DAD49B" transform="translate(58.959868, 198.654591) rotate(34.000000) translate(-58.959868, -198.654591) " x="47.4598678" y="184.757103" width="22.7768632" height="27.7755421"></rect>
+                        <rect id="Rectangle-13-2" fill="#DAD49B" transform="translate(172.031483, 31.019028) rotate(34.000000) translate(-172.031483, -31.019028) " x="160.531483" y="17.1215403" width="22.7768632" height="27.7755421"></rect>
+                        <circle id="Oval-2" stroke="#DAD49B" stroke-width="18" cx="115.640703" cy="114.640704" r="87.6407035"></circle>
+                    </g>
+                </g>
             </g>
         </g>
     </g>

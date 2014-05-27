@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
-    <title>blue gear</title>
+<svg width="217px" height="217px" viewBox="0 0 217 217" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.2 (7799) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled 2</title>
     <description>Created with Sketch.</description>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="gears" sketch:type="MSLayerGroup" transform="translate(-177.000000, -276.000000)">
-            <g id="blue-gear" transform="translate(178.000000, 277.000000)" sketch:type="MSShapeGroup">
-                <rect id="Rectangle-15" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(94.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
-                <rect id="Rectangle-17" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(124.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
-                <rect id="Rectangle-18" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(154.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
-                <rect id="Rectangle-19" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(184.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
-                <rect id="Rectangle-16" fill="#79A2BD" transform="translate(99.023424, 99.098671) rotate(64.000000) translate(-99.023424, -99.098671) " x="89.0234235" y="0.0986708041" width="19.6216268" height="198"></rect>
-                <rect id="Rectangle-13" fill="#79A2BD" transform="translate(98.866581, 98.992879) rotate(34.000000) translate(-98.866581, -98.992879) " x="89.0557673" y="-0.00712101373" width="19.6216268" height="198"></rect>
-                <circle id="Oval-2" stroke="#79A2BD" stroke-width="18" fill="#222222" cx="98.5" cy="98.5" r="75.5"></circle>
+        <g id="gear-small" sketch:type="MSLayerGroup" transform="translate(9.000000, 9.000000)">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="gears">
+                    <g id="blue-gear">
+                        <rect id="Rectangle-15" fill="#79A2BD" transform="translate(12.465166, 93.022447) rotate(94.000000) translate(-12.465166, -93.022447) " x="2.4651659" y="80.8923803" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-15-2" fill="#79A2BD" transform="translate(185.781811, 105.141927) rotate(94.000000) translate(-185.781811, -105.141927) " x="175.781811" y="93.0118607" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-17" fill="#79A2BD" transform="translate(27.099886, 50.557377) rotate(124.000000) translate(-27.099886, -50.557377) " x="17.0998857" y="38.4273109" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-17-2" fill="#79A2BD" transform="translate(171.136763, 147.711478) rotate(124.000000) translate(-171.136763, -147.711478) " x="161.136763" y="135.581412" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-18" fill="#79A2BD" transform="translate(61.006459, 21.098908) rotate(154.000000) translate(-61.006459, -21.098908) " x="51.0064595" y="8.96884197" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-18-2" fill="#79A2BD" transform="translate(137.169004, 177.255267) rotate(154.000000) translate(-137.169004, -177.255267) " x="127.169004" y="165.1252" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-19" fill="#79A2BD" transform="translate(105.099648, 12.540413) rotate(184.000000) translate(-105.099648, -12.540413) " x="95.0996482" y="0.41034641" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-19-2" fill="#79A2BD" transform="translate(92.980168, 185.857058) rotate(184.000000) translate(-92.980168, -185.857058) " x="82.9801678" y="173.726992" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-16" fill="#79A2BD" transform="translate(177.180020, 60.953091) rotate(64.000000) translate(-177.180020, -60.953091) " x="167.18002" y="48.8230243" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-16-2" fill="#79A2BD" transform="translate(21.023661, 137.115636) rotate(64.000000) translate(-21.023661, -137.115636) " x="11.0236615" y="124.985569" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-13" fill="#79A2BD" transform="translate(147.550259, 27.054951) rotate(34.000000) translate(-147.550259, -27.054951) " x="137.550259" y="14.9248842" width="19.6216268" height="24.260133"></rect>
+                        <rect id="Rectangle-13-2" fill="#79A2BD" transform="translate(50.396158, 171.091828) rotate(34.000000) translate(-50.396158, -171.091828) " x="40.396158" y="158.961762" width="19.6216268" height="24.260133"></rect>
+                        <circle id="Oval-2" stroke="#79A2BD" stroke-width="18" cx="98.5" cy="98.5" r="75.5"></circle>
+                    </g>
+                </g>
             </g>
         </g>
     </g>
