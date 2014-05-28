@@ -51,7 +51,7 @@ $('nav li').hover(function() {
 				$('h1').remove();
 
 				$('.illustration').prepend('<h1 class="about"></h1>');
-				alignHeader();
+			  centerAbsolute('h1.about');
 				$('h1').text(about);
 			});
 		 } else if ( opt == 'twitter' ) {
