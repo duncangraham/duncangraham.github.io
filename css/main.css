@@ -31,7 +31,7 @@ a {
 
 a:hover {
   padding-bottom: 0px;
-  border-bottom: 0px solid transparent;
+  border-bottom: none;
   color: #ce904e; }
 
 a:visted {
