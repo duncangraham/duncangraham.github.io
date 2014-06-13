@@ -22,9 +22,14 @@ After figuring out the general iA and  setting a grid, I began typographic itera
 
 </p><img class="m-img-large"  src="/img/liveblog.gif"  />
 
-Here's where the design is currently. I'm working on adding views for the live chat aspect of the product.
+And here is the finished template design! The left bar is a collection of headers of all updates, linked to the full posts.
 
 </p><img class="m-img-large"  src="/img/wapo-live-blog.png"  />
+
+A concern that was brought up while I was designing the template was how commenting would be integrated. After much thought and many discussions, I decided that the user submitted content should fit the product as a whole. For live events a typical commenting system seemed out of place to me, so I proposed integrating a live chat. 
+
+
+</p><img class="m-img-large"  src="/img/liveblog-chat.png"  />
 
 
 
