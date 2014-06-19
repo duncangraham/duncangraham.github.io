@@ -261,3 +261,109 @@ nav ul .home a {
 img.m-img-large {
 	width: 70%;
 }
+
+.svg-container{
+width:22.5em;
+margin:0 auto;
+position:relative;
+overflow:hidden;
+}
+
+img#svg-tablet{
+position:relative;
+z-index:100;
+width: 100%;
+}
+
+#newsItem,#svg-background{
+position:absolute;
+top:1.7em;
+left:3%;
+width: 94.5%;
+}
+
+#newsItem{
+z-index:99;
+-webkit-animation:newsItem 16s infinite;
+-moz-animation:newsItem 16s infinite;
+-o-animation:newsItem 16s infinite;
+animation:newsItem 16s infinite
+}
+
+#svg-active{
+position:absolute;
+width:94.5%;
+top:7.2em;
+left:2.4%;
+z-index:99;
+-webkit-animation:slider 16s infinite;
+-moz-animation:slider 16s infinite;
+-o-animation:slider 16s infinite;
+animation:slider 16s infinite
+}
+
+#svg-5{
+ position:absolute;
+ width:65.25%;
+ top:7.38em;
+ left:3%;
+ z-index:97;
+ opacity:0;
+ -webkit-animation:min5 16s infinite;
+ -moz-animation:min5 16s infinite;
+ -o-animation:min5 16s infinite;
+ animation:min5 16s infinite}
+
+#svg-10{
+ position:absolute;
+ width:65.25%;
+ top:7.38em;
+ left:3%;
+ z-index:98;
+ opacity:0;
+ -webkit-animation:min10 16s infinite;
+ -moz-animation:min10 16s infinite;
+ -o-animation:min10 16s infinite;
+ animation:min10 16s infinite}
+
+.animated-img{
+ position:absolute}
+
+@-webkit-keyframes newsItem{
+ 0%,100%,35%{
+ -webkit-transform:translate3d(100%,0,0)}40%,86%{
+ -webkit-transform:translate3d(0%,0,0)}}@-webkit-keyframes min10{
+ 0%,100%,28%{
+ opacity:0}32%,45%{
+ opacity:1}}@-webkit-keyframes min5{
+ 0%,100%,23%{
+ opacity:0}28%,42%{
+ opacity:1}}@-webkit-keyframes slider{
+ 0%,100%,15%{
+ -webkit-transform:translate3d(0%,0,0)}20%,23%{
+ -webkit-transform:translate3d(23%,0,0)}28%{
+ -webkit-transform:translate3d(47%,0,0)}32%,40%,60%{
+ -webkit-transform:translate3d(70%,0,0)}70%{
+ -webkit-transform:translate3d(0%,0,0)}}@-webkit-keyframes finger{
+ 0%,100%{
+ -webkit-transform:translate3d(50%,0,0) scale(1.1)}12%{
+ -webkit-transform:translate3d(20%,-100%,0) scale(1.1)}15%{
+ -webkit-transform:translate3d(20%,-100%,0) scale(0.98)}20%,23%{
+ -webkit-transform:translate3d(41%,-100%,0) scale(0.98)}28%{
+ -webkit-transform:translate3d(62%,-100%,0) scale(0.98)}32%{
+ -webkit-transform:translate3d(83%,-100%,0) scale(0.98)}40%,80%{
+ -webkit-transform:translate3d(50%,0,0) scale(1.1)}85%{
+ -webkit-transform:translate3d(5%,-30%,0) scale(1.1)}86%{
+ -webkit-transform:translate3d(1%,-35%,0) scale(0.9)}87%{
+ -webkit-transform:translate3d(5%,-30%,0) scale(1.1)}}
+
+.work img#svg-finger{
+ -webkit-animation:finger 16s infinite;
+ -moz-animation:finger 16s infinite;
+ -o-animation:finger 16s infinite;
+ animation:finger 16s infinite;
+ z-index:100;
+ position:absolute;
+ top: 75%;
+ width: 22em;
+}

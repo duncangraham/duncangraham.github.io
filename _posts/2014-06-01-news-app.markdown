@@ -1,0 +1,18 @@
+---
+layout: project
+title: News App Concept
+img: 'img/news-app.gif'
+category: work
+---
+
+<div class="svg-container">
+  <img id="svg-background" src="/img/bg.png">
+  <img id="svg-tablet" src="/img/tablet.svg">
+  <img id="svg-finger" class="animated-img" src="/img/finger.svg">
+  <img id="svg-active" class="animated-img" src="/img/active.png">
+  <img id="svg-5" class="animated-img" src="/img/5min.png">
+  <img id="svg-10" class="animated-img" src="/img/10min.png">
+  <img id="newsItem" class="animated-img" src="/img/newsItem.png">
+</div>
+
+
