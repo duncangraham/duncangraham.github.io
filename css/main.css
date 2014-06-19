@@ -667,6 +667,9 @@ img#svg-tablet {
   top: 75%;
   width: 22em; }
 
+img.m-full {
+  width: 100%; }
+
 .cursor-pointer {
   cursor: pointer; }
 
