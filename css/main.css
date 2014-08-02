@@ -687,6 +687,12 @@ h1.about {
   color: #e6e8ec;
   background: #364147; }
 
+.s-headphones {
+  width: 5em;
+  position: absolute;
+  top: -6em;
+  left: 2.3em; }
+
 .font-small {
   font-size: .875em;
   line-height: 1.71em; }

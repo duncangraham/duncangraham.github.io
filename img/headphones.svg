@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="401px" height="978px" viewBox="0 0 401 978" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(3.000000, 1.000000)" stroke="#FFFFFF">
+            <circle id="Oval-1" stroke-width="6" fill="#364147" sketch:type="MSShapeGroup" cx="197.5" cy="776.5" r="197.5"></circle>
+            <circle id="Oval-2" stroke-width="2" sketch:type="MSShapeGroup" cx="198" cy="777" r="175"></circle>
+            <path d="M198,914 C273.663011,914 335,852.663011 335,777 C335,701.336989 271.968124,648.808524 233.148285,642.418685 C225.337648,641.133036 178.380951,642.418685 169.703972,642.418685 C143.270027,653.805927 118.952547,668.223003 93.64399,680.519088 C52.2177966,776.999996 62.7814257,745.639743 52.2177966,776.999996 C52.2177966,852.663006 122.336989,914 198,914 Z" id="Oval-3" stroke-width="4" sketch:type="MSShapeGroup"></path>
+            <circle id="Oval-4" stroke-width="2" sketch:type="MSShapeGroup" cx="197.5" cy="777.5" r="123.5"></circle>
+            <path d="M169,619.189731 L169,460 L226,460 L226,636.338699 L169.03642,636.338699 L96.5147543,668.81698 L96.5147543,650.777525 L169,619.189731 Z" id="Rectangle-2" stroke-width="4" fill="#364147" sketch:type="MSShapeGroup"></path>
+            <path d="M197.499999,-0.461261377 C167.351798,-0.461261377 153.538215,14.2362154 153.538215,14.2362154 C146.443046,19.493284 140.691275,30.9200651 140.691275,39.7530788 L140.691275,461.001901 C140.691275,469.837407 143.165319,483.724401 146.25738,492.00148 C146.25738,492.00148 165.59038,545.50285 169.693728,545.50285 C184.798692,545.50285 210.231099,550.238959 225.940169,545.50285 C234.252253,542.996849 249.451548,492.236943 249.451548,492.236943 C252.134093,483.821812 254.308725,469.834915 254.308725,461.001901 L254.308725,39.7530788 C254.308725,30.9175729 248.726902,19.2568437 241.461784,14.2362154 C241.461784,14.2362154 227.6482,-0.461261377 197.499999,-0.461261377 Z" id="Rectangle-2" stroke-width="6" fill="#364147" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

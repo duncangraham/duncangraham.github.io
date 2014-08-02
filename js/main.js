@@ -16,13 +16,11 @@ var $win = $(window),
         var color = "hsla(" + h + ", 75%, 60%, 1)";
         return (color);
     };
-/*
-$('.entry').each( function () {
-    var color = rainbow(),
-        $this = $(this);
-        $this.css('color', color);
-});  
-*/
+
+
+function checkRdio () {
+
+}
 
 $win.mousemove(function (e) {
     mousePos = e;
