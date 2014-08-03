@@ -11,7 +11,7 @@ date:   2014-08-01 17:30:00
 </style>
 
 <!-- Post Content -->
-A year ago I moved from my house in DC to the suburbs. A weeked of schlepping boxes of belongings was a vexing way to realize how much I had amassed over the years and how it weighed me down. After the move I decided to give myself a year to simplify. The goal: 100 possesions.
+A year ago I moved from my house in DC to the suburbs. A weekend of schlepping boxes of belongings was a vexing way to realize how much I had amassed over the years and how it weighed me down. After the move I decided to give myself a year to simplify. The goal: 100 possesions.
 
 I donated books and clothes, decluttered, and changed my purchasing habits. I became more selective and concerned with quality. There wasn't any room for things that were mediocre. 
 
