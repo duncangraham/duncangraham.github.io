@@ -81,22 +81,6 @@ So, I hit my goal, but only by bending the rules a bit. I still have a bicycle, 
 <script type="text/javascript" src="/js/jquery.lettering-0.6.1.min.js"></script>
 <!-- Post specific js -->
 <script type="text/javascript">
-$('h1').lettering();
-
-function fadeLetter (el) {
-  $('.'+el).animate({color: '#DADADA'}, 1000);  
-}
-
-$('.char2').animate({ color: '#DADADA' }, 1000,
-  function() {
-    $('.char4').animate({ color: '#DADADA' }, 1000,
-    function() {
-      $('.char9').animate({ color: '#DADADA'}, 1000,    
-      function() {
-        $('.char14').animate({ color: '#DADADA'}, 1000);
-      })
-   })
-});
 </script>
 
 
