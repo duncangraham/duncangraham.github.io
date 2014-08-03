@@ -11,9 +11,11 @@ date:   2014-08-01 17:30:00
 </style>
 
 <!-- Post Content -->
-A year ago I moved from my house in DC to the suburbs. It was only 7 miles away, but took an entire weekend and 3 trips with a pickup truck. It was an annoying way to realize how much stuff I had amassed over the years, and how it weighed me down. After the move, I decided to give myself a year to get down to 100 possessions.
+A year ago I moved from my house in DC to the suburbs. A weeked of schlepping boxes of belongings was a vexing way to realize how much I had amassed over the years and how it weighed me down. After the move I decided to give myself a year to simplify. The goal: 100 possesions.
 
-After a year of donating books and clothes, decluttering, and changing my purchasing habits, I moved to San Francisco two days ago with 2 backpacks stuffed with the result of my efforts. Here's what I brought with me:
+I donated books and clothes, decluttered, and changed my purchasing habits. I became more selective and concerned with quality. There wasn't any room for things that were mediocre. 
+
+Two days ago I moved to San Francisco with 2 backpacks stuffed with the result of my efforts. Here's what I brought with me:
 
 <h2>Clothing (54)</h2>
 <ul class="l-col-3">
@@ -49,7 +51,7 @@ After a year of donating books and clothes, decluttering, and changing my purcha
 <li>1 Headphones</li>
 <li>1 1TB Hard Drive</li>
 </ul>
-<small>I'm not counting the chargers, mostly because one without the other is pointless. It would be like counting a pair of pants as two individual things. Coincidentally, I saw someone today only wearing one pant leg.</small>
+<small>I don't count the books on the kindle or chargers. Also, if you have headphone recommendations, I'd love to hear them.</small>
 
 
 <h2>Dog (6)</h2>
@@ -75,7 +77,7 @@ After a year of donating books and clothes, decluttering, and changing my purcha
 
 <h2>TOTAL: 74!</h2>
 
-So, I hit my goal, but only by bending the rules a bit. I still have a bicycle, some books, a suit, a tux, and some aartwork back home that I'll be flying out in the next few weeks. As noted above, I'll probably buy some more socks too. I'll need some silverware and furniture most likely, which will probably put me a little bit past the mark. But not by much! 
+I hit my goal, but I still have a bicycle, some books & artwork, a suit, and a tux back home that I'll be flying out in the next few weeks. These will put me closer to the 100 mark. As noted above, I'll probably buy some more socks too. I'll need some silverware and furniture most likely, which will probably put me a little bit past the mark. But not by much! 
 
 <script src="/js/jquery.color.min.js"></script>
 <script type="text/javascript" src="/js/jquery.lettering-0.6.1.min.js"></script>
