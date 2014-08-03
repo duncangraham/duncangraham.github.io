@@ -76,7 +76,6 @@ nav {
 	margin: 2em auto;
 	width: 22em;
 	overflow: auto;
-	font-family: $font-sans-serif;
 	
 	a {
 		border: 0px solid transparent;
@@ -84,6 +83,7 @@ nav {
 
 	li {
 		float: left;
+    font-family: $font-sans-serif;
 		margin-right: 3em;
 	}
 
@@ -174,7 +174,7 @@ pre {
 
 ul, ol {
   font-size: 1em;
-  font-family: "freight-text-pro", Palantino, Georgia, serif;
+  font-family: $font-serif;
   line-height: 1.5em;
   margin: 0 auto 1.5em;
 	width: 36em;

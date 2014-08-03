@@ -67,12 +67,12 @@ article h1 {
 nav {
   margin: 2em auto;
   width: 22em;
-  overflow: auto;
-  font-family: "effra", Helvetica, Arial, sans-serif; }
+  overflow: auto; }
   nav a {
     border: 0px solid transparent; }
   nav li {
     float: left;
+    font-family: "effra", Helvetica, Arial, sans-serif;
     margin-right: 3em; }
   nav li:last-child {
     margin-right: 0em; }
