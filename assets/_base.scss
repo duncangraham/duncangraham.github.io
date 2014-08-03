@@ -153,7 +153,8 @@ h3, h4, h5, h6 {
 small {
 	font-size: 0.8em;
 	line-height: 1.714285714em;
-	text-align: center;
+  margin: 2em 0em;
+  text-align: center;
 	display: block;
 	font-style: italic;
 	color: #9C9C9C;
@@ -173,6 +174,7 @@ pre {
 
 ul, ol {
   font-size: 1em;
+  font-family: "freight-text-pro", Palantino, Georgia, serif;
   line-height: 1.5em;
   margin: 0 auto 1.5em;
 	width: 36em;

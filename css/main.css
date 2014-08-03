@@ -130,6 +130,7 @@ h3, h4, h5, h6 {
 small {
   font-size: 0.8em;
   line-height: 1.714285714em;
+  margin: 2em 0em;
   text-align: center;
   display: block;
   font-style: italic;
@@ -147,6 +148,7 @@ pre {
 
 ul, ol {
   font-size: 1em;
+  font-family: "freight-text-pro", Palantino, Georgia, serif;
   line-height: 1.5em;
   margin: 0 auto 1.5em;
   width: 36em; }
@@ -206,6 +208,13 @@ nav .home {
   margin-left: auto;
   margin-right: auto;
   display: block; }
+
+.l-col-3 {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  -ms-columns: 3;
+  -o-columns: 3;
+  columns: 3; }
 
 .grid-item {
   height: 16em;

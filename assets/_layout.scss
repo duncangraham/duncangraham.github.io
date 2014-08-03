@@ -49,3 +49,11 @@ nav .home {
 	margin-right: auto;
 	display: block;
 }
+
+.l-col-3 {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  -ms-columns: 3;
+  -o-columns: 3;
+  columns: 3;
+}
