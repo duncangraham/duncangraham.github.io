@@ -5,9 +5,6 @@ img: 'img/live-blog.png'
 category: work
 ---
 
-This project is ongoing, but I'm too excited not to share some of the work I've been doing.
-
-
 The original Washington Post Live Blog was created in a rush and, while functional, needed a visual refresh to better serve the needs of  readers & reporters.
 
 </p><img class="m-img-large"  src="/img/wapo-live-blog-old.png"  />
@@ -18,18 +15,33 @@ After talking to reporters and learning about users experience's and favorite fe
 
 </p><img class="m-img-large"  src="/img/it.png"  />
 
-After figuring out the general iA and  setting a grid, I began typographic iterations.
+In architecture school one of my professors told me that all good ideas were at the bottom of the pencil and you need to work through a lot of lead to get to them. I pull that mentality into my process when starting a new project. Above is a small sampling of the applications I explored. My goal was to design a framework malleable enough to be used for sports games, breaking news, TV shows, and whatever else the newsroom could come up with. 
+
+After a week of iterations, I came up with the following architecture: a primary feed for content/custom modules flanked by a live chat.
+
+</p><img class="m-img-large"  src="/img/live-blog-initial.png"  />
+
+I began typographic iterations, questioning my decisions and aligning the new design with the Post's revamped article design. Below is a sampling from the day I spent on typography and layout polish.
 
 </p><img class="m-img-large"  src="/img/liveblog.gif"  />
 
-And here is the finished template design! The left bar is a collection of headers of all updates, linked to the full posts.
+And here is the finished template design! The left bar is an independantly scrollable list of headers from all the updates, linked to the full posts.
 
 </p><img class="m-img-large"  src="/img/wapo-live-blog.png"  />
 
-A concern that was brought up while I was designing the template was how commenting would be integrated. After much thought and many discussions, I decided that the user submitted content should fit the product as a whole. For live events a typical commenting system seemed out of place to me, so I proposed integrating a live chat. 
+I also designed the visuals for live updates.
 
+</p><img class="m-img-large"  src="/img/live-blog-update.png"  />
+
+A concern that was brought up while I was designing the template was how commenting would be integrated. After much thought and many discussions, I decided that the user submitted content should fit the product as a whole. For live events a typical commenting system seemed out of place to me, so I proposed integrating a live chat (Which you saw in an earlier state before). For this context, I decided to place live chat in a large shelf that would slide over the content feed. The header list would remain so users could follow along peripherally.
 
 </p><img class="m-img-large"  src="/img/liveblog-chat.png"  />
 
+I also examined other states for the comment thread, such as after live events have ended. During this time we also debated nomenclature and toyed around with calling the UGC portion discussions.
 
+</p><img class="m-img-large"  src="/img/live-blog-closed.png"  />
+
+Not to overwhelm you, but I also worked on the mobile views too! 
+
+</p><img class="m-full"  src="/img/live-blog-mobile.png"  />
 
