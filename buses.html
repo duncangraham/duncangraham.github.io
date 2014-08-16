@@ -48,10 +48,11 @@
   }
 
   .chosen-container {
+    margin: 1em 0em;
     font-family: sans-serif;
   }
 
-  #route-list {
+  #route-list, #car-ownership {
     list-style-type: none;
     top: 2em;
     font-family: sans-serif;
@@ -93,11 +94,23 @@
         <option value="Outbound-Evening">Outbound-Evening</option>
       </optgroup>
       <optgroup label="BUS ROUTES">
-      <option value="" disabled="">Select Route</option>
       <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="6">6</option><option value="9">9</option><option value="10">10</option><option value="12">12</option><option value="14">14</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="33">33</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="41">41</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="52">52</option><option value="54">54</option><option value="66">66</option><option value="67">67</option><option value="71">71</option><option value="88">88</option><option value="108">108</option><option value="509">509</option><option value="514">514</option><option value="528">528</option><option value="538">538</option><option value="571">571</option><option value="708">708</option><option value="716">716</option><option value="730">730</option><option value="781">781</option><option value="782">782</option><option value="783">783</option><option value="797">797</option><option value="801">801</option><option value="808">808</option><option value="831">831</option><option value="838">838</option><option value="901">901</option><option value="908">908</option><option value="914">914</option><option value="931">931</option><option value="938">938</option>
       </optgroup> 
+      <optgroup label="HOUSE % NO AUTO"></optgroup>
     </select>
 
+    <select data-placeholder="Percentage of Homes with no car" id="car-ownership" multiple="multiple">
+        <option value="0pct">0%-10%</option>
+        <option value="10pct">10%-20%</option>
+        <option value="20pct">20%-30%</option>
+        <option value="30pct">30%-40%</option>
+        <option value="40pct">40%-50%</option>
+        <option value="50pct">50%-60%</option>
+        <option value="60pct">60%-70%</option>
+        <option value="70pct">70%-80%</option>
+        <option value="80pct">80%-90%</option>
+        <option value="90pct">90%-100%</option>
+      </select>
               <!--  <a href="">Clear Route Selection</a>-->
   </div>
 
@@ -187,8 +200,17 @@ function avg_load () {
        //.attr('fill', function(d) {return 'hsla(288, 100%, 50%, ' + (d.avg_load*.02)/1 + ')'})
        .attr('fill', function(d) {return 'hsl(193, ' + d.avg_load*2  + '%, 50%)'})
        .attr('transform', function(d) {return 'translate(' + projection([d.longitude, d.latitude]) + ')'})
-       .attr('class', function(d) {return  Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day })
+       .attr('class', function(d) {
+          var pct = Math.round( d.housing_units_no_vehicle_pct*10 ) * 10
+          pct =  pct + 'pct'
+return  Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day + ' '  + pct
+       })
        .attr('data-route', function(d) {return Math.floor( d.route ) })
+       .attr('data-cars', 
+         function(d) {
+          var pct = Math.round( d.housing_units_no_vehicle_pct*10 ) * 10
+          return pct + 'pct'
+         })
        .on("mouseover", function(d) {
          $('.stop').not('.'+ Math.floor( d.route )).css('opacity', '.02');
         })
@@ -288,7 +310,25 @@ $('#route-list').chosen().change(function(){
 
 })
 
+$('#car-ownership').chosen().change(function(){
+  var value = $(this).val()
+
+  if ( value == null ) {
+    $('.stop').show()
+    return
+  }
+
+  $('.stop').hide()
+
+  $.each(value, function(k,v){
+    console.log(v);
+    $('.'+ v).show()
+  })
+
+})
+
 $('#route-list').chosen()
+$('#car-ownership').chosen()
 
 
 $('.btn').on('click', 
