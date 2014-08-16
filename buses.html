@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+ <head>
+
+  <link rel="stylesheet" href="/css/chosen.min.css">
+  <style>
+  body, html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  }
+  path {
+  fill: none;
+  }
+
+  .overlay {
+    fill: none;
+    pointer-events: all;
+  }
+
+  .land {
+    stroke-width: 1;
+    stroke: #ccc;
+  }
+
+  .streets {
+    stroke-width: .5;
+    stroke: #d9d9d9;
+  }
+
+  #routes {
+    stroke-width: .5;
+    stroke: rgba(241, 79, 79, 0.48);
+  }
+
+  #settings {
+    background-color: rgba(0,0,0,.05);
+    width: 20em;
+    padding: 1em;
+    margin: 1em;
+    color: #333;
+    position: fixed;
+  }
+
+  #route-list {
+    list-style-type: none;
+    top: 2em;
+    font-family: sans-serif;
+    width: 100%;
+  }
+
+  </style>
+</head>
+
+
+
+<body>
+  <div id='settings'>
+    <select data-placeholder="Choose some Filters..." name="route-list" id="route-list" multiple="multiple">
+      <optgroup label="Times">
+        <option value="Inbound-Morning">Inbound-Morning</option>
+        <option value="Outbound-Evening">Outbound-Evening</option>
+      </optgroup>
+      <optgroup label="BUS ROUTES">
+      <option value="" disabled="">Select Route</option>
+      <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="6">6</option><option value="9">9</option><option value="10">10</option><option value="12">12</option><option value="14">14</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="33">33</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="41">41</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="52">52</option><option value="54">54</option><option value="66">66</option><option value="67">67</option><option value="71">71</option><option value="88">88</option><option value="108">108</option><option value="509">509</option><option value="514">514</option><option value="528">528</option><option value="538">538</option><option value="571">571</option><option value="708">708</option><option value="716">716</option><option value="730">730</option><option value="781">781</option><option value="782">782</option><option value="783">783</option><option value="797">797</option><option value="801">801</option><option value="808">808</option><option value="831">831</option><option value="838">838</option><option value="901">901</option><option value="908">908</option><option value="914">914</option><option value="931">931</option><option value="938">938</option>
+      </optgroup> 
+    </select>
+
+              <!--  <a href="">Clear Route Selection</a>-->
+  </div>
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/chosen.proto.min.js" type="text/javascript"></script>
+<script src="/js/chosen.jquery.min.js" type="text/javascript"></script>
+<script src="/js/d3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var width = 2000,
+      height = 2000
+  
+  var projection = d3.geo.mercator()
+                         .scale(210000)
+                         .center([37.76,-122.42].reverse())
+                         .translate([width / 3, height / 4.5])
+
+  var zoom = d3.behavior.zoom()
+               .translate([0, 0])
+                  .scale(1)
+                  .scaleExtent([1, 8])
+                  .on("zoom", zoomed)
+
+  var svg = d3.select("body").append("svg")
+              .attr({width: width, height: height })
+
+  svg.append('rect')
+         .attr('class', 'overlay')
+         .attr({width: width, height: height})
+         .call(zoom)
+
+  var path = d3.geo.path().projection(projection),
+      features = svg.append('g')
+
+  var streets, 
+      land,
+      routes,
+      stops
+
+  d3.json('/js/sf_streets.json', got_streets)
+
+  function got_streets(err, _) {
+     if(err) throw err
+
+     streets = _
+     d3.json('/js/sf_land.json', got_land)
+  }
+  
+  function got_land(err, _) {
+    if(err) throw err
+    land = _
+    features.append('path').datum(streets).attr('d', path).attr('class', 'streets')
+    landFeatures = land
+    features.append('path').datum(landFeatures).attr('d', path).attr('class', 'land')
+  
+    d3.json('/js/sf_bus_routes.json', got_routes)
+  }
+
+  function got_routes(err, _) {
+    if(err) throw err
+  
+    routes = _
+    d3.csv('/json/sf_bus_stops.csv', got_stops)
+  }
+
+  function got_stops(err, _) {
+    if(err) throw err
+
+    stops = _
+
+
+    features.append('g').attr('id', 'routes')
+       .selectAll('path')
+       .data(routes.features)
+       .enter()
+       .append('path')
+       .attr('d', path)
+
+    features.append('g').attr('id', 'stops')
+       .selectAll('circle')
+       .data(stops)
+       .enter()
+       .append('circle')
+       .attr('r', '3')
+       //.attr('fill', function(d) {return 'hsla(288, 100%, 50%, ' + (d.avg_load*.02)/1 + ')'})
+       .attr('fill', function(d) {return 'hsl(193, ' + d.avg_load*2  + '%, 50%)'})
+       .attr('transform', function(d) {return 'translate(' + projection([d.longitude, d.latitude]) + ')'})
+       .attr('class', function(d) {return d.route + ' stop ' + d.direction + '-' + d.time_of_day })
+}
+/*
+d3.csv('/json/routes.csv', 
+  function(err, data){
+    console.log(data);      
+    var routeList = document.getElementById('route-list')    
+
+    $.each(data, function(k, v){
+      var li = document.createElement('option')
+      li.innerHTML = v.route
+      li.value = v.route
+      
+      routeList.appendChild(li)
+   })
+  }
+);
+*/
+
+$('#route-list').chosen().change(function(){
+  var value = $(this).val()
+
+  if ( value == null ) {
+    $('.stop').show()
+    return
+  }
+
+  $('.stop').hide()
+
+    
+
+  $.each(value, function(k,v){
+    $('.'+ v).show()
+  })
+
+})
+
+$('#route-list').chosen()
+
+
+function zoomed() {
+  features.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+  //features.select(".state-border").style("stroke-width", 1.5 / d3.event.scale + "px");
+  //features.select(".county-border").style("stroke-width", .5 / d3.event.scale + "px");
+}
+
+</script>
+</body>
+</html>
