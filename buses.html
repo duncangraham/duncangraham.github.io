@@ -94,9 +94,9 @@
         <option value="Outbound-Evening">Outbound-Evening</option>
       </optgroup>
       <optgroup label="BUS ROUTES">
-      <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="6">6</option><option value="9">9</option><option value="10">10</option><option value="12">12</option><option value="14">14</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="33">33</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="41">41</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="52">52</option><option value="54">54</option><option value="66">66</option><option value="67">67</option><option value="71">71</option><option value="88">88</option><option value="108">108</option><option value="509">509</option><option value="514">514</option><option value="528">528</option><option value="538">538</option><option value="571">571</option><option value="708">708</option><option value="716">716</option><option value="730">730</option><option value="781">781</option><option value="782">782</option><option value="783">783</option><option value="797">797</option><option value="801">801</option><option value="808">808</option><option value="831">831</option><option value="838">838</option><option value="901">901</option><option value="908">908</option><option value="914">914</option><option value="931">931</option><option value="938">938</option>
+              <option value="1_ax_express">1_ax_express</option><option value="1_bx_express">1_bx_express</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="5_limited">5_limited</option><option value="6">6</option><option value="8_ax_express">8_ax_express</option><option value="8_bx_express">8_bx_express</option><option value="8_express">8_express</option><option value="9">9</option><option value="10">10</option><option value="12">12</option><option value="14">14</option><option value="14_ax_express">14_ax_express</option><option value="14_limited">14_limited</option><option value="16_express">16_express</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="27">27</option><option value="28">28</option><option value="28_limited">28_limited</option><option value="29">29</option><option value="30">30</option><option value="30_express">30_express</option><option value="31">31</option><option value="31_ax_express">31_ax_express</option><option value="31_bx_express">31_bx_express</option><option value="33">33</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="38_ax_express">38_ax_express</option><option value="38_bx_express">38_bx_express</option><option value="38_limited">38_limited</option><option value="39">39</option><option value="41">41</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="52">52</option><option value="54">54</option><option value="66">66</option><option value="67">67</option><option value="71">71</option><option value="71_limited">71_limited</option><option value="81_express">81_express</option><option value="82_express">82_express</option><option value="83_express">83_express</option><option value="88">88</option><option value="97_express">97_express</option><option value="108">108</option></select>
       </optgroup> 
-      <optgroup label="HOUSE % NO AUTO"></optgroup>
+
     </select>
 
     <select data-placeholder="Percentage of Homes with no car" id="car-ownership" multiple="multiple">
@@ -203,25 +203,25 @@ function avg_load () {
        .attr('class', function(d) {
           var pct = Math.round( d.housing_units_no_vehicle_pct*10 ) * 10
           pct =  pct + 'pct'
-return  Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day + ' '  + pct
+return   d.route  + ' stop ' + d.direction + '-' + d.time_of_day + ' '  + pct
        })
-       .attr('data-route', function(d) {return Math.floor( d.route ) })
+       .attr('data-route', function(d) {return d.route})
        .attr('data-cars', 
          function(d) {
           var pct = Math.round( d.housing_units_no_vehicle_pct*10 ) * 10
           return pct + 'pct'
          })
        .on("mouseover", function(d) {
-         $('.stop').not('.'+ Math.floor( d.route )).css('opacity', '.02');
+         $('.stop').not('.'+ d.route ).css('opacity', '.02');
         })
        .on("mouseout", function(d) {
         $('.stop').css('opacity', '1');
        })
        .on('click', function(d){
-        $('#route-list').val( Math.floor( d.route )).trigger('change').trigger('chosen:updated');
+        $('#route-list').val( d.route ).trigger('change').trigger('chosen:updated');
        })
        .append('svg:title')
-       .text(function(d){ return  Math.floor( d.route ) })
+       .text(function(d){ return  d.route  })
 }
 
 function avg_off () {
@@ -283,8 +283,9 @@ d3.csv('/json/routes.csv',
 
     $.each(data, function(k, v){
       var li = document.createElement('option')
-      li.innerHTML = v.route
-      li.value = v.route
+      console.log(v[1]);
+      li.innerHTML = v[1]
+      li.value = v[1]
       
       routeList.appendChild(li)
    })
