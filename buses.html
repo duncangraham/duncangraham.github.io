@@ -34,6 +34,10 @@
     stroke: rgba(241, 79, 79, 0.48);
   }
 
+  .stop:hover {
+    cursor: pointer;
+  }
+
   #settings {
     background-color: rgba(0,0,0,.05);
     width: 20em;
@@ -43,11 +47,34 @@
     position: fixed;
   }
 
+  .chosen-container {
+    font-family: sans-serif;
+  }
+
   #route-list {
     list-style-type: none;
     top: 2em;
     font-family: sans-serif;
     width: 100%;
+  }
+
+  .btn {
+    padding: .5em;
+    margin: .5em 0em;
+    border: 1px solid #64B5FC;
+    border-radius: 5px; 
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    background-color: aliceblue; 
+  }
+
+  .btn.selected {
+    background-color: #64B5Fc;
+    color: #FFF;
   }
 
   </style>
@@ -57,8 +84,11 @@
 
 <body>
   <div id='settings'>
+    <div data-method='avg_load' class='btn selected'>Average Load</div>
+    <div data-method='avg_on' class='btn'>Average On</div>
+    <div data-method='avg_off' class='btn'>Average Off</div>
     <select data-placeholder="Choose some Filters..." name="route-list" id="route-list" multiple="multiple">
-      <optgroup label="Times">
+      <optgroup label="TIMES">
         <option value="Inbound-Morning">Inbound-Morning</option>
         <option value="Outbound-Evening">Outbound-Evening</option>
       </optgroup>
@@ -137,7 +167,6 @@
 
     stops = _
 
-
     features.append('g').attr('id', 'routes')
        .selectAll('path')
        .data(routes.features)
@@ -145,6 +174,10 @@
        .append('path')
        .attr('d', path)
 
+    avg_load()
+}
+
+function avg_load () {
     features.append('g').attr('id', 'stops')
        .selectAll('circle')
        .data(stops)
@@ -154,8 +187,72 @@
        //.attr('fill', function(d) {return 'hsla(288, 100%, 50%, ' + (d.avg_load*.02)/1 + ')'})
        .attr('fill', function(d) {return 'hsl(193, ' + d.avg_load*2  + '%, 50%)'})
        .attr('transform', function(d) {return 'translate(' + projection([d.longitude, d.latitude]) + ')'})
-       .attr('class', function(d) {return d.route + ' stop ' + d.direction + '-' + d.time_of_day })
+       .attr('class', function(d) {return  Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day })
+       .attr('data-route', function(d) {return Math.floor( d.route ) })
+       .on("mouseover", function(d) {
+         $('.stop').not('.'+ Math.floor( d.route )).css('opacity', '.02');
+        })
+       .on("mouseout", function(d) {
+        $('.stop').css('opacity', '1');
+       })
+       .on('click', function(d){
+        $('#route-list').val( Math.floor( d.route )).trigger('change').trigger('chosen:updated');
+       })
+       .append('svg:title')
+       .text(function(d){ return  Math.floor( d.route ) })
 }
+
+function avg_off () {
+    features.append('g').attr('id', 'stops')
+       .selectAll('circle')
+       .data(stops)
+       .enter()
+       .append('circle')
+       .attr('r', '3')
+       //.attr('fill', function(d) {return 'hsla(288, 100%, 50%, ' + (d.avg_load*.02)/1 + ')'})
+       .attr('fill', function(d) {return 'hsl(193, ' + d.avg_off*8  + '%, 50%)'})
+       .attr('transform', function(d) {return 'translate(' + projection([d.longitude, d.latitude]) + ')'})
+       .attr('class', function(d) {return  Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day })
+       .attr('data-route', function(d) {return Math.floor( d.route )})
+       .on("mouseover", function(d) {
+         $('.stop').not('.' + Math.floor( d.route )).css('opacity', '.02');
+        })
+       .on("mouseout", function(d) {
+        $('.stop').css('opacity', '1');
+       })
+       .on('click', function(d){
+        $('#route-list').val( Math.floor( d.route )).trigger('change').trigger('chosen:updated');
+       })
+       .append('svg:title')
+       .text(function(d){ return Math.floor( d.route )})
+}
+function avg_on () {
+    features.append('g').attr('id', 'stops')
+       .selectAll('circle')
+       .data(stops)
+       .enter()
+       .append('circle')
+       .attr('r', '3')
+       //.attr('fill', function(d) {return 'hsla(288, 100%, 50%, ' + (d.avg_load*.02)/1 + ')'})
+       .attr('fill', function(d) {return 'hsl(193, ' + d.avg_on*8  + '%, 50%)'})
+       .attr('transform', function(d) {return 'translate(' + projection([d.longitude, d.latitude]) + ')'})
+       .attr('class', function(d) {return Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day })
+       .attr('data-route', function(d) {return Math.floor( d.route )})
+       .on("mouseover", function(d) {
+         $('.stop').not('.' + Math.floor( d.route )).css('opacity', '.02');
+        })
+       .on("mouseout", function(d) {
+        $('.stop').css('opacity', '1');
+       })
+       .on('click', function(d){
+        $('#route-list').val(Math.floor( d.route )).trigger('change').trigger('chosen:updated');
+       })
+       .append('svg:title')
+       .text(function(d){ return Math.floor( d.route ) })
+}
+
+
+
 /*
 d3.csv('/json/routes.csv', 
   function(err, data){
@@ -193,6 +290,26 @@ $('#route-list').chosen().change(function(){
 
 $('#route-list').chosen()
 
+
+$('.btn').on('click', 
+  function() {
+    if(!$(this).hasClass('selected')){
+      $('.selected').removeClass('selected')
+      $(this).addClass('selected')
+      var method = $(this).data('method')
+      $('.stop').remove()
+      if( method == 'avg_on' ) {
+        avg_on()
+      } 
+      else if( method == 'avg_off' ) {
+        avg_off()
+      }
+      else {
+        avg_load()      
+      }
+    }
+  }
+)
 
 function zoomed() {
   features.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
