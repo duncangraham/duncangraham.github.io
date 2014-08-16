@@ -39,7 +39,9 @@
   }
 
   #settings {
-    background-color: rgba(0,0,0,.05);
+    border-radius: 5px;
+    border: 1px solid #e4e4e4;
+    background-color: rgba(255, 255, 255, 0.85); 
     width: 20em;
     padding: 1em;
     margin: 1em;
@@ -234,19 +236,19 @@ function avg_off () {
        //.attr('fill', function(d) {return 'hsla(288, 100%, 50%, ' + (d.avg_load*.02)/1 + ')'})
        .attr('fill', function(d) {return 'hsl(193, ' + d.avg_off*8  + '%, 50%)'})
        .attr('transform', function(d) {return 'translate(' + projection([d.longitude, d.latitude]) + ')'})
-       .attr('class', function(d) {return  Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day })
-       .attr('data-route', function(d) {return Math.floor( d.route )})
+       .attr('class', function(d) {return   d.route  + ' stop ' + d.direction + '-' + d.time_of_day })
+       .attr('data-route', function(d) {return  d.route })
        .on("mouseover", function(d) {
-         $('.stop').not('.' + Math.floor( d.route )).css('opacity', '.02');
+         $('.stop').not('.' +  d.route ).css('opacity', '.02');
         })
        .on("mouseout", function(d) {
         $('.stop').css('opacity', '1');
        })
        .on('click', function(d){
-        $('#route-list').val( Math.floor( d.route )).trigger('change').trigger('chosen:updated');
+        $('#route-list').val( d.route ).trigger('change').trigger('chosen:updated');
        })
        .append('svg:title')
-       .text(function(d){ return Math.floor( d.route )})
+       .text(function(d){ return  d.route })
 }
 function avg_on () {
     features.append('g').attr('id', 'stops')
@@ -258,19 +260,19 @@ function avg_on () {
        //.attr('fill', function(d) {return 'hsla(288, 100%, 50%, ' + (d.avg_load*.02)/1 + ')'})
        .attr('fill', function(d) {return 'hsl(193, ' + d.avg_on*8  + '%, 50%)'})
        .attr('transform', function(d) {return 'translate(' + projection([d.longitude, d.latitude]) + ')'})
-       .attr('class', function(d) {return Math.floor( d.route ) + ' stop ' + d.direction + '-' + d.time_of_day })
-       .attr('data-route', function(d) {return Math.floor( d.route )})
+       .attr('class', function(d) {return d.route  + ' stop ' + d.direction + '-' + d.time_of_day })
+       .attr('data-route', function(d) {return  d.route })
        .on("mouseover", function(d) {
-         $('.stop').not('.' + Math.floor( d.route )).css('opacity', '.02');
+         $('.stop').not('.' +  d.route ).css('opacity', '.02');
         })
        .on("mouseout", function(d) {
         $('.stop').css('opacity', '1');
        })
        .on('click', function(d){
-        $('#route-list').val(Math.floor( d.route )).trigger('change').trigger('chosen:updated');
+        $('#route-list').val(d.route).trigger('change').trigger('chosen:updated');
        })
        .append('svg:title')
-       .text(function(d){ return Math.floor( d.route ) })
+       .text(function(d){ return d.route })
 }
 
 
