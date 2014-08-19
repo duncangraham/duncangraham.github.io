@@ -1,33 +1,16 @@
-<script src="{{ root_path }}/js/d3.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-  var width = window.innerWidth,
-      height = window.innerHeight;
-  
-  var projection = d3.geo.mercator()
-  .scale(150000)
-    .center([37.76,-122.42].reverse())
-      .translate([width / 2, height / 2])
+---
+layout: entry
+title:  "Examining San Francisco's Bus Data"
+type: "writing"
+date:   2014-08-17 17:30:00
+---
+
+This past weekend I participated in the <a href="http://asa-datathon.github.io/">ASA Datathon</a>. My team asked the question, 'Does SF public transportation underserve those in low-income communities or without cars?' We couldn't find conclusive evidence,  but we did draw some interesting conclusions. Below is the presentation we gave.  <a href="/buses.html">Here's the visualization we used heavily to explore the data</a>. 
+
+Want to get involved? I'm working on adding realtime aspects to the viz, as well as other layers of data. <a href='https://github.com/duncangraham/sf-bus-data'>Here's the repo on Github</a> and <a href='https://modeanalytics.com/derek/reports/3faf34b0bfcb'>Here's the data set on Mode</a>.
+
+<iframe src="https://docs.google.com/file/d/0B6ShUnRfrZjLNExEQVFHZGswc0k/preview" width="80%" height="600" style="margin:5% 10%"></iframe>
+
+Oh also, we won! Thanks to all of the judges and organizers.
 
 
-      var svg = d3.select("body").append("svg")
-        .attr({width: width, height: height })
-
-        var path = d3.geo.path().projection(projection)
-
-        var streets, land
-        d3.json('/js/sf_streets.json', got_streets)
-
-        function got_streets(err, _) {
-            if(err) throw err
-                streets = _
-                  d3.json('/js/sf_land.json', got_land)
-        }
-        function got_land(err, _) {
-            if(err) throw err
-                land = _
-                  svg.append('path').datum(streets).attr('d', path)
-                    landFeatures = land
-                      svg.append('path').datum(landFeatures).attr('d', path)
-        }
-
-</script>
