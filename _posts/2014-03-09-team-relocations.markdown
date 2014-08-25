@@ -37,9 +37,6 @@ h1 {
   position: absolute;
 }
 
-.site {
-}
-
 .d3-tip {
   line-height: 1;
   font-weight: bold;

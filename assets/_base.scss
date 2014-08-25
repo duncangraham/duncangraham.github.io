@@ -76,6 +76,7 @@ nav {
 	margin: 2em auto;
 	width: 22em;
 	overflow: auto;
+  height: 3em;
 	
 	a {
 		border: 0px solid transparent;
@@ -100,7 +101,7 @@ nav {
 	color: $dark;
 	text-shadow: 0px 0px 2px $gray-light;
 	}
-}
+ }
 
 p {
   font-size: 1em;       /* 16 */

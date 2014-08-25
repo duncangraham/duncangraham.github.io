@@ -25,3 +25,30 @@ article h1:hover {
 	font-size: 4em;
 }
 
+//Animation Code
+
+
+
+.playground {
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+}
+
+nav { 
+  #twitter {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+  }
+  #about {
+    -webkit-animation-delay: .75s;
+    -moz-animation-delay: .75s;
+  }
+  #work {
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+  }
+  #blog {
+    -webkit-animation-delay: .25s;
+    -moz-animation-delay: .25s;
+  }
+}
