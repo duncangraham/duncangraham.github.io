@@ -724,17 +724,19 @@ article h1:hover {
 
 .playground {
   -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s; }
-
-nav #twitter {
+  -moz-animation-duration: 3s;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s; }
+
+nav #twitter {
+  -webkit-animation-delay: 1.25s;
+  -moz-animation-delay: 1.25s; }
 nav #about {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s; }
+nav #work {
   -webkit-animation-delay: .75s;
   -moz-animation-delay: .75s; }
-nav #work {
+nav #blog {
   -webkit-animation-delay: .5s;
   -moz-animation-delay: .5s; }
-nav #blog {
-  -webkit-animation-delay: .25s;
-  -moz-animation-delay: .25s; }
