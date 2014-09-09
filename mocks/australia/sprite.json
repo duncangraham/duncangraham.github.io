@@ -1,0 +1,18 @@
+{
+  "dot.sdf": {
+      "x": 0,
+      "y": 0,
+      "width": 19,
+      "height": 20,
+      "pixelRatio": 1,
+      "sdf": true
+    },
+  "triangle.sdf": {
+      "x": 21,
+      "y": 0,
+      "width": 20,
+      "height": 20,
+      "pixelRatio": 1,
+      "sdf": true
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title></title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+<!-- <link href="styles.css" rel="stylesheet" />-->
+</head>
+<body>
+
+<div id='map'></div>
+
+<!--
+<article>
+  <section id="cover" class="cover active">
+    <h1>The XYZ Ore Transfer Station</h1>
+    <p>An analysis for miners, environmentalists, logistics companies, and the curious.</p>
+    <small class="scroll">Scroll ▼</small>
+  </section>
+  <section id="wirrida" class="">
+       <h2>Wirrida Rail Siding</h2>
+       <p>New data shows a mining supply chain link in the deep outback of Australia, built in 2012. Our recent, high-resolution satellite imagery allows us to analyze operations.</p>
+  </section>
+</article>
+-->
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ';
+   var geoJSON = {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature", 
+        "geometry": {
+          "type": "Point",
+          "coordinates": [134.5569, -29.5060]
+        },
+        "properties": {
+          "title": "Wirrida Rail Siding",
+        }
+      },{
+        "type": "Feature", 
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ 134.56021, -29.50642]
+        },
+        "properties": {
+          "title": "Transfer Zone",
+        }
+      }
+    ]
+  };
+  var markers = new mapboxgl.GeoJSONSource({data: geoJSON});
+  
+  var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: "style.json",//stylesheet location
+    center: [-29.506, 134.5608150959015], // starting position
+    zoom: 15 // starting zoom
+  });
+  
+  setTimeout(function() {
+    map.addSource('markers', markers);
+  }, 800);
+</script>
+
+</body>
+</html>

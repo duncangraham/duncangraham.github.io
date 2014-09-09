@@ -1,0 +1,37 @@
+{
+  "version": 4,
+  "sprite": "sprite",
+    "transition": {"duration": 900},
+      "sources": {
+          "mapbox": {
+                "type": "raster",
+                "url": "mapbox://mapbox.satellite",
+                "tileSize": 256
+              }
+        },
+          "layers": [{
+              "id": "background",
+              "style": {
+                    "background-color": "rgb(4,7,14)"
+                  },
+              "type": "background"
+            }, {
+                "id": "satellite",
+                "source": "mapbox",
+                "type": "raster"
+              }, {
+                  "id": "markers",
+                  "source": "markers",
+                  "type": "symbol",
+                  "render": {
+                        "icon-ignore-placement": true,
+                        "icon-image": "dot.sdf",
+                        "icon-max-size": 10
+                      },
+                  "style": {
+                        "icon-size": 2,
+                        "icon-color": "#f1f075",
+                        "icon-opacity": 1
+                      }
+                }]
+                }

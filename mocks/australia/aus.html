@@ -1,0 +1,294 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Monitoring Mining in South Australia: Wirrida Rail Siding</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.js"></script>
+    <link href="https://www.mapbox.com/base/latest/base.css" rel="stylesheet">
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+  </head>
+  <body>
+
+    <style>
+      article {
+        position:absolute;
+        top:0px;
+        right:0;
+        bottom:0px;
+        left:0px;
+        overflow:auto;
+      }
+      .sections {
+        width:400px;
+      }
+      section {
+        color:rgba(255,255,255,.9);
+        margin: 0 !important;
+      }
+      section > .inner {
+        background: rgba(0,0,0,0.5);
+      }
+      section.active {
+        background:#fff;
+        color:#404040;
+      }
+      section.active > .inner {
+        background: none;
+      }
+    </style>
+    <div id="map" class="mapboxgl-map"><canvas class="mapboxgl-canvas" width="1954" height="1358" style="position: absolute; width: 977px; height: 679px;"></canvas><div class="mapboxgl-ctrl-attrib"></div></div>
+
+    <article id="narrative">
+      <div class="sections prose pad4" style="padding-bottom: 479px;">
+        <section id="cover" class="cover active animate round pad2x">
+          <div class="inner pad2x pad4y round-top">
+            <h1>Monitoring Mining in South Australia</h1>
+            <p>New satellite imagery data shows a mining supply chain link in the deep outback of Australia. This is the Wirrida Rail Siding, completed late in 2012. Arrium Ltd transfers rich iron ore here to trains operated by Genesee &amp; Wyoming Australia. Recent, high-resolution data allows detailed analysis.</p>
+            <small class="button short quiet icon down">Scroll</small>
+          </div>
+        </section>
+        <section id="xfer" class="animate round pad2x">
+          <div class="inner pad2x pad4y">
+            <h2>Ore aboard!</h2>
+            <p>A train 1.25 km (0.75 mi) long pulls around a rail loop to pick up iron ore at this spot. The first 78 train cars are already filled, and 47 are waiting. A large front-end loader is collecting a scoopful of ore (poured into a crescent-shaped hill by a conveyor belt arm) to place on the train.</p>
+          </div>
+        </section>
+        <section id="value" class="animate round pad2x">
+          <div class="inner pad2x pad4y">
+            <h2>A $2.2 million train</h2>
+            <p>125 ore cars at a typical capacity of 140 metric tons each implies a full-train delivery of about 17,500 metric tons. Licensing data in the public record lists this ore at 61.7% hematite. Using recent market prices, we can estimate that this train will carry just over US$2.2 million in ore.</p>
+          </div>
+        </section>
+        <section id="activity" class="animate round pad2x">
+          <div class="inner pad2x pad4y">
+            <h2>Analyzing dust patterns from space</h2>
+            <p>Hematite, the type of iron ore handled at this facility, is charcoal gray when extracted from the ground. Over long periods at the surface, it turns red-orange and gives the local soil its color. The gray areas show which parts of the facility directly process ore.</p>
+          </div>
+        </section>
+        <section id="water" class="animate round pad2x">
+          <div class="inner pad2x pad4y">
+            <h2>Regulatory monitoring</h2>
+            <p>Water is a carefully controlled resource in the Australian desert. Details of water use can be compared to the operatorâ€™s environmental filings, confirming their compliance.</p>
+          </div>
+        </section>
+        <section id="capacity" class="animate round pad2x">
+          <div class="inner pad2x pad4y">
+            <h2>Capacity estimation</h2>
+            <p>5 parking spots for industrial-scale vehicles are visible, 1 occupied by a yellow front-end loader. 3 similar vehicles are seen at work nearby, as well as 1 red crane-type heavy vehicle. A 3/4 equipment use ratio agrees with Arriumâ€™s published plans to ramp up capacity at this site.</p>
+          </div>
+        </section>
+        <section id="traffic" class="animate round pad2x">
+          <div class="inner pad2x pad4y">
+            <h2>What's moving?</h2>
+            <p>A heavy-duty ore truckâ€”known as a â€œroad trainâ€â€”is returning to the mine to load up again (Australia drives on the left). Multiple images can be used to establish rates of traffic, allowing precise estimates of production even at sites that do not file public reports.</p>
+          </div>
+        </section>
+        <section id="risk" class="animate round pad2x">
+          <div class="inner pad2x pad4y">
+            <h2>Controlling risks</h2>
+            <p>A small amount of water has pooled harmlessly just upstream of the roadway. A large pond here would indicate that the culvert was clogged by sediment or debris. That could lead to a washout in the rainy season, requiring emergency roadwork and contaminating the stream with oil. Satellite imagery allows these environmental and business risks to be monitored easily, even over very large areas.</p>
+          </div>
+        </section>
+
+        <!--     <section id='water' class='animate round pad2x'>
+                                                                                                                                                                                                                                                                                                                                                      pond here would indicad2x pad4y'>
+                                                                                                                                                                                                                                                                                                                                                              <h2>Regulatory monitoring</h2>
+                                                                                                                                                                                                                                                                                                                                                                      <p>Water is a carefully controlled resource in the Australian desert. Details of water use can be compared to the operatorâ€™s environmental filings to help confirm that they are in compliance.</p>
+                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                </section> -->
+      </div>
+    </article>>
+
+    <script>
+
+      mapboxgl.accessToken = 'pk.eyJ1IjoicGRnb29kbWFuIiwiYSI6IjdITEZQTVkifQ.jSHttbpZ0JNMYoM2cSK5MA';
+
+      var places = {
+        "type": "FeatureCollection",
+        "features": [
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.5569, -29.5060]
+          },
+          "properties": {
+            "id": "cover",
+            "zoom": 14,
+            "bearing": 4
+          },
+          "type": "Feature"
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.56021, -29.50642]
+          },
+          "properties": {
+            "id": "xfer",
+            "zoom": 18,
+            "bearing": -85
+          },
+          "type": "Feature"
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.55675, -29.5]
+          },
+          "properties": {
+            "id": "value",
+            "zoom": 16,
+            "bearing": 0
+          },
+          "type": "Feature"
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.5613, -29.5071]
+          },
+          "properties": {
+            "id": "activity",
+            "zoom": 16,
+            "bearing": 93
+          },
+          "type": "Feature"
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.56438, -29.51117]
+          },
+          "properties": {
+            "id": "water",
+            "zoom": 18,
+            "bearing": 4
+          },
+          "type": "Feature"
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.56164, -29.50788]
+          },
+          "properties": {
+            "id": "capacity",
+            "zoom": 18,
+            "bearing": -86
+          },
+          "type": "Feature"
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.6562, -29.5368]
+          },
+          "properties": {
+            "id": "traffic",
+            "zoom": 17,
+            "bearing": 12.5
+          },
+          "type": "Feature"
+        },
+        {
+          "geometry": {
+            "type": "Point",
+            "coordinates": [134.68590, -29.54215]
+          },
+          "properties": {
+            "id": "risk",
+            "zoom": 18,
+            "bearing": -78
+          },
+          "type": "Feature"
+        }
+        ]
+      };
+
+var placesLayer = new mapboxgl.GeoJSONSource({data: places});
+
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'style.json',
+center: [-29.5060, 134.5569],
+zoom: 13
+});
+
+var narrative = document.getElementById('narrative'),
+    container = narrative.getElementsByClassName('sections')[0],
+    sections = narrative.getElementsByTagName('section'),
+    currentId = '';
+
+function setHeight() {
+  container.style.paddingBottom = (window.innerHeight - 200) + 'px';
+}
+setHeight();
+
+window.onresize = function(e) {
+  setHeight();
+};
+
+setTimeout(function() {
+    map.addSource('places', placesLayer);
+    setId('cover');
+    }, 800);
+
+setInterval(function() {
+    if (!map || !map.style.hasClass('active')) return;
+    if (map.style.hasClass('pulse')) {
+    map.style.removeClass('pulse');
+    } else {
+    map.style.addClass('pulse');
+    }
+    }, 950);
+
+function setId(newId) {
+  if (newId === currentId) return;
+
+  if (newId === 'cover') {
+    map.style.removeClass('active');
+    map.style.removeClass('pulse');
+  } else {
+    map.style.addClass('active');
+  }
+
+  for (var i = 0; i < places.features.length; i++) {
+    var layer = places.features[i];
+    var id = layer.properties.id;
+    if (id === newId) {
+      map.stop();
+      map.flyTo([layer.geometry.coordinates[1], layer.geometry.coordinates[0]], layer.properties.zoom || 14, layer.properties.bearing);
+    }
+  };
+  for (var i = 0; i < sections.length; i++) {
+    if (sections[i].id === newId) {
+      sections[i].classList.add('active');
+    } else {
+      sections[i].classList.remove('active');
+    }
+  }
+  currentId = newId;
+}
+
+narrative.onscroll = function(e) {
+  var narrativeHeight = narrative.offsetHeight;
+  var newId = currentId;
+  for (var i = sections.length - 1; i >= 0; i--) {
+    var rect = sections[i].getBoundingClientRect();
+    if (rect.top >= 0 && rect.top <= narrativeHeight) {
+      newId = sections[i].id;
+    }
+  };
+  setId(newId);
+};
+    </script>
+
+
+
+
+  </body>
+</html>
