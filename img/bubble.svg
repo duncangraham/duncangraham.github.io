@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="933px" height="867px" viewBox="0 0 933 867" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.0.2 (7799) - http://www.bohemiancoding.com/sketch -->
-    <title>bubble 2</title>
-    <description>Created with Sketch.</description>
-    <defs></defs>
+<svg width="434px" height="410px" viewBox="0 0 434 410" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-97.7350652%" x2="50%" y2="188.80684%" id="linearGradient-1">
+            <stop stop-color="#5CED5F" offset="0%"></stop>
+            <stop stop-color="#00D9FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="bubble" sketch:type="MSLayerGroup" transform="translate(12.000000, 12.000000)" stroke-width="12" stroke="#79A2BD">
-            <g id="Page-1" sketch:type="MSShapeGroup">
-                <g id="blog">
-                    <path d="M198,644.153112 L198,0 L909,0 L909,838 L203.471148,838 C113.565131,839.220061 -0.228155781,842.779634 -0.228155781,842.779634 L198,644.153112 L198,644.153112 Z" id="Rectangle-25"></path>
-                    <path d="M302.5,697 L800.62146,697" id="Path" fill="#222222"></path>
-                    <path d="M304.5,585 L802.62146,585" id="Path" fill="#222222"></path>
-                    <path d="M304.5,473 L802.62146,473" id="Path" fill="#222222"></path>
-                    <path d="M304.5,361 L802.62146,361" id="Path" fill="#222222"></path>
-                    <path d="M305,137 L803,137" id="Path" fill="#222222"></path>
-                    <path d="M304.5,249 L802.62146,249" id="Path" fill="#222222"></path>
-                </g>
-            </g>
-        </g>
+        <path d="M141.690467,70.0378401 L378.739989,70.0378401 M141.452465,123.313325 L378.559803,123.313325 M141.452465,176.588811 L378.559803,176.588811 M141.452465,229.864296 L378.559803,229.864296 M141.452465,283.139781 L378.559803,283.139781 M140.500459,336.415266 L377.607797,336.415266 M73.5433392,4.87050544 L429.196313,4.87050544 L429.196313,405.758844 L73.5433422,405.758839 L8.82998881,405.758829 L73.5433432,332.219795 L73.5433392,4.87050544 Z" id="Path" stroke="url(#linearGradient-1)" stroke-width="8" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>

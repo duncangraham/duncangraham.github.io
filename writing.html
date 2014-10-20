@@ -1,0 +1,16 @@
+---
+layout: sub-page
+title: The Digital Playground of Duncan Graham
+---
+
+<h3>Writing</h3>
+<ul>
+    {% for post in site.tags.writing %}
+    <li>
+        <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
+            <span> {{ post.title }}</span>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+<a class="m-view-all" href="/index.html">Back from whence ye came!</a>

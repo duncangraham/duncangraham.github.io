@@ -1,16 +1,31 @@
 ---
-layout: sub-page 
-title: If only there were more hours in a day 
+layout: sub-page
+title: If only there were more hours in a day
 ---
 
-<div class="desc dark">
-<div class="content-spacing">
-<h2 class="">My Wishlist</h2>
-<p>these are some things I want to work on. Some are half baked and still need some love. If you want to collaborate (or tell me that they already exist) drop me a line: hello@dvncan.com or <a href="http://twitter.com/duncangraham">@duncangraham</a></p>
-</div>
-</div>
+<style>
+    p {
+        font-family: 'effra', sans-serif;
+    }
+    img {
+        width: 96%;
+        margin: 2em 0em 1em;
+        padding: 1%;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
 
-<ul class="ideas space-top content-spacing">
+    img:hover {
+        border: 1px solid #0074D9;
+        }
+
+</style>
+
+
+<p class="l-font-center">these are some things I want to work on. Some are half baked and still need some love. If you want to collaborate (or tell me that they already exist) drop me a line: hello@dvncan.com or <a href="http://twitter.com/duncangraham">@duncangraham</a></p>
+<a href="https://github.com/duncangraham/ideas" class="l-font-center">More Here</a>
+
+<ul class=" ">
   <li class="idea tk-adobe-garamond-pro ">
     <h2>Wikipedia Gems</h2>
     <p>I've found <a href="http://en.wikipedia.org/wiki/Commonplace_book">really</a>, <a href="https://en.wikipedia.org/wiki/Geneva_drivek">really</a> <a href="http://en.wikipedia.org/wiki/Tulip_bulb_mania">interesting</a> <a href="https://en.wikipedia.org/wiki/Toast_sandwich">things</a> on Wikipedia. I'm not sure what form the project would take (curated list, exploration game, etc), but I think with minimal collective effort, we could mine wikipedia for its gems.</p>
@@ -28,6 +43,3 @@ title: If only there were more hours in a day
     <p>I want to find the holes in my digital network. Bear with me on this one. I'm going take the people I follow ( (me-allUsers)+follow ) and look at who they follow ( ((me-allUsers)+follow)-allUsers)+follow ). I want to take that list and find the people in it that i don't follow, then sort descending by how many times they appear in my peripheral network. Just writing that made me want to find/make a better way to notate network relationships.</p>
   </li>
 </ul>
-</div> <!-- end site div -->
-
-{% include footer.html %}

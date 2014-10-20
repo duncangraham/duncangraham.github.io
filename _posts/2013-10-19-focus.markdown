@@ -1,17 +1,18 @@
 ---
 layout: entry
 title:  "Focus"
-type: "experiment"
+category: "experiment"
+tag: experiment
 date:   2013-10-19 17:00:00
 desc: An experiement in relating interaction to meaning.
 ---
 
 <style>
-h1 {
+.info {
 	display: none;
 }
 	.focus {
-		padding-top:3em;
+		padding:2em 0em 1em;
 		text-align: center;
 		font-size: 5em;
 	}
@@ -54,8 +55,8 @@ $(function() {
 		var offset = $(this).offset();
 		spanX[i] = offset.left + $(this).width()/2;
 		spanY[i] = offset.top + $(this).height()/2;
-	}); 	
-	
+	});
+
 	$('body').mousemove(function(e) {
 		mouseX = e.pageX;
 	    mouseY = e.pageY;
@@ -65,12 +66,8 @@ $(function() {
 			var y = spanY[i] - mouseY;
 			var d = Math.round(Math.sqrt( x*x + y*y )) * .25;
 			$(this).css('textShadow', '0 0 '+d+'px rgb(0,0,0)'); /* THIS IS THE IMPORTANT BIT! */
-		}); 
+		});
 	});
-	
-});	
+
+});
 </script>
-
-
-
-

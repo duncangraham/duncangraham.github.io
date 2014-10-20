@@ -1,7 +1,8 @@
 ---
 layout: entry
 title:  "Diamond Kaleidoscope"
-type: "experiment"
+category: "experiment"
+tag: experiment
 date:   2013-9-20 5:00:00
 desc: I wanted to make a kind of scrolling kaleidoscopic diamond. It ended up being a really fun problem to solve and kickstarted the entire redesign of this site.
 ---
@@ -22,7 +23,7 @@ h1 {
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -o-transform: scale(0.8);
-  transform: scale(0.8); 
+  transform: scale(0.8);
 }
 
 .about {
@@ -59,7 +60,7 @@ h1 {
   border-bottom: 1em solid #333; }
   .post:nth-child(10) {
   border-top: 1em solid #333; }
- 
+
  .post:nth-child(10) .post-title {
     top: -3.3em; }
     .post:nth-child(2) .post-title,

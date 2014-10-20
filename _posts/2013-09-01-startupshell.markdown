@@ -1,8 +1,9 @@
 ---
 layout: project
-title: startup-shell
+title: Startup Shell
 img: 'img/startup-shell.png'
 category: work
+tag: work
 ---
 
 At the end of my time at the University of Maryland  I helped create the Startup Shell, a student run startup accelerator. When I joined, there was no website, branding, or location-- only an idea.
@@ -24,11 +25,11 @@ While I was finishing the logo, we had found a physical location for the Shell. 
 
 
 <video controls class="l-center space">
-  <source src="/assets/paintTheShell.mp4" 
+  <source src="/assets/paintTheShell.mp4"
           type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>
 
-In 2 hours I made <a href="http://dvncan.com/mocks/startupshell/">our first website</a>. Since then we've grown up a bit. We're mentoring almost 10 times as many student companies. 
+In 2 hours I made <a href="http://dvncan.com/mocks/startupshell/">our first website</a>. Since then we've grown up a bit. We're mentoring almost 10 times as many student companies.
 
 <img src="/img/shell.jpg" />
 <small>Last smester Alexis Ohanian, founder of Reddit and Hipmunk, dropped by for a visit!</small>

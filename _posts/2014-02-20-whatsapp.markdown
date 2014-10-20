@@ -1,13 +1,14 @@
 ---
 layout: entry
 title:  "Whatsapp-ening? An Acquisition in Perspective"
-type: "writing"
+category: "writing"
+tag: writing
 date:   2014-02-20 23:00:00
 ---
 
 <!-- Post specific styles -->
 <style>
-	
+
 rect {
 	stroke-width: 2.5px;
 }
@@ -94,11 +95,11 @@ var barLabelPadding = 5; // padding between bar and bar labels (left)
 var gridLabelHeight = 18; // space reserved for gridline labels
 var gridChartOffset = 3; // space between start of grid and first bar
 var maxBarWidth = 560; // width of the bar with the max value
- 
-// accessor functions 
+
+// accessor functions
 var barLabel = function(d) { return d['Name']; };
 var barValue = function(d) { return parseFloat(d[' Market Cap (Bil)']); };
- 
+
 // scales
 var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
 var y = function(d, i) { return yScale(i); };
@@ -109,7 +110,7 @@ var chart = d3.select('#market-cap').append("svg")
   .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth)
   .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
 var labelsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 90 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 90 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 labelsContainer.selectAll('text').data(data).enter().append('text')
   .attr('y', yText)
   .attr('stroke', 'none')
@@ -119,7 +120,7 @@ labelsContainer.selectAll('text').data(data).enter().append('text')
   .text(barLabel);
 // bars
 var barsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 100 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 100 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('y', y)
   .attr('height', yScale.rangeBand())
@@ -151,11 +152,11 @@ var barLabelPadding = 5; // padding between bar and bar labels (left)
 var gridLabelHeight = 18; // space reserved for gridline labels
 var gridChartOffset = 3; // space between start of grid and first bar
 var maxBarWidth = 360; // width of the bar with the max value
- 
-// accessor functions 
+
+// accessor functions
 var barLabel = function(d) { return d['Name']; };
 var barValue = function(d) { return parseFloat(d[' Value per Employee (Mil)']); };
- 
+
 // scales
 var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
 var y = function(d, i) { return yScale(i); };
@@ -166,7 +167,7 @@ var chart = d3.select('#market-cap-employee').append("svg")
   .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth + 200)
   .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
 var labelsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 225 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 225 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 labelsContainer.selectAll('text').data(data).enter().append('text')
   .attr('y', yText)
   .attr('stroke', 'none')
@@ -176,7 +177,7 @@ labelsContainer.selectAll('text').data(data).enter().append('text')
   .text(barLabel);
 // bars
 var barsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 235 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 235 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('y', y)
   .attr('height', yScale.rangeBand())
@@ -208,11 +209,11 @@ var barLabelPadding = 5; // padding between bar and bar labels (left)
 var gridLabelHeight = 18; // space reserved for gridline labels
 var gridChartOffset = 3; // space between start of grid and first bar
 var maxBarWidth = 450; // width of the bar with the max value
- 
-// accessor functions 
+
+// accessor functions
 var barLabel = function(d) { return d['Name']; };
 var barValue = function(d) { return parseFloat(d[' MAU']); };
- 
+
 // scales
 var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
 var y = function(d, i) { return yScale(i); };
@@ -223,7 +224,7 @@ var chart = d3.select('#mau-chart').append("svg")
   .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth+100)
   .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
 var labelsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 150 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 150 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 labelsContainer.selectAll('text').data(data).enter().append('text')
   .attr('y', yText)
   .attr('stroke', 'none')
@@ -233,7 +234,7 @@ labelsContainer.selectAll('text').data(data).enter().append('text')
   .text(barLabel);
 // bars
 var barsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 160 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 160 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('y', y)
   .attr('height', yScale.rangeBand())
@@ -264,12 +265,12 @@ var barLabelPadding = 5; // padding between bar and bar labels (left)
 var gridLabelHeight = 18; // space reserved for gridline labels
 var gridChartOffset = 3; // space between start of grid and first bar
 var maxBarWidth = 200; // width of the bar with the max value
- 
-// accessor functions 
+
+// accessor functions
 var barLabel = function(d) { return d['Name']; };
 var barValue = function(d) { return parseFloat(d[' Price']); };
 var buyer = function(d) { return d[' Buyer']; };
- 
+
 // scales
 var yScale = d3.scale.ordinal().domain(d3.range(0, data.length)).rangeBands([0, data.length * barHeight]);
 var y = function(d, i) { return yScale(i); };
@@ -280,7 +281,7 @@ var chart = d3.select('#acq-chart').append("svg")
   .attr('width', maxBarWidth + barLabelWidth + valueLabelWidth+200)
   .attr('height', gridLabelHeight + gridChartOffset + data.length * barHeight);
 var labelsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 200 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 200 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 labelsContainer.selectAll('text').data(data).enter().append('text')
   .attr('y', yText)
   .attr('stroke', 'none')
@@ -290,7 +291,7 @@ labelsContainer.selectAll('text').data(data).enter().append('text')
   .text(barLabel);
 // bars
 var barsContainer = chart.append('g')
-  .attr('transform', 'translate(' + 210 + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+  .attr('transform', 'translate(' + 210 + ',' + (gridLabelHeight + gridChartOffset) + ')');
 barsContainer.selectAll("rect").data(data).enter().append("rect")
   .attr('y', y)
   .attr('height', yScale.rangeBand())
@@ -349,7 +350,7 @@ Snapchat, 30
 <script id="acq" type="text/csv">Name, Price, Buyer
 Whatsapp, 19, $19B - Facebook
 Instagram, 1, $1B - FB
-Snapchat, 3, $3B - FB (not realized) 
+Snapchat, 3, $3B - FB (not realized)
 Paypal, 1.5, $1.5B - Ebay
 Skype, 2.6, $2.6B - Ebay
 Skype, 8.5, $8.5B - Microsoft
@@ -358,6 +359,3 @@ Nest, 3.2, $3.2B - Google
 Viber, .9, $.9B - Ratuken
 </script>
 <script>renderChart();</script>
-
-
-

@@ -1,208 +1,220 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 body {
-	font-size: 100%; 
-	line-height: 1.61803;
-	background: #f7f7f7;
-	color: $gray;
+    font-size: 100%; 
+    line-height: 1.61803;
+    background: #f7f7f7;
+    color: $gray;
 }
 
 header {
-	font-family: $font-sans-serif;
-	font-weight: bold;	
+    font-family: $font-sans-serif;
+    font-weight: bold;	
 }
 
 ul {
-	list-style-type: none; 
+    list-style-type: none; 
 }
 
 a {
-	padding-bottom: 2px;
-	border-bottom: 1px solid $accent;
-	@include transition(all, .2s, ease-in);
-	cursor: pointer;
-	text-decoration: none;
-	color: inherit;
-	}	
+    padding-bottom: 2px;
+    border-bottom: 1px solid $accent;
+    @include transition(all, .2s, ease-in);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}	
 
-	a:hover {
-	padding-bottom: 0px;
-	border-bottom-color: transparent;
-	color: $accent;
-	}	
+a:hover {
+    padding-bottom: 0px;
+    border-bottom-color: transparent;
+    color: $accent;
+}	
 
 a:visted {
-	color: inherit;
-}
-
-div {
-	overflow: auto;
+    color: inherit;
 }
 
 img {
-	display: block;
-	margin: 6em auto;
+    display: block;
+    margin: 6em auto;
+    width: 100%;
 }
 
 article {
-	h1 {
-	font-size: 3em;       /* 48 */
-  line-height: 1em;     /* 48 */
-  margin: 1em auto .5em;
-font-family: $font-fancy;
-	color: $dark; 
-	font-style: italic;
-	text-align: center;
-	margin: 1.5em auto 1em;
-	width: 12.6667em;
-	@include transition(all, .2s, ease-in-out);
-	@media screen and (max-width: $mobile) {
-		width: 80%;
-	 }
+    width: 36em;
+    margin: 0 auto;
 
-	}
+    .info {
+        margin: 3em auto 4em;
+
+        .date {
+            font-family: 'inconsolata';
+            color: $gray-mid-light;
+            font-style: italic;
+            margin: .75em 0em 2.5em;
+        }
+
+        hr {
+            width: 3.5em;
+            height: .5em;
+            background-color: $light-blue;
+            margin: 0;
+            border: 0;
+        }
+    }
+
+    h1 {
+        font-size: 2em;
+        line-height: 1em;
+        text-transform: uppercase;
+        font-family: "effra";
+        color: #364147;
+        text-align: left;
+        margin: 0em;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
 
 
-	  }
+}
 
 nav {
-	margin: 2em auto;
-	width: 22em;
-	overflow: auto;
-  height: 3em;
-	
-	a {
-		border: 0px solid transparent;
-	}	
+    margin: 2em auto;
+    width: 22em;
+    overflow: auto;
+    height: 3em;
 
-	li {
-		float: left;
-    font-family: $font-sans-serif;
-		margin-right: 3em;
-	}
+    li {
+        position: fixed;
+        color: $gray-mid-light;
+        margin: 0em;
+    }
 
-	li:last-child {
-		margin-right: 0em;
-	}
+    li a {
+        border-bottom: none;
+    }
 
-	li a {
-	color: #AAA;
-	text-decoration: none;
-	}
-
-	nav li a:hover {
-	color: $dark;
-	text-shadow: 0px 0px 2px $gray-light;
-	}
- }
+    .home {
+        font-size: 1.5em;
+        bottom: .6667em;
+        left: .6667em;
+    }
+    
+    li a:hover {
+        color: $dark;
+        text-shadow: 0px 0px 2px $gray-light;
+    }
+}
 
 p {
-  font-size: 1em;       /* 16 */
-  line-height: 1.5em;
+    font-size: 1em;       /* 16 */
+    line-height: 1.5em;
 
-	//should this stuff go here or in theme or layout?
-	font-family: $font-serif;
-	width: 36em;
-  margin: 0 auto 1.5em;
+    //should this stuff go here or in theme or layout?
+    font-family: $font-serif;
+    margin: 0 auto 1.5em;
 
-	  @media screen and (max-width: $mobile) {
-						width: 80%;
-								  }
+    @media screen and (max-width: $mobile) {
+        width: 80%;
+    }
 }
 
 h1 {
-	text-align: center;
-  font-size: 1.5em;       /* 48 */
-	width:	20em;;
-	color: $gray-light;
-  line-height: 1em;     /* 48 */
-	font-family: $font-fancy;
-  margin: 2em auto;
+    text-align: center;
+    font-size: 1.5em;       /* 48 */
+    color: $gray-light;
+    line-height: 1em;     /* 48 */
+    font-family: $font-fancy;
+    margin: 2em auto;
 
-	  @media screen and (max-width: $mobile) {
-						width: 80%;
-								  }
+    @media screen and (max-width: $mobile) {
+        width: 80%;
+    }
 
 }
 
 h2 {
-  font-size: 1.5em;     /* 24 */
-  line-height: 1em;     /* 24 */
-  margin: 4em auto 2em;
+    font-size: 1.5em;     /* 24 */
+    line-height: 1em;     /* 24 */
+    margin: 4em auto 2em;
 
-	//should this in _base?
-	font-family: $font-sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-	width: 24em;
-	color: $dark;
+    //should this in _base?
+    font-family: $font-sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark;
+}
+
+h3 {
+    margin-bottom: .25em;
 }
 
 h3, h4, h5, h6 {
-  font-size: 1em;      /* 16 */
-  line-height: 1.5em;  /* 24 */
-	font-family: $font-sans-serif;
+    font-size: 1em;      /* 16 */
+    line-height: 1.5em;  /* 24 */
+    font-family: $font-sans-serif;
 }
 
 small {
-	font-size: 0.8em;
-	line-height: 1.714285714em;
-  margin: 2em 0em;
-  text-align: center;
-	display: block;
-	font-style: italic;
-	color: #9C9C9C;
-	font-weight: 200;
-	font-family: $font-serif;
+    font-size: 0.8em;
+    line-height: 1.714285714em;
+    margin: 2em 0em;
+    text-align: center;
+    display: block;
+    font-style: italic;
+    color: #9C9C9C;
+    font-weight: 200;
+    font-family: $font-serif;
 }
 
 img + small {
-	margin: -6em auto 6em; //gross. fix.
+    margin: -6em auto 6em; //gross. fix.
 }
 
 pre {
-	width: 36em;
-	margin: 4em auto;
-	padding: 2em;
+    margin: 4em auto;
+    padding: 2em;
 }
 
 ul, ol {
-  font-size: 1em;
-  font-family: $font-serif;
-  line-height: 1.5em;
-  margin: 0 auto 1.5em;
-	width: 36em;
+    font-size: 1em;
+    font-family: $font-serif;
+    line-height: 1.5em;
+    margin: 0 auto 1.5em;
 }
 
 footer {
-	width: 100%;
-	overflow: auto;
+    background-color: $gray-light;
+    width: 100%;
+    overflow: auto;
 
-	a {
-	color: $accent;
-	border: 0px solid transparent;
-	}
+    a {
+        color: $accent;
+        border: 0px solid transparent;
+    }
 
-	p {
-	width: 100%;
-	text-align: center;
-	font-size: .75em;
-	margin: 1.714285714em auto;
-	color: #AAA;
-	font-family: $font-accent;
-	}
+    p {
+        width: 100%;
+        text-align: center;
+        font-size: .75em;
+        margin: 1.714285714em auto;
+        color: #AAA;
+        font-family: $font-accent;
+    }
 }
 
 
 hr {
-	color: $gray-mid;
-	margin: 4em auto;
-	width: 36em;
+    color: $gray-mid;
+    margin: 4em auto;
 }

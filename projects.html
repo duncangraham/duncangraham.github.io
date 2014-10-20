@@ -1,0 +1,32 @@
+---
+layout: sub-page
+title: My labours of love
+---
+<style>
+    p {
+        font-family: 'effra', sans-serif;
+    }
+    img {
+        width: 96%;
+        margin: 2em 0em 1em;
+        padding: 1%;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    img:hover {
+        border: 1px solid #0074D9;
+        }
+
+</style>
+
+    <p class="l-font-center">Currently working for <a href="https://www.mapbox.com/about/team/#duncan-graham">Mapbox</a>.</p>
+    <p class="l-font-center"><a href="/resume.pdf">Check out my resumé</a>, or take a gander at some selected projects below.</p>
+    <ul class="work">
+        {% for project in site.tags.work %}
+        <a class="" href="{{ project.url }}">
+            <img src="{{ project.img }}" />
+        </a>
+    </li>
+    {% endfor %}
+</ul>

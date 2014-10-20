@@ -1,23 +1,19 @@
 ---
 layout: project
-title: bckbrnr
+title: Bckbrnr
 img: 'img/bckbrnr.png'
 category: 'work'
+tag: work
 ---
 
 <a href="http://bckbrnr.co">Check out the live site</a>
 
-<iframe class="l-center space" src="//player.vimeo.com/video/96001278?autoplay=1andamp;loop=1" width="642" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+<iframe class="l-center space" src="//player.vimeo.com/video/96001278?autoplay=1andamp;loop=1" width="642" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Bckbrnr was a productivity and project management tool I built to keep track of my side projects.
 
-From a practical standpoint, building bckbrnr was a beneficial crash course on the architectures, best practices, and tools for modern webapps. To my surprise, the majority of development was dedicated to implementing pre-made modules and making sure they played nice together. 
+From a practical standpoint, building bckbrnr was a beneficial crash course on the architectures, best practices, and tools for modern webapps. To my surprise, the majority of development was dedicated to implementing pre-made modules and making sure they played nice together.
 
-More valuable were the insights I gained through the self reflection needed to understand my working habits and how I could better them. I learned that technological tools are not always the best solution. (<a href="http://blog.codinghorror.com/todont/" title="Coding Horror's To Do List Rant" alt="Coding Horror's To Do List Rant">Here's a great article elaborating on this</a>). 
+More valuable were the insights I gained through the self reflection needed to understand my working habits and how I could better them. I learned that technological tools are not always the best solution. (<a href="http://blog.codinghorror.com/todont/" title="Coding Horror's To Do List Rant" alt="Coding Horror's To Do List Rant">Here's a great article elaborating on this</a>).
 
 Rather than continuing work, I decided to commit myself to improving my focus, memory, discipline and willpower. I only tackle one side project at a time and I work tirelessly to finish it as quickly as possible.
-
- 
-
-
-

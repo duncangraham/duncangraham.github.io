@@ -1,13 +1,14 @@
 ---
 layout: entry
 title:  "Strategy Guide: Threes!"
-type: "writing"
+category: "writing"
+tag: writing
 date:   2014-02-11 23:00:00
 ---
 
 <!-- Post specific styles -->
 <style>
-	
+
 </style>
 
 <!-- Post Content -->
@@ -35,7 +36,7 @@ This shows the waterfalling paradigm nicely. I would probably swipe up, combinin
 </small>
 </p>
 
-With this strategy, you set yourself up to make the biggest pairings possible. And, the larger your highest value, the larger the bonus you'll receive and the larger your final score will be. 
+With this strategy, you set yourself up to make the biggest pairings possible. And, the larger your highest value, the larger the bonus you'll receive and the larger your final score will be.
 
 Once locked into this type of game, breaking this rule for almost any reason has marked the beginning of the end of me.
 
@@ -66,7 +67,3 @@ Footnotes
 <script type="text/javascript">
 
 </script>
-
-
-
-

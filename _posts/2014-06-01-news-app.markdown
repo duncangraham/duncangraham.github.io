@@ -3,9 +3,10 @@ layout: project
 title: News App Concept
 img: 'img/news-app.gif'
 category: work
+tag: work
 ---
 
-Shortly after Jeff Bezos acquired the Post, the design team was asked to pitch our ideas for the future of mobile news. After examining precedents, competitors, and desires of consumers I proposed the following: an app that balances personal choice, technological prowess and editorial savvy. 
+Shortly after Jeff Bezos acquired the Post, the design team was asked to pitch our ideas for the future of mobile news. After examining precedents, competitors, and desires of consumers I proposed the following: an app that balances personal choice, technological prowess and editorial savvy.
 
 The main page would feature a daily list of news items deigned by editors to be neccessary for cultural literacy. The reader could choose how much of each story was displayed (headlines, or more information if they wanted to quickly skim). If they were unfamiliar with a story, they would then be able to choose an amount of content to be served based on desired consumption time by swiping.
 
@@ -20,8 +21,6 @@ The main page would feature a daily list of news items deigned by editors to be 
 </div>
 
 Users would choose how much time they wanted to invest on each item, and would subsequently be served atomic slices of news related to the story and personalized to their knowledge of the subject & context. Meta information such as relevant persons & organizations would allow users to educate themselves on the context.
-</p><img class="m-full" src="/img/newsAppProcess.png" /> 
+</p><img class="m-full" src="/img/newsAppProcess.png" />
 
-Though it wasn't developed further, I love this idea and think it would be wildly successful. The only apps today that are close to this is Twitter and Circa. I'm excited for the future. 
-
-
+Though it wasn't developed further, I love this idea and think it would be wildly successful. The only apps today that are close to this is Twitter and Circa. I'm excited for the future.

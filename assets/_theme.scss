@@ -22,7 +22,8 @@ article h1:hover {
 }
 
 .twitter-share-button .icon-twitter {
-	font-size: 4em;
+	font-size: 2em;
+    color: $light-blue;
 }
 
 //Animation Code
@@ -53,4 +54,14 @@ nav {
     -webkit-animation-delay: .5s;
     -moz-animation-delay: .5s;
   }
+}
+
+.t-about {
+    font-size: .8em;
+    font-family: 'effra';
+
+    a {
+        border-bottom: 0;
+        font-weight: bold;
+    }
 }

@@ -1,7 +1,8 @@
 ---
 layout: entry
 title:  "Beautiful News"
-type: "project"
+category: "project"
+tag: project
 date:   2013-10-23 17:00:00
 ---
 <style>

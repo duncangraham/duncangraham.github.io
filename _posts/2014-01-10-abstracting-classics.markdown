@@ -1,7 +1,8 @@
 ---
 layout: entry
 title:  "Abstracting Classics"
-type: "experiment"
+category: "experiment"
+tag: experiment
 date:   2014-01-10 13:47:00
 color: "purple"
 ---
@@ -74,7 +75,7 @@ var setupCanvas = function (canvasName, rasterName) {
 	// Create an empty project and a view for the canvas:
 	paper.setup(canvas);
 	paper.project.activeLayer.removeChildren();
-		
+
 	var size = 2,
 		rastRatio,
 		paths = [];
@@ -112,7 +113,7 @@ var setupCanvas = function (canvasName, rasterName) {
 			   	w = size,
 				h = w*rastRatio,
 				gridSize = (canvas.width)/w;
-			}	
+			}
 
 			if ( gridSize <= 5 ) {
 				return;
@@ -153,7 +154,7 @@ var setupCanvas = function (canvasName, rasterName) {
 				y2 = y2 + gridSize;
 			}
 
-			// Move the active layer to the center of the view, so all 
+			// Move the active layer to the center of the view, so all
 			// the created paths in it appear centered.
 			paper.project.activeLayer.position = paper.view.center;
 
@@ -189,7 +190,7 @@ $('canvas').hover(function(){
 		cursor.style.display = 'block';
 		cursor.style.top = e.pageY*1 + 5 + "px";
 	    cursor.style.left = e.pageX*1 + 5 + "px";
-	});	
+	});
 },function(){
 	cursor.style.display = 'none';
 });

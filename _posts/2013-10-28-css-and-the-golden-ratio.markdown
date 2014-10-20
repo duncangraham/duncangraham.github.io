@@ -1,14 +1,15 @@
 ---
 layout: entry
 title:  "CSS and the Golden Ratio"
-type: "experiment"
+category: "experiment"
+tag: experiment
 date:   2013-10-28 23:00:00
 ---
 <style>
 	div {
 		overflow: visible;
 	}
-	
+
 	.experiment-container {
 		margin: 8em 0em 4em 55%;
 	}

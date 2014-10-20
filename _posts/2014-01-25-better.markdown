@@ -1,7 +1,8 @@
 ---
 layout: entry
 title:  "Is This Better?"
-type: "writing"
+category: "writing"
+tag: writing
 date:   2014-01-25 17:00:00
 color: "orange"
 ---
@@ -22,7 +23,7 @@ I've been wrestling with this question (and resulting ones like, <a href="http:/
 <p>
 ## The snooze button
 
-A bit of historical perspective: <a href="https://en.wikipedia.org/wiki/Water-powered_clock#Greco-Roman_world">As old as alarm clocks are</a>, the snooze button is a relatively new invention. The first snooze alarm was the <a href="http://www.telechron.net/eod/7h241.htm">1956 General Electric Telechron</a>. Three years later the Westclox Drowse popularized the concept. In 2000 the "drowse" button was renamed to the snooze we know of today. In my lifetime, a clock without a snooze option has been a rarity. 
+A bit of historical perspective: <a href="https://en.wikipedia.org/wiki/Water-powered_clock#Greco-Roman_world">As old as alarm clocks are</a>, the snooze button is a relatively new invention. The first snooze alarm was the <a href="http://www.telechron.net/eod/7h241.htm">1956 General Electric Telechron</a>. Three years later the Westclox Drowse popularized the concept. In 2000 the "drowse" button was renamed to the snooze we know of today. In my lifetime, a clock without a snooze option has been a rarity.
 
 <div videoID="UahqgK60vuk" startTime="232" endTime="277" height="400" width="400" id="youtube-player"></div>
 
@@ -54,7 +55,7 @@ For a social connection to be made, there needs to be an exchange of recognition
 
 I think a bit of digital voyuerism (see also: stalking) is fine, but I realized that I was spending hours a day using Facebook. I wondered if this was the best use of time. 7 months ago, I deleted my account.
 
-For the first few weeks, I would navigate to facebook.com unconsciously. Every day I'd have moments when I thought, "What do I do now?". I reached out to old friends. I spent more and more time building things. I began reading for fun again. It wasn't the easiest transistion- I found I didn't have many of my friend's phone numbers or emails. Maintaining relationships took more effort, but with that effort came quality. 
+For the first few weeks, I would navigate to facebook.com unconsciously. Every day I'd have moments when I thought, "What do I do now?". I reached out to old friends. I spent more and more time building things. I began reading for fun again. It wasn't the easiest transistion- I found I didn't have many of my friend's phone numbers or emails. Maintaining relationships took more effort, but with that effort came quality.
 
 If Facebook is to exist long term it need a massive shift in purpose and execution. (It launched <a href="">Paper</a> while I was writing this. I'm intrigued, but reserving judgement till I use it). Alternatively, it can become an acquisition machine, riding the social media ouroboros.
 

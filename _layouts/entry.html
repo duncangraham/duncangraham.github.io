@@ -40,35 +40,23 @@
 </head>
   <body id="post">
 		<article>
+            <div class="info">
 			<h1>{{ page.title }}</h1>
+			<p class="date">{{ page.date | date: "%B %-d %Y" }}</p>
+            <hr/>
+            </div>
 
 			{{ content }}
 
 
 			<a href="https://twitter.com/share" class="twitter-share-button" data-via="duncangraham">
 							<i class="icon-twitter"></i>
-							<p>tweet</p></a>
+							</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'htdattp':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 		</article>
     <nav class="">
       <ul class="">
-        {% if page.previous.url %}
-        <li class="previous nav">
-          <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" class="">
-          <i class="icon-left-open-big"></i>
-          <span  class="tk-adobe-garamond-pro hover-show"></span>
-          </a>
-        </li>
-        {% endif %}
-        {% if page.next.url %}
-        <li class="next nav">
-          <a href="{{page.next.url}}" title="Previous Post: {{page.next.title}}" class="">
-          <span  class="tk-adobe-garamond-pro hover-show"></span>
-          <i class="icon-right-open-big"></i>
-          </a>
-        </li>
-        {% endif %}
         <li class="home">
           <a href="/index.html">
           <i class="icon-home"></i>

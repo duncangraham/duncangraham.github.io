@@ -1,7 +1,8 @@
 ---
 layout: entry
 title:  "Focus: the tutorial"
-type: "tutorial"
+category: "writing"
+tag: writing
 date:   2013-11-20 17:00:00
 ---
 
@@ -20,7 +21,7 @@ The HTML is pretty cut and dry: A div with span elements containing the individu
 	</div>
 {% endhighlight %}
 
-The sneakiest bit of this experiment lies in the the CSS. At first I was planning on using webkit-filter: blur, but then I realized by making the text transparent and using the blur radius property of text-shadow I could get the effect I wanted cross browser. 
+The sneakiest bit of this experiment lies in the the CSS. At first I was planning on using webkit-filter: blur, but then I realized by making the text transparent and using the blur radius property of text-shadow I could get the effect I wanted cross browser.
 {% highlight css %}
 	.focus span {
 		color: transparent;
@@ -43,7 +44,7 @@ Then I used a for each loop to iterate through all of the spans. In this I retri
 		var offset = $(this).offset();
 		spanX[i] = offset.left + $(this).width()/2;
 		spanY[i] = offset.top + $(this).height()/2;
-	}); 
+	});
 {% endhighlight %}
 
 
@@ -58,7 +59,7 @@ Now here's the best bit. On a mousemove event I first update the mouseX annd mou
 			var y = spanY[i] - mouseY;
 			var d = Math.round(Math.sqrt( x*x + y*y )) * .25;
 			$(this).css('textShadow', '0 0 '+d+'px rgb(0,0,0)'); /* THIS IS THE IMPORTANT BIT! */
-		}); 
+		});
 	});
 {% endhighlight %}
 

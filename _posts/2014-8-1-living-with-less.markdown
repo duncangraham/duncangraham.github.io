@@ -1,19 +1,20 @@
 ---
 layout: entry
 title:  "Living With Less"
-type: "writing"
+category: "writing"
+tag: writing
 date:   2014-08-01 17:30:00
 ---
 
 <!-- Post specific styles -->
 <style>
-	
+
 </style>
 
 <!-- Post Content -->
 A year ago I moved from my house in DC to the suburbs. A weekend of schlepping boxes of belongings was a vexing way to realize how much I had amassed over the years and how it weighed me down. After the move I decided to give myself a year to simplify. The goal: 100 possesions.
 
-I donated books and clothes, decluttered, and changed my purchasing habits. I became more selective and concerned with quality. There wasn't any room for things that were mediocre. 
+I donated books and clothes, decluttered, and changed my purchasing habits. I became more selective and concerned with quality. There wasn't any room for things that were mediocre.
 
 Two days ago I moved to San Francisco with 2 backpacks stuffed with the result of my efforts. Here's what I brought with me:
 
@@ -77,14 +78,10 @@ Two days ago I moved to San Francisco with 2 backpacks stuffed with the result o
 
 <h2>TOTAL: 74!</h2>
 
-I hit my goal, but I still have a bicycle, some books & artwork, a suit, and a tux back home that I'll be flying out in the next few weeks. These will put me closer to the 100 mark. As noted above, I'll probably buy some more socks too. I'll need some silverware and furniture most likely, which will probably put me a little bit past the mark. But not by much! 
+I hit my goal, but I still have a bicycle, some books & artwork, a suit, and a tux back home that I'll be flying out in the next few weeks. These will put me closer to the 100 mark. As noted above, I'll probably buy some more socks too. I'll need some silverware and furniture most likely, which will probably put me a little bit past the mark. But not by much!
 
 <script src="/js/jquery.color.min.js"></script>
 <script type="text/javascript" src="/js/jquery.lettering-0.6.1.min.js"></script>
 <!-- Post specific js -->
 <script type="text/javascript">
 </script>
-
-
-
-

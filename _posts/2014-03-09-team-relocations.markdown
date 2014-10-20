@@ -1,13 +1,18 @@
 ---
 layout: entry
 title:  "Sport Team Relocations"
-type: "experiment"
+category: "experiment"
+tag: experiment
 date:   2014-03-09 10:08:00
 ---
 <!-- Post specific styles -->
 <style>
-h1 {
+h1, .date, .info hr {
   display: none;
+}
+
+body article .info {
+    margin: 0;
 }
 
 .site {
@@ -21,10 +26,6 @@ h1 {
 
 #relocations svg {
   padding-bottom: 2em;
-}
-
-#mc_embed_signup {
-
 }
 
 .flexbox {
@@ -194,7 +195,7 @@ rect {
 }
 
 .label.nhl {
-  color:#30DDB3; 
+  color:#30DDB3;
 }
 
 .axis {
@@ -259,7 +260,7 @@ rect {
   color:#CCC;
 }
 
-.nameChangeList { 
+.nameChangeList {
 	width: 50%;
   overflow: auto;
   text-align: center;
@@ -268,6 +269,7 @@ rect {
 .nameChangeList li:nth-child(odd) { clear: left; }
 
 </style>
+</article>
 <ul class="filters">
   <li class="font-dark sort-opt">
     <h3 id="year" class="font-large">1900</h3>
@@ -287,7 +289,7 @@ rect {
   <li class="sort-opt">
     <h3 id="NHL" class="label nhl font-large" data-sport="nhl">NHL</h3>
   </li>
-</ul> 
+</ul>
 
 <ul class="stateList">
 </ul>
@@ -297,7 +299,7 @@ rect {
 </ul>
 
 <div id="relocations"></div>
-
+<article>
   <div class="space-top entry-content content-spacing">
     <p class="first-paragraph">Months ago I had an idea for a news service that would bring current events into perspective. For every big story, it would display similar threads from the past. My hope was that the context would cut down on sensationalism and better inform readers.</p>
     <p>During that time, the Washington Redskins were in the spotlight for their <a href="https://en.wikipedia.org/wiki/List_of_sports_team_names_and_mascots_derived_from_indigenous_peoples">controversial name</a>. With a newfound appreciation for history (I never really liked it in school), I started looking up historical sport team name changes. I found that many occurred during <a href="https://en.wikipedia.org/wiki/Relocation_of_professional_sports_teams">relocations</a>. The data looked interesting and I had wanted to learn D3 for a while, so I began coding in earnest.</p><p id="nameChanges">
@@ -306,7 +308,7 @@ rect {
     <small class="font-small show-code center cursor-pointer space-bottom">
        20 teams (38% of all relocations) changed names!
     </small><p>As I worked with the data set, I started seeing patterns and stories. Some teams relocated multiple times, relocations happened within the same state, names changed (or didn't) for specific and fascinating reasons. Eventually, the context around the relocations interested me more than the original visualization.</p><p>At the time, the graphic showed the dataset, but offered no ways to explore it interactively. Without explicitly telling a story or allowing the audience to find stories for themselves, it was pretty lifeless.</p><p>Since everyone roots for different teams and enjoys different sports, I chose to be less explicit, letting the audience choose their own adventures. I hope you enjoy the graphic as much as I enjoyed making it. If you want to extend what I've already done, <a href="{{ root_path }}/json/relocations.json">here's the dataset</a>.</p>
- 
+
 <!-- <script src="{{ root_path }}/js/jquery.js"></script> -->
 <script src="{{ root_path }}/js/d3.min.js" type="text/javascript"></script>
 <script src="{{ root_path }}/js/topojson.v1.min.js" type="text/javascript" ></script>
@@ -347,7 +349,7 @@ d3.json("/json/us.json", function(error, us) {
 
   d3.json("/json/relocations.json", function(error, data) {
       var m = data.migrations;
-  
+
       var x = d3.time.scale()
                      .domain([new Date(1900, 7, 1), new Date(2014, 7, 1)])
                      .rangeRound([0, width*.8]);
@@ -413,7 +415,7 @@ d3.json("/json/us.json", function(error, us) {
                           return 'link mlb move ' + d.left.state + ' ' + d.arrived.state
                         }
                        })
-                       .on("mouseover", function(d){ 
+                       .on("mouseover", function(d){
                             $(this).parent().children().each(function(){
                               var classNames = this.getAttribute('class') + ' active';
                               this.setAttribute('class', classNames)
@@ -433,7 +435,7 @@ d3.json("/json/us.json", function(error, us) {
                               $('.move').not( ".active" ).css({opacity: '.1'});
                             }
                        })
-                       .on("mouseout", function(){ 
+                       .on("mouseout", function(){
                             if( !locked ) {
                               $('.move').css({opacity: '1'});
                             }
@@ -492,7 +494,7 @@ d3.json("/json/us.json", function(error, us) {
       var l1 = pathNode.getTotalLength()-.01,
           l2 = pathNode.getTotalLength(),
           t0 = 0
-          
+
       return function(t) {
            var p0 = pathNode.getPointAtLength(t0 * l1);//previous point
            var p = pathNode.getPointAtLength(t * l2);////current point
@@ -506,7 +508,7 @@ d3.json("/json/us.json", function(error, us) {
 
       var yearHash = {};
       var rects = groups.append("rect")
-                        .attr("x", function(d) { 
+                        .attr("x", function(d) {
                           var year = new Date(d.year, 1, 1);
                           return x(year)+width/10; })
                         .attr("width", "10px")
@@ -532,7 +534,7 @@ d3.json("/json/us.json", function(error, us) {
                             return 'move block mlb ' + d.left.state + ' ' + d.arrived.state
                           }
                         })
-                        .on("mouseover", function(d){ 
+                        .on("mouseover", function(d){
                           $(this).parent().children().each(function(){
                             var classNames = this.getAttribute('class') + ' active';
                             this.setAttribute('class', classNames)
@@ -554,7 +556,7 @@ d3.json("/json/us.json", function(error, us) {
                           if( !locked ) {
                             $('.move').css({opacity: '1'});
                           }
-                          
+
                           $('.reloc-data').remove();
                           $(this).parent().children().each(function(){
                             var classNames = this.getAttribute('class');
@@ -564,7 +566,7 @@ d3.json("/json/us.json", function(error, us) {
 
                         });
 
-      
+
     }
 
      drawArcs();
@@ -631,7 +633,7 @@ d3.json("/json/us.json", function(error, us) {
             $('.lock-text').html('click label to lock');
             $(this).removeClass('locked');
             $('.label').css('opacity', 1);
-           
+
            } else {
 
             if ( lockType == 'state' ) {
@@ -642,7 +644,7 @@ d3.json("/json/us.json", function(error, us) {
               $('.label').css('opacity', 1);
             }
 
-            lockType = 'label';            
+            lockType = 'label';
             $(this).addClass('locked');
 
             $('.move').css('opacity', 1);
@@ -659,7 +661,7 @@ d3.json("/json/us.json", function(error, us) {
 
         if ( !locked ) {
           labelHover( $(this) );
-        }     
+        }
 
       },function(){
         if( !locked ) {
@@ -763,12 +765,12 @@ d3.json("/json/us.json", function(error, us) {
                  .append("g")
                  .attr("transform", "translate(" + radius + "," + height / 4 + ")");
 
-      
+
     var g = pieSvg.selectAll(".arc")
                 .data(pie(nameHash))
               .enter().append("g")
                 .attr("class", "arc");
-        
+
         g.append("path")
          .attr("d", arc)
          .style("fill", function(d){

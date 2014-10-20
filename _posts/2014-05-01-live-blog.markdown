@@ -1,8 +1,9 @@
 ---
 layout: project
-title: Live Blog
+title: WaPo Live Blog
 img: 'img/live-blog.png'
 category: work
+tag: work
 ---
 
 The original Washington Post Live Blog was created in a rush and, while functional, needed a visual refresh to better serve the needs of  readers & reporters.
@@ -15,7 +16,7 @@ After talking to reporters and learning about users experience's and favorite fe
 
 </p><img class="m-img-large"  src="/img/it.png"  />
 
-In architecture school one of my professors told me that all good ideas were at the bottom of the pencil and you need to work through a lot of lead to get to them. I pull that mentality into my process when starting a new project. Above is a small sampling of the applications I explored. My goal was to design a framework malleable enough to be used for sports games, breaking news, TV shows, and whatever else the newsroom could come up with. 
+In architecture school one of my professors told me that all good ideas were at the bottom of the pencil and you need to work through a lot of lead to get to them. I pull that mentality into my process when starting a new project. Above is a small sampling of the applications I explored. My goal was to design a framework malleable enough to be used for sports games, breaking news, TV shows, and whatever else the newsroom could come up with.
 
 After a week of iterations, I came up with the following architecture: a primary feed for content/custom modules flanked by a live chat.
 
@@ -41,7 +42,6 @@ I also examined other states for the comment thread, such as after live events h
 
 </p><img class="m-img-large"  src="/img/live-blog-closed.png"  />
 
-Not to overwhelm you, but I also worked on the mobile views too! 
+Not to overwhelm you, but I also worked on the mobile views too!
 
 </p><img class="m-full"  src="/img/live-blog-mobile.png"  />
-
