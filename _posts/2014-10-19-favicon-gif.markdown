@@ -19,9 +19,9 @@ date:   2014-10-19 11:19:00
 
 </style>
 
-This began as a fun, hacky gimmick. Now got me wondering what's possible in such a constrained medium. Narratives? 3 dimensionality?
+This began as a fun, hacky gimmick. Now I'm wondering what's possible in such a constrained medium. Narratives? 3 dimensionality?
 
-I would love to see what you come up with. Here's the code:
+I'd love to see what you come up with. Here's the code:
 
 {% highlight js %}
 var icoCounter = 2;
