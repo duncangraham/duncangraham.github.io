@@ -386,6 +386,25 @@ nav .home {
 .margin12r {
   margin-right: 100.0000%; }
 
+.space-top0 {
+  margin-top: 0.5em; }
+
+.space-top1 {
+  margin-top: 1em; }
+
+.space-top2 {
+  margin-top: 2em; }
+
+.space-top3 {
+  margin-top: 3em; }
+
+@media all and (max-width: 700px) {
+  .col2, .col3i, .col4, .col5, .col6, .col7 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    text-align: center; } }
 .grid-item {
   height: 16em;
   padding: 2em;
@@ -415,7 +434,6 @@ nav .home {
   position: absolute; }
 .illustration .container {
   overflow: initial;
-  margin: 3em;
   position: relative; }
 .illustration .option {
   position: absolute; }
@@ -663,26 +681,23 @@ footer #mc_embed_signup form {
   .twitter-share-button p {
     margin-top: .5em; }
 
-.blog {
-  margin-top: 4em;
-  font-size: 1em; }
-  .blog h3 {
-    margin-top: 2em; }
-  .blog h3.misc {
-    margin-top: 3.8em; }
-  .blog h3:first-child {
-    margin-top: 0; }
-  .blog ul {
-    font-family: "effra", Helvetica, Arial, sans-serif;
-    margin: 0em 0em 0.5em; }
-  .blog li {
-    color: #666666; }
-    .blog li a {
-      border-width: 0px;
-      line-height: 1.75em;
-      transition: none; }
-    .blog li a:hover {
-      color: #ce904e; }
+.blog h3 {
+  margin-top: 2em; }
+.blog h3.misc {
+  margin-top: 3.8em; }
+.blog h3:first-child {
+  margin-top: 0; }
+.blog ul {
+  font-family: "effra", Helvetica, Arial, sans-serif;
+  margin: 0em 0em 0.5em; }
+.blog li {
+  color: #666666; }
+  .blog li a {
+    border-width: 0px;
+    line-height: 1.75em;
+    transition: none; }
+  .blog li a:hover {
+    color: #ce904e; }
 
 .work article {
   margin-top: 4em; }
