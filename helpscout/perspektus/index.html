@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perspektus</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-responsive.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/login.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/menu-style.css" />
+
+        <style type="text/css">@font-face{
+                font-family:'DINWeb';
+                src:url(/fonts/DINCond-Reg.woff) format('woff');
+                font-weight:normal;
+                font-style:normal;
+            }      </style>
+        <script type="text/javascript" src="js/clock.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jshake-1.1.min.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+        <script type="text/javascript">
+
+            var map;
+            var myLayer;
+            function setMapToken() {
+                L.mapbox.accessToken = 'pk.eyJ1IjoibWVkaW9wb2xpcyIsImEiOiJXOVE4Q2tFIn0.fcZlKjwseszfM-VW-G0xOw';
+            }
+            $(document).ready(function() {
+                perspektusClock();
+
+
+$("#ajaxLogin input").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+            return ajaxLogin();
+    }
+});
+
+
+                var div = $("div.login");
+                setMapToken();
+                map = L.mapbox.map('mapcontainer', 'mediopolis.21d14749')
+                        .addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
+                            autocomplete: true
+                        }));
+                myLayer = L.mapbox.featureLayer().addTo(map);
+                myLayer.on('layeradd', function(e) {
+                    var marker = e.layer,
+                            feature = marker.feature;
+
+                            marker.setIcon(L.icon(feature.properties.icon));
+                });
+
+                map.on('mousemove', function(e) {
+                    $('.cmd-nav-livecoord span.lat').html(e.latlng.lat.toFixed(2));
+                    $('.cmd-nav-livecoord span.long').html(e.latlng.lng.toFixed(2));
+                });
+
+                $('body').animate({'opacity': 1}, 1500);
+
+            });
+        </script>
+    </head>
+    <body class="tk-bigsmalls-regular" style="">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="nav-collapse"> <a class="brand" href="index.html"><img src="images/login_page_logo.png"></a>
+                    <div class="spi-earnings-box" style="float:right;">
+                        <span id="perspektusHours"></span>
+                        <span id="perspektusMinutes" style="width:28px !important; letter-spacing:0px !important;"></span>
+                        <span id="perspektusSeconds" style="font-size:18px !important; width:24px !important; letter-spacing:0px !important;"></span>
+                        <div id="perspektusDate" class="date"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+    $(document).ready(function() {
+//							   perspektusClock();
+        var div = $(".login_box");
+
+    var h = ((window.innerHeight - $('.navbar-fixed-top').height()) / 2.2) ;
+
+
+  //	$('body').animate({'opacity':1},1500);
+
+        div.animate({top:h+'px'}, 950,"linear", function() {
+            $('#loginbtn').css('opacity', 1);
+      $('#loginbtn img').css('opacity', 1);
+            $('#loginbtn').animate({paddingLeft: '450px'}, "linear" ,
+         function() {
+                $('#loginbtn button').css('opacity', 1);
+        $('input.username').attr('placeholder', 'Username');
+              $('input.password').attr('placeholder', 'Password');
+            });
+
+        });
+
+
+        //set placeholder
+
+    });
+
+
+</script>
+
+<div class="container" style="width:100% !important;">
+
+</div>
+    <div id="mapcontainer" style="">
+
+   </div>
+<div class="cmdHome" style="">
+        <!-- command panel start-->
+<script type="text/javascript" src="js/command.js"></script>
+<script type="text/javascript" src="js/jquery.transition.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+<link type="text/css" href="css/tooltip.css" />
+
+<div id="leftmenu">
+<div id="mainmenu" class="cmd-mainmenu">
+    <div class="cmd-mainmenu-title nav-toggler toggle-push-bottom">Menu</div>
+
+</div>
+    <div onMouseOver="mouseoversound5.playclip()" id="quickmenu" class="cmd-quickmenu">
+     <div class="cmd-quickmenu-title"></div>
+</div>
+
+<nav class="menu push-menu-bottom">
+    <ul>
+                 <li style="background-color: #051c35;width: 475px;height: 160px;">Main Menu</li>
+                 <li class="menuitem" style="width: 175px;height: 50px;background-color: #2e3f4b;">Container 1</li>
+                <li class="menuitem" style="width: 300px;height: 50px;background-color: #163348;">Container 2</li>
+                <li class="menuitem submenu" style="background-color: #051c35;height: 50px">Container 3</li>
+
+            </ul>
+
+</nav>
+</div>
+<input type="hidden" value="0" id="submenudir">
+<div class="submenudiv">
+   Submenu 2;
+</div>
+
+<div id="cmd-panel">
+<div id="cmdmapstyles" onMouseOver="mouseoversound1.playclip()" onClick="clicksound1.playclip()" class="cmd-mapstyles-menubtn">
+
+    <div class="cmd-mapstyles-title">MAP STYLES <div class="bottom_arrow"><img style="transform:rotate(90deg);padding-top:10px" src="images/arrow_right1.png" width="16px" height="16px" /> </div>   </div>
+
+    <input type="hidden" id="dir" value="1">
+</div>
+      <ul class="maptype">
+      <li class="cmd-mapstyles-item " data-bind="mediopolis.a3be16d1"><span class="arrow_box"></span><img class="mapimg " src="https://api.tiles.mapbox.com/v4/mediopolis.a3be16d1/-98.833,34.6422,6/80x80.png?1413826305548&access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q" height="48px" width="48px"/><span class="imgborder"></span><span class="menudesc">Satellite Night</span></li>
+        <li class="cmd-mapstyles-item " data-bind="mediopolis.76cdc8a0"><span class="arrow_box"></span><img class="mapimg " src="https://api.tiles.mapbox.com/v4/mediopolis.76cdc8a0/-103.5352,43.2452,5/80x80.png?1413813603167&access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q" height="48px" width="48px"/><span class="imgborder"></span><span class="menudesc">Satellite NatGeo</span></li>
+        <li class="cmd-mapstyles-item " data-bind="mediopolis.21d14749"><span class="arrow_box"></span><img class="mapimg " src="https://api.tiles.mapbox.com/v4/mediopolis.21d14749/-122.7887,47.3983,8/80x80.png?1413813252458&access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q" height="48px" width="48px"/><span class="imgborder"></span><span class="menudesc">Run Bike and Hike</span></li>
+        <li class="cmd-mapstyles-item " data-bind="mediopolis.8a3b3206"><span class="arrow_box"></span><img class="mapimg " src="https://api.tiles.mapbox.com/v4/mediopolis.8a3b3206/-93.7134,30.4818,7/80x80.png?1413752017130&access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q" height="48px" width="48px"/><span class="imgborder"></span><span class="menudesc">Standard Night</span></li>
+        <li class="cmd-mapstyles-item " data-bind="mediopolis.fd78e255"><span class="arrow_box"></span><img class="mapimg " src="https://api.tiles.mapbox.com/v4/mediopolis.fd78e255/-91.1307,30.3952,13/80x80.png?1413582997692&access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q" height="48px" width="48px"/><span class="imgborder"></span><span class="menudesc">Deep Flat Gray</span></li>
+    </ul>
+
+
+
+
+
+    <div id=cmddatamap onMouseOver="mouseoversound1.playclip()" onClick="clicksound3.playclip()" class="cmd-dataviz">
+        <div class="cmd-dataviz-title">VISUALIZE DATA</div>
+    </div><p>
+
+    <div id="cmdweather" class="cmd-weather">
+        <div class="cmd-weather-mini">
+            <div class="cmd-weather-icon"><img src="" class="cmd-weather-icon-img" width="30px" height="25px" style="display: none"/></div>
+            <div class="cmd-weather-temp"></div>
+            <div class="cmd-weather-temphi"></div>
+            <div class="cmd-weather-templow"></div>
+        </div>
+        <div class="cmd-weather-des">
+            <div class="weather-des">
+                Mostly Cloudy and Breezy
+            </div>
+        </div>
+    </div>
+
+    <div id="cmdnav" class="cmd-nav">
+        <div class="cmd-nav-livecoord"><span class="lat">34.69</span> N &nbsp;<span class="long">34.69</span> W</div>
+        <div class="cmd-nav-getlocation" style="width:150px;text-align:right">Get My Location</div>
+        <div class="cmd-nav-getdirection" style="width:140px;text-align:right">Get Directions</div>
+
+        <div onMouseOver="mouseoversound4.playclip()" onClick="clicksound4.playclip()" class="myloc">
+        </div>
+        <div onMouseOver="mouseoversound4.playclip()" onClick="clicksound4.playclip()" class="getdir">
+
+        </div>
+    </div><p>
+
+    <div id="cmddashboard" onMouseOver="mouseoversound1.playclip()" onClick="clicksound3.playclip()" class="cmd-dashboard">
+        <div class="cmd-dashboard-title">MY DASHBOARD</div>
+    </div><p>
+
+
+        <input type="text" class="cmd-search" placeholder="Quick Search" id="pac-input">
+        <div class="cmd-search-input"></div>
+    <p>
+
+
+    <div id="cmdsearchgo" class="cmd-search-go"></div>
+    <div id="loc" style="display: inline-block;opacity: 0"></div>
+</div>
+<div onMouseOver="mouseoversound4.playclip()" onClick="clicksound3.playclip()" class="cmd-hidepanel-arrow">
+    <div class="tooltip tooltip-top" data-hint="Hide Me"></div>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 24 47" enable-background="new 0 0 24 47" xml:space="preserve">
+    <path d="M23.7,23.5l-22.6,23l-0.8-0.7l22-22.4L0.3,1.1l0.8-0.7L23.7,23.5z"/>
+    </svg>
+</div
+
+><!-- command panel ends --></div>
+
+
+<script type="text/javascript" src="//use.typekit.net/wql0aeg.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript">try {
+                Typekit.load();
+            } catch (e) {
+            }</script>
+
+</body>
+</html>

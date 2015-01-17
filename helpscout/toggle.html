@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Water risk map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+.map-info { font-size: 20px; }
+#map { position: absolute; width: 100%; top: 0; bottom: 0; }
+</style>
+</head>
+<body>
+
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.3/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.3/leaflet.fullscreen.css' rel='stylesheet' />
+
+<div id='map'></div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoicmVzb3VyY2VtYXRpY3MiLCJhIjoiWmFzdmM3VSJ9.alE4A1t1dZ9C4_QmHzlKhA';
+
+var map = L.mapbox.map('map', 'resourcematics.kob3ci2p')
+.setView([4.5,-35.5], 2);
+L.control.fullscreen().addTo(map);
+L.mapbox.shareControl().addTo(map);
+
+L.control.layers({
+'Petroleum refineries': L.mapbox.tileLayer('resourcematics.koc6jp19'),
+'Power plants': L.mapbox.tileLayer('resourcematics.kob52d10').addTo(map)
+}, {}, {position: 'bottomleft',
+collapsed: false}).addTo(map);
+
+var petrolLayer = L.mapbox.gridLayer('resourcematics.koc6jp19').addTo(map);
+var petrolControl = L.mapbox.gridControl(petrolLayer).addTo(map);
+
+map.legendControl.addLegend('legend').setPosition('bottomleft');
+
+map.on('baselayerchange', function(e){
+	//clear layers
+	petrolLayer.removeLayer();
+	powerLayer.removeLayer();
+
+	//if petrol
+	if (e.layer._tilejson.id == 'resourcematics.koc6jp19') {
+		var petrolLayer = L.mapbox.gridLayer('resourcematics.koc6jp19').addTo(map);
+		var petrolControl = L.mapbox.gridControl(petrolLayer).addTo(map);
+	} else {
+		var powerLayer = L.mapbox.gridLayer('resourcematics.kob52d10').addTo(map);
+		var powerControl = L.mapbox.gridControl(powerLayer).addTo(map);
+	}
+});
+
+</script>
+
+</body>
+</html>
