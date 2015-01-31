@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>A simple map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+        <style>
+              body { margin:0; padding:0; }
+                #map { position:absolute; top:0; bottom:0; width:100%; }
+        </style>
+    </head>
+    <body>
+        <div id='map'></div>
+        <script>
+            L.mapbox.accessToken = 'pk.eyJ1Ijoic2FudDlpZ2EiLCJhIjoiR3lKYUpHVSJ9.A_ARTOJLFh6J-zEZAqGbAw';
+            var map = L.mapbox.map('map', 'sant9iga.l0hkb4gp')
+                .setView([51.505, -0.09], 13);
+        </script>
+    </body>
+</html>
