@@ -1,0 +1,45 @@
+﻿.ms-ctn .ms-trigger {
+    border-left: solid 1px black;
+}
+
+.ms-ctn .ms-trigger {
+    background-color: #fff;
+}
+
+
+.ms-ctn .ms-sel-item{
+    background: #cceefb;
+    color: black;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 0px;
+    border: 1px solid #00aeef;
+    margin: 1px 5px 1px 0;
+}
+.ms-ctn .ms-sel-item:hover{
+    border: 1px solid #008bbf;
+}
+.ms-ctn-focus .ms-sel-item:hover{
+    border: 1px solid #008bbf;
+}
+.ms-sel-ctn .ms-sel-text{
+    background: #FFF;
+    color: black;
+    padding-right: 0;
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.ms-res-ctn .ms-res-item {
+    color: black;   
+}
+
+.ms-res-item.ms-res-item-active{
+    background-color:#00aeef;
+}
+
+
+.ms-ctn .ms-trigger .ms-trigger-ico {
+    margin-top: 20px;
+}

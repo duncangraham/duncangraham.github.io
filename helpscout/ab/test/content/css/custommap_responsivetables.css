@@ -1,0 +1,107 @@
+table.table-responsive { 
+  margin: 0 auto !important;
+  border-collapse: collapse !important;
+  text-rendering: optimizeLegibility !important;
+}
+table.table-responsive thead th { }
+table.table-responsive thead th, 
+table.table-responsive tbody td { }
+table.table-responsive tbody td { }
+table.table-responsive tbody tr:not(:last-child) { }
+
+@media (max-width: 480px) {
+
+	.leaflet-popup-content-wrapper, .leaflet-popup-tip-container, .leaflet-popup-close-button
+	{
+		display:none;
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+  table.table-responsive caption { background-image: none; }
+  /*table.table-responsive thead { display: none; }*/
+
+  table.table-responsive tbody td, table.table-responsive thead th { 
+    display: block !important;
+	text-align:left !important;
+  }
+  table.table-responsive tbody tr td:first-child{ 
+	/*color:white;
+	background-color: #00aeef;
+	text-decoration:none;*/
+  }
+
+	table.table-responsive tbody tr td:first-child a{
+	/*color:white;
+	border-color:white;*/
+}
+	table.table-responsive tbody td:before { 
+    content: attr(data-th) !important;
+    display: inline-block !important;
+    width: 7em !important;  
+  }
+	table.table-responsive tbody td:first-child:before { 
+	text-decoration:none !important;
+    content: none !important;
+    width: auto !important;
+  }
+		
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

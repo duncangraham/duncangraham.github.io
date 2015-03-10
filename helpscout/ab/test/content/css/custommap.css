@@ -1,0 +1,881 @@
+main #content {
+    padding-top: 10px;    
+}
+
+
+/* IE9 bug where map z-index goes over the footer */
+.page-footer {
+    z-index: 1001; /* Map is Z-index 2, the leaflet logo is 1000 */
+}
+
+.ms-ctn.form-control.ms-ctn-focus {
+    /*padding: 5px 12px !important; */
+}
+
+div.ms-res-ctn.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    list-style: none;
+    font-size: 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+}
+
+.ms-close-btn{
+    background-position: 0 0 !important;
+}
+
+.leaflet-control-location.leaflet-bar.leaflet-control a {
+    font-size: 18px;
+    text-align: center;
+    line-height: 27px;
+}
+
+.ms-ctn.form-control.ms-no-trigger {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.ms-sel-ctn input {
+    font-size: 18px;
+    padding: 1px !important;
+}
+
+.ms-helper {
+    color: #222 !important;
+    left: 3px !important;
+    top: 0px !important;
+}
+
+#project-search .ms-helper {
+    display: none !important;
+}
+
+.map {
+	height:500px;
+	width:100%;
+	border:solid 1px #dddddd;
+}
+
+.map-detail{
+	height:400px;	
+}
+
+#content img{
+	outline:none !important;
+	outline-offset:0 !important;
+}
+
+/* Fix for Template */
+.nav{
+	
+	margin-bottom:1em;
+	}
+.nav.nav-tabs li {
+	padding-bottom:0;
+    cursor: pointer;
+}
+
+.nav-tabs > li > a{
+	margin-right:0;
+}
+/* End Template fixes */
+
+/* custom styling for tabs */
+.nav.nav-tabs li {
+	padding-top:5px;
+}
+.nav.nav-tabs li.active {
+	padding-top:0;
+	border-top:solid 5px #24a9d1;
+}
+.tab-message
+{
+	margin-bottom:0.3em;
+}
+
+table.table{
+	border:solid 1px #dddddd;	
+}
+
+table.table.table-sortable thead th{
+    position: relative;   
+	color:white;
+	background-color: #00aeef;
+	text-decoration:none;
+	vertical-align:top !important;	
+	text-transform:uppercase;
+	
+	padding:12px;
+	padding-right:18px !important;
+    cursor: pointer;
+}
+
+table.table th.headerSortUp, 
+table.table th.headerSortDown {
+	text-decoration:none;
+}
+
+table.table thead th {
+    /*position: relative;*/
+    /*background-image: none !important;*/
+}
+ 
+table.table thead th::after,
+table.table thead th.headerSortUp::after,
+table.table thead th.headerSortDown::after {
+    position: absolute;
+	top: 6px;
+    right: 6px;
+    display: block;
+    font-family: FontAwesome;
+}
+
+table.table thead th.header::after {
+    content: "\f0dc" !important;
+    color: #fff;
+	font-size: 1em;
+    padding-top: 6px;
+}
+table.table thead th.headerSortDown::after, a.mobile-sort.headerSortDown::after {
+    content: "\f0de" !important;
+}
+table.table thead th.headerSortUp::after, a.mobile-sort.headerSortUp::after {
+    content: "\f0dd" !important;
+}
+
+table.table thead th span{
+	color:white;
+}
+
+table.table thead th, table.table tbody td{
+	padding:8px;
+	font-size:16px;
+    white-space: normal !important;
+    text-overflow: clip !important;
+    overflow: auto !important;
+    max-width:none !important;
+}
+
+table.table-responsive .fa{
+	padding:0;
+}
+
+.mobile-sort-section
+{
+	display:block;
+	color:white;
+	background-color: #00aeef;
+	padding:10px;	
+}
+
+a.mobile-sort::after{
+    font-family: FontAwesome;
+	color:white;
+	content: "\f0dc";
+	padding-left:5px;
+}
+
+#project-search{
+    width:100%; 
+    margin-bottom:20px;
+}
+
+button.view-button{
+	margin-top:8px;
+	background-color:#eee;
+}
+
+.nav-tabs > li.active > a
+{
+	font-weight: bold;	
+}
+
+.item-count
+{
+	font-size:1.2em;
+	color:#00aeef;
+}
+.item-count.sub
+{
+	font-size:1.1em;
+}
+/*make icons go away for projects*/
+#project-map i.fa {
+	color:transparent;
+	font-size:0px;
+}
+
+#project-map img.leaflet-marker-icon {
+	
+}
+
+/* legend */
+.map-legend {
+	margin-top:10px;
+		}
+.map-legend .legend-item{
+	vertical-align:middle;
+	margin-bottom:4px;
+	
+	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	overflow: hidden;
+}
+.map-legend .legend-item-color{
+	width:25px;
+	display:inline-block;
+	border:solid 1px #ddd;
+	margin-right:7px;
+	font-weight: bold !important;
+	background-color:red;
+}
+
+
+
+/* pop up content header*/
+.leaflet-popup-content a h1{
+	margin-top:0;
+}
+
+/* end custom styling */
+
+.offscreen{
+	position:absolute !important;
+	top:-90000px;
+	left:-5000px;
+	display:none;
+}
+
+/* popup styling */
+
+.leaflet-popup-close-button
+{
+	border-bottom: 0px;
+}
+
+.leaflet-popup-content img
+{
+	width: 100% !important;	
+}
+
+.leaflet-marker-icon
+{
+	outline: none !important;	
+}
+
+.map img
+{
+	outline: none !important;
+}
+
+.map-popup-label
+{
+	font-weight: bold !important;
+	padding-right: 5px;
+}
+
+/* end popup styling */
+
+
+/* IMAP Colours */
+/*
+Agriculture and Related #000000
+Biofuels #FF6600
+Chemicals and Petrochemicals #FFCC00
+Commercial / Retail #FFFF00
+Commercial / Retail and Residential  #99FF00
+Forestry and Related  #00FFCC
+Infrastructure #9C9E00
+Institutional #008000
+Manufacturing #99CCFF
+Mining #CC99FF
+Oil and Gas #00CCFF
+Oil Sands #808080
+Other Industrial #FFFFFF
+Pipelines #0066FF
+Power #7900CC
+Residential #0000FF
+Telecommunications #FF43E7
+Tourism / Recreation #FF0000
+*/
+/* End IMAP Colours */
+
+.map-detail-label
+{
+	font-weight: bold !important;
+	padding-right: 10px;
+	width: 200px;	
+}
+
+.map-detail-label2
+{
+	font-weight: bold !important;
+	padding-right: 0px;
+	font-size: 1.12em;
+}
+
+#project-description h2
+{
+	margin-top: 0em;	
+}
+
+.more-info
+{
+	cursor: help;	
+}
+
+.hover-description
+{
+	display: inline-block	
+}
+
+
+.status-ahead-of-schedule
+{
+	color: blue;
+}
+
+.status-on-schedule
+{
+	color: green;
+}
+		
+.status-delayed
+{
+	color: red;
+}
+
+
+.status-under-budget
+{
+	color: blue;
+}
+
+.status-on-budget
+{
+	color: green;
+}
+		
+.status-over-budget
+{
+	color: red;
+}
+
+
+
+.status-on-track
+{
+	color: green;
+}
+
+.status-minor-variations
+{
+	color: orange;
+}
+		
+.status-major-variations
+{
+	color: red;
+}
+
+
+
+[class*="icon-"]
+{
+	padding-right: 0px !important;	
+}
+
+
+.map-marker
+{
+	padding-left: 0em;
+	padding-right: 0em;
+}
+
+.details-button
+{
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  font-size: 1.2em;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: visible;
+}
+
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.tooltip.top {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+
+.tooltip.right {
+  padding: 0 5px;
+  margin-left: 3px;
+}
+
+.tooltip.bottom {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+
+.tooltip.left {
+  padding: 0 5px;
+  margin-left: -3px;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #000000;
+  border-width: 5px 5px 0;
+}
+
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  border-top-color: #000000;
+  border-width: 5px 5px 0;
+}
+
+.tooltip.top-right .tooltip-arrow {
+  right: 5px;
+  bottom: 0;
+  border-top-color: #000000;
+  border-width: 5px 5px 0;
+}
+
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-right-color: #000000;
+  border-width: 5px 5px 5px 0;
+}
+
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-left-color: #000000;
+  border-width: 5px 0 5px 5px;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #000000;
+  border-width: 0 5px 5px;
+}
+
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  border-bottom-color: #000000;
+  border-width: 0 5px 5px;
+}
+
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  border-bottom-color: #000000;
+  border-width: 0 5px 5px;
+}
+
+
+.marker-cluster-small {
+	background-color:  rgba(0, 174, 239, 1) !important;
+	}
+.marker-cluster-small div {
+	background-color: rgba(220, 220, 220, 1)    !important;
+	}
+
+.marker-cluster-medium {
+	background-color:  rgba(0, 174, 239, 1) !important;
+	}
+.marker-cluster-medium div {
+	background-color: rgba(220, 220, 220, 1)    !important;
+	}
+
+.marker-cluster-large {
+	background-color:  rgba(0, 174, 239, 1) !important;
+	}
+.marker-cluster-large div {
+	background-color: rgba(220, 220, 220, 1)    !important;
+	}
+
+/*
+.marker-cluster-small {
+	background-color: rgba(230, 230, 230, 0.6) !important;
+	}
+.marker-cluster-small div {
+	background-color: rgba(215, 215, 215, 0.6)  !important;
+	}
+
+.marker-cluster-medium {
+	background-color: rgba(220, 220, 220, 0.6)   !important;
+	}
+.marker-cluster-medium div {
+	background-color: rgba(153, 153, 153, 0.6)   !important;
+	}
+
+.marker-cluster-large {
+	background-color: rgba(153, 153, 153, 0.6)  !important;
+	}
+.marker-cluster-large div {
+	background-color: rgba(100, 100, 100, 0.6)  !important;
+	}
+*/
+
+
+
+	.modal-body
+	{
+		padding: 0px !important;	
+	}
+
+	#modal-project-details h4
+	{
+		font-size: 1.5em !important;
+	}
+	
+	.map-popup-label
+	{
+		font-size: 0.8em !important;
+		padding-left: 15px !important;
+	}
+
+	.modal-header
+	{
+		border-bottom: 0px;
+	}
+
+	.modal-footer
+	{
+		border-top: 0px;
+		padding-top: 0px;
+
+	}
+
+	#modal-project-details table
+	{
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	#modal-project-details img
+	{
+		display:none;
+	}
+	
+	#modal-project-details .btn
+	{
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+	#modal-project-details .modal-dialog
+	{
+		width: 350px; /* your width */
+	}
+
+    /*
+	.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus
+	{
+		background-color: #00aeef !important;
+	}
+
+	#capital-map-pills a, #project-map-pills a
+	{
+		border: 0px;
+	}
+
+	
+
+	#capital-map-pill > a, #project-map-pill > a
+	{
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 15px;
+	}
+
+	#capital-table-pill > a, #project-table-pill > a
+	{
+		border-top-right-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+    */
+	.side-item
+	{
+		padding-bottom: 10px;
+	}
+
+	#twitter-timeline-div
+	{
+		
+	}
+
+    #project-budget-slider-control.ui-widget-content {
+        background-image: none;
+        background-color: white;        
+    }
+    #project-budget-slider-control .ui-widget-header {
+        background-image: none;
+        background-color: #00aeef;
+    }
+
+    .feature-image
+    {
+	    margin-bottom: 15px !important;
+        text-align: right;
+    }
+
+    .feature-image img
+    {
+	    width: 100%;
+	    margin-bottom: 2px !important;
+    }
+
+
+    .ms-sel-ctn .ms-sel-item .ms-close-btn{
+        background-image: url("images/close.png") !important;
+    }
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    #project-search{
+        width:50%;
+    }
+}
+
+/* medium desktop */
+@media (min-width: 992px) and (max-width: 1199px) {
+	table.table tbody td{
+		padding-left:5px !important;
+		padding-right:5px !important;
+        /*color: orange !important;*/
+	}
+
+	table.table thead th{
+		padding-left:5px !important;
+	}
+    table.table thead th, table.table tbody td {
+        font-size: 15px;
+    }
+    table.table-sortable.table thead th {
+        padding: 6px;
+    }
+
+    #project-search{
+        width:50%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) 
+{
+	table.table tbody td{
+		padding-left:5px !important;
+		padding-right:5px !important;
+/*		color:green !important;*/
+	}
+
+	table.table thead th{
+		padding-left:5px !important;
+	}
+    #project-search {
+        width: 75%;
+        margin-bottom: 8px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) 
+{	
+	table.table tbody td{
+		padding-left:5px !important;
+		padding-right:5px !important;	
+/*		color:red !important;*/
+	}
+
+	table.table thead th.header::after {
+		font-size: 0.8em !important;
+		padding-top: 6px !important;
+	}
+
+	table.table thead th{
+	    padding-right:16px !important;
+	}
+
+	table.table thead th{
+		padding-left:5px !important;
+	}
+
+	button.view-button i.fa{
+		font-size:1.5em;
+	}
+			
+	.map-legend .legend-item{
+		margin-bottom:8px;
+	}
+
+	.popup-image
+	{
+		display:none;
+	}
+
+    #project-search{
+        width:100%;
+    }
+
+    #project-map-filter {
+        margin-left: 15px;
+        padding-right: 35px;
+    }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
+	.leaflet-popup-content-wrapper td
+	{
+		line-height: 1em !important;
+	}
+
+	.leaflet-popup-content-wrapper h1,.leaflet-popup-content-wrapper.h1
+	{
+		font-size: 1.25em !important;
+	}
+		
+	button.view-button i.fa{
+		font-size:2em;
+	}
+			
+	.map-legend .legend-item{
+		margin-bottom:15px;
+	}
+
+    #project-search{
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

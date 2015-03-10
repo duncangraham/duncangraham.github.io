@@ -1,0 +1,21 @@
+	/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small {
+    background-color: rgb(0, 174, 239);
+	}
+.leaflet-oldie .marker-cluster-small div {
+	background-color: rgb(220, 220, 220);
+	}
+
+.leaflet-oldie .marker-cluster-medium {
+	background-color: rgb(0, 174, 239);
+	}
+.leaflet-oldie .marker-cluster-medium div {
+	background-color: rgb(220, 220, 220);
+	}
+
+.leaflet-oldie .marker-cluster-large {
+	background-color: rgb(0, 174, 239);
+	}
+.leaflet-oldie .marker-cluster-large div {
+	background-color: rgb(220, 220, 220);
+}
