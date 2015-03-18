@@ -4,28 +4,145 @@
         <meta charset=utf-8 />
         <title>A simple map</title>
         <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
-        <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.4.0/turf.min.js'></script>
-        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
         <style>
-              body { margin:0; padding:0; }
-                #map { position:absolute; top:0; bottom:0; width:100%; }
+          body { margin:0; padding:0; }
+          #map { position:absolute; top:0; bottom:0px; width:100%; }
+          #steps { position:absolute; bottom:0px; width:100%; height: 40px; background:#000; }
+          #steps a {
+                color:#fff;
+                display:inline-block;
+                text-align:center;
+                box-sizing:border-box;
+                max-width:10000px !important;
+            }
+          path {
+              transition: fill .4s ease;
+              -webkit-transition: fill .4s ease;
+           }
         </style>
     </head>
     <body>
         <div id='map'></div>
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js'></script>
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+        <script src='turf.js'></script>
         <script>
+            //Set up the map
             L.mapbox.accessToken = 'pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ';
-            var map = L.mapbox.map('map', 'duncangraham.310da81f')
+            var map = L.mapbox.map('map',null)
                 .setView([37.76718664006672, -122.44245529174803], 13);
+            var layerGroup = L.layerGroup().addTo(map);
 
-            var bbox = [-122.518,37.721,-122.379,37.812];
-            var points = turf.random('points', 100, {bbox: bbox});
-            console.log(points);
+            //multiple styles
+            var layers = {
+              Dark: L.mapbox.tileLayer('examples.map-y7l23tes'),
+              Teleport: L.mapbox.tileLayer('duncangraham.310da81f'),
+            };
+            layers.Dark.addTo(map);
+            L.control.layers(layers).addTo(map);
 
-            var poly = turf.bboxPolygon(bbox);
-            var polyLayer =  L.mapbox.featureLayer().setGeoJSON(poly).addTo(map);
-            var pointLayer = L.mapbox.featureLayer().setGeoJSON(points).addTo(map);
+            var cafes = {}
+            cafes.type = "FeatureCollection"
+            cafes.features = []
+
+            //get summa dat sweet 4^2 data
+
+               var bbox = [,,,];
+            $.get('https://api.foursquare.com/v2/venues/search?limit=50&ll=37.76555823017286,-122.43850708007811&sw=37.721,-122.518&ne=37.812,-122.379&categoryId=4bf58dd8d48988d16d941735,4bf58dd8d48988d1e0931735&client_id=A5MOEBNINCSXIWN1TYHBPVBJOO1KSGLMJQ3EYVYNB2RNM4RX&client_secret=H2X22VQTNYSAEEZ4I3V3HGYA04QM0OBZNRQSGGVWROAQT3US&v=20150315&m=foursquare', function(data){
+                    var venues = data.response.venues
+                    for (cafe in venues) {
+                        var lat = venues[cafe].location.lat;
+                        var lon = venues[cafe].location.lng;
+                        var cafe = turf.point([lon,lat]);
+                        cafes.features.push(cafe)
+                    }
+
+            //MOAR DATA 
+            $.get('https://api.foursquare.com/v2/venues/search?limit=50&ll=37.77207165460911,-122.4755859375&sw=37.721,-122.518&ne=37.812,-122.379&categoryId=4bf58dd8d48988d174941735,4bf58dd8d48988d16a941735&client_id=A5MOEBNINCSXIWN1TYHBPVBJOO1KSGLMJQ3EYVYNB2RNM4RX&client_secret=H2X22VQTNYSAEEZ4I3V3HGYA04QM0OBZNRQSGGVWROAQT3US&v=20150315&m=foursquare', function(data){
+                    var venues = data.response.venues
+                    for (cafe in venues) {
+                        var lat = venues[cafe].location.lat;
+                        var lon = venues[cafe].location.lng;
+                        var cafe = turf.point([lon,lat]);
+                        cafes.features.push(cafe)
+                    }
+
+                    L.geoJson(cafes, {
+                        pointToLayer: function(feature, latlng) {
+                        return L.circleMarker(latlng, {
+                        radius: 4,
+                        fillColor:'#fff',
+                        fillOpacity:1,
+                        stroke: false
+                        });
+                    }
+                    }).addTo(layerGroup);
+                    console.log(cafes);
+
+                    makeGrid(cafes);
+            })
+
+})
+
+
+           //Build grid
+            function makeGrid(cafes) {
+               var bbox = [-122.518,37.721,-122.379,37.812];
+               var cellWidth = 1;
+               var units = 'miles';
+               var grid = turf.triangleGrid(bbox, cellWidth, units)
+               var grid = turf.count(grid, cafes, 'pt_count');
+               
+               //working here
+               /*
+               var hex = L.geoJson(grid)
+                    .eachLayer(function(l) {
+                            l.setStyle(l.feature.properties);
+                    })
+               .addTo(layerGroup);
+                */
+
+               //loop over every cell & style each
+               grid.features.forEach(function(cell) {
+                    var pt_count = cell.properties.pt_count;
+            
+                   //Grid cell styling
+                   var _withCount = cell._withCount = {};
+                   _withCount.color = '#00ffff';
+                   _withCount.weight = 0;
+                   _withCount.fill = '#00FFFF';
+                   _withCount.fillOpacity = 0;        
+
+                    //determine if any points are in cell, then determine opacity based on count
+                    if(pt_count >= 1) {
+                        _withCount.fillOpacity = 0.1;
+                    } if(pt_count >= 3) {
+                        _withCount.fillOpacity = 0.2;
+                        _withCount.weight = 1;
+                    } if(pt_count >= 5) {
+                        _withCount.weight = 2;
+                        _withCount.fillOpacity = 0.35;
+                    } if(pt_count >= 10) {
+                        _withCount.weight = 3;
+                        _withCount.fillOpacity = 0.55;
+                    }
+
+                    //why nohex???
+                    cell.properties = cell._withCount;
+                })//end forEach
+
+               console.log(grid)
+               //Not working here
+               var hex = L.geoJson(grid)
+                    .eachLayer(function(l) {
+                            l.setStyle(l.feature.properties);
+                    })
+               .addTo(layerGroup);
+
+
+            }
+
         </script>
     </body>
 </html>

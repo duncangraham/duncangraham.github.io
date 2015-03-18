@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>A simple map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <style>
+              body { margin:0; padding:0; }
+                #map { position:absolute; top:0; bottom:0; width:100%; }
+        </style>
+    </head>
+    <body>
+        <div id='map'></div>
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js'></script>
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+        <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.4.0/turf.min.js'></script>
+        <script>
+            L.mapbox.accessToken = 'pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ';
+            var map = L.mapbox.map('map', 'duncangraham.310da81f')
+                .setView([37.76718664006672, -122.44245529174803], 13);
+
+
+            $.get('https://api.foursquare.com/v2/venues/search?ll=37.76555823017286,-122.43850708007811&categoryId=4bf58dd8d48988d16d941735&client_id=A5MOEBNINCSXIWN1TYHBPVBJOO1KSGLMJQ3EYVYNB2RNM4RX&client_secret=H2X22VQTNYSAEEZ4I3V3HGYA04QM0OBZNRQSGGVWROAQT3US&v=YYYYMMDD', function(data){
+                console.log(data);
+            })
+        </script>
+    </body>
+</html>
