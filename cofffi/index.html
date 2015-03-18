@@ -89,7 +89,7 @@
            //Build grid
             function makeGrid(cafes) {
                var bbox = [-122.518,37.721,-122.379,37.812];
-               var cellWidth = 1;
+               var cellWidth = .9;
                var units = 'miles';
                var grid = turf.triangleGrid(bbox, cellWidth, units)
                var grid = turf.count(grid, cafes, 'pt_count');
@@ -117,14 +117,15 @@
                     //determine if any points are in cell, then determine opacity based on count
                     if(pt_count >= 1) {
                         _withCount.fillOpacity = 0.1;
+                        _withCount.weight = .25;
                     } if(pt_count >= 3) {
                         _withCount.fillOpacity = 0.2;
-                        _withCount.weight = 1;
+                        _withCount.weight = .5;
                     } if(pt_count >= 5) {
-                        _withCount.weight = 2;
+                        _withCount.weight = 1;
                         _withCount.fillOpacity = 0.35;
                     } if(pt_count >= 10) {
-                        _withCount.weight = 3;
+                        _withCount.weight = 2;
                         _withCount.fillOpacity = 0.55;
                     }
 
