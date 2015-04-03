@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Slideshow gallery in a marker tooltip</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<style>
+.popup {
+text-align:center;
+}
+.popup .slideshow .image { display:none; }
+.popup .slideshow .image.active { display:block; }
+.popup .slideshow img {
+width:100%;
+}
+.popup .slideshow .caption {
+background:#eee;
+padding:10px;
+}
+.popup .cycle {
+padding:10px 0 20px;
+}
+.popup .cycle a.prev { float:left; }
+.popup .cycle a.next { float:right; }
+</style>
+
+<div id='map'></div>
+
+<!-- jQuery is required for this example. -->
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoib21uaXVzbm93IiwiYSI6ImFlZ0pNSXMifQ.VNyOy9GaRZ1cAS2nDTp3tw';
+var map = L.mapbox.map('map', 'omniusnow.lcfl92fp');
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
+
+var geoJson = [{
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-80.190583, 25.767619]},
+"properties": {
+'title': 'BRICKELL WORLD PLAZA',
+'marker-color': '#ff8888',
+'marker-symbol': 'commercial',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/Y7O0ugQ.jpg','<p><b>Location: Miami, Florida</b></p>More than just another development. Brickell World Plaza is a benchmark for Miami\'s future.'],
+['http://i.imgur.com/wCyKfJs.jpg','Text Goes Here.'],
+['http://i.imgur.com/kvSRm4L.jpg','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-82.356899, 29.633012]},
+"properties": {
+'title': 'THE BARTRAM',
+'marker-color': '#ff8888',
+'marker-symbol': 'city',
+'marker-size': 'large',
+'images': [
+['http://i.imgur.com/P6qbN8I.jpg','The Bartram is an environmentally friendly, Class A luxury, resort-style apartment complex, located at 2337 SW Archer Road in Gainesville Florida. Visit <a href="http://thebartram.com/"> The Bartram</a>.'],
+['http://i.imgur.com/tcroFTJ.jpg','Text Goes Here.'],
+['http://i.imgur.com/yDLxcqI.jpg','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-84.650528, 34.610110]},
+"properties": {
+'title': 'CARTER\'S LAKE',
+'marker-color': '#ff8888',
+'marker-symbol': 'land-use',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-81.052371, 32.043918]},
+"properties": {
+'title': 'LAUREL VIEW',
+'marker-color': '#ff8888',
+'marker-symbol': 'land-use',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-81.247057, 32.115481]},
+"properties": {
+'title': 'Pooler, Ga',
+'marker-color': '#ff8888',
+'marker-symbol': 'land-use',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-81.146635, 32.788518]},
+"properties": {
+'title': 'ESTILL FARM',
+'marker-color': '#ff8888',
+'marker-symbol': 'farm',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-81.610061, 32.750461]},
+"properties": {
+'title': '301 FARM',
+'marker-color': '#ff8888',
+'marker-symbol': 'farm',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-85.118540, 30.927965]},
+"properties": {
+'title': 'SPORTING RETREAT / BASCOM',
+'marker-color': '#ff8888',
+'marker-symbol': 'land-use',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-105.071058, 39.033353]},
+"properties": {
+'title': 'TRIPLE J RANCH',
+'marker-color': '#ff8888',
+'marker-symbol': 'land-use',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}, {
+type: 'Feature',
+"geometry": { "type": "Point", "coordinates": [-84.490652, 34.508737]},
+"properties": {
+'title': 'TALKING ROCK CREEK',
+'marker-color': '#ff8888',
+'marker-symbol': 'land-use',
+'marker-size': 'large',
+
+// Store the image url and caption in an array.
+'images': [
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.'],
+['http://i.imgur.com/ClKkGwJ.png','Text Goes Here.']
+]
+}
+}];
+
+// Add custom popup html to each marker.
+myLayer.on('layeradd', function(e) {
+var marker = e.layer;
+var feature = marker.feature;
+var images = feature.properties.images
+var slideshowContent = '';
+
+for(var i = 0; i < images.length; i++) {
+var img = images;
+
+slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') + '">' +
+'<img src="' + img[0] + '" />' +
+'<div class="caption">' + img[1] + '</div>' +
+'</div>';
+}
+
+// Create custom popup content
+var popupContent = '<div id="' + feature.properties.id + '" class="popup">' +
+'<h2>' + feature.properties.title + '</h2>' +
+'<div class="slideshow">' +
+slideshowContent +
+'</div>' +
+'<div class="cycle">' +
+'<a href="#" class="prev">« Previous</a>' +
+'<a href="#" class="next">Next »</a>' +
+'</div>'
+'</div>';
+
+// http://leafletjs.com/reference.html#popup
+marker.bindPopup(popupContent,{
+closeButton: false,
+minWidth: 320
+});
+});
+
+// Add features to the map
+myLayer.setGeoJSON(geoJson);
+
+$('#map').on('click', '.popup .cycle a', function() {
+var $slideshow = $('.slideshow'),
+$newSlide;
+
+if ($(this).hasClass('prev')) {
+$newSlide = $slideshow.find('.active').prev();
+if ($newSlide.index() < 0) {
+$newSlide = $('.image').last();
+}
+} else {
+$newSlide = $slideshow.find('.active').next();
+if ($newSlide.index() < 0) {
+$newSlide = $('.image').first();
+}
+}
+
+$slideshow.find('.active').removeClass('active').hide();
+$newSlide.addClass('active').show();
+return false;
+});
+
+map.setView([39.283, -94.482], 5);
+</script>
+</body>
+</html>

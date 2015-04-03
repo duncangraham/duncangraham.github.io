@@ -70,6 +70,8 @@ article {
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
+  article p {
+    font-family: "freight-text-pro", Palantino, Georgia, serif; }
 
 nav {
   margin: 2em auto;
@@ -94,7 +96,7 @@ p {
   font-size: 1em;
   /* 16 */
   line-height: 1.5em;
-  font-family: "freight-text-pro", Palantino, Georgia, serif;
+  font-family: "effra", Helvetica, Arial, sans-serif;
   margin: 0 auto 1.5em; }
   @media screen and (max-width: 767px) {
     p {
@@ -398,6 +400,12 @@ nav .home {
 .space-top3 {
   margin-top: 3em; }
 
+.space-top4 {
+  margin-top: 4em; }
+
+.space-top8 {
+  margin-top: 8em; }
+
 @media all and (max-width: 700px) {
   .col2, .col3i, .col4, .col5, .col6, .col7 {
     width: 100%;
@@ -427,16 +435,18 @@ nav .home {
   color: #FFF;
   background-color: #364147; }
 
-.illustration h1 {
-  font-family: 'freight-display-pro';
-  width: 100%;
-  text-align: center;
-  position: absolute; }
-.illustration .container {
-  overflow: initial;
-  position: relative; }
-.illustration .option {
-  position: absolute; }
+.illustration {
+  position: fixed; }
+  .illustration h1 {
+    font-family: 'freight-display-pro';
+    width: 100%;
+    text-align: center;
+    position: absolute; }
+  .illustration .container {
+    overflow: initial;
+    position: relative; }
+  .illustration .option {
+    position: absolute; }
 
 .head {
   width: 100%; }

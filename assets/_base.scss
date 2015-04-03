@@ -85,6 +85,9 @@ article {
         transition: all 0.2s ease-in-out;
     }
 
+    p {
+        font-family: $font-serif;
+    }
 
 }
 
@@ -121,7 +124,7 @@ p {
     line-height: 1.5em;
 
     //should this stuff go here or in theme or layout?
-    font-family: $font-serif;
+    font-family: $font-sans-serif;
     margin: 0 auto 1.5em;
 
     @media screen and (max-width: $mobile) {
