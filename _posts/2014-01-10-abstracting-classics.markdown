@@ -70,13 +70,13 @@ A week ago I saw <a href="http://work.heinley.com/pixels#asset-656032">"Nightpix
 
 window.onload = function() {
 
-
-var setupCanvas = function (canvasName, rasterName) {
+  var setupCanvas = function (canvasName, rasterName) {
 	var myPaper = new paper.PaperScope();
 	var canvas = document.getElementById(canvasName);
 	// Create an empty project and a view for the canvas:
 	paper.setup(canvas);
 	paper.project.activeLayer.removeChildren();
+
 
 	var size = 2,
 		rastRatio,
@@ -101,20 +101,23 @@ var setupCanvas = function (canvasName, rasterName) {
 			// 40 pixels wide and 30 pixels high:
 
 			//the max width is always 671
-
+      //fix this some other time
+      canvas.canvasHeight = window.getComputedStyle(canvas, null).getPropertyValue('height');
+      canvas.canvasWidth = window.getComputedStyle(canvas, null).getPropertyValue('width');
+      console.log(canvas.canvasHeight)
 
 			if ( raster.height > raster.width ) {
 				rastRatio = raster.width/raster.height;
 				orientation = 'portrait';
 				h = size,
 				w = h*rastRatio,
-				gridSize = (canvas.height)/h;
+				gridSize = (canvas.canvasHeight)/h;
 			} else {
 			    rastRatio = raster.height/raster.width;
 			    orientation = 'landscape';
 			   	w = size,
 				h = w*rastRatio,
-				gridSize = (canvas.width)/w;
+				gridSize = (canvas.canvasWidth)/w;
 			}
 
 			if ( gridSize <= 5 ) {
@@ -199,4 +202,8 @@ $('canvas').hover(function(){
 
 
 }; // end window.onload
+
+function isHighDensity(){
+    return ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches)) || (window.devicePixelRatio && window.devicePixelRatio > 1.3));
+    }
 </script>
