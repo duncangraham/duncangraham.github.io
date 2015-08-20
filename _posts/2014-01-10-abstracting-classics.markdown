@@ -77,7 +77,6 @@ window.onload = function() {
 	paper.setup(canvas);
 	paper.project.activeLayer.removeChildren();
 
-
 	var size = 2,
 		rastRatio,
 		paths = [];
@@ -104,20 +103,19 @@ window.onload = function() {
       //fix this some other time
       canvas.canvasHeight = window.getComputedStyle(canvas, null).getPropertyValue('height');
       canvas.canvasWidth = window.getComputedStyle(canvas, null).getPropertyValue('width');
-      console.log(canvas.canvasHeight)
 
 			if ( raster.height > raster.width ) {
 				rastRatio = raster.width/raster.height;
 				orientation = 'portrait';
 				h = size,
 				w = h*rastRatio,
-				gridSize = (canvas.canvasHeight)/h;
+				gridSize = (600)/h;
 			} else {
 			    rastRatio = raster.height/raster.width;
 			    orientation = 'landscape';
 			   	w = size,
 				h = w*rastRatio,
-				gridSize = (canvas.canvasWidth)/w;
+				gridSize = (671)/w;
 			}
 
 			if ( gridSize <= 5 ) {
