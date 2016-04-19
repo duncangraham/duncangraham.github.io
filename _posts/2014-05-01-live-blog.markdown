@@ -42,6 +42,8 @@ I also examined other states for the comment thread, such as after live events h
 
 </p><img class="m-img-large"  src="/img/live-blog-closed.png"  />
 
-Not to overwhelm you, but I also worked on the mobile views too!
+I also worked on the mobile views too!
+
+</article>
 
 </p><img class="m-full"  src="/img/live-blog-mobile.png"  />

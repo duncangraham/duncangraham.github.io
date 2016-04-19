@@ -9,7 +9,7 @@ body {
   font-size: 100%;
   line-height: 1.61803;
   background: #FAFAFA;
-  color: #222222; }
+  color: #222; }
 
 header {
   font-family: "effra", Helvetica, Arial, sans-serif;
@@ -20,7 +20,7 @@ ul {
 
 a {
   padding-bottom: 2px;
-  border-bottom: 1px solid #ce904e;
+  border-bottom: 1px solid #CE904E;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -32,7 +32,7 @@ a {
 a:hover {
   padding-bottom: 0px;
   border-bottom-color: transparent;
-  color: #ce904e; }
+  color: #CE904E; }
 
 a:visted {
   color: inherit; }
@@ -49,13 +49,13 @@ article {
     margin: 3em auto 4em; }
     article .info .date {
       font-family: 'inconsolata';
-      color: #b8b8b8;
+      color: #B8B8B8;
       font-style: italic;
       margin: .75em 0em 2.5em; }
     article .info hr {
       width: 3.5em;
       height: .5em;
-      background-color: #35aff2;
+      background-color: #35AFF2;
       margin: 0;
       border: 0; }
   article h1 {
@@ -80,7 +80,7 @@ nav {
   height: 3em; }
   nav li {
     position: fixed;
-    color: #b8b8b8;
+    color: #B8B8B8;
     margin: 0em; }
   nav li a {
     border-bottom: none; }
@@ -90,7 +90,7 @@ nav {
     left: .6667em; }
   nav li a:hover {
     color: #364147;
-    text-shadow: 0px 0px 2px #e6e8ec; }
+    text-shadow: 0px 0px 2px #E6E8EC; }
 
 p {
   font-size: 1em;
@@ -106,7 +106,7 @@ h1 {
   text-align: center;
   font-size: 1.5em;
   /* 48 */
-  color: #e6e8ec;
+  color: #E6E8EC;
   line-height: 1em;
   /* 48 */
   font-family: "acta-display";
@@ -162,11 +162,11 @@ ul, ol {
   margin: 0 auto 1.5em; }
 
 footer {
-  background-color: #e6e8ec;
+  background-color: #E6E8EC;
   width: 100%;
   overflow: auto; }
   footer a {
-    color: #ce904e;
+    color: #CE904E;
     border: 0px solid transparent; }
   footer p {
     width: 100%;
@@ -177,7 +177,7 @@ footer {
     font-family: "inconsolata"; }
 
 hr {
-  color: #666666;
+  color: #666;
   margin: 4em auto; }
 
 #post nav li {
@@ -487,16 +487,13 @@ Details: http://www.positioniseverything.net/easyclearing.html
 @-moz-keyframes spin {
   100% {
     -moz-transform: rotate(360deg); } }
-
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg); } }
-
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-
 .gear.large {
   left: 15em;
   top: 2.5em;
@@ -523,16 +520,13 @@ Details: http://www.positioniseverything.net/easyclearing.html
 @-moz-keyframes reverse {
   100% {
     -moz-transform: rotate(360deg); } }
-
 @-webkit-keyframes reverse {
   100% {
     -webkit-transform: rotate(360deg); } }
-
 @keyframes reverse {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-
 .bubble {
   display: none;
   top: .8em;
@@ -586,7 +580,7 @@ footer #mc_embed_signup form {
       width: 80%; } }
 
 #mc_embed_signup #mc-embedded-subscribe-form input.button:hover {
-  background-color: #ce904e; }
+  background-color: #CE904E; }
 
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
 #mc_embed_signup form {
@@ -721,13 +715,13 @@ footer #mc_embed_signup form {
   font-family: "effra", Helvetica, Arial, sans-serif;
   margin: 0em 0em 0.5em; }
 .blog li {
-  color: #666666; }
+  color: #666; }
   .blog li a {
     border-width: 0px;
     line-height: 1.75em;
     transition: none; }
   .blog li a:hover {
-    color: #ce904e; }
+    color: #CE904E; }
 
 .work article {
   margin-top: 4em; }
@@ -739,15 +733,23 @@ footer #mc_embed_signup form {
   height: .5em;
   line-height: .6em;
   padding: .2em .5em .2em .15em;
-  color: #666666; }
+  color: #666; }
   .work nav ul .back a i {
     font-size: 0.7em;
     position: relative; }
 .work nav ul .back a:hover {
-  color: #ce904e; }
+  color: #CE904E; }
 
 img.m-img-large {
-  width: 70%; }
+  width: 120%;
+  margin-left: -10%; }
+
+img.m-full {
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  left: 0;
+  top: 0; }
 
 .svg-container {
   width: 22.5em;
@@ -814,71 +816,50 @@ img#svg-tablet {
 @-webkit-keyframes newsItem {
   0%,100%,35% {
     -webkit-transform: translate3d(100%, 0, 0); }
-
   40%,86% {
     -webkit-transform: translate3d(0%, 0, 0); } }
-
 @-webkit-keyframes min10 {
   0%,100%,28% {
     opacity: 0; }
-
   32%,45% {
     opacity: 1; } }
-
 @-webkit-keyframes min5 {
   0%,100%,23% {
     opacity: 0; }
-
   28%,42% {
     opacity: 1; } }
-
 @-webkit-keyframes slider {
   0%,100%,15% {
     -webkit-transform: translate3d(0%, 0, 0); }
-
   20%,23% {
     -webkit-transform: translate3d(23%, 0, 0); }
-
   28% {
     -webkit-transform: translate3d(47%, 0, 0); }
-
   32%,40%,60% {
     -webkit-transform: translate3d(70%, 0, 0); }
-
   70% {
     -webkit-transform: translate3d(0%, 0, 0); } }
-
 @-webkit-keyframes finger {
   0%,100% {
     -webkit-transform: translate3d(50%, 0, 0) scale(1.1); }
-
   12% {
     -webkit-transform: translate3d(20%, -100%, 0) scale(1.1); }
-
   15% {
     -webkit-transform: translate3d(20%, -100%, 0) scale(0.98); }
-
   20%,23% {
     -webkit-transform: translate3d(41%, -100%, 0) scale(0.98); }
-
   28% {
     -webkit-transform: translate3d(62%, -100%, 0) scale(0.98); }
-
   32% {
     -webkit-transform: translate3d(83%, -100%, 0) scale(0.98); }
-
   40%,80% {
     -webkit-transform: translate3d(50%, 0, 0) scale(1.1); }
-
   85% {
     -webkit-transform: translate3d(5%, -30%, 0) scale(1.1); }
-
   86% {
     -webkit-transform: translate3d(1%, -35%, 0) scale(0.9); }
-
   87% {
     -webkit-transform: translate3d(5%, -30%, 0) scale(1.1); } }
-
 .work img#svg-finger {
   -webkit-animation: finger 16s infinite;
   -moz-animation: finger 16s infinite;
@@ -888,9 +869,6 @@ img#svg-tablet {
   position: absolute;
   top: 75%;
   width: 22em; }
-
-img.m-full {
-  width: 100%; }
 
 .btn {
   padding: 1em 0em;
@@ -904,7 +882,7 @@ img.m-full {
 
 .m-view-all {
   font-family: 'inconsolata';
-  color: #35aff2;
+  color: #35AFF2;
   border-bottom: none;
   font-size: .8em; }
 
@@ -922,7 +900,7 @@ h1.about {
   text-align: left; }
 
 .s-dark {
-  color: #e6e8ec;
+  color: #E6E8EC;
   background: #364147; }
 
 .s-headphones {
@@ -936,7 +914,7 @@ h1.about {
   line-height: 1.71em; }
 
 article h1:hover {
-  color: #222222; }
+  color: #222; }
 
 .bold {
   font-weight: bold; }
@@ -949,7 +927,7 @@ article h1:hover {
 
 .twitter-share-button .icon-twitter {
   font-size: 2em;
-  color: #35aff2; }
+  color: #35AFF2; }
 
 .playground {
   -webkit-animation-duration: 3s;
@@ -976,3 +954,5 @@ nav #blog {
   .t-about a {
     border-bottom: 0;
     font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */
