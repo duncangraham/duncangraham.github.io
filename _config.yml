@@ -1,6 +1,6 @@
 name: dvncan <3s you
 markdown: redcarpet
-pygments: true
+highlighter: true
 paginate: 5
 exclude:
 - README.md
