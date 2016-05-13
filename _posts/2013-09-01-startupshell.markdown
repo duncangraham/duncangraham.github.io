@@ -10,7 +10,7 @@ At the end of my time at the University of Maryland  I helped create the Startup
 
 I began branding work with the original name in mind-- eT Labs (short for enTerprenuerial). After <a href="https://docs.google.com/presentation/d/1RmTh6geSDsVRQNGmihfyA3RpGnV-qjA_qYKOl7Wj2aw/edit?usp=sharing">a few iterations</a> we ran into legal red tape with the name, so we went back to the drawing board. After dozens of proposals, I pitched "Startup Shell", along with some early branding work.
 
-<iframe src="https://docs.google.com/presentation/d/1tzd0jjs1phKtQhE5_uO94_GbJbFV6T5ytoLuoJj13Xg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"style="margin: 3em auto; display: block "></iframe>
+<iframe src="https://docs.google.com/presentation/d/1tzd0jjs1phKtQhE5_uO94_GbJbFV6T5ytoLuoJj13Xg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="allowfullscreen" style="margin: 3em auto; display: block"></iframe>
 
 After a vote, the other founding members chose to go forward with StartupShell, and I began polishing the logo.
 
