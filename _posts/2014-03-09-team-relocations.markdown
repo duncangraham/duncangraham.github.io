@@ -21,7 +21,7 @@ body article .info {
 
 #relocations {
   position: relative;
-  margin-top: -3em;
+  margin-left: -16em;
 }
 
 #relocations svg {
@@ -269,7 +269,6 @@ rect {
 .nameChangeList li:nth-child(odd) { clear: left; }
 
 </style>
-</article>
 <ul class="filters">
   <li class="font-dark sort-opt">
     <h3 id="year" class="font-large">1900</h3>
