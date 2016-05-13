@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+  </head>
+  <body>
+
+    <style>
+      #menu {
+        position: absolute;
+        padding: 1em;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+        cursor: pointer;
+      }
+
+      #menu.day div {
+        background: rgba(0,0,0,.25);
+        color: #000;
+        border-color: #000;
+      }
+
+      #menu div {
+        color: #FFF;
+        border: 1px solid #FFF;
+        border-right-width: 0;
+        background: rgba(255,255,255,.4);
+        padding: .5em;
+        text-align: center;
+        width: 4em;
+        float: left;
+        opacity: .5;
+      }
+
+      #menu div:hover {
+        opacity: 1;
+      }
+
+      #menu div:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+
+      #menu div:last-child {
+        border-right-width: 1px;
+        border-radius:  0 5px 5px 0;
+      }
+    </style>
+
+    <div id='map'></div>
+
+    <div id='menu'>
+      <div class='tilt'>Tilt</div>
+      <div class='day'>Day</div>
+      <div class='night'>Night</div>
+    </div>
+    <script src='
+      https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js'></script>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/duncangraham/cio5gng9n000dafm5cve9w8c1',
+        zoom: 11,
+        center: [-122.455337, 37.762453]
+      });
+
+      $('.tilt').on('click', function() {
+        if ( map.getBearing() > 0 ) {
+          map.easeTo({bearing: 0, duration: 3000, pitch: 0, zoom: 14})
+        } else {
+          map.easeTo({bearing: 180, duration: 3000, pitch: 60, zoom: 14})
+        }
+      })
+
+      $('.night').on('click', function() {
+        map.setStyle('mapbox://styles/duncangraham/cio5gng9n000dafm5cve9w8c1')
+        $('#menu').removeClass('day')
+      })
+
+      $('.day').on('click', function() {
+        map.setStyle('mapbox://styles/duncangraham/cinz2n3qk0005ahnnuzwztpvt')
+        $('#menu').addClass('day')
+      })
+    </script>
+
+  </body>
+</html>
+
