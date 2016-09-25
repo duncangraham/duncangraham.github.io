@@ -3,94 +3,12 @@ layout: default
 title: The Digital Playground of Duncan Graham
 ---
 
-<div class="col12 margin1 space-top6">
-    <h3>Hey, Welcome. 
-    <br/>I'm Duncan Graham and this is my website.</h3>
+<div class="col12 margin1 space-top3">
+    <h3>
+        Duncan Graham is a <a href='https://dribbble.com/duncangraham'>designer</a> and <a href='https://github.com/duncangraham'>developer</a> living in SF. He operates the <a href='https://www.google.com/search?q=treat+street+clubhouse&rlz=1C5CHFA_enUS698US698&oq=treat+street+clubhouse&aqs=chrome..69i57.5339j0j1&sourceid=chrome&ie=UTF-8'>Treat Street Clubhouse</a>, a hostel that hosts artists and adventurers from around the world.
+    </h3>
 
-    <p>
-    I design & build things with <a href='http://hivemind.works/'>Hive Mind</a>
-    <br/>We helped redesign <a href='https://www.shopspring.com/'>Spring's</a> website.
-    <br/>Now we're completely focused on <a href='https://rideargo.com/'>Argo Bus</a>: Mass Transit for the Future
-    <br/>I run <a href='https://www.google.com/#q=treat+street+clubhouse'>a hostel for artists and adventurers</a>
-    <br/>I make <a href='https://soundcloud.com/olly_olly_oxenfree'>music with some awesome friends</a> 
+    <p class='space-top3'>
+        His sidekick is a three legged wonder pooch named <a href='https://www.instagram.com/explore/tags/rouxforyou/'>Roux</a> 
     </p>
-
-    <div class='space-top6'>
-    <h3>Office Hours</h3>
-    <p>
-        I hold office hours every Monday morning (PST). If you'd like advice on design/development/business strategy, <a href='mailto:hello@dvncan.com'>shoot me an email with a time and what you'd like to chat about</a>
-    </p>
-    </div>
-</div>
-
-<div class="clearfix space-top6">
-<div class="col5 margin1">
-
-<h3>Writing</h3>
-<ul id="blog" class="head-anim">
-    {% for post in site.tags.writing limit:5 %}
-    <li>
-        <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
-            <span> {{ post.title }}</span>
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-<a class="m-view-all" href="/writing.html">View More</a>
-
-<h3>Experiments</h3>
-<ul>
-    {% for post in site.tags.experiment limit:5 %}
-    <li>
-        <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
-            <span> {{ post.title }}</span>
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-<a class="m-view-all" href="/experiments.html">View More</a>
-</div>
-
-
-<div class="col5 margin1">
-<h3>Projects</h3>
-<ul>
-    {% for post in site.tags.work limit:5 %}
-    <li>
-        <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
-            <span> {{ post.title }}</span>
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-<a class="m-view-all" href="/projects.html">View More</a>
-
-<h3 class="misc">Miscellanies</h3>
-<ul>
-    <li>
-        <a class="entry" href="/visuals.html">
-            <span>Visuals</span>
-        </a>
-    </li>
-    <li>
-        <a class="entry" href="/canon.html">
-            <span>My Canon</span>
-        </a>
-    </li>
-    <li>
-        <a class="entry" href="/ideas.html">
-            <span>Ideas on the Backburner</span>
-        </a>
-    </li>
-    <li>
-        <a class="entry" href="/books.html">
-            <span>Books Read</span>
-        </a>
-    </li>
-</ul>
-</div>
-</div>
-<div class='col12 margin1 space6'>
-    <h3>Not enough?</h3> 
-    <p>Follow me on <a href='https://twitter.com/duncangraham'>Twitter</a> and <a href='http://quotidiens.dvncan.com/'>Tumblr</a></p>
 </div>

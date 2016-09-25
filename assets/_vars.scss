@@ -1,6 +1,18 @@
-$font-sans-serif:  'effra', Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: 'Mono';
+    src: url('/font/GT-Pressura-Mono-Light.otf')
+}
+
+@font-face {
+font-family: 'Apercu';
+src: url('/font/apercu_regular_pro.otf')
+
+}
+
+$sans-serif:  'Mono', Helvetica, Arial, sans-serif;
+$font-sans-serif:  'FF DIN OT', Helvetica, Arial, sans-serif;
 $font-serif: 'freight-text-pro', Palantino, Georgia, serif;
-$font-accent: 'inconsolata';
+$font-accent: 'Mono';
 $font-fancy: "acta-display";
 
 $gray: #222;
@@ -10,6 +22,8 @@ $gray-light: #E6E8EC;
 $accent: #CE904E;
 $light-blue: #35AFF2;
 $dark: #364147;
+
+$white: #FFF;
 
 $mobile: 767px;
 

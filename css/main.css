@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Mono';
+  src: url("/font/GT-Pressura-Mono-Light.otf"); }
+@font-face {
+  font-family: 'Apercu';
+  src: url("/font/apercu_regular_pro.otf"); }
 * {
   margin: 0;
   padding: 0; }
@@ -8,11 +14,12 @@ html {
 body {
   font-size: 100%;
   line-height: 1.61803;
-  background: #FAFAFA;
-  color: #222; }
+  color: #FFF;
+  background-color: #16161d;
+  -webkit-font-smoothing: antialiased; }
 
 header {
-  font-family: "effra", Helvetica, Arial, sans-serif;
+  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
   font-weight: bold; }
 
 ul {
@@ -20,19 +27,14 @@ ul {
 
 a {
   padding-bottom: 2px;
-  border-bottom: 1px solid #CE904E;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
   cursor: pointer;
   text-decoration: none;
-  color: inherit; }
+  color: #666; }
 
 a:hover {
   padding-bottom: 0px;
   border-bottom-color: transparent;
-  color: #CE904E; }
+  color: #FFF; }
 
 a:visted {
   color: inherit; }
@@ -93,11 +95,11 @@ nav {
     text-shadow: 0px 0px 2px #E6E8EC; }
 
 p {
-  font-size: 1em;
-  /* 16 */
-  line-height: 1.5em;
-  font-family: "effra", Helvetica, Arial, sans-serif;
-  margin: 0 auto 1.5em; }
+  font-feature-settings: 'liga' 0;
+  letter-spacing: 0.0rem;
+  line-height: 1.75rem;
+  margin: 0 auto 1.5em;
+  font-family: "Mono", Helvetica, Arial, sans-serif; }
   @media screen and (max-width: 767px) {
     p {
       width: 80%; } }
@@ -116,25 +118,24 @@ h1 {
       width: 80%; } }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2.25em;
   /* 24 */
   line-height: 1em;
   /* 24 */
   margin: 4em auto 2em;
-  font-family: "effra", Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #364147; }
+  font-family: "Mono", Helvetica, Arial, sans-serif;
+  font-weight: normal; }
 
 h3 {
+  font-size: 1.5rem;
+  /* 24 */
+  line-height: 1.5em;
+  /* 24 */
+  font-weight: normal;
   margin-bottom: .25em; }
 
 h3, h4, h5, h6 {
-  font-size: 1em;
-  /* 16 */
-  line-height: 1.5em;
-  /* 24 */
-  font-family: "effra", Helvetica, Arial, sans-serif; }
+  font-family: "Mono", Helvetica, Arial, sans-serif; }
 
 small {
   font-size: 0.8em;
@@ -166,7 +167,7 @@ footer {
   width: 100%;
   overflow: auto; }
   footer a {
-    color: #CE904E;
+    color: #666;
     border: 0px solid transparent; }
   footer p {
     width: 100%;
@@ -174,7 +175,7 @@ footer {
     font-size: .75em;
     margin: 1.714285714em auto;
     color: #AAA;
-    font-family: "inconsolata"; }
+    font-family: #FFF; }
 
 hr {
   color: #666;
@@ -534,7 +535,7 @@ Details: http://www.positioniseverything.net/easyclearing.html
   width: 4em; }
 
 footer #mc_embed_signup form {
-  font-family: "effra", Helvetica, Arial, sans-serif;
+  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
   text-align: left;
   margin-bottom: 2em;
   overflow: auto;
@@ -543,14 +544,14 @@ footer #mc_embed_signup form {
   padding: 1em 0em; }
 
 #mc_embed_signup label {
-  font-family: "effra", Helvetica, Arial, sans-serif;
+  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #CCC; }
 
 #mc_embed_signup #mc-embedded-subscribe-form input.email {
   padding: 8px 0;
   font-size: 1em;
-  font-family: "effra", Helvetica, Arial, sans-serif;
+  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
   float: left;
   clear: none;
   margin: 0em;
@@ -568,7 +569,7 @@ footer #mc_embed_signup form {
   float: left;
   clear: none;
   width: 2em;
-  font-family: "effra", Helvetica, Arial, sans-serif;
+  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   background-color: #364147;
   -webkit-transition: background-color 0.2s linear;
@@ -698,7 +699,7 @@ footer #mc_embed_signup form {
   color: #AAA;
   border-bottom: 0px solid transparent;
   padding: 0em;
-  font-family: "effra", Helvetica, Arial, sans-serif;
+  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
   margin: 7em auto 0em;
   display: block;
   text-align: center; }
@@ -712,7 +713,8 @@ footer #mc_embed_signup form {
 .blog h3:first-child {
   margin-top: 0; }
 .blog ul {
-  font-family: "effra", Helvetica, Arial, sans-serif;
+  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   margin: 0em 0em 0.5em; }
 .blog li {
   color: #666; }
@@ -721,7 +723,7 @@ footer #mc_embed_signup form {
     line-height: 1.75em;
     transition: none; }
   .blog li a:hover {
-    color: #CE904E; }
+    color: #FFF; }
 
 .work article {
   margin-top: 4em; }
@@ -915,6 +917,9 @@ h1.about {
 
 article h1:hover {
   color: #222; }
+
+.accent {
+  font-family: "Mono"; }
 
 .bold {
   font-weight: bold; }
