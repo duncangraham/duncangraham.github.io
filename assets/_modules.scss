@@ -399,3 +399,12 @@ opacity:1}}@-webkit-keyframes slider{
     border-bottom: none;
     font-size: .8em;
 }
+
+.polaroid {
+    margin: 0;
+    position: fixed;
+    width: 14rem;
+    bottom: 4rem;
+    right: 8rem;
+    transform: rotate(15deg);
+}
