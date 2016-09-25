@@ -10,8 +10,9 @@ html {
 body {
     font-size: 100%; 
     line-height: 1.61803;
-    background: /*Foux du*/ #FAFAFA; //https://www.youtube.com/watch?v=EuXdhow3uqQ
-    color: $gray;
+    color: $white;
+    background-color: #16161d; 
+    -webkit-font-smoothing: antialiased;
 }
 
 header {
@@ -25,17 +26,15 @@ ul {
 
 a {
     padding-bottom: 2px;
-    border-bottom: 1px solid $accent;
-    @include transition(all, .2s, ease-in);
     cursor: pointer;
     text-decoration: none;
-    color: inherit;
+    color: $gray-mid;
 }	
 
 a:hover {
     padding-bottom: 0px;
     border-bottom-color: transparent;
-    color: $accent;
+    color: $white;
 }	
 
 a:visted {
@@ -120,12 +119,13 @@ nav {
 }
 
 p {
-    font-size: 1em;       /* 16 */
-    line-height: 1.5em;
+        font-feature-settings: 'liga' 0;
+                letter-spacing: 0.0rem;
+                    line-height: 1.75rem;
 
     //should this stuff go here or in theme or layout?
-    font-family: $font-sans-serif;
     margin: 0 auto 1.5em;
+    font-family: $sans-serif;
 
     @media screen and (max-width: $mobile) {
         width: 80%;
@@ -147,25 +147,24 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;     /* 24 */
+    font-size: 2.25em;     /* 24 */
     line-height: 1em;     /* 24 */
     margin: 4em auto 2em;
 
     //should this in _base?
-    font-family: $font-sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $dark;
+    font-family: $sans-serif;
+    font-weight: normal;
 }
 
 h3 {
+    font-size: 1.5rem;     /* 24 */
+    line-height: 1.5em;     /* 24 */
+    font-weight: normal;
     margin-bottom: .25em;
 }
 
 h3, h4, h5, h6 {
-    font-size: 1em;      /* 16 */
-    line-height: 1.5em;  /* 24 */
-    font-family: $font-sans-serif;
+    font-family: $sans-serif;
 }
 
 small {
@@ -203,7 +202,7 @@ footer {
     overflow: auto;
 
     a {
-        color: $accent;
+        color: $gray-mid;
         border: 0px solid transparent;
     }
 
@@ -213,7 +212,7 @@ footer {
         font-size: .75em;
         margin: 1.714285714em auto;
         color: #AAA;
-        font-family: $font-accent;
+        font-family: $white;
     }
 }
 

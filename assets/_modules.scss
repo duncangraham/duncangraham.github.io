@@ -209,6 +209,7 @@ footer #mc_embed_signup form {
 
     ul {
         font-family: $font-sans-serif;
+        font-weight: 300;
         margin: 0em 0em 0.5em;
     }
 
@@ -222,7 +223,7 @@ footer #mc_embed_signup form {
         }
 
         a:hover {
-            color: $accent;
+            color: $white;
         }
     }
 

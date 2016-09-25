@@ -2,3 +2,7 @@ _site
 *.swp
 *.swo
 *.sketch
+.sass-cache/
+.jekyll-metadata
+.DS_Store
+
