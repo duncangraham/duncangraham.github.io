@@ -428,12 +428,33 @@ Details: http://www.positioniseverything.net/easyclearing.html
   margin-top: 8em; }
 
 @media all and (max-width: 700px) {
-  .col2, .col3i, .col4, .col5, .col6, .col7 {
+  h3 {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .margin1 {
+    margin: 0; }
+
+  .col2, .col3, .col4, .col5, .col6, .col7 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    float: none;
-    text-align: center; } }
+    float: none; }
+
+  .space-top3 {
+    margin-top: 2rem; }
+
+  .polaroid {
+    position: relative;
+    height: 22rem;
+    bottom: 0;
+    right: 0;
+    left: 5rem;
+    margin-top: 2rem; }
+
+  .polaroid img {
+    width: 12rem; } }
 .grid-item {
   height: 16em;
   padding: 2em;
@@ -888,6 +909,50 @@ img#svg-tablet {
   border-bottom: none;
   font-size: .8em; }
 
+@keyframes shakeit {
+  from {
+    transform: rotate(15deg); }
+  16.66%, 50%, 83.33% {
+    transform: perspective(600px) rotate3d(2, -1, 0.5, 90deg) translate3d(-0.1rem, -5rem, -7.9rem); }
+  33.33%, 66.66% {
+    transform: perspective(600px) rotate3d(2, 0, -0.5, -20deg) translate3d(2rem, 1.4rem, 0rem); } }
+.polaroid {
+  position: fixed;
+  width: 14rem;
+  height: 32rem;
+  bottom: 6rem;
+  right: 8rem;
+  transform: rotate(15deg); }
+
+.polaroid img {
+  margin: 0;
+  position: fixed;
+  width: 14rem;
+  bottom: 0rem;
+  transition: all .1s; }
+
+.polaroid.forward img {
+  transform: perspective(600px) rotate3d(2, -1, 0.5, 59deg) translate3d(-0.1rem, -5rem, -7.9rem); }
+
+.polaroid.back img {
+  transform: perspective(600px) rotate3d(2, 0, -0.5, -20deg) translate3d(2rem, 1.4rem, 0rem); }
+
+.shakeit {
+  animation-name: shakeit;
+  animation-duration: 2s; }
+
+@media all and (max-width: 700px) {
+  .polaroid {
+    position: relative;
+    height: 22rem;
+    bottom: 0;
+    right: 0;
+    left: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem; }
+
+  .polaroid img {
+    width: 12rem; } }
 .cursor-pointer {
   cursor: pointer; }
 
@@ -910,6 +975,10 @@ h1.about {
   position: absolute;
   top: -6em;
   left: 2.3em; }
+
+::selection {
+  background-color: #FFF;
+  color: #16161d; }
 
 .font-small {
   font-size: .875em;
