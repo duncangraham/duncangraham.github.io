@@ -888,13 +888,37 @@ img#svg-tablet {
   border-bottom: none;
   font-size: .8em; }
 
+@keyframes shakeit {
+  from {
+    transform: rotate(15deg); }
+  16.66%, 50%, 83.33% {
+    transform: perspective(600px) rotate3d(2, -1, 0.5, 90deg) translate3d(-0.1rem, -5rem, -7.9rem); }
+  33.33%, 66.66% {
+    transform: perspective(600px) rotate3d(2, 0, -0.5, -20deg) translate3d(2rem, 1.4rem, 0rem); } }
 .polaroid {
+  position: fixed;
+  width: 14rem;
+  height: 32rem;
+  bottom: 6rem;
+  right: 8rem;
+  transform: rotate(15deg); }
+
+.polaroid img {
   margin: 0;
   position: fixed;
   width: 14rem;
-  bottom: 4rem;
-  right: 8rem;
-  transform: rotate(15deg); }
+  bottom: 0rem;
+  transition: all .1s; }
+
+.polaroid.forward img {
+  transform: perspective(600px) rotate3d(2, -1, 0.5, 59deg) translate3d(-0.1rem, -5rem, -7.9rem); }
+
+.polaroid.back img {
+  transform: perspective(600px) rotate3d(2, 0, -0.5, -20deg) translate3d(2rem, 1.4rem, 0rem); }
+
+.shakeit {
+  animation-name: shakeit;
+  animation-duration: 2s; }
 
 .cursor-pointer {
   cursor: pointer; }

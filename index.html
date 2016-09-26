@@ -12,5 +12,26 @@ title: The Digital Playground of Duncan Graham
         His sidekick is a three legged wonder pooch named <a href='https://www.instagram.com/explore/tags/rouxforyou/'>Roux</a> 
     </p>
 
-    <img src='/img/me.png' class='polaroid'/>
+    <div class='polaroid shakeit'>
+        <img src='/img/me.png' />
+        <img src='/img/develop.png' class='develop'/>
+    </div>
 </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        setTimeout(function(){
+            $(this).find('img').toggleClass('shakeit');
+            $('.develop').fadeOut(30000);
+        }, 2000)
+
+
+        $('.polaroid').hover(function(){
+            $(this).find('img').toggleClass('shakeit');
+        },function() {
+            $(this).find('img').toggleClass('shakeit');
+        })
+    });
+</script>
