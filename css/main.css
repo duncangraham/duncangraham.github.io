@@ -428,12 +428,21 @@ Details: http://www.positioniseverything.net/easyclearing.html
   margin-top: 8em; }
 
 @media all and (max-width: 700px) {
-  .col2, .col3i, .col4, .col5, .col6, .col7 {
+  .col2, .col3, .col4, .col5, .col6, .col7 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    float: none;
-    text-align: center; } }
+    float: none; }
+
+  .space-top3 {
+    margin-top: 2rem; }
+
+  .polaroid {
+    position: relative;
+    height: 22rem;
+    bottom: 0;
+    right: 0;
+    margin-top: 2rem; } }
 .grid-item {
   height: 16em;
   padding: 2em;
@@ -920,6 +929,14 @@ img#svg-tablet {
   animation-name: shakeit;
   animation-duration: 2s; }
 
+@media all and (max-width: 700px) {
+  .polaroid {
+    position: relative;
+    height: 22rem;
+    bottom: 0;
+    right: 0;
+    left: 3rem;
+    margin-top: 5rem; } }
 .cursor-pointer {
   cursor: pointer; }
 

@@ -447,3 +447,15 @@ opacity:1}}@-webkit-keyframes slider{
     animation-name: shakeit;
     animation-duration: 2s;
 }
+
+
+@media all and (max-width: 700px){
+    .polaroid {
+        position: relative;
+        height: 22rem;
+        bottom: 0;
+        right: 0;
+        left: 3rem;
+        margin-top: 5rem;
+    }
+}
