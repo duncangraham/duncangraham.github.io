@@ -943,6 +943,10 @@ h1.about {
   top: -6em;
   left: 2.3em; }
 
+::selection {
+  background-color: #FFF;
+  color: #16161d; }
+
 .font-small {
   font-size: .875em;
   line-height: 1.71em; }
