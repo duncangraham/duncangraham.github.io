@@ -41,7 +41,7 @@ a:visted {
 
 img {
   display: block;
-  margin: 6em auto;
+  margin: 2em auto;
   width: 100%; }
 
 article {
@@ -73,7 +73,7 @@ article {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
   article p {
-    font-family: "freight-text-pro", Palantino, Georgia, serif; }
+    font-family: "Mono", Helvetica, Arial, sans-serif; }
 
 nav {
   margin: 2em auto;
@@ -163,7 +163,6 @@ ul, ol {
   margin: 0 auto 1.5em; }
 
 footer {
-  background-color: #E6E8EC;
   width: 100%;
   overflow: auto; }
   footer a {
@@ -173,7 +172,6 @@ footer {
     width: 100%;
     text-align: center;
     font-size: .75em;
-    margin: 1.714285714em auto;
     color: #AAA;
     font-family: #FFF; }
 
@@ -426,6 +424,10 @@ Details: http://www.positioniseverything.net/easyclearing.html
 
 .space-top8 {
   margin-top: 8em; }
+
+.my3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 @media all and (max-width: 700px) {
   h3 {
@@ -734,7 +736,7 @@ footer #mc_embed_signup form {
 .blog h3:first-child {
   margin-top: 0; }
 .blog ul {
-  font-family: "FF DIN OT", Helvetica, Arial, sans-serif;
+  font-family: "Mono", Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 0em 0em 0.5em; }
 .blog li {
@@ -917,9 +919,10 @@ img#svg-tablet {
   33.33%, 66.66% {
     transform: perspective(600px) rotate3d(2, 0, -0.5, -20deg) translate3d(2rem, 1.4rem, 0rem); } }
 .polaroid {
+  cursor: pointer;
   position: fixed;
   width: 14rem;
-  height: 32rem;
+  height: 22rem;
   bottom: 6rem;
   right: 8rem;
   transform: rotate(15deg); }
@@ -1028,5 +1031,8 @@ nav #blog {
   .t-about a {
     border-bottom: 0;
     font-weight: bold; }
+
+.moon-phase {
+  font-style: normal; }
 
 /*# sourceMappingURL=main.css.map */

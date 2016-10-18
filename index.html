@@ -3,18 +3,42 @@ layout: default
 title: The Digital Playground of Duncan Graham
 ---
 
+<style>
+    .develop {
+        background: #FFF;
+        height: 16rem;
+        margin: 2rem .875rem;
+        width: 12rem;
+        display: block;
+        position: relative;
+    }
+</style>
+
 <div class="col12 margin1 space-top3">
     <h3>
         Duncan Graham is a <a href='https://dribbble.com/duncangraham'>designer</a> and <a href='https://github.com/duncangraham'>developer</a> living in SF. He operates the <a href='https://www.google.com/search?q=treat+street+clubhouse&rlz=1C5CHFA_enUS698US698&oq=treat+street+clubhouse&aqs=chrome..69i57.5339j0j1&sourceid=chrome&ie=UTF-8'>Treat Street Clubhouse</a>, a hostel that hosts artists and adventurers from around the world.
     </h3>
 
-    <p class='space-top3'>
+    
+    <p class='my3'>
         His sidekick is a three legged wonder pooch named <a href='https://www.instagram.com/explore/tags/rouxforyou/'>Roux</a> 
     </p>
 
+    <!--
+    <ul>
+        {% for post in site.tags.writing %}
+            <li>
+                <a class="{{ post.type }} {{ post.date | date: "%m%d%Y" }} entry" href="{{ post.url }}">
+                    <span> {{ post.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    -->
+
     <div class='polaroid'>
         <img src='/img/me.png' />
-        <img src='/img/develop.png' class='develop'/>
+        <div class='develop'></div>
     </div>
 </div>
 
@@ -23,20 +47,22 @@ title: The Digital Playground of Duncan Graham
 <script>
     $(function () {
         setTimeout(function(){
-            $('.polaroid').find('img').toggleClass('shakeit');
+            $('.polaroid').toggleClass('shakeit');
             $('.develop').fadeOut(30000);
         }, 1000)
 
         
         setTimeout(function(){
-            $('.polaroid img').toggleClass('shakeit');
+            $('.polaroid').toggleClass('shakeit');
         }, 3000);
 
 
-        $('.polaroid').hover(function(){
-            $('.polaroid img').toggleClass('shakeit');
-        },function() {
-            $('.polaroid img').toggleClass('shakeit');
+        $('.polaroid').on('click', function(){
+            $('.polaroid').toggleClass('shakeit');
+
+            setTimeout(function(){ 
+                $('.polaroid').toggleClass('shakeit');
+            }, 2000)
         })
     });
 </script>

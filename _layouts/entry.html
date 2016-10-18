@@ -40,10 +40,16 @@
 </head>
   <body id="post">
 		<article>
-            <div class="info">
-			<h1>{{ page.title }}</h1>
-			<p class="date">{{ page.date | date: "%B %-d %Y" }}</p>
-            <hr/>
+            <div class='info'>
+            <p class="date">
+                <span>
+                    {{ page.title }}
+                </span>
+                <span class='moon-phase'>🌔</span>
+                <span>
+                    {{ page.date | date: "%B %-d %Y" }}
+                </span>
+            </p>
             </div>
 
 			{{ content }}

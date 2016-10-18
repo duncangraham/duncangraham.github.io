@@ -43,7 +43,7 @@ a:visted {
 
 img {
     display: block;
-    margin: 6em auto;
+    margin: 2em auto;
     width: 100%;
 }
 
@@ -84,8 +84,9 @@ article {
         transition: all 0.2s ease-in-out;
     }
 
+    
     p {
-        font-family: $font-serif;
+        font-family: $sans-serif;
     }
 
 }
@@ -197,7 +198,6 @@ ul, ol {
 }
 
 footer {
-    background-color: $gray-light;
     width: 100%;
     overflow: auto;
 
@@ -210,7 +210,6 @@ footer {
         width: 100%;
         text-align: center;
         font-size: .75em;
-        margin: 1.714285714em auto;
         color: #AAA;
         font-family: $white;
     }

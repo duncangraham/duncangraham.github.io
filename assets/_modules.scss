@@ -208,7 +208,7 @@ footer #mc_embed_signup form {
     }
 
     ul {
-        font-family: $font-sans-serif;
+        font-family: $sans-serif;
         font-weight: 300;
         margin: 0em 0em 0.5em;
     }
@@ -417,9 +417,10 @@ opacity:1}}@-webkit-keyframes slider{
 
 
 .polaroid {
+    cursor: pointer;
     position: fixed;
     width: 14rem;
-    height: 32rem;
+    height: 22rem;
     bottom: 6rem;
     right: 8rem;
     transform: rotate(15deg);
@@ -441,13 +442,10 @@ opacity:1}}@-webkit-keyframes slider{
         transform: perspective(600px) rotate3d(2, 0, -0.5, -20deg) translate3d(2rem, 1.4rem, 0rem);
 }
 
-
-
 .shakeit {
     animation-name: shakeit;
     animation-duration: 2s;
 }
-
 
 @media all and (max-width: 700px){
     .polaroid {
