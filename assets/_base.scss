@@ -86,7 +86,7 @@ article {
 
     
     p {
-        font-family: $sans-serif;
+        font-family: $serif;
     }
 
 }
@@ -150,7 +150,7 @@ h1 {
 h2 {
     font-size: 2.25em;     /* 24 */
     line-height: 1em;     /* 24 */
-    margin: 4em auto 2em;
+    margin: 0em auto 2em;
 
     //should this in _base?
     font-family: $sans-serif;
@@ -171,7 +171,7 @@ h3, h4, h5, h6 {
 small {
     font-size: 0.8em;
     line-height: 1.714285714em;
-    margin: 2em 0em;
+    margin: 1em 0em;
     text-align: center;
     display: block;
     font-style: italic;
@@ -200,6 +200,8 @@ ul, ol {
 footer {
     width: 100%;
     overflow: auto;
+    position: fixed;
+    bottom: 0;
 
     a {
         color: $gray-mid;

@@ -180,14 +180,15 @@ footer #mc_embed_signup form {
 #mc_embed_signup #mce-error-response {display:none;}
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
 #mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
 .twitter-share-button {
     color: #AAA;
     border-bottom: 0px solid transparent;
     padding: 0em;
     font-family: $font-sans-serif;
-    margin: 7em auto 0em;
-    display: block;
-    text-align: center;
+    position: fixed;
+    bottom: .6667em;
+    right: .6667em;
 
     p {
         margin-top: .5em;
@@ -210,7 +211,6 @@ footer #mc_embed_signup form {
     ul {
         font-family: $sans-serif;
         font-weight: 300;
-        margin: 0em 0em 0.5em;
     }
 
     li {
